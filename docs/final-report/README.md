@@ -1,6 +1,34 @@
 # ECE 509 final report
 
-## Current accepted revision — October 29, 2026
+## Current accepted revision — November 2, 2026
+
+**[Read the full report (PDF, 15 pages)](cxl-scheduler-revised-20261102.pdf)**
+
+*From Service Classes to Hardware Costs: An RTL Study of CXL-Inspired Switch Scheduling*
+by Jay Chiang and Daniel Chou. This revision contains **10 figures, 9 tables and 19 references**.
+
+The report follows shared-path contention → FAI service classes and Buffer → executable RTL → a common measurement platform → performance and hardware cost. The November 2 update integrates the quota × ordering studies, production-window results, credit-refill and Buffer analysis, and dynamic-workload observations. It connects each conclusion to its experiment and evidence level.
+
+- [LaTeX driver](main-v3.tex) and [manuscript body](sections/hotnets-body-v3.tex)
+- [Acceptance record and PDF SHA-256](update-20261102/ACCEPTANCE_20261102.md)
+- [Claim–evidence matrix](update-20261102/CLAIM_EVIDENCE_MATRIX_20261102.md)
+- [November 2 numerical manifest](generated/update_20261102_manifest.json)
+- [Published artifact checksums](publication-20261102.json)
+- [中文專案介紹](../../README.zh-TW.md)
+
+The PDF is the accepted November 2 snapshot. Ongoing experiments are tracked in the [development report](../DEVELOPMENT_REPORT.md).
+
+### Build from the published sources
+
+The repository includes all generated LaTeX inputs and all ten PDF figures used by `main-v3.tex`. With PDFLaTeX and the packages listed in the driver installed, run the following command **twice** from `docs/final-report/`:
+
+```sh
+pdflatex -interaction=nonstopmode -halt-on-error -jobname=cxl-scheduler-revised-20261102 main-v3.tex
+```
+
+This compiles the saved report inputs. Experiment and figure-generation commands for earlier revisions are documented below.
+
+## Historical accepted revision — October 29, 2026
 
 The latest report is *From Service Classes to Hardware Costs: An RTL Study of CXL-Inspired Switch Scheduling*: **13 pages, 9 figures, 7 tables, 19 references**. It preserves the five-step narrative and adds the completed twenty-seed finite-Heavy RTL confirmation (80 jobs, 40 mixed/isolated pairs) and current-source CGOF replay (30 runs, 60 A/B endpoints). Two new figures show paired seed observations, appropriate confidence intervals, and the separate confirmation/exploration cohorts.
 
