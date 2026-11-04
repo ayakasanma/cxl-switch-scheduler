@@ -1,0 +1,100 @@
+{
+  "revision": "2026-11-02",
+  "published_on": "2026-11-04",
+  "title": "From Service Classes to Hardware Costs: An RTL Study of CXL-Inspired Switch Scheduling",
+  "pdf": {
+    "path": "docs/final-report/cxl-scheduler-revised-20261102.pdf",
+    "pages": 15,
+    "size": 449736,
+    "sha256": "27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf"
+  },
+  "acceptance": "docs/final-report/update-20261102/ACCEPTANCE_20261102.md",
+  "source_entry": "docs/final-report/main-v3.tex",
+  "source_dependencies": [
+    {
+      "path": "docs/final-report/generated/figures/confirmation.pdf",
+      "size": 14938,
+      "sha256": "2e21c969a898c9380951666b23b87408ce37c23804714f3d64504e6f1c591237"
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/allocation-shares.pdf",
+      "size": 36657,
+      "sha256": "878c373ba3bbdf32b25233eebe323d19161fd47af6dee599d677d17b7a734c35"
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/buffer-transition.pdf",
+      "size": 25767,
+      "sha256": "cbdf2cdef013153678a705a8eb8fa17bff29ad46a2f0e1830edc05a27bf4fb14"
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/cgof-hardware.pdf",
+      "size": 26577,
+      "sha256": "f67ad680f93d360ef309cc99c0c0ed7ac9fbf69ff76f2c08526a5562d1c66f1d"
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.pdf",
+      "size": 26542,
+      "sha256": "0a82a9ef0272657839e8230a0b45c6c388b32d371a51acb11ada383b54915882"
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/pooling-path.pdf",
+      "size": 24068,
+      "sha256": "246dd7c1e4a0d57b8ed862db24c93daad18db6ccdd154b32b8bde12683c683ef"
+    },
+    {
+      "path": "docs/final-report/generated/figures/sensitivity.pdf",
+      "size": 18886,
+      "sha256": "77772e3768382c201d7ccb5a73e9d182bd432e8c34557031d800c509b516dc03"
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/finite-heavy-confirmation.pdf",
+      "size": 35370,
+      "sha256": "0422658d9677bc1755b589e606aa045f1c7dbfa61a0b87a76c99038a3afb3882"
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/readiness-confirmation.pdf",
+      "size": 18711,
+      "sha256": "01482d5ecc9c957b3f4554e6af654288e2519d0bc67b393449175cc6c3fcee33"
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261102/followup-synthesis-20261102.pdf",
+      "size": 30509,
+      "sha256": "d33115e5dbad7ee72e2b7c2f41b2f4cd63ff23e56e26b7864ba0cb64cf81d349"
+    },
+    {
+      "path": "docs/final-report/generated/improvement_results.tex",
+      "size": 1922,
+      "sha256": "7a77999c59c5cae4f54985b4e9987981bd11d9dc0e5186aecf61d0781d1aa62d"
+    },
+    {
+      "path": "docs/final-report/generated/results.tex",
+      "size": 3149,
+      "sha256": "c1ae15bb7b7a2c5084b46a2eef043f2e0af1d46fe36fb712ecf489f2526a94db"
+    },
+    {
+      "path": "docs/final-report/generated/revision_v3_results.tex",
+      "size": 3643,
+      "sha256": "8e8675907d91d9739a27db6d1319b1f403ca032a13b81ee4f154eaabf40b2b26"
+    },
+    {
+      "path": "docs/final-report/generated/update_20261029_results.tex",
+      "size": 750,
+      "sha256": "cf5881c18654d95002ca0da464e2d486c6081fa6123fd9abb53e5585a799b775"
+    },
+    {
+      "path": "docs/final-report/generated/update_20261102_results.tex",
+      "size": 2809,
+      "sha256": "88d2f56c161c024b28ebb7855da8a71089384ea41223423aef45b79cfe188831"
+    },
+    {
+      "path": "docs/final-report/main-v3.tex",
+      "size": 9116,
+      "sha256": "7550a7bce8671c15abe8a0f67ca9c64e93cc34123576b0c81f3acb09bf6a8696"
+    },
+    {
+      "path": "docs/final-report/sections/hotnets-body-v3.tex",
+      "size": 53445,
+      "sha256": "823ec50f835e982ba375339828d09d2308889fea78dd1d9ebd3418c7d3073093"
+    }
+  ]
+}

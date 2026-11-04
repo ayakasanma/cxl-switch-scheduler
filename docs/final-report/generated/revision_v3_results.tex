@@ -1,0 +1,107 @@
+% v3 only; generated from pinned accepted evidence. Do not edit.
+
+\newcommand{\RevisionMatrixPassed}{498}
+
+\newcommand{\RevisionMatrixPlanned}{498}
+
+\newcommand{\RevisionConfirmationTable}{%
+\begin{tabular}{llrrrr}
+\hline
+Policy & High:Low & A P99 & B P99 & A mean & B mean \\
+\hline
+FCFS & -- & 18.10 & 33.45 & 16.392 & 23.306 \\
+RR1 & -- & 2.00 & 16.65 & 1.025 & 8.129 \\
+RR10 & -- & 11.00 & 17.70 & 5.584 & 9.153 \\
+FAI-inspired & -- & 10.00 & 21.05 & 5.522 & 9.240 \\
+Algorithm-2 & -- & 10.00 & 21.35 & 5.525 & 9.326 \\
+BLISS-inspired & -- & 1.15 & 33.00 & 1.009 & 21.696 \\
+CGOF (2:1) & 2:1 & 1.10 & 12.35 & 1.008 & 6.092 \\
+\hline
+\end{tabular}%
+}
+
+\newcommand{\RevisionPninetyNineA}{(1,18.10) (2,2.00) (3,11.00) (4,10.00) (5,10.00) (6,1.15) (7,1.10)}
+
+\newcommand{\RevisionPninetyNineB}{(1,33.45) (2,16.65) (3,17.70) (4,21.05) (5,21.35) (6,33.00) (7,12.35)}
+
+\newcommand{\RevisionPairedCITable}{%
+\begin{tabular}{lllrr}
+\hline
+Candidate / baseline & High:Low & Arm & $\Delta$ P99 & 95\% CI \\
+\hline
+FAI-inspired / FCFS & -- & A & -8.10 & [-8.25, -8.00] \\
+FAI-inspired / FCFS & -- & B & -12.40 & [-13.25, -11.55] \\
+FAI-inspired / RR10 & -- & A & -1.00 & [-1.00, -1.00] \\
+FAI-inspired / RR10 & -- & B & 3.35 & [2.25, 4.45] \\
+CGOF (2:1) / FAI-inspired & 2:1 & A & -8.90 & [-9.00, -8.75] \\
+CGOF (2:1) / FAI-inspired & 2:1 & B & -8.70 & [-9.50, -7.90] \\
+\hline
+\end{tabular}%
+}
+
+\newcommand{\RevisionNExpansionTable}{%
+\begin{tabular}{rlrrrr}
+\hline
+N & Policy & A P99 & B P99 & A mean & B mean \\
+\hline
+8 & FCFS & 20.00 & 37.60 & 16.945 & 23.995 \\
+8 & RR1 & 2.00 & 20.20 & 1.059 & 8.387 \\
+8 & RR10 & 12.00 & 21.00 & 5.799 & 9.423 \\
+8 & FAI-inspired & 10.00 & 27.60 & 5.552 & 9.797 \\
+8 & Algorithm-2 & 10.00 & 28.20 & 5.500 & 9.792 \\
+8 & BLISS-inspired & 2.00 & 37.00 & 1.025 & 22.213 \\
+16 & FCFS & 22.00 & 41.80 & 18.174 & 25.437 \\
+16 & RR1 & 3.00 & 23.40 & 1.134 & 8.956 \\
+16 & RR10 & 13.00 & 24.40 & 6.174 & 10.055 \\
+16 & FAI-inspired & 10.00 & 34.80 & 5.562 & 11.094 \\
+16 & Algorithm-2 & 10.00 & 35.20 & 5.565 & 11.205 \\
+16 & BLISS-inspired & 2.00 & 41.60 & 1.063 & 23.506 \\
+\hline
+\end{tabular}%
+}
+
+\newcommand{\RevisionPowerTable}{%
+\begin{tabular}{llrrrr}
+\hline
+Policy & Arm & Internal & Switching & Leakage & Total \\
+\hline
+FCFS & A & 1.306000 & 0.017807 & 2.032000 & 3.356000 \\
+FCFS & B & 1.306000 & 0.017547 & 2.033000 & 3.356000 \\
+RR10 & A & 0.999500 & 0.013447 & 1.546667 & 2.559667 \\
+RR10 & B & 0.999100 & 0.013090 & 1.548000 & 2.560000 \\
+FAI-inspired & A & 1.331667 & 0.019203 & 2.116000 & 3.466667 \\
+FAI-inspired & B & 1.331000 & 0.018737 & 2.116667 & 3.466000 \\
+\hline
+\end{tabular}%
+}
+
+\newcommand{\RevisionCgofPpaTable}{%
+\begin{tabular}{lrrrrrr}
+\hline
+High:Low & Cell area & Registers & Setup ns & Hold ns & Untested & Formal points \\
+\hline
+2:1 & 109794.784709 & 9014 & 10.398800 & 0.038578 & 68 & 9126 \\
+\hline
+\end{tabular}%
+}
+
+% N4 subset of the full nine-case disjoint leaf audit; square micrometres; printed rounding applies.
+\newcommand{\RevisionPrimaryAreaTable}{%
+\begin{tabular}{lrrrrrr}
+\hline
+N4 policy & Descriptor & Timestamp & Policy logic & Common & Residual & Whole area \\
+\hline
+FCFS & 44404.041137 & 13532.660156 & 1131.957370 & 44901.399654 & -0.000001002 & 103970.058316 \\
+RR10 & 44404.041137 & 0.000000 & 263.039041 & 34380.092136 & 0.000002003 & 79047.172316 \\
+FAI-inspired & 44404.041139 & 13532.660157 & 7143.987889 & 45009.156711 & -0.000002999 & 110089.845892 \\
+\hline
+\end{tabular}%
+}
+
+\newcommand{\RevisionFaiOverRRMin}{38.22}
+
+\newcommand{\RevisionFaiOverRRMax}{39.27}
+
+\newcommand{\RevisionRRBelowFaiMin}{27.65}
+
+\newcommand{\RevisionRRBelowFaiMax}{28.20}
