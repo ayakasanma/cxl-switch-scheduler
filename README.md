@@ -1,5 +1,7 @@
 # CXL Switch Scheduler
 
+**English** · [繁體中文](README.zh-TW.md)
+
 A cycle-accurate study of how a CXL memory-pooling switch should arbitrate between a
 bandwidth-hungry host and hosts that send requests only occasionally.
 
