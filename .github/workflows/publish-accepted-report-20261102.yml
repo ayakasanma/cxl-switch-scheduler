@@ -1,0 +1,41 @@
+name: Publish accepted CXL report (one time)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - name: Restore the accepted PDF and verify SHA-256
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, hashlib
+          parts = Path('docs/final-report/.publication-parts-20261102')
+          expected_names = [f'report.b64.{i:03d}' for i in range(3)]
+          assert sorted(p.name for p in parts.iterdir()) == expected_names
+          encoded = ''.join((parts / n).read_text(encoding='ascii') for n in expected_names)
+          pdf = base64.b64decode(encoded, validate=True)
+          expected = '27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf'
+          assert len(pdf) == 449736
+          assert hashlib.sha256(pdf).hexdigest() == expected
+          assert pdf.startswith(b'%PDF-')
+          dest = Path('docs/final-report/cxl-scheduler-revised-20261102.pdf')
+          assert not dest.exists(), 'Accepted PDF already published; inspect before replacing'
+          dest.write_bytes(pdf)
+          print(f'Accepted PDF verified: {len(pdf)} bytes, SHA-256 {expected}')
+          PY
+      - name: Commit the verified PDF and remove temporary publication files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --force -- docs/final-report/cxl-scheduler-revised-20261102.pdf
+          git rm -r -- docs/final-report/.publication-parts-20261102
+          git rm -- .github/workflows/publish-accepted-report-20261102.yml
+          git commit -m 'docs: restore and verify accepted November 2 report PDF'
+          git push origin HEAD:main
