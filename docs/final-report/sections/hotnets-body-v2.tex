@@ -1,0 +1,424 @@
+\begin{abstract}
+Windowed classification reduces sparse-host waiting under sustained interference
+without sacrificing descriptor output service. In a unified register-transfer-level
+(RTL) study of a single-output Compute Express Link (CXL) switch slice, the
+FAI-inspired Main policy reduces sparse-host generation-to-fire P99 relative to
+first-come, first-served (FCFS) by a mean paired 45.03\% for single arrivals and 38.64\% for
+eight-request bursts. After two natural classification windows, both profiles
+improve across all five matched seeds; all 15 production RTL runs pass.
+All 30 measured intervals sustain the saturated
+descriptor-level output capacity of 1.000000 transfer/cycle, with the heavy
+host retaining approximately 97.7\% of service. Round robin with a ten-transfer
+quantum (RR10) achieves a 3.6-cycle advantage in mean burst P99, while Main retains
+a one-cycle advantage for single arrivals. Main's pre-layout area premium is
+4.97--5.89\% over FCFS and 38.22--39.27\% over RR10. First-in, first-out
+(FIFO) subtrees occupy 92.40--98.63\% of mapped standard-cell area; all nine
+primary mappings close timing at 25\,ns. Independent audits and 14/14 scoped
+formal RTL-to-netlist equivalence checks support the implementation comparison.
+Classification shields sparse hosts relative to FCFS at a modest area
+premium; per-source rotation yields lower measured burst P99 than Main.
+Queue storage and ordering metadata dominate implementation cost.
+\end{abstract}
+
+\section{Introduction}
+Arbitration can substantially reduce sparse-host waiting even when aggregate
+output service is already saturated. Compute Express Link (CXL) enables memory
+expansion and pooling through a coherent load/store interconnect~\cite{cxl_intro},
+bringing heterogeneous host demands into competition at shared switch egress
+ports. A continuously active host can saturate output capacity while occasional
+requests wait behind its admitted work. Because work-conserving policies sustain
+identical aggregate throughput under heavy load, aggregate bandwidth leaves the
+central design trade-off unaddressed: which requests receive earlier service,
+and what hardware cost buys that protection?
+
+Our production register-transfer-level (RTL) experiments directly quantify this
+exchange. Across 15 production runs, we evaluate first-come, first-served (FCFS),
+round robin with a ten-transfer quantum (RR10), and FAI-inspired Main across
+five matched seeds. After two natural classification windows, Main reduces
+sparse-host P99 relative to FCFS by a mean paired 45.03\% for single arrivals and
+38.64\% for bursts, improving in every seed under both profiles. All 30 measured
+intervals sustain 1.000000 descriptor transfer per cycle, and the heavy host
+retains approximately 97.7\% of service. Arbitration thus delivers earlier
+sparse service at an unchanged total output rate.
+
+Comparing Main against RR10 exposes the structural cost of aggregating sparse
+sources into a single class. Main holds a one-cycle advantage in mean
+single-arrival P99 (9.09\% relative to RR10), whereas RR10 achieves a 3.6-cycle
+advantage in mean burst P99. Main's burst P99 is higher in four seeds and tied in
+one. While RR10 grants an independent quantum to each source, Main's sparse
+sources share a single ten-transfer High visit. Concurrent bursts can therefore
+exhaust this shared class quota before Low service resumes. This mechanism is
+consistent with the observed tail reversal, showing that the choice of service
+domain remains consequential even at identical aggregate throughput.
+
+We relate these service outcomes to mapped standard-cell area, timing, and
+cold-start power within a common SystemVerilog switch. The synthesized boundary
+integrates depth-16 per-source first-in, first-out (FIFO) queues, a 105-bit
+descriptor datapath, one output, and a shared hold controller. Only policy
+arbitration logic and necessary queue metadata vary. Across $N=4,8,16$ sources,
+all nine primary mappings close timing at 25\,ns. Main's area premium is
+4.97--5.89\% over FCFS and 38.22--39.27\% over RR10. Because FIFO subtrees
+account for 92.40--98.63\% of total mapped area, accounting for storage and
+ordering metadata is central to an accurate policy-cost comparison.
+
+This study establishes a measured latency--area trade-off: two-window
+classification protects sparse hosts relative to FCFS, while per-source
+rotation remains preferable for the tested burst tails. It also shows why
+selector-only area omits the dominant storage cost. Claims concern descriptor
+arbitration and implementation cost at the evaluated switch boundary~\cite{artifact}.
+
+\section{Related Work}
+\paragraph{CXL sharing and interference.}
+Pond investigates memory pooling for cloud platforms, TPP examines page placement
+across local and CXL tiers, and DirectCXL demonstrates pooled memory
+access~\cite{pond,tpp,directcxl}. These systems demonstrate the value of pooled
+capacity, focusing on operating-system allocation, migration, and host-side
+integration. Complementary studies examine switch architecture: A Case Against
+CXL Memory Pooling and My CXL Pool analyze the economic and latency implications
+of intermediate switches~\cite{case_pool,my_cxl_pool}. Furthermore,
+CXL-INTERPLAY, contention-aware DRAM caching, and high-performance computing
+(HPC) pooling studies characterize interference under shared
+resources~\cite{cxl_interplay,contention_cache,hpc_pool}, while CXL-DMSim
+connects full-system simulation with device measurements~\cite{cxldmsim}.
+Our study isolates the descriptor datapath and measures how arbitration redistributes queuing delay.
+
+\paragraph{Service history and grouping.}
+Fair Queuing Memory Systems and stall-time fair scheduling distinguish service
+allocation from application-level progress~\cite{fqmem,stfm}. ATLAS uses attained
+service, and TCM groups threads by memory-access behavior~\cite{atlas,tcm}.
+BLISS reduces scheduling complexity through two-group blacklisting and evaluates
+Verilog implementations synthesized with Design Compiler and a commercial
+32\,nm standard-cell library~\cite{bliss}. Its combination of workload behavior
+and synthesized hardware cost serves as a methodological precedent for this report.
+The grouping mechanisms differ: BLISS uses blacklisting, whereas Main uses
+windowed successful-transfer counts and hysteresis that retains the previous
+effective class.
+Consistent with this literature, our study evaluates descriptor waiting time
+and service allocation at the switch boundary rather than inferring
+application-level IPC or slowdown.
+
+\paragraph{CXL arbitration and hardware costs.}
+FAI-CXL combines fairness-aware scheduling with cacheline-level
+interleaving~\cite{fai}. We use its adaptive classification as the foundation
+for an explicit single-output 10/10 reconstruction. The approved Main and a
+supplementary Algorithm-2 interpretation feature distinct transition semantics,
+enabling an empirical check on the implementation cost of that design choice.
+Prior work in memory scheduling, crossbar arbitration, weighted-fair-queuing
+sorting circuits, and network-on-chip (NoC) arbiters analyzes priority algorithms
+and circuit complexity~\cite{rixner,gupta,wfq_sort,arbiter_ppa}. However, their
+protocols, interfaces, and buffering models differ. In the literature reviewed
+here, we found no directly comparable complete area, timing, and power baseline
+at the same CXL switch boundary. Our common-boundary comparison provides this
+baseline.
+
+\section{Design and Service Mechanism}
+\subsection{A Common Transfer Contract}
+Figure~\ref{fig:architecture} illustrates the shared synthesized switch boundary. Each source
+interfaces to a dedicated depth-16 FIFO. The 105-bit descriptor contains a 32-bit tag, 32-bit address,
+one-bit opcode, eight-bit length, and 32-bit payload. All fields pass through the switch intact;
+each descriptor consumes one atomic output service opportunity. FCFS and Main
+also retain a 32-bit arrival field per FIFO entry. RR10 omits this ordering state
+because its arbitration requires only a round-robin pointer and quantum counter. The resulting storage difference
+is an integral component of each policy's actual implementation cost.
+
+\input{generated/architecture-v2-sol.tex}
+
+A push is accepted whenever beginning-of-cycle FIFO occupancy is below 16.
+The arbiter selects an eligible source independently of sink readiness, and
+\begin{equation}
+ f(t)=v_{\rm out}(t)\land r_{\rm out}(t)
+ \label{eq:fire}
+\end{equation}
+defines successful service. Only $f(t)$ pops a FIFO and decrements active quota. The common
+controller holds the selected source, descriptor, and policy context across a
+downstream stall. Per-source ordering, admission rules, and output holding are
+identical across policies.
+
+\subsection{Capacity Is Shared; Waiting Is Scheduled}
+For a single output serving equal-cost atomic descriptors, the measured service rate is
+\begin{equation}
+ R=\frac{1}{T}\sum_{t=0}^{T-1}f(t)\leq 1.
+ \label{eq:capacity}
+\end{equation}
+Since $f(t)$ is binary, $R=1$ requires a successful transfer in every measured
+cycle. A work-conserving arbiter sustains this rate whenever each cycle
+presents eligible FIFO work and a ready receiver ($r_{\rm out}(t)=1$). External
+offered demand alone is insufficient: producer backlog does not constitute eligible work,
+and a newly accepted descriptor cannot bypass unread FIFO entries. Under continuous occupancy
+and downstream readiness, the output's descriptor service capacity is fixed at 1.000000 transfer
+per cycle. Arbitration can still change which descriptor fires, its waiting time, and
+each source's service share. Saturated throughput therefore leaves waiting
+tails policy-dependent; maximum throughput does not establish equivalent service quality.
+
+FCFS consistently schedules the oldest admitted queue head, with source-ID tie breaking. Sparse
+requests therefore compete directly with older requests already admitted from the heavy
+source. Depth-16 FIFOs constrain this admitted competition, while unadmitted
+heavy requests accumulate in the external producer queue. RR10 instead rotates across
+nonempty sources, granting up to ten successful transfers per visit and skipping
+empty sources. It organizes competition by source identity rather than arrival
+age. Downstream sink stalls consume no quantum under either quota-based policy.
+
+\subsection{Classification Changes the Service Domain}
+Main tracks successful transfers $B[h]$ for each source across a $W$-cycle window,
+computing total delivered service $S=\sum_h B[h]$. Its classification thresholds evaluate
+\begin{align}
+ \mathrm{UP}:&\quad 10NB[h]<3S,\nonumber\\
+ \mathrm{DOWN}:&\quad NB[h]>S,\label{eq:classes}\\
+ \mathrm{KEEP}:&\quad \text{otherwise, including equality}.\nonumber
+\end{align}
+Production uses $W=5{,}000{,}000$, 23-bit counters, and widened unsigned 32-bit
+comparisons. The window-closing transfer is included before counters clear. Every
+source initializes in effective High. Two supporting windows commit a transition;
+a pending state retains its previous effective class. Observing KEEP, opposite evidence,
+or an idle window cancels the pending transition. Classification thus reflects
+sustained delivered service over time rather than transient arrival spikes.
+
+Main alternates visits between High and Low classes, each with a quota of up to ten fires,
+and selects the oldest head within the active class. Under heavy/sparse traffic,
+two windows move the heavy source to Low while sparse sources remain High.
+Older heavy entries then compete in a separate service domain from sparse
+entries. A sparse request still waits for active visit context, but its
+service no longer depends on outranking every heavy head by arrival age.
+
+An empty High visit immediately relinquishes unused quota. That credit is not
+banked, and Low service proceeds without an artificial idle cycle. The 10/10 schedule
+therefore divides output cycles only when both classes need service; it never reserves
+capacity for absent sparse work. This mechanism explains how Main preserves
+full 1.000000 transfer/cycle output service while the heavy host uses approximately 97.7\% of it.
+
+However, class aggregation creates competition within the protected class. Sparse sources
+share one ten-fire High visit, whereas RR10 assigns ten fires to each source.
+Overlapping sparse bursts can exhaust the shared High visit and wait through
+an intervening Low visit. This structure can lengthen sparse waits despite full output
+service, motivating separate comparisons of Main against RR10 and FCFS.
+
+\section{Implementation and Experimental Method}
+\subsection{Correctness and Comparable Hardware}
+A single policy-selectable SystemVerilog top-level module shares FIFO, multiplexer, and hold logic.
+Independent golden Python queue models and cocotb testbenches verify cycle-accurate output pin activity,
+descriptors, source order, conservation, response tags, buffer occupancies, and held-output stability.
+Directed tests exercise timestamp wrap, full-plus-pop refusal, bypass prevention, quota
+boundaries, class thresholds, and reset assertion during output holding. The accepted
+primary regression achieves 180/180 passing runs across three policies, three source
+counts, and 20 seeds. Main additionally passes 30 stress runs and three
+20-million-cycle production runs across $N=4,8,16$.
+
+Synopsys Formality W-2024.09 formally proves 14/14 scoped RTL/netlist pairs: nine primary
+mappings, two supplementary mappings, and three current-Main bridges. The verified pairs
+have zero failing, aborted, unverified, unmatched, or active-blackbox points.
+An intentional output-valid inversion fails its expected compare point,
+validating our negative control. Six FCFS/RR pairs retain one explicitly
+uncompared propagated-constant register. The supplementary Algorithm-2 study
+passes ten stress cases and a production run; at $N=4$ its complete-area
+difference from Main is 0.028626\%. We retain it as transition-semantic
+sensitivity evidence and focus the primary comparison on FCFS, RR10, and Main.
+
+The nine primary area/timing mappings use Design Compiler and PrimeTime
+W-2024.09 with SAED32 RVT standard cells at the TT corner (0.78\,V, $25\,{}^\circ$C).
+The common clock is 25\,ns, setup/hold uncertainty is 0.10/0.05\,ns, input/output delays are
+0/2\,ns, and the nominal output load is 2.656828\,fF. A common wire-load
+estimate and identical constraints define the pre-layout comparison. Final
+checks restore the original output capacitance limits after optimization.
+Area is reported in library units. The accepted cold-power matrix uses
+zero-delay VCS mapped-netlist replay and switching activity interchange format
+(SAIF) data in PrimeTime/PrimePower
+at the same corner and clock, covering three seeds per mapping.
+
+\subsection{Production HOG-SPARSE Experiment}
+The accepted HOG-SPARSE benchmark comprises $3\times5=15$ actual RTL runs at
+$N=4$, depth 16, with seeds 509--513 and a continuously ready sink. Source zero
+generates one descriptor per active cycle. Sources one through three exhibit
+sparse demand, driven by deterministic, policy-independent pseudorandom streams.
+Each run executes ten million real training cycles, covering two complete
+production windows. Main's heavy source transitions through High, pending High, then Low;
+the sparse sources remain effective High. The measured class map is
+Low/High/High/High.
+
+Profile A continues independent Bernoulli arrivals with probability $1/128$
+per sparse source per cycle for 100,000 measured cycles. Profile B generates
+one eight-descriptor burst per sparse source per 1,024-cycle block, at a seeded
+uniform offset, for 102,400 cycles. Its 100 blocks generate exactly 2,400 sparse
+requests. Both profiles maintain expected sparse demand of $3/128$ requests/cycle,
+allowing temporal concentration to be examined at the same expected offered
+rate; Profile A retains its realized finite counts. The heavy source supplies persistent
+competition throughout training, both profiles, and completion guards.
+
+Each profile is followed by a 1,024-cycle guard that stops new sparse arrivals
+while maintaining heavy generation. Every sparse cohort thus completes with heavy
+pressure still active. Final drain then flushes all producer, FIFO, and
+response work. The accepted execution accounts for 156,657,531 nonreset RTL
+cycles, including 150 million training cycles and 3,036,000 measured cycles.
+All 15 production runs pass, and an independent raw audit passes. The audit
+checks exact histograms, source pooling, direct/stage identities, conservation,
+class transitions, completion, and actual run exits. Five external trace groups
+match across policies; Main and FCFS also produce identical cold pin digests over
+each seed's entire ten-million-cycle training interval.
+
+\subsection{Endpoints and Paired Summaries}
+For request $i$, let $g_i,a_i,d_i$ denote its generation, acceptance, and fire cycles.
+The primary endpoint is direct sparse latency
+\begin{equation}
+ L_i=d_i-g_i=(a_i-g_i)+(d_i-a_i).
+ \label{eq:latency}
+\end{equation}
+Each run pools the complete sparse generation cohort of one profile and extracts
+nearest-rank P99 directly from its request histogram. Per-source results remain
+available for checking distribution within the class. Figures report arithmetic
+means of five run means or five run P99s; whiskers denote observed seed ranges.
+For baseline $b$ and matched seed $s$, the percentage reduction is
+\begin{equation}
+ \rho_{b,s}=100\frac{P99_{b,s}-P99_{{\rm Main},s}}{P99_{b,s}}.
+ \label{eq:paired}
+\end{equation}
+We average these five paired percentages, retaining the baseline denominator
+within each seed. This differs from a ratio of mean P99s; negative values
+denote higher Main P99. The five seeds provide descriptive replications;
+sources sharing an arbiter are not independent replications. Seed ranges
+are neither confidence intervals nor worst-case bounds.
+
+\section{Evaluation}
+\subsection{Sparse Protection at Full Output Capacity}
+Main protects sparse single arrivals while the descriptor output remains fully
+saturated (Figure~\ref{fig:hog-sparse}). In Profile A, FCFS exhibits a mean direct
+latency of \HSMeanAFCFS\ cycles and a mean run P99 of \HSPtailAFCFS\ cycles;
+Main reduces these to \HSMeanAMain\ and \HSPtailAMain\ cycles.
+The P99 reduction averages 8.2 cycles and \HSReductionAFCFS\% across matched
+seeds, improving in five of five. RR10 achieves \HSMeanARR\ cycles mean and
+\HSPtailARR\ cycles mean run P99. Main's one-cycle P99 advantage over RR10
+is \HSReductionARR\%, likewise in every seed.
+
+\input{generated/hog_sparse_figure.tex}
+
+Profile B preserves Main's advantage over FCFS under burst injection. FCFS
+reaches \HSMeanBFCFS\ cycles mean and \HSPtailBFCFS\ cycles P99; Main reaches
+\HSMeanBMain\ and \HSPtailBMain\ cycles. The paired reduction is 13.0 cycles
+or \HSReductionBFCFS\%, with all five seeds improving. Across the three sparse
+sources and five seeds, every one of the 15 source/seed P99 comparisons improves
+over FCFS in each profile. The pooled improvement thus extends to each individual sparse
+source in the tested runs, rather than masking a source-level regression.
+
+Stage-latency decomposition locates the benefit after FIFO admission. In Profile A,
+the generation-to-acceptance mean is zero under every policy, proving that earlier output
+service accounts entirely for Main's improvement. In Profile B, all policies incur the same
+3.5-cycle mean injection delay: eight descriptors generated simultaneously enter a
+source FIFO at one per cycle. Main's acceptance-to-fire mean is 5.8243 cycles,
+versus FCFS's 19.7989 cycles. The reduction therefore survives both burst injection
+and its common serialization cost. Direct P99 is measured from each request's
+full generation-to-fire wait; stage percentiles are never added.
+
+The cold control supports the class-separation mechanism. Before the second
+classification window, Main and FCFS produce matching per-seed sparse
+histograms, a five-run mean of 16.3842 cycles, and P99 of 18 cycles; their full
+training pin digests also match. Main's protection follows its two-window
+transition. Both profiles finish before a third production window.
+
+\subsection{The RR10 Burst Trade-off}
+RR10 demonstrates a 3.6-cycle advantage in mean burst P99: \HSPtailBRR\ cycles versus
+Main's \HSPtailBMain\ cycles. Its mean direct latency is \HSMeanBRR\ cycles, close
+to Main's \HSMeanBMain\ cycles, showing that a negligible mean difference can conceal a larger tail
+divergence. Using RR10 as the baseline denominator in each paired comparison, Main's
+burst P99 is 20.78\% higher on average; Equation~\ref{eq:paired} therefore
+returns $-20.78\%$. Main exhibits higher P99 in four seeds and ties in one, with
+run P99s spanning 17--24 cycles versus RR10's tighter 17--18 cycle range.
+
+The service domains defined in Section~3 explain why an improvement over FCFS does
+not imply an improvement over RR10. Both Main and RR10 eliminate global
+arrival-age competition against the heavy host. Overlapping sparse bursts,
+however, share a single High visit in Main, whereas RR10 retains an independent quantum per source.
+Class aggregation is consistent with the measured tail difference, although
+no separate causal ablation isolates it. For this source mix, Main retains
+a one-cycle single-arrival P99 advantage, whereas RR10 delivers lower measured
+burst P99 while occupying less silicon area.
+
+\subsection{Heavy Service and Conservation}
+All 30 measured policy/seed/profile intervals sustain exactly 1.000000
+descriptor transfer/cycle with zero avoidable eligible-ready bubbles. In Profile A,
+heavy transfers/cycle average 0.976728 for FCFS, 0.976726 for RR10, and 0.976724
+for Main. In Profile B, the respective rates are 0.97657617, 0.97656445, and
+0.97656445. Because total service is 1.000000, these rates represent the heavy
+host's service fractions: approximately 97.66--97.67\%.
+
+Main's mean heavy-rate difference from FCFS in Profile A is only $-0.000004$
+transfer/cycle. Empty-High relinquishment lets the heavy Low source consume
+spare opportunities, ensuring that sparse protection does not impose an artificial 50\% heavy-host
+cap. The small interval differences include requests crossing phase boundaries;
+complete-cohort latency tracking and final conservation checks account for all such requests.
+
+Total offered load exceeds descriptor output capacity: the heavy host alone
+offers one request per cycle, with sparse work added. Its producer backlog
+grows under every policy; at the end of Profile B,
+mean pending counts are 239,330.4 for FCFS and 239,331.6 for RR10 and Main.
+These counts describe unadmitted producer work, separate from each depth-16
+FIFO. Final drain accounts for every generated heavy request, while the sparse
+completion guards establish protection during continuing interference. These
+overloaded intervals do not define a stationary heavy-host delay distribution.
+
+\subsection{Policy-to-Hardware Cost}
+Figure~\ref{fig:hardware-cost} juxtaposes the service results with the accepted
+hardware comparison. All nine primary mappings meet setup, hold, and original
+electrical limits at the common 25\,ns target. Main adds 5.89\%, 5.23\%, and
+4.97\% total area over FCFS at $N=4,8,16$, respectively. Its premiums over
+RR10 are 39.27\%, 38.60\%, and 38.22\%. At the four-source boundary used
+for HOG-SPARSE, Main's area is 110,089.846 library units, compared with
+103,970.058 for FCFS and 79,047.172 for RR10. The measured sparse-host
+protection over FCFS therefore accompanies a 5.89\% complete-area premium
+at the same source count.
+
+\input{generated/hardware_cost_v2.tex}
+
+FIFO subtrees account for 92.40--98.63\% of complete mapped area, including
+arrival metadata where required. At $N=16$, 256 FIFO entries hold 26,880
+descriptor bits; FCFS and Main add 8,192 arrival bits. RR10 avoids this
+per-entry ordering state, so its smaller footprint reflects the service rule
+as well as simpler arbitration logic. Main further
+adds window counters, class state, and quota context. Its policy subtree
+grows from 7,143.988 library units at $N=4$ to 26,673.175 at $N=16$,
+whereas FCFS grows from 1,131.957 to 6,038.461 and RR10 from 263.039
+to 1,268.687. Comparing these policy subtrees alone would omit the FIFO
+metadata cost. The complete-area result charges both, exposing storage as
+the dominant budget even when selector complexity differs substantially.
+
+Timing closure exhibits a policy-dependent margin.
+FCFS setup slack decreases from 13.072\,ns at $N=4$ to 3.892\,ns at
+$N=16$; Main decreases from 10.496 to 1.158\,ns. RR10 retains at least
+18.694\,ns across all configurations. Main16's limiting timing path connects FIFO read-pointer state to
+class-state update, linking head selection to the closing-window decision.
+All reported designs use the common pipeline and constraints. The accepted
+timing accounting retains 140 constant-disabled checks separately, so closure
+refers to evaluated setup, hold, and electrical checks under this profile.
+
+Cold-start power consistently orders RR10 $<$ FCFS $<$ Main for every
+accepted seed. The three-seed means at $N=4$ are approximately 2.601,
+3.398, and 3.500\,mW; at $N=16$ they are 10.3, 13.4, and 13.8\,mW. These
+estimates use their own cold activity trace, separate from the production
+HOG-SPARSE latency experiment.
+
+\section{Conclusion}
+
+Main reduces sparse-host P99 relative to FCFS by a mean paired 45.03\% for
+single arrivals and 38.64\% for bursts after two natural classification
+windows, improving in every matched seed. All 30 measured intervals sustain
+1.000000 descriptor transfer/cycle; the heavy host retains 97.66--97.67\%
+of service because empty-High relinquishment releases unused quota.
+Arbitration therefore changes who waits even when descriptor output service
+is saturated. RR10 has a 3.6-cycle advantage in mean burst P99, while Main
+retains a one-cycle advantage for single arrivals. Main's area premium over
+RR10 is 38.22--39.27\%. At $N=4$, Figure~\ref{fig:hardware-cost}(d) makes
+the choice concrete: Main reduces single-arrival P99 by 8.2 cycles over FCFS
+for 5.89\% more area, whereas RR10 is smaller than Main and has lower
+measured burst P99.
+
+Main's protection over FCFS costs 4.97--5.89\% total area across $N=4,8,16$.
+All nine primary mappings close timing at 25\,ns, and 14/14 scoped
+RTL-to-netlist equivalence checks support implementation fidelity. FIFO
+subtrees occupy 92.40--98.63\% of mapped standard-cell area, so storage
+dominates implementation cost while service order governs waiting tails.
+
+\section{AI Use Acknowledgment}
+Claude Code/RTL Agent Team and owner-authorized GPT-6.1 Sol supported implementation
+and verification tooling; Codex coordinated evidence review and drafting under ARS-Codex guidance.
+Gemini 4 Argon assisted literature analysis and claim review.
+Gemini 3.8 Flash performed the final academic language polish.
+Numerical findings derive strictly from archived tool results.
+The authors assume full responsibility for this report and its sources.
+

@@ -1,0 +1,50 @@
+{
+  "schema": "cxl-scheduler-ppa-profile/v1",
+  "profile_id": "saed32-rvt-tt-25ns-forqa-v1",
+  "status": "FROZEN",
+  "review": {
+    "reviewed_by": "Codex independent pilot review",
+    "reviewed_on": "2026-10-20",
+    "evidence": "Actual W-2024.09 FCFS N4 10ns and Main N16 20ns pilots, then complete25ns FCFS N4 run.sh DC/PT pilot (runner-syn-fcfs-n4-wrapper-c): both batches exit0, all markers/reports/result hashes checked, PT worst setup+9.860374ns/hold+0.049066ns. Fixed compile-medium and one DC core. Freeze comparative measurement assumptions only; reported max-capacitance/slew findings remain OPEN and are not waived or accepted as signoff."
+  },
+  "library": {
+    "db_basename": "saed32rvt_tt0p78v25c.db",
+    "sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+    "name": "saed32rvt_tt0p78v25c",
+    "operating_conditions": "tt0p78v25c"
+  },
+  "units": {
+    "time": "1ns",
+    "capacitance": "1ff",
+    "evidence": "Linked pilot DC report_units: time 1ns, cap 1fF; PT report_units: 1e-09 second, 1e-15 Farad."
+  },
+  "clock": {
+    "port": "clk",
+    "name": "core_clk",
+    "period": 25.0,
+    "setup_uncertainty": 0.1,
+    "hold_uncertainty": 0.05,
+    "transition": 0.1
+  },
+  "io": {
+    "input_delay_min": 0.0,
+    "input_delay_max": 2.0,
+    "output_delay_min": 0.0,
+    "output_delay_max": 2.0,
+    "input_transition": 0.1,
+    "output_load": 2.656828
+  },
+  "wire_load": {
+    "method": "fixed_model",
+    "model": "ForQA",
+    "mode": "top",
+    "rationale": "The actual SAED32 library supplies ForQA. Fix the same model and top mode for every N/policy with DC auto selection disabled; pre-layout QA wireload estimate, no physical parasitic claim. Output load is FO4 from observed INVX1_RVT/A capacitance 0.664207fF."
+  },
+  "compile": {
+    "command": "compile",
+    "map_effort": "medium"
+  },
+  "power": {
+    "status": "NOT_RUN"
+  }
+}

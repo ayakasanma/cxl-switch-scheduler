@@ -1,0 +1,15 @@
+{
+  "host": "",
+  "user": "",
+  "port": 22,
+  "identity_file": "",
+  "remote_work_root": "",
+  "module_name": "Synopsys_x86-64/2024",
+  "module_init": "",
+  "target_library": "",
+  "top_module": "",
+  "rtl_files": [],
+  "constraint_files": [],
+  "sta_netlist_files": [],
+  "sta_constraint_files": []
+}

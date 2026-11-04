@@ -1,0 +1,91 @@
+{
+  "schema": "cxl-report-hypothesis-status/1.0",
+  "as_of": "2026-10-30",
+  "scope": "evidence update; Oct 30 single-seed dynamic RTL probe and follow-up A/B MODEL_ONLY stages complete",
+  "frozen_protocol": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+  "latest_theory": "docs/final-report/update-20261029/THEORY_AND_EVIDENCE.md",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "status": "PARTIAL_SUPPORT_SINGLE_SEED",
+      "new_experiment_status": "COMPLETED_SINGLE_SEED",
+      "report_integration_ready": true,
+      "evidence": "artifacts/implementation/cgof-dynamic-20261030/aggregate.json",
+      "evidence_sha256": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+      "supported_claim": "In one four-window probe, generation-time Heavy/Sparse roles survived a physical [0,0,1,1] source schedule, with three effective source-class transitions and Buffer states retaining their prior effective class.",
+      "remaining": "Multi-seed held-out role-switch confirmation and broader role schedules; do not infer a latency benefit from state counts or one seed."
+    },
+    {
+      "id": "H2",
+      "status": "PARTIAL_SUPPORT_MODEL_ONLY",
+      "new_experiment_status": "COMPLETED_MODEL_ONLY",
+      "report_integration_ready": true,
+      "evidence": "artifacts/implementation/followup-20261030/A-credit-refill/decision-trace.json",
+      "evidence_sha256": "0c351647d5d27efe5a4d580053b3053e1facbbd8a4a9e8fbbbbc4a312026c704",
+      "supported_claim": "With arrivals, readiness and all source classes fixed, changing only absolute High credit from 1 to 2 moved the first service-order divergence through refill or eligibility in 3 of 5 arrival phases; 2 phases had no divergence.",
+      "remaining": "Same-task production RTL refill/eligibility trace and matched quota x ordering x active-set controls under intermittent arrivals; no general latency bound."
+    },
+    {
+      "id": "H3",
+      "status": "PARTIAL_SUPPORT_SINGLE_WINDOW",
+      "new_experiment_status": "COMPLETED_BY_PRIOR_EXPERIMENT_TASK",
+      "report_integration_ready": true,
+      "evidence": "artifacts/implementation/cgof-rtl-diagnosis/confirmation-finite-heavy-fixed-20261029/aggregate.json",
+      "evidence_sha256": "0f39a3c5e8342c44d6d05bcfd46cfd249f69f1e7ef5ef15615b63a95aa98226d",
+      "seeds": [
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        548
+      ],
+      "simulations": 80,
+      "pairs": 40,
+      "classification_boundaries_per_mixed_run": 1,
+      "dynamic_evidence": "artifacts/implementation/cgof-dynamic-20261030/aggregate.json",
+      "dynamic_evidence_sha256": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+      "dynamic_simulations": 20,
+      "dynamic_pairs": 10,
+      "dynamic_classification_boundaries_per_mixed_run": 4,
+      "followup_evidence": "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/summary.json",
+      "followup_evidence_sha256": "92afb0f1bd189942864eb853286195d398de2cefcf3503c8fae1d1f2c268c9ac",
+      "profile": "near",
+      "supported_claim": "Across twenty seeds, 2:1 minus 1:1 increases Sparse P99 by one cycle and mean per-run maximum Heavy wall gap by 1.40 cycles. In held-out MODEL_ONLY under load, mixed minus isolated Heavy completion is 0 cycles (95% CI [0,0]); under over load it is 834.25 cycles (95% CI [820.4,849.3]) and exceeds the predeclared 20-cycle margin.",
+      "remaining": "Same-task production RTL under/over confirmation, multi-seed dynamic held-out confirmation, broad backpressure/load matrix, and validated same-harness Main/WRR/IWRR contrasts.",
+      "scope_note": "Seeds are held out from 509-513 exploration but reuse identifiers from an older, different A/B workload. The new quota contrast worsens both tail metrics for 2:1; it does not prove 2:1 dominates."
+    },
+    {
+      "id": "H4",
+      "status": "PARTIAL_SUPPORT_SINGLE_SEED",
+      "new_experiment_status": "COMPLETED_SINGLE_SEED",
+      "report_integration_ready": true,
+      "evidence": "artifacts/implementation/cgof-dynamic-20261030/aggregate.json",
+      "evidence_sha256": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+      "supported_claim": "Under bursty readiness, reducing depth from D16 to D8 moved Heavy P99 waiting from acceptance-to-fire to generation-to-acceptance while total generation-to-fire P99 stayed 20.",
+      "remaining": "Multi-seed depth confirmation and a broader backpressure/load matrix; component percentiles are not additive and this is not application slowdown."
+    },
+    {
+      "id": "H5",
+      "status": "UNTESTED",
+      "new_experiment_status": "NOT_RUN",
+      "report_integration_ready": false,
+      "remaining": "Calibrated CXL platform or validated system model and actual response/byte/application metrics."
+    }
+  ],
+  "updated_followup_protocol": "docs/final-report/update-20261029/FOLLOWUP_EXPERIMENTS.md"
+}

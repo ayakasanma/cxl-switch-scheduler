@@ -1,0 +1,1636 @@
+{
+  "status": "PASS",
+  "runs": [
+    "20261022T003252Z_406",
+    "20261022T003252Z_407",
+    "20261022T003252Z_404"
+  ],
+  "rtl_runs": 180,
+  "measured_cycles": 18000000,
+  "legacy_fields_identical_except_host_wall_time": true,
+  "phases_per_run": 6,
+  "stats": "20 run-level means; sampleSD and t19 95% CI. Mean runP99 is not pooled requestP99. Undefined cohort means remain blank in raw CSV; no partial-seed CI.",
+  "sum_job_sim_wall_seconds": 6905.844,
+  "inputs": [
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed509__fcfs_primary_metrics.json",
+      "sha256": "6e401b2466c23f77f52c452dac8a4e65f5d526e629e888e3d3f3eb98f4f56811",
+      "legacy_metrics_sha256": "7b64a2a9738d63099cc2c060af4ad174033babbb71ca5875c60a90242f667163",
+      "trace_sha256": "98db926f8e630f817d20d462253e09175c35c8983cacb811d0ff25b66b0a477e"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed510__fcfs_primary_metrics.json",
+      "sha256": "30fb220164cf852b2c185f8bd44a81a6ab136adc4362f777c56cf2b032d566a0",
+      "legacy_metrics_sha256": "5a0b192621625f7535cc1d61c769ea4ed6c2789de93c46bb5805983a7c4d474a",
+      "trace_sha256": "a7832271a7131e786385e909ecd2c301525abce002fcd444ac6c006d71e0fc1a"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed511__fcfs_primary_metrics.json",
+      "sha256": "800b35887639cdb2e936f726d352e9ba9c48e5a4c6e19a51500c8aa7c6bc889f",
+      "legacy_metrics_sha256": "66ad9fe8fe81ab4a34c61b1bd11828b43bc29f793475bcea44165736a9a3a7d8",
+      "trace_sha256": "faceec86a3313831a5d67c2ef0344b603a01c2f1484896aec12dba8c91702c0d"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed512__fcfs_primary_metrics.json",
+      "sha256": "25682ee9ee2acac82eceabf6621474cec06cad28087caff267da74c10d4ed3a5",
+      "legacy_metrics_sha256": "d3685c81b896b658bead9c775103c61f02c2174c582b300f601239242aedacc7",
+      "trace_sha256": "df931641a3e8e76086d0618c4d3fe2b3f2c594eda15e5b27288623beb56f5bcf"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed513__fcfs_primary_metrics.json",
+      "sha256": "c5056190062272163d28a7d39a21c44dd3899eb7cddd9c7a08c6fddd9b97a2f9",
+      "legacy_metrics_sha256": "96e0ca346390f9d392892ec95a82faf0e66cb840d188a637df45f322e4e8c0fb",
+      "trace_sha256": "e71496c29367f77ccb5630aab8f30763bc0c1a32716d4f756b581cc0420da599"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed514__fcfs_primary_metrics.json",
+      "sha256": "5a3ae5fe09e15b8a814b7b92c2b4cecab219e8770a97040fdb249c3362b803d7",
+      "legacy_metrics_sha256": "8bfcd582f3c515d3d466198b62d23cc885b18caa84c8884a4749dd7a38d88682",
+      "trace_sha256": "48464fc225786c640c3db52ee4a32e272bef6e97da2b234c84c6ac3c9a34d4a8"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed515__fcfs_primary_metrics.json",
+      "sha256": "1ecfcfe149e496e67b48101499eaa2eace5a6daa2da0659ad61f391d877c17e8",
+      "legacy_metrics_sha256": "0ef5365bb202743662d36ef9328c976fb63e983b5ad26a2cdad9b08c03601914",
+      "trace_sha256": "37f4c52477d813a55865c31208a50d4fa74934553c4fca7aaded28ac199833a0"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed516__fcfs_primary_metrics.json",
+      "sha256": "83e3b0186d3b3c8a3184680cf23156727d5262a447f2cb0e529cabb7f8d6e4da",
+      "legacy_metrics_sha256": "8852bdae47a5a586a1df33187547077857566f9fc89130510fd977ce5b185d66",
+      "trace_sha256": "e9e985f437d06069671b2148b98111bbe47e877ef7c0725f122eada60109c35b"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed517__fcfs_primary_metrics.json",
+      "sha256": "cf079e32202293780bea907af19c32dd4d10991c5e18a9667c7615e02478633c",
+      "legacy_metrics_sha256": "ad1f6ea3ace9572fffdf568eb23d7a0e4bca588803792806e9b9151a09f7c2c0",
+      "trace_sha256": "6f8d6c46c92337dd36de4aa6c75ebe5138bc0ae4f94859f7180a6513429c7fa7"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed518__fcfs_primary_metrics.json",
+      "sha256": "c7f999aa4a1f049f05dc3dc58689e6848401a96ff957278a2a35cfc019ace76c",
+      "legacy_metrics_sha256": "c03fe0dd367c49397dd70d270645dd5c607232c56f1c08f658c5d17e132d371c",
+      "trace_sha256": "87f281e02660b763d3e1fd2e47435b69f6b3b19859d8bcb3793777b41ec1df88"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed519__fcfs_primary_metrics.json",
+      "sha256": "5bf442081f6802ff82bcd059aeee2e941a4478baa464861a20b0ea099c7443f0",
+      "legacy_metrics_sha256": "67c5f163363d84a9c48e49b536dcbf3f2a08a2747670ebb1a4a8e0ffae90e588",
+      "trace_sha256": "6c82d468c5e2f514093148ba2ba54a2fee94e89dbe00ef76fd83e37880d98321"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed520__fcfs_primary_metrics.json",
+      "sha256": "9d77dbb2c19144f50fae9b96d04e1fc1eee59eb6df768a7691b2219bb488ab5c",
+      "legacy_metrics_sha256": "da1ed4b559210db08ca410f0bcf64e1ca38e1c98c70b282e13ea4c63a29350b3",
+      "trace_sha256": "76fcb67c18a3a8ae5c4e78ed89c0b54ad228884b1c618c4e550be6f3f82b8f8e"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed521__fcfs_primary_metrics.json",
+      "sha256": "47d7ba8a5af6cd750b927aa0cc15c125ff65a95ddc91ac730864655daebcaded",
+      "legacy_metrics_sha256": "49075dbc6729fc8ceef0ad1d4f9b03e12bbf4d5ac102871b45c6554419a7b178",
+      "trace_sha256": "911f8bb0908dad22019ebd410b242afdfa39da59c6c0bf9a7e7fe24682d7162f"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed522__fcfs_primary_metrics.json",
+      "sha256": "5e72e6ae76e28a20df994d4cbe1d9ace7b07fbd92829dde53a815010ce0ff121",
+      "legacy_metrics_sha256": "9c4217f5edd5e46b2a524fc992958b799a6efa938f321819963d63a8bde8ca2c",
+      "trace_sha256": "fc7297d9974b61402c6059830201c18a81c04145cafb1d7b30842853de886962"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed523__fcfs_primary_metrics.json",
+      "sha256": "a6684b0608d1569e1dff2c7e380570296e0f8c557c8b6664abb19aa6e948097b",
+      "legacy_metrics_sha256": "e483f9cb03c397cf740c1cf901d2006ac8ee076366e28beee44231f640261e8e",
+      "trace_sha256": "8738434dee919d1ef9e03fdb8b8035e879f26fabc0f404aa1c32bae7c4b253a5"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed524__fcfs_primary_metrics.json",
+      "sha256": "028b554adb2011fd06f67b94001bbfcc8443ef176997e08e144d05e6fc1b822e",
+      "legacy_metrics_sha256": "bccc40691a04b9d755a232800ec9fc900d4a6db4ed63f3b3095d485fef963173",
+      "trace_sha256": "e26506334458d951ca175798609ad167eb5a899d424ed0bd96856ee549d0290b"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed525__fcfs_primary_metrics.json",
+      "sha256": "418b662702ab398d9b8f52b5a8aeeda2f608ebc514fc8b2bc4fa9abb1f4ed787",
+      "legacy_metrics_sha256": "4cfdb2fb7115605c455738e8bd715ba24a9b1227879b14f276c4b68faeb7de8e",
+      "trace_sha256": "98e14e4d3432a98e0b0fe0b17fb4354230b9f8f6c1282bdb8f182f2a6dedd2c5"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed526__fcfs_primary_metrics.json",
+      "sha256": "8e1d042a0245c60c580a43a87da5c357da74ed37bba65c0d33d7453380d6c3fc",
+      "legacy_metrics_sha256": "49d213652f99b0653516a4f7db99ddf27d536939740061f7dffa9a27ddd65f78",
+      "trace_sha256": "56a57a2bc48935d3b1a982d810f2fe67a22db50a7dfd0424a17ba5587644557c"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed527__fcfs_primary_metrics.json",
+      "sha256": "97fdbf85430f950d4454f9c08bb6cddeb4c6d044e6f01e406fd17c0ab808eb02",
+      "legacy_metrics_sha256": "d249183592eb1f77d2c2ef4a3693b90ae782ec19bcc518edc9695270a2d5a98d",
+      "trace_sha256": "7445affbfde9f389e53d49e4e1205675e881555f7b34d52fbfbfbe305e0edded"
+    },
+    {
+      "policy": "FCFS",
+      "N": 4,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n4_seed528__fcfs_primary_metrics.json",
+      "sha256": "05093c28fed03b48eb5577792f13087fbf648c269b82f86d5580212a751f75be",
+      "legacy_metrics_sha256": "272501b01f640cf1a165c09f582f10272b62d161edfa479779a7a7737c14d312",
+      "trace_sha256": "7378d7123efe8d26f022702ff58b3ec792c2aa604ed821c63a6c99ba7a71bbae"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed509__fcfs_primary_metrics.json",
+      "sha256": "851089cce1bb744e7131e88a12cbace918f2c9f85735cfd3f0d44d75e7113ab4",
+      "legacy_metrics_sha256": "f19945211e242ff408dadce11755bfaeb843770fe609ed5df9b4f51ce14e0923",
+      "trace_sha256": "132db6aefeebdb6a5e016fe313f2be3465e3006ce6feb7d07fbcf5edfc51c77a"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed510__fcfs_primary_metrics.json",
+      "sha256": "b022ee2a4074f963e5433204e8f09df8cdf630a364aad47dd6374e5d3ee42865",
+      "legacy_metrics_sha256": "6379f340fbbee92ba9722a5df458d549880ea67d446361fb53384f740bbf258c",
+      "trace_sha256": "00ba7d2ca6e986c9bd76097f474e69b680cd12f57fd49eba889a6648a3884cb1"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed511__fcfs_primary_metrics.json",
+      "sha256": "ad05478e3fe61cdc58e99a06b618a266714c3af80863c09869446d486816fe53",
+      "legacy_metrics_sha256": "993815e59be53a02df26622677229ccb18de827858de6f4c92b4e6c2202821af",
+      "trace_sha256": "18eca9b6a98ecf4c7b0f53227c240e64b6ee8efe2751b854c0229e05c59e738d"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed512__fcfs_primary_metrics.json",
+      "sha256": "2ccdffea79fb627a0c32bcbf6851094b25c1f6457f3dc9e86d4d8a399dfe480c",
+      "legacy_metrics_sha256": "71885e6d0f71f4cd7c720b2b2e4af4fcb5c2b2dcc88e65d51d5c2b6c31e0f60c",
+      "trace_sha256": "88d92eef7b8692ffd1a0edf446526e54bcf2fc2afc019861d52650e000bb18e2"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed513__fcfs_primary_metrics.json",
+      "sha256": "3f8fa2926350121e9c1c7511dfbe424cf208ea112c489579c7326758eb9c8369",
+      "legacy_metrics_sha256": "f340030e10f9558a8bbc338ffa4b451ffcb1c8b3778b45ca2ab26778a567a374",
+      "trace_sha256": "5a798215821e0d8e4ecaec9e9fb9140ae8e7ca75a262377b69fb0e0d706f3863"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed514__fcfs_primary_metrics.json",
+      "sha256": "60a212c205ab0233aa154e78984ec16776d1529df4fb5311be9c50804532ad16",
+      "legacy_metrics_sha256": "d4be6cb87e4ba30093a0a6548642b74bde52734803a9209cd4c9fecf1b4b1c4f",
+      "trace_sha256": "4783f42a0b6c87079a75e39d59c2a7c0664307d8594ea5aebece1d65ee712e0f"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed515__fcfs_primary_metrics.json",
+      "sha256": "14efebfe6c48a25259acb7b21c83b198635b9357390e44dbd041b727f9ae8036",
+      "legacy_metrics_sha256": "e8a1ff865278af5dff5de8a5413aba49dd35eaeb48349623039117e7a4624704",
+      "trace_sha256": "3f5eb9c9dbb0bafef1baa2d7646051884afd27f1087ba986d6f82397d34c3ab7"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed516__fcfs_primary_metrics.json",
+      "sha256": "ab15ad206dc26639d6ce4a5bca5e050eb147afc5005e7371cb099a31c6fe73d2",
+      "legacy_metrics_sha256": "976d681d0a6b729a21fe60678210b117315524f947ce696d71bee6f20f49269a",
+      "trace_sha256": "72a736085202dbe1a635c1a802936de7a77c7770dfb97c4a5985e1c1efa09619"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed517__fcfs_primary_metrics.json",
+      "sha256": "27199bf6b8a6dbf7d28e77b3e0ec3e3f5db31e93cf419a154f21195e4facf827",
+      "legacy_metrics_sha256": "3aa1b2fd4786200850767514315ed9345efb4101a5d338003d58e63c564813d0",
+      "trace_sha256": "f1e53e18123dc5a51c089097f12274627dd3f7bf75076a3d0156b1dd5683be2b"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed518__fcfs_primary_metrics.json",
+      "sha256": "558d91ab8e2951c737762291dac5cd85a3b3372cbf55d9260a805f2efc3eca9f",
+      "legacy_metrics_sha256": "950a91fe944866bee3791278b768f838f074999bc56a2896e1c76c826767647e",
+      "trace_sha256": "ae581f86bfa2d6bf9f467ee324744a311edf38bf3748502f26af06e0522d97f3"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed519__fcfs_primary_metrics.json",
+      "sha256": "22b21d15d3adff47b2de932fe3180f30b6f1fa4f2a16d7bf03e3d7201010e0c3",
+      "legacy_metrics_sha256": "2cf79894d636e43e0597c373037da0b8b3d9895fb8581d92db4d6eb6f028bc19",
+      "trace_sha256": "00fc228e5bbc82bc8ee36d1db74cb9f0512c54aa823ea42985f6c57aa150d7c1"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed520__fcfs_primary_metrics.json",
+      "sha256": "564c59a1144ed56d2ea9678a11b8ae06d825cc2ef48d05aecd12a7356502dab5",
+      "legacy_metrics_sha256": "522d87466da15c98e4f78b386fc1906f203e21571232196397d95935ee039b31",
+      "trace_sha256": "919c3e1cab83a2a39b26cd79a72c3d3a18ee9ebc77133d6496358396496f04c0"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed521__fcfs_primary_metrics.json",
+      "sha256": "c47d2feacabbef0779bb48a0bafeebc424ab9989cac6098b69979dba1a05a645",
+      "legacy_metrics_sha256": "fe17c9d312c1cbaa0031bb4606d38bd91f831263c540195b6044a9bfcb1bcbbb",
+      "trace_sha256": "865abf8f8b116d2aab8e03b7f158315e59469a9159a94b02f4294498395d3978"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed522__fcfs_primary_metrics.json",
+      "sha256": "955bd5b9a4a28ee530676def5c8ef673725ff9639108423c511523ff20b2b46f",
+      "legacy_metrics_sha256": "7cc68fdb4b4a0c7051aa004d1dfc7ef45925f89ce45a8200bc0a745e5d0d6317",
+      "trace_sha256": "956265613d5e84d9bfd4fda918db3dadd0f2473055d4e9bfe9554b9a6ed5e7cc"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed523__fcfs_primary_metrics.json",
+      "sha256": "09481542e4f08a757d8500a49956721a70e9d5d03959183d278f3f16bf67a874",
+      "legacy_metrics_sha256": "92baf2c17a54ac67b4197fc1b2fe631eeb4fa1c9cfc40c8c1c8fc4e27e9cc769",
+      "trace_sha256": "9e1cee83ebe9c8705dd8855bcd7f4e3754f7baa8a0181f856fce4a22c5351875"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed524__fcfs_primary_metrics.json",
+      "sha256": "08e74aa050e86fa0ee0074d929b09fae9007505bcd93d1b5c6fb20b2367ad776",
+      "legacy_metrics_sha256": "b040685d3b6f0d3ef5a44b7ceb4d5b9ecac0a515a3b22c87424f2c4babaf8136",
+      "trace_sha256": "08eb83566b9174ed905ef7418d831c91cd7bcb7639b77fc51ad2cf9306b2de5c"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed525__fcfs_primary_metrics.json",
+      "sha256": "caa0915edffa2dffd0742cfb2ddb1de189d6fb79c475f59d9be00387f5ab5279",
+      "legacy_metrics_sha256": "1223977383c17aef0659a361625087f29bfab14dfbb55934f6ad1959905682d5",
+      "trace_sha256": "c77261a7ba40a5b8e3e270772d66a01318954b4ab7e93c0d6aacb8b529f2daa0"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed526__fcfs_primary_metrics.json",
+      "sha256": "4399bc5d014a5b82984b2fa48ce77673faa198d2b359c5f81fa95dcf139fda18",
+      "legacy_metrics_sha256": "c16ad673f6c8f029e68f8ee028ce82d60139a098fd8792f93134448d2a155071",
+      "trace_sha256": "4028fc735eb3a2f95b5468b9215c883083d8e5d2e9c9d0dad8a7c54b7ecc055a"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed527__fcfs_primary_metrics.json",
+      "sha256": "0e08aa5ab92d343a4c3fd5d3bf4b058550a20d870f9c2568409fcbd366e1dd4a",
+      "legacy_metrics_sha256": "765b98c3c4461f4a076cfec36ed8d9f93d1e5399aed5925ebdeb367e6820a065",
+      "trace_sha256": "8339664ca5b6fc660cf575bfda26aa4c9ed43c80aa77ee152136d11043a2d945"
+    },
+    {
+      "policy": "FCFS",
+      "N": 8,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n8_seed528__fcfs_primary_metrics.json",
+      "sha256": "fe525ec6d9163a7e3b841cb254700411963ba1de179b38a6908429a571baef35",
+      "legacy_metrics_sha256": "038ae24d86910ec6c9482721d38a92360a643d72b91f8118cb7d5cadf0247d2a",
+      "trace_sha256": "4d118f004b95bd55a0c7e4d85f397a590faaf2d50b7ebb701c6cf890f494821d"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed509__fcfs_primary_metrics.json",
+      "sha256": "7d3ca3c64fd5dd080a519ed62009e1a8be0a66e2e78bf81f9e20da6819640a97",
+      "legacy_metrics_sha256": "cf8865cc6b689939976850d67c9b882c050bb14f516220553fc39c083fa52938",
+      "trace_sha256": "c8138c80245f673a22a5cc0acfde34f0377cc1a26af7fea047d3209a16bd2a09"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed510__fcfs_primary_metrics.json",
+      "sha256": "cad6130fbcaca8160c3c039a3bdfeb8865930d329e304e3af0335cec990b8afd",
+      "legacy_metrics_sha256": "be8adc16e3d9250404e90ef2896acd88ea3612e9b79fdc36fcc4c7e7f49af854",
+      "trace_sha256": "402ce00b02157d8d88655978a50afe6c63c63c65fbd039e47c3c335ac824f495"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed511__fcfs_primary_metrics.json",
+      "sha256": "4f9b255d3534ba2eec5902dd2c065c8e378e52afc7a2df01509661933c400b16",
+      "legacy_metrics_sha256": "0a47ce8eb080ca6f52877e412706fb2ac57e51bf5c0b46ca809851cbf5e0fc5f",
+      "trace_sha256": "2ec8b4eb38704820e07fc74b31094f66582dcf4e822e81c6ba16f961411ad1c1"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed512__fcfs_primary_metrics.json",
+      "sha256": "6bfd626353be4c284cb81665a98b9c935e96d88284998eb62ceabb3e2ba09bbb",
+      "legacy_metrics_sha256": "dcbdbb59443aaa7d3375eca94e1b23794b0a776983fa3857cce3c254ca6194a4",
+      "trace_sha256": "f269e366e5adf4e6f964c3f694e6b841af73654cb2d810073e018c830a69d5ee"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed513__fcfs_primary_metrics.json",
+      "sha256": "802497da2321b12ba9aa80260f77563339f65681992a6651911302264023be26",
+      "legacy_metrics_sha256": "334e9889279faa9d85bb46ac88beacca6060abf98ff4d823cfd5388fc4378e28",
+      "trace_sha256": "11d8e99f1a8cc67fbcbab65ecb3f6615b564e0a6846437f612f590e3bde858e7"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed514__fcfs_primary_metrics.json",
+      "sha256": "0d00f8b8b1cc10b51c442b980caf114e17ede7519b56fa90001cb22594509e3d",
+      "legacy_metrics_sha256": "d98aede3237bd13da2bc04ed1ad7942632aa3e6863bf190742a85141bf91665b",
+      "trace_sha256": "0c71e9ba35094d997874ec4a246645d12c0d6fb544e542e5d9487fa71d738ca9"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed515__fcfs_primary_metrics.json",
+      "sha256": "4af4521ab902983e9655800b295b2f048a347ff693d99cc70ca854bac163fd4d",
+      "legacy_metrics_sha256": "cad2f07501d7f8234247c09b346f5ee04f5217ba0685f5729ad54812c47f0286",
+      "trace_sha256": "60f9f7c9c7bec55e6527e0b5eddc09cc5ea1d087d977b725c7839a30dd1ba136"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed516__fcfs_primary_metrics.json",
+      "sha256": "eaee1b429f03c274861bba3c99c3a733524197024da2c94e558f4ce96d7dde90",
+      "legacy_metrics_sha256": "344d9c6dfc554155bde0d425bdef1a671cd40b01095c705813e57de2afd8de5c",
+      "trace_sha256": "51e66be8b193a9490ea18d2ce21fddc31c265b446b19c3ba7dd74bff3986b23b"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed517__fcfs_primary_metrics.json",
+      "sha256": "9bdfd23b18c44cac1b636d68f105a31acfb1f89e870111e48fd81e5dce5dacf4",
+      "legacy_metrics_sha256": "f2ef5d3e34fb3e1e751963ab2cfa8278c541dc0175e7245cbc02cc4f25c3be69",
+      "trace_sha256": "af8631cd34f8f255efbc7c3b88ad450e5c2db6c0492c1d762d0ba2321b5bf107"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed518__fcfs_primary_metrics.json",
+      "sha256": "0f69b7dffa8166026c209508e5ba706811024d65f3ab64fc9144382c34e2ddab",
+      "legacy_metrics_sha256": "850c19f2221ce38b7aeabf5e807c818f639beb585d61b457f95d0067adbb5dc4",
+      "trace_sha256": "6c980281a5dd777d1300059d5a34aa06aede0f354981150db5dc7e929d5d778d"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed519__fcfs_primary_metrics.json",
+      "sha256": "d6d61ae08241427699ec48e9ecdbcdd7749e183de7a3c71b3057ade1223f7a56",
+      "legacy_metrics_sha256": "48d2ff9228c3883b22f3dda25335067739015dcb1cc8cfef246a91c138e587be",
+      "trace_sha256": "1461038dade22491e71a62982fe88a6059082d1662747093885aa8a0eeefbca3"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed520__fcfs_primary_metrics.json",
+      "sha256": "3ea4e07dc5ee16b31c674bcd89e3ec25323df74dd66a54d57a727df2fda81fb1",
+      "legacy_metrics_sha256": "7dc4ecc9eba82c9efdaeb7f1139eb0a6c6fe2451054f615e14c3899dc496cd85",
+      "trace_sha256": "0aaaf496011eb5441585587a84ea7aef6064ce4c19df2d2b094c591154e8e38b"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed521__fcfs_primary_metrics.json",
+      "sha256": "e315d80b96e7e25fea0d38d6841009308679662d31645aa062ccb1ad83b9bc99",
+      "legacy_metrics_sha256": "d739856e4c9da9d7d9c4d6d6bdd8f44769982cd8c60f03d5645be21b60e1ec4f",
+      "trace_sha256": "9d73097544ff154fe3c72a8fde3f41a7b0a6435b7af2d0cf7e111affb9d35e39"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed522__fcfs_primary_metrics.json",
+      "sha256": "2dec787a88bbf62cafd1b3d3a6b0a81a9ee35a0edf31d8145e03141d671a5686",
+      "legacy_metrics_sha256": "e78fa4daee02fe613f5d9900efd49042d2b701a48180e7d30bdd2967a21f774e",
+      "trace_sha256": "dedda5d26b81956496b9181c17525fc806a9f7cad0751633302ca2069a31f8da"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed523__fcfs_primary_metrics.json",
+      "sha256": "486ba4e095c7624c4f4279879a398ae5bc55430fc36d23b752a300bfdfbc3f13",
+      "legacy_metrics_sha256": "1e9bcc450344fce2cff0c84f8366859ccd009fdcdfade11c09ea44a791e0165f",
+      "trace_sha256": "acbf06654309bb6e7be59ebe1d96e5f8eb637a95d31c78a278828b110e9d100c"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed524__fcfs_primary_metrics.json",
+      "sha256": "519201e798d5a3c0f4dbd699d8b0b6f0ddc626937c8c356fb6e631e1fe5878c7",
+      "legacy_metrics_sha256": "fa7b103b3dc2b26794b1761d3614e63600d51a1260a5bce5a2d19fd921e78571",
+      "trace_sha256": "be07ec2cbea21680cc82c41e54538142d68c3edbec004cae4adff54d04ada179"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed525__fcfs_primary_metrics.json",
+      "sha256": "d6164d5e5925f93a9e5c60d265fb1a87a297a205c2928703cad67e618f215fcc",
+      "legacy_metrics_sha256": "ce93a8e7a0cff76c3c75195f3c40494ea4cfb7237da4fa22f830380a2b9ac186",
+      "trace_sha256": "f6890ca34ddc4077b358d7e4e5484ae06ea1ac1ccbd15d7768e3304b2edb75b2"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed526__fcfs_primary_metrics.json",
+      "sha256": "ae3cff0c0d271aed9df70d619e0967cd3d27472fea01a2fb101437b5635e749e",
+      "legacy_metrics_sha256": "a613cedef87d5bdc0e49871a1780a91efd74c5af7c05541d59ecaa62e5f9aa18",
+      "trace_sha256": "e1e89ab9038211ecd304e02ce24edfef847c42224174718c671e2d51cb09e1b6"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed527__fcfs_primary_metrics.json",
+      "sha256": "1f2a576c624e5f04070374c9b5c53b1738f303dfaeb0dff587b8e0cc4f5566e2",
+      "legacy_metrics_sha256": "0d2b1b1138d3fd94dbeca30b6eab099a216eb23869136e8220b1e1454b983326",
+      "trace_sha256": "2ccdc7c97a2d69dfb39927d24a13101866bfd98f3ac216482eed2c10413519b6"
+    },
+    {
+      "policy": "FCFS",
+      "N": 16,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M3-primary\\20261022T003252Z_406\\results\\cocotb_switch_top_fcfs_primary_n16_seed528__fcfs_primary_metrics.json",
+      "sha256": "4e1061065608e1ccc153653cd1ba392e76b73fccfe5a25b8d66e03e63f5b6f51",
+      "legacy_metrics_sha256": "934c3a830596e274d452e655cb6d96fabbe20f7068997c662b7b22507d61449a",
+      "trace_sha256": "3436a3576b462a13ef58cf5a260f1b0ceb3b37e7d1cbd5c4661fd95f4a1decb2"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed509__rr_primary_metrics.json",
+      "sha256": "4d8a42ffc7a78ebe5645549f8d0f7565bf5029c803728937e09ff3325dab7b29",
+      "legacy_metrics_sha256": "0a85cc63163dec60c3ef45e1be07c1573706fedca25ecd4e0cf9685be63edec7",
+      "trace_sha256": "98db926f8e630f817d20d462253e09175c35c8983cacb811d0ff25b66b0a477e"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed510__rr_primary_metrics.json",
+      "sha256": "5707ecc6de701b330640656b529be8d64ca4f7a32949a1a0e7630cf566dddd7a",
+      "legacy_metrics_sha256": "42edba6a692ea2cad50c891e119f68ffc51f9dafdd46542aeed6fa528ebb8ca0",
+      "trace_sha256": "a7832271a7131e786385e909ecd2c301525abce002fcd444ac6c006d71e0fc1a"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed511__rr_primary_metrics.json",
+      "sha256": "5e99d41c0bf59566501e447a4bc4aa1a77c122e05353d7fdac1df6638e5bd759",
+      "legacy_metrics_sha256": "d3ccd432ce8e5ddbfa2a72200430d6fff91c358cb49fa8ac1813c73beb17bf32",
+      "trace_sha256": "faceec86a3313831a5d67c2ef0344b603a01c2f1484896aec12dba8c91702c0d"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed512__rr_primary_metrics.json",
+      "sha256": "b3835238a284b1a9b1dc0134b78218848aaf9d17e41fd7929b6aaa33563e7c8e",
+      "legacy_metrics_sha256": "edf17d5cba27f611a2bfb856331e9197676fbe239198e0a1881cea2b619604c2",
+      "trace_sha256": "df931641a3e8e76086d0618c4d3fe2b3f2c594eda15e5b27288623beb56f5bcf"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed513__rr_primary_metrics.json",
+      "sha256": "34218e22e9370b0797f340b35cfa5de8d737f41939189be06b55d7bd14d32c9e",
+      "legacy_metrics_sha256": "645f982221a999930d16ef203e123085d10a5edcfe6741a782dc5bd61bc1fe05",
+      "trace_sha256": "e71496c29367f77ccb5630aab8f30763bc0c1a32716d4f756b581cc0420da599"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed514__rr_primary_metrics.json",
+      "sha256": "7d37932669ba166e217e473dc6f1f4fe4527e5c729adc0c144a50227f80ab5c1",
+      "legacy_metrics_sha256": "14666b1bb162dfafe30a1d1fa693d71cd3af3dece86537df739e856de7c4af74",
+      "trace_sha256": "48464fc225786c640c3db52ee4a32e272bef6e97da2b234c84c6ac3c9a34d4a8"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed515__rr_primary_metrics.json",
+      "sha256": "abc731b2eba34351aa9272a2a6cf0a7a8b1b2adb3759d8ca5f92d157d74b035e",
+      "legacy_metrics_sha256": "3f7a2e2714a0c9957945b4769db00b12dcb97eb32284fc282783785407587d6b",
+      "trace_sha256": "37f4c52477d813a55865c31208a50d4fa74934553c4fca7aaded28ac199833a0"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed516__rr_primary_metrics.json",
+      "sha256": "d404692b7b557ffc9ac25e5c76312efdd1a5c7e14cbdbdd971f594dd213fdb1d",
+      "legacy_metrics_sha256": "7410fefe95c1c8f6dd9540c654080e516140ea7ba43bbd409aff37fa00b0aacc",
+      "trace_sha256": "e9e985f437d06069671b2148b98111bbe47e877ef7c0725f122eada60109c35b"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed517__rr_primary_metrics.json",
+      "sha256": "171b6866e8b915aaec387248fb8b205a0988c50981c3ecc5b4de2c194f080f1a",
+      "legacy_metrics_sha256": "351dea7d2b3d84037ff1b2d06f6b710218f653033e9c389656506df1426423c6",
+      "trace_sha256": "6f8d6c46c92337dd36de4aa6c75ebe5138bc0ae4f94859f7180a6513429c7fa7"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed518__rr_primary_metrics.json",
+      "sha256": "70192730efe719ced619b69936d20353e7c980c1633d0edb9e29260ba87a5251",
+      "legacy_metrics_sha256": "ddff5b2ebaff40595cda334778cd091671fb8c7aa4c6b8ae99227145039fbc8f",
+      "trace_sha256": "87f281e02660b763d3e1fd2e47435b69f6b3b19859d8bcb3793777b41ec1df88"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed519__rr_primary_metrics.json",
+      "sha256": "0bbfa37863c924387e01c87a4c0587b6ad6ff351459acf7b517b2c2ff8ea08ac",
+      "legacy_metrics_sha256": "e8b32dc27a8535d0d40db65d256aa408710ded8b6762ebc84f6120fd08d336f7",
+      "trace_sha256": "6c82d468c5e2f514093148ba2ba54a2fee94e89dbe00ef76fd83e37880d98321"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed520__rr_primary_metrics.json",
+      "sha256": "5351c3b67942b8d2398ca1acafcc7aec1befa974bd7634ebb5104a94b9b2b965",
+      "legacy_metrics_sha256": "e0155d6fa0186174ae7b23a6827ee81b8a9dccec6cbf2f78a90f9171ddc3715e",
+      "trace_sha256": "76fcb67c18a3a8ae5c4e78ed89c0b54ad228884b1c618c4e550be6f3f82b8f8e"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed521__rr_primary_metrics.json",
+      "sha256": "82082f64b212918a55fbd22baccb20f8387b562f0dd50f0e67dccbbbc70f0e76",
+      "legacy_metrics_sha256": "48db4d01aaa3865604be2513f7b552a7cc1acb3f5ae4c69afe0a582edd683082",
+      "trace_sha256": "911f8bb0908dad22019ebd410b242afdfa39da59c6c0bf9a7e7fe24682d7162f"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed522__rr_primary_metrics.json",
+      "sha256": "4b9586b2a08a8befe8c2bfdd246c7eddabf64afef7fdbfbdcdfb80f2b014afe9",
+      "legacy_metrics_sha256": "7ae101edb55c2c97b4eac77bf03af80141e80a47a9df7ccedf095e394b7f7347",
+      "trace_sha256": "fc7297d9974b61402c6059830201c18a81c04145cafb1d7b30842853de886962"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed523__rr_primary_metrics.json",
+      "sha256": "f100cd37e0a23d564397833af8cae11e691813a02662383130fb7194200f0852",
+      "legacy_metrics_sha256": "8225cb5f673f77f0ac4b51d914668ebb2b831ed983b2568a60affa9e46d30879",
+      "trace_sha256": "8738434dee919d1ef9e03fdb8b8035e879f26fabc0f404aa1c32bae7c4b253a5"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed524__rr_primary_metrics.json",
+      "sha256": "1bbd339fce5496114d97c0fa752a1f9bc4b8baebb8127b5d98f773eecd14ef83",
+      "legacy_metrics_sha256": "30e3ebf39522a2fedcf4dbd204a7cb779142f8c7fd4f0f090073e52ccef9fe55",
+      "trace_sha256": "e26506334458d951ca175798609ad167eb5a899d424ed0bd96856ee549d0290b"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed525__rr_primary_metrics.json",
+      "sha256": "0ac6dff6df2378c1f6743d39c6cd912dd4eb03c08beb37cba86ed6d5dbde177d",
+      "legacy_metrics_sha256": "81c8221e9b96998f110c0f0057f4970d1b3ff34488bb59655bf949470479ebe7",
+      "trace_sha256": "98e14e4d3432a98e0b0fe0b17fb4354230b9f8f6c1282bdb8f182f2a6dedd2c5"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed526__rr_primary_metrics.json",
+      "sha256": "d3e94f1b7f38edef65dda51076b13dc217e04b422f85ed3dd0c3e6e73846ff5b",
+      "legacy_metrics_sha256": "b0c6772d2a0434d3e49f4fce147d777a89db73480f81d496ea423049ea591849",
+      "trace_sha256": "56a57a2bc48935d3b1a982d810f2fe67a22db50a7dfd0424a17ba5587644557c"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed527__rr_primary_metrics.json",
+      "sha256": "b7aba8f59aca99cabac58a001f839ab0b339cccb15050521380f72fedc63ec8d",
+      "legacy_metrics_sha256": "8bfa110cb8d3a4d28b1e1527bdb4c48193d2b6e6897034726c6cdc78b74161c3",
+      "trace_sha256": "7445affbfde9f389e53d49e4e1205675e881555f7b34d52fbfbfbe305e0edded"
+    },
+    {
+      "policy": "RR10",
+      "N": 4,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n4_seed528__rr_primary_metrics.json",
+      "sha256": "32b10249e4e4da8a63288b4710290b4e083d2e332d69555489ceb57a5c52c3a5",
+      "legacy_metrics_sha256": "ac50934ad19bac08f69f768e7f1c0114e577940393f36a814c8cb43e89a66df8",
+      "trace_sha256": "7378d7123efe8d26f022702ff58b3ec792c2aa604ed821c63a6c99ba7a71bbae"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed509__rr_primary_metrics.json",
+      "sha256": "86d21f4eabb8be0a53ca99a3cffcc19e1d76f9219f43c07f2b4be0d48d85f54a",
+      "legacy_metrics_sha256": "0433678d3b097934d31c380d52480680892ac2957df8a45fac7a550bcc274751",
+      "trace_sha256": "132db6aefeebdb6a5e016fe313f2be3465e3006ce6feb7d07fbcf5edfc51c77a"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed510__rr_primary_metrics.json",
+      "sha256": "32ad15c2feaae08130d4a4e53ca6e2a81ae76908f0f8717cc61c241b2dce79bb",
+      "legacy_metrics_sha256": "c8e62fca620e380f1bf2b4e7f11a61d4982e119f30f5b2c6c14683219664a338",
+      "trace_sha256": "00ba7d2ca6e986c9bd76097f474e69b680cd12f57fd49eba889a6648a3884cb1"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed511__rr_primary_metrics.json",
+      "sha256": "0855e5f557677314f76feff3b47c769b2b86d41ef9ac9e5b02049c853307988c",
+      "legacy_metrics_sha256": "4a32738577fd4c44910dfdff1597124987851f77f51ca8f07bd86764a7d6a7a4",
+      "trace_sha256": "18eca9b6a98ecf4c7b0f53227c240e64b6ee8efe2751b854c0229e05c59e738d"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed512__rr_primary_metrics.json",
+      "sha256": "c1b92e4aa3ed8af262593fc927aab55af3883c3c2f165771ec494ac9f57e21bc",
+      "legacy_metrics_sha256": "251eec14a72f0194ca9eeab5d6d7776310c43c08478bced5bc0f59e5fbb98105",
+      "trace_sha256": "88d92eef7b8692ffd1a0edf446526e54bcf2fc2afc019861d52650e000bb18e2"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed513__rr_primary_metrics.json",
+      "sha256": "1cae993dc9b0a44a9b3d601f97c4b038c2bb1a8c63308af428f613ccab2a678f",
+      "legacy_metrics_sha256": "6e444ee177aec406bf4fdd1e9aafd0678efcb3918948854c7e28955023e6a4f7",
+      "trace_sha256": "5a798215821e0d8e4ecaec9e9fb9140ae8e7ca75a262377b69fb0e0d706f3863"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed514__rr_primary_metrics.json",
+      "sha256": "8f9968dcd3ac90fe6cd0849991a667c4bdd5fd0d7373a5f7de11f6d618930323",
+      "legacy_metrics_sha256": "182823d91cd1d6550258de325416c29585a410637b3faa16bd4b8c2dd76da760",
+      "trace_sha256": "4783f42a0b6c87079a75e39d59c2a7c0664307d8594ea5aebece1d65ee712e0f"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed515__rr_primary_metrics.json",
+      "sha256": "e140ab6da5375aea4cd88da49d27331aa064c79409616353fd53ef73145bc830",
+      "legacy_metrics_sha256": "12978586f03c0915dffef3b6c2351db77654dae7e739e32dda492f51230e2320",
+      "trace_sha256": "3f5eb9c9dbb0bafef1baa2d7646051884afd27f1087ba986d6f82397d34c3ab7"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed516__rr_primary_metrics.json",
+      "sha256": "3ba6aef4a7c944259ab9b8322aa4b84a6a335e0480254cc1e3e46339b2f9b14c",
+      "legacy_metrics_sha256": "e72dc8095b1712cf315e7e12a33a59be097dd0a9d63e4c1eb142dcdf30b55007",
+      "trace_sha256": "72a736085202dbe1a635c1a802936de7a77c7770dfb97c4a5985e1c1efa09619"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed517__rr_primary_metrics.json",
+      "sha256": "b58e646cff6317a8ee6854c8cd79877721ee543ad6afb18ca759c78097d9d27e",
+      "legacy_metrics_sha256": "089e7b1328f82981c6a9509b0d9cd6848fae4e4b1694410de1abf0a1405075bd",
+      "trace_sha256": "f1e53e18123dc5a51c089097f12274627dd3f7bf75076a3d0156b1dd5683be2b"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed518__rr_primary_metrics.json",
+      "sha256": "422692a07426422fab51837143c9968fbcfe63de696a3f3b3d1ec9c89f9b42c3",
+      "legacy_metrics_sha256": "f4dae0403e715d225b803cd0cb83cc8fef643f39509f46f60e924cf120aa93d8",
+      "trace_sha256": "ae581f86bfa2d6bf9f467ee324744a311edf38bf3748502f26af06e0522d97f3"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed519__rr_primary_metrics.json",
+      "sha256": "e3d12fed093297b781f83336a9e974ffb9acdded299418a000d9ef1f329e2f97",
+      "legacy_metrics_sha256": "ad13ffda0be8121e60bfabf487d7407ac6cc4d50b845efca22142ad4b4f9430e",
+      "trace_sha256": "00fc228e5bbc82bc8ee36d1db74cb9f0512c54aa823ea42985f6c57aa150d7c1"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed520__rr_primary_metrics.json",
+      "sha256": "443078ad6dafd561191aa2ec7e22d43e7ab2e2e9765ab8eb0c4490fc95ab4d8e",
+      "legacy_metrics_sha256": "61253758a437d3587b0daeb414831f2143f59531ed1c9f2bf5ad31a5fd027adb",
+      "trace_sha256": "919c3e1cab83a2a39b26cd79a72c3d3a18ee9ebc77133d6496358396496f04c0"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed521__rr_primary_metrics.json",
+      "sha256": "ac5013a347d5720e15b282ef37f22a9b69be86d8a9d239ac252b1aebc786136d",
+      "legacy_metrics_sha256": "240ff1ab0ef7838755647be5d00d1fc884fa517077fce182304ca3e60c590847",
+      "trace_sha256": "865abf8f8b116d2aab8e03b7f158315e59469a9159a94b02f4294498395d3978"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed522__rr_primary_metrics.json",
+      "sha256": "c3fa72b5998093db41f46c614d5fc3f145977431037b20c454c8daaf2aa8dc6d",
+      "legacy_metrics_sha256": "3d1f09a00ff50a532dbd551bc2b60a5068f4bcdc5265ba9313ee657e32fe2019",
+      "trace_sha256": "956265613d5e84d9bfd4fda918db3dadd0f2473055d4e9bfe9554b9a6ed5e7cc"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed523__rr_primary_metrics.json",
+      "sha256": "88a25534cc723363bc6b00c3089105a813aba10dab051dcad62322c8c8f661aa",
+      "legacy_metrics_sha256": "a9c56de56a4b99c0d3b56854a4c2085d445eecd9fb7e36afe777e40f13ee1fcc",
+      "trace_sha256": "9e1cee83ebe9c8705dd8855bcd7f4e3754f7baa8a0181f856fce4a22c5351875"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed524__rr_primary_metrics.json",
+      "sha256": "334de5770ff390deaa91845190458f2c89300621fe2f3780b42230ab990f51b4",
+      "legacy_metrics_sha256": "1503170a1ee8f94dbb29ca7bc934e689987e018fea27e5f36219d7dd6b69b03d",
+      "trace_sha256": "08eb83566b9174ed905ef7418d831c91cd7bcb7639b77fc51ad2cf9306b2de5c"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed525__rr_primary_metrics.json",
+      "sha256": "8443cc17c30bbc92398e91551b85772b6ec3509e9db4eaacbfc093517c4b00d4",
+      "legacy_metrics_sha256": "5d4fee6bc45d2c91b5ef48914c35c8de693ddb26345add8457b686010b0d2161",
+      "trace_sha256": "c77261a7ba40a5b8e3e270772d66a01318954b4ab7e93c0d6aacb8b529f2daa0"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed526__rr_primary_metrics.json",
+      "sha256": "7310d1edbcf8845e723ba3e8c1623b5c9cbc5e8820c9fd2ef35a7716a4842ddf",
+      "legacy_metrics_sha256": "f59f851f7435b6fa15cbc4915305ed14cd096f298e51ce4a48455d0972f1f557",
+      "trace_sha256": "4028fc735eb3a2f95b5468b9215c883083d8e5d2e9c9d0dad8a7c54b7ecc055a"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed527__rr_primary_metrics.json",
+      "sha256": "3b215903caad3767dde7c404a68aa82d21f47c390859ff6b2746c25cd3f2448b",
+      "legacy_metrics_sha256": "58dace446447c37123fc15581ecd1a1ec344a926b75223a77aaa39e4f907644b",
+      "trace_sha256": "8339664ca5b6fc660cf575bfda26aa4c9ed43c80aa77ee152136d11043a2d945"
+    },
+    {
+      "policy": "RR10",
+      "N": 8,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n8_seed528__rr_primary_metrics.json",
+      "sha256": "4bd764e6e161d2a483e72f321e9e768b7f55bcd929adbec0d6d34232e27a78f8",
+      "legacy_metrics_sha256": "b07e75bd4225994f48ca8da28ccbcbe86ffdb0f6ceb73229b974cffe34b406a4",
+      "trace_sha256": "4d118f004b95bd55a0c7e4d85f397a590faaf2d50b7ebb701c6cf890f494821d"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed509__rr_primary_metrics.json",
+      "sha256": "8278d7b1d262ac6559bb96148f87c6e11896840be9ab1ca21af8ab9ad9dd60f1",
+      "legacy_metrics_sha256": "dd3afd65e47274dd76e438cb24eaed7caf013611d15d21c80deb02326a950e82",
+      "trace_sha256": "c8138c80245f673a22a5cc0acfde34f0377cc1a26af7fea047d3209a16bd2a09"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed510__rr_primary_metrics.json",
+      "sha256": "0acd91b65d28bfdfc4e63c93dac04947f5e83b49d9e005c44d0555240130cdf7",
+      "legacy_metrics_sha256": "bc58c353ef7b4fc81447dfdb579b6d688505af7dbdd647caadfd4babdd1c7aed",
+      "trace_sha256": "402ce00b02157d8d88655978a50afe6c63c63c65fbd039e47c3c335ac824f495"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed511__rr_primary_metrics.json",
+      "sha256": "3d1035c83fe7299ba05d27e909eddd7e5e3f96af9f963f9d3275c0fcc9585489",
+      "legacy_metrics_sha256": "777bd78fade10e05aaa452ed050e4cdab60ac7902e1fe70ebfe79a5fdb904435",
+      "trace_sha256": "2ec8b4eb38704820e07fc74b31094f66582dcf4e822e81c6ba16f961411ad1c1"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed512__rr_primary_metrics.json",
+      "sha256": "a8771c543a3cabb992e6ee1b126139423fa7354325d982a97a8262ad834d3939",
+      "legacy_metrics_sha256": "45c98173810ced002e12604a91c12a4c9139325c3243fe3f4a79c365049026c8",
+      "trace_sha256": "f269e366e5adf4e6f964c3f694e6b841af73654cb2d810073e018c830a69d5ee"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed513__rr_primary_metrics.json",
+      "sha256": "d4a1a9cc2dc60150fa34c9e6da9f49b9375c91db4704d8852ae40f01c2d39ba2",
+      "legacy_metrics_sha256": "7074a5cc61c2396964781c9e152ea814df98343cadaec34cf9731680e7fbb643",
+      "trace_sha256": "11d8e99f1a8cc67fbcbab65ecb3f6615b564e0a6846437f612f590e3bde858e7"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed514__rr_primary_metrics.json",
+      "sha256": "53c6d14a41cd75b6f3bbfa1d725086383b7259c2e3e9a47da9c49bfe35e21af0",
+      "legacy_metrics_sha256": "5543bce7a61a255c206317dffc89d505ef4bfa9ae88b76d5b1a94af34cbe29c0",
+      "trace_sha256": "0c71e9ba35094d997874ec4a246645d12c0d6fb544e542e5d9487fa71d738ca9"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed515__rr_primary_metrics.json",
+      "sha256": "22d2ccc879ef152782468ca5008608358cfbaa1dd89648e52e45d8095386433b",
+      "legacy_metrics_sha256": "ce43162342bf3b6cf848a83e81e19f341da87296e61f968f3173abe782052e9f",
+      "trace_sha256": "60f9f7c9c7bec55e6527e0b5eddc09cc5ea1d087d977b725c7839a30dd1ba136"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed516__rr_primary_metrics.json",
+      "sha256": "f6b885ad1166ec0563717f57e3e39d121c756c8c71780d88a94c2dea77d268cc",
+      "legacy_metrics_sha256": "b335a36bac727b99e9f094093cb2ece17c91cefebd6f710a2870f14c0d4149d9",
+      "trace_sha256": "51e66be8b193a9490ea18d2ce21fddc31c265b446b19c3ba7dd74bff3986b23b"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed517__rr_primary_metrics.json",
+      "sha256": "cc04c941981ef0edb75bfc68d7282ef85488053e9ed00aead8a47b0912178228",
+      "legacy_metrics_sha256": "a138fed1f312afc01af48c476e8fcefce3ca139470357ac843086cc57ababb25",
+      "trace_sha256": "af8631cd34f8f255efbc7c3b88ad450e5c2db6c0492c1d762d0ba2321b5bf107"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed518__rr_primary_metrics.json",
+      "sha256": "c3642fe1765d806d695cb3f3044e7472ecc8be9225f951e4932c96700b9bce6c",
+      "legacy_metrics_sha256": "28ef326af516e351d04f2fd7997bf61fe53e807af531637e77c7239ee0e5babe",
+      "trace_sha256": "6c980281a5dd777d1300059d5a34aa06aede0f354981150db5dc7e929d5d778d"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed519__rr_primary_metrics.json",
+      "sha256": "cb7d424f9814fcc42f764e003bba886d2b921d80e5164dd5393d96b74f8789b9",
+      "legacy_metrics_sha256": "140448229b3543c2c7399cfc29701e183fdb74a590c491a74b69200b1e992a50",
+      "trace_sha256": "1461038dade22491e71a62982fe88a6059082d1662747093885aa8a0eeefbca3"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed520__rr_primary_metrics.json",
+      "sha256": "22ab51834971d29ce54dd90ddb6ffd79f2b5c17b1aceeef424cecc0ea6596614",
+      "legacy_metrics_sha256": "b9fc5178018053232faadd665fbf83f7131f9b4d38237c626e7f7af4640be78e",
+      "trace_sha256": "0aaaf496011eb5441585587a84ea7aef6064ce4c19df2d2b094c591154e8e38b"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed521__rr_primary_metrics.json",
+      "sha256": "4a6c3229080317c02b813c08fb31ef3be17c9296b813d6bb1196953e2b1d7df8",
+      "legacy_metrics_sha256": "0b2356fa927321bcfd2fe507a037d3419e6c00f788e1dc12b68057def3d245f7",
+      "trace_sha256": "9d73097544ff154fe3c72a8fde3f41a7b0a6435b7af2d0cf7e111affb9d35e39"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed522__rr_primary_metrics.json",
+      "sha256": "8620614d48c3769ec8cc328a3a97a77ff123fb3241293b8b3fd53f9991d8886b",
+      "legacy_metrics_sha256": "adf946b9cd604012d8e941957919d53c02e1b9bebe6214348e171680e4f93dc9",
+      "trace_sha256": "dedda5d26b81956496b9181c17525fc806a9f7cad0751633302ca2069a31f8da"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed523__rr_primary_metrics.json",
+      "sha256": "9affc49df1ed99ecbbd047de6690c0389714b98e2ad6514c3f8df4fbd7341a71",
+      "legacy_metrics_sha256": "67e0689594d3b844e8b4eb966f05f06c9f693cbc7a595db158140cfd0b67023f",
+      "trace_sha256": "acbf06654309bb6e7be59ebe1d96e5f8eb637a95d31c78a278828b110e9d100c"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed524__rr_primary_metrics.json",
+      "sha256": "9656c6d67bed3dcdeff0815fbc24716a693455f57d9b1653b8188f8b42b9ea4d",
+      "legacy_metrics_sha256": "7742a4e078dd97b3bd67fac86d5efecfa2ab91ca0cd4fd087a9104611a38f004",
+      "trace_sha256": "be07ec2cbea21680cc82c41e54538142d68c3edbec004cae4adff54d04ada179"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed525__rr_primary_metrics.json",
+      "sha256": "e8b663afa5a4bbb6952d61b511285e46c47e6d9b2b19594a56aa141e5bc60313",
+      "legacy_metrics_sha256": "7407e10c10506eb7cb3d0cf70599a1a46e1ab1fde8ef109410b6896552faa1dc",
+      "trace_sha256": "f6890ca34ddc4077b358d7e4e5484ae06ea1ac1ccbd15d7768e3304b2edb75b2"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed526__rr_primary_metrics.json",
+      "sha256": "9133419214b3535eb5058ccfe9300dcc9ac49b47884ff1d6900790ef78b04338",
+      "legacy_metrics_sha256": "b654549e032f0996a5a292d6359f7c0e5544709e7fb820f48c2338b2dd191e0c",
+      "trace_sha256": "e1e89ab9038211ecd304e02ce24edfef847c42224174718c671e2d51cb09e1b6"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed527__rr_primary_metrics.json",
+      "sha256": "2a574e80fcaddefc76882b7c2e0f3b846092bbc3e3d116f13f09c1c2fcdf39b1",
+      "legacy_metrics_sha256": "c82883eef18b314ebee4255dd95de2656b7a15bf74f5eb1366ffeb43bca01968",
+      "trace_sha256": "2ccdc7c97a2d69dfb39927d24a13101866bfd98f3ac216482eed2c10413519b6"
+    },
+    {
+      "policy": "RR10",
+      "N": 16,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M4-primary\\20261022T003252Z_407\\results\\cocotb_switch_top_rr_primary_n16_seed528__rr_primary_metrics.json",
+      "sha256": "6702369a11b31f8e374c7b76a259c4d71f37a7b663c70604cfd3385d3e702e49",
+      "legacy_metrics_sha256": "440649be6f303f200b2931789161ed8fc4df35b33f159c553fff6be058d70955",
+      "trace_sha256": "3436a3576b462a13ef58cf5a260f1b0ceb3b37e7d1cbd5c4661fd95f4a1decb2"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed509__fai_primary_metrics.json",
+      "sha256": "acead863801071b0c5f9ab63728106918b58e1a8d3ce634346edffead17c8d1f",
+      "legacy_metrics_sha256": "6b03c6b7ab44608da179b2a8c0470c7f4ccf020801d12d80678a8f8ed38790f4",
+      "trace_sha256": "98db926f8e630f817d20d462253e09175c35c8983cacb811d0ff25b66b0a477e"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed510__fai_primary_metrics.json",
+      "sha256": "b8432a3ab28e932013abdc2f24243e2de2f97246280893cdd616e9178fc5da0c",
+      "legacy_metrics_sha256": "9cf15403566cde63bc2e9cc8f685606e5f660ae22cdcc458a5511079c382b39f",
+      "trace_sha256": "a7832271a7131e786385e909ecd2c301525abce002fcd444ac6c006d71e0fc1a"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed511__fai_primary_metrics.json",
+      "sha256": "6b639e57f763d845806d7fb6d1c1b4cc82fd9cea262be176590a959fbacc3974",
+      "legacy_metrics_sha256": "18a86ee4ab08e19872309ecc364e28007a4a3083b7b8ab96d1a156c38a66a47a",
+      "trace_sha256": "faceec86a3313831a5d67c2ef0344b603a01c2f1484896aec12dba8c91702c0d"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed512__fai_primary_metrics.json",
+      "sha256": "4f2411463f07d08deb4ae647649b80b65df031d87afb30c343a56222b5e197f0",
+      "legacy_metrics_sha256": "e0753c6b72eb0be908440693e8b4d17a92d003b3ef4fa769a233ddc47f6a316b",
+      "trace_sha256": "df931641a3e8e76086d0618c4d3fe2b3f2c594eda15e5b27288623beb56f5bcf"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed513__fai_primary_metrics.json",
+      "sha256": "5ffedd51643741e7651ba2169b51d30b944f42311d4505e0d156d78a93d3ac14",
+      "legacy_metrics_sha256": "7adaad0646f0ad628eafdec074e21fee1cb23496511cc9c440cda686f96f1126",
+      "trace_sha256": "e71496c29367f77ccb5630aab8f30763bc0c1a32716d4f756b581cc0420da599"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed514__fai_primary_metrics.json",
+      "sha256": "b19dcaf88ec34ccc05f57e87cf5b439b037a121d225f7359c82b2f2aa70da58c",
+      "legacy_metrics_sha256": "a1ec7f0a96d6b8bcc31623a4b070cf12e66070a562e01bbd03a3ad69ae89799e",
+      "trace_sha256": "48464fc225786c640c3db52ee4a32e272bef6e97da2b234c84c6ac3c9a34d4a8"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed515__fai_primary_metrics.json",
+      "sha256": "ac7363393eff0990a79d15d2dcf525775a27d4cba400ed77de946ad36367cc0d",
+      "legacy_metrics_sha256": "89f98fd5fb8cbfb09f92597414c18dbd38fd9607e0964d6252bd8fa5ba029c8d",
+      "trace_sha256": "37f4c52477d813a55865c31208a50d4fa74934553c4fca7aaded28ac199833a0"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed516__fai_primary_metrics.json",
+      "sha256": "8be98cb3238bd013fd11d47103bea203418d5fae125c2dc5758df7bd80726a27",
+      "legacy_metrics_sha256": "a7d0e68503ba625a3ddcafd04d93e5a557d21a5a398599c346a1441f9979f1dd",
+      "trace_sha256": "e9e985f437d06069671b2148b98111bbe47e877ef7c0725f122eada60109c35b"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed517__fai_primary_metrics.json",
+      "sha256": "43841b30e45f419d7adc21be4cbca2a9a3960cb1cf7d84542df184aae2d51d3a",
+      "legacy_metrics_sha256": "d16c4fb6dffc5a2a41c41805619d3abb53aae38d0fb02af52689ba629bb42175",
+      "trace_sha256": "6f8d6c46c92337dd36de4aa6c75ebe5138bc0ae4f94859f7180a6513429c7fa7"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed518__fai_primary_metrics.json",
+      "sha256": "4e7b6cc152f33d964b990e90b41a3651d88abd6ea3eb974dbebf3cfac5e96b32",
+      "legacy_metrics_sha256": "2844ce10e1a4bb5741435ac5c372a3d32ff6fdef9d3955455f3f282fab7766cf",
+      "trace_sha256": "87f281e02660b763d3e1fd2e47435b69f6b3b19859d8bcb3793777b41ec1df88"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed519__fai_primary_metrics.json",
+      "sha256": "81a2f9d279f1571ad6afc06b5513193d76dd7fa25f27a671334f030f82279c1f",
+      "legacy_metrics_sha256": "0b6f01da488149c0d651cd6538889fab7bbc3e9c55d3a6f375cb649060b01069",
+      "trace_sha256": "6c82d468c5e2f514093148ba2ba54a2fee94e89dbe00ef76fd83e37880d98321"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed520__fai_primary_metrics.json",
+      "sha256": "a10c0fcdb0cc87df1b6a47098428c1379afff3ebb8757f887d37d3d2eea952d6",
+      "legacy_metrics_sha256": "bae7d88f892c81f095a6482c4e465e625dab88e2396cc80fb44938758f795e05",
+      "trace_sha256": "76fcb67c18a3a8ae5c4e78ed89c0b54ad228884b1c618c4e550be6f3f82b8f8e"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed521__fai_primary_metrics.json",
+      "sha256": "4936ca6d52f9e2266c2e540c2ad54efa93ab2edca67434c2ab526e8d41cf7085",
+      "legacy_metrics_sha256": "7a370b825f9a607a28716bc9eafbc42005cbfb4c07c9a3502cd29e3c6333e6e5",
+      "trace_sha256": "911f8bb0908dad22019ebd410b242afdfa39da59c6c0bf9a7e7fe24682d7162f"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed522__fai_primary_metrics.json",
+      "sha256": "8073a735235d57ffce29c49c28f6a423414274fddaea0b634eca43f057fe5ebd",
+      "legacy_metrics_sha256": "9fd823cd5c036ee827fa70d62458b661db28eb395342c428eaf4a49de73dbb70",
+      "trace_sha256": "fc7297d9974b61402c6059830201c18a81c04145cafb1d7b30842853de886962"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed523__fai_primary_metrics.json",
+      "sha256": "8751f04ac19c70ec1c7589643debf395f330ecc79e26c136ba7c1cee3de9ce3c",
+      "legacy_metrics_sha256": "739bbf4785e632c1f08a06b000001d4b811f9cdbdf5ca909253260d06039e785",
+      "trace_sha256": "8738434dee919d1ef9e03fdb8b8035e879f26fabc0f404aa1c32bae7c4b253a5"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed524__fai_primary_metrics.json",
+      "sha256": "e6aab5db0533214cb94dcac7bd3c46c6864c3890251cf51a8b0d1a013f92738a",
+      "legacy_metrics_sha256": "64a9fd11879162cbdbae1c2a61f58ec3e3bcbde6ce73be931bf9253907e7a4f2",
+      "trace_sha256": "e26506334458d951ca175798609ad167eb5a899d424ed0bd96856ee549d0290b"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed525__fai_primary_metrics.json",
+      "sha256": "7e32fcbd44d05ef08314e7740fcbc59d2d83119b1e5c58214f29627d5a8e6769",
+      "legacy_metrics_sha256": "08c59132e07eb702cddd53003e8b71117b56746e71ef73233bd225f604da029d",
+      "trace_sha256": "98e14e4d3432a98e0b0fe0b17fb4354230b9f8f6c1282bdb8f182f2a6dedd2c5"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed526__fai_primary_metrics.json",
+      "sha256": "db5473374c647c9ec14ca4dd6b209e6f4b75493a79a5f04d04857f56b0c44b6d",
+      "legacy_metrics_sha256": "706f67086769d938f4d3bfeb46b5871e4d51704e5f745e2d66cb4b16e93dde86",
+      "trace_sha256": "56a57a2bc48935d3b1a982d810f2fe67a22db50a7dfd0424a17ba5587644557c"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed527__fai_primary_metrics.json",
+      "sha256": "134a930ab749751a8d7145c9445fb748db1a84f381ae88fd00edaf610eed2902",
+      "legacy_metrics_sha256": "de0775400578fce7f8717752ce8f421586f94267a9436ae44470a268f125b750",
+      "trace_sha256": "7445affbfde9f389e53d49e4e1205675e881555f7b34d52fbfbfbe305e0edded"
+    },
+    {
+      "policy": "Main",
+      "N": 4,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n4_seed528__fai_primary_metrics.json",
+      "sha256": "9b632ba89f8dd179254355f1c90b9e0ed6c22e9e91bdb72d246d86f7203e7f64",
+      "legacy_metrics_sha256": "dcdfab35c575110cd177496e01f85b748793235d16ecd0b0cae34b9181d65bc0",
+      "trace_sha256": "7378d7123efe8d26f022702ff58b3ec792c2aa604ed821c63a6c99ba7a71bbae"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed509__fai_primary_metrics.json",
+      "sha256": "3c036d9979a73f821e869305fe8b95886b67d6fda99f3d44ec0a0cc374df34a9",
+      "legacy_metrics_sha256": "e1ee662585345f4c6c9b6f6a67bae8fb250abac4041e4e86629e9b651832185e",
+      "trace_sha256": "132db6aefeebdb6a5e016fe313f2be3465e3006ce6feb7d07fbcf5edfc51c77a"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed510__fai_primary_metrics.json",
+      "sha256": "6f9cb6bc261978bac41758eb122c9b107614224b17cc4c13fdc974d8117de19c",
+      "legacy_metrics_sha256": "28a9a6416b4cd5650a3f9441c56530224675752170ca1b31be3f1cbe229097cd",
+      "trace_sha256": "00ba7d2ca6e986c9bd76097f474e69b680cd12f57fd49eba889a6648a3884cb1"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed511__fai_primary_metrics.json",
+      "sha256": "cfa4927c095531c28885b2f6ffc123b5b7d11fcd08644dee0f340fbad4c5ddfd",
+      "legacy_metrics_sha256": "3a4eb34823e1e4d5a3c8d546162cbbc95146961553dcd91898e94620bcc434f2",
+      "trace_sha256": "18eca9b6a98ecf4c7b0f53227c240e64b6ee8efe2751b854c0229e05c59e738d"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed512__fai_primary_metrics.json",
+      "sha256": "56e46fcb38fc383d38e2cab4c1bc6b9f843f8278ae2bb630e6659ed789c3655c",
+      "legacy_metrics_sha256": "fa145c584d2084524bb009b0b6d0fcd03137301b113627802a32638034deafb5",
+      "trace_sha256": "88d92eef7b8692ffd1a0edf446526e54bcf2fc2afc019861d52650e000bb18e2"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed513__fai_primary_metrics.json",
+      "sha256": "8c2e7db168c8e318fc8e4c99773d4fa0d703473d4550ac35c3c1a2242f9ad665",
+      "legacy_metrics_sha256": "47f196a8905b61a7bdabb7aeb3d6c4b1d6ff8f500ba0df4f016ae66b43c790d2",
+      "trace_sha256": "5a798215821e0d8e4ecaec9e9fb9140ae8e7ca75a262377b69fb0e0d706f3863"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed514__fai_primary_metrics.json",
+      "sha256": "1a9a45ab3b4738069ed78d5854827fb08e1961da3ffab3b8fcb7ba56a719fe22",
+      "legacy_metrics_sha256": "d3fddd4ad471f0197cbed3c2f2029052dd973db391604cdcd76d4726b0f43a7e",
+      "trace_sha256": "4783f42a0b6c87079a75e39d59c2a7c0664307d8594ea5aebece1d65ee712e0f"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed515__fai_primary_metrics.json",
+      "sha256": "93df733a4c899160489f2681764bc173f68c1fea659d2019a5a004ae714e7d64",
+      "legacy_metrics_sha256": "d9b4a1c5a5a96252aa1c215fe224a7c70a73360ef11e0bf355158cb405b57662",
+      "trace_sha256": "3f5eb9c9dbb0bafef1baa2d7646051884afd27f1087ba986d6f82397d34c3ab7"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed516__fai_primary_metrics.json",
+      "sha256": "5e946487b6816e9730d560173c3bb717ec0f5674a75907e4e1b5329f99ec6047",
+      "legacy_metrics_sha256": "0e86b3f0fdab118d3a77810539e5e2a6f3c9fb73946138c1fd006ccfb70b2841",
+      "trace_sha256": "72a736085202dbe1a635c1a802936de7a77c7770dfb97c4a5985e1c1efa09619"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed517__fai_primary_metrics.json",
+      "sha256": "e9cbd7c35de3f2fc5f21c2cbe4f21fb766dadb6d4c191c379bafbee22d88b86a",
+      "legacy_metrics_sha256": "8951e2af41708624fefceb9ea8d87ed8674df915558b6040553b7a2fd7273473",
+      "trace_sha256": "f1e53e18123dc5a51c089097f12274627dd3f7bf75076a3d0156b1dd5683be2b"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed518__fai_primary_metrics.json",
+      "sha256": "da510ee6329c0675ddf0c5d7532e6ff64edfb66578fc9460618e08986db2cd0f",
+      "legacy_metrics_sha256": "04e10d4c6fa0ea00a0b5a5bb55fc48c003a260d4a298dcb70d2bc0422f0bbd56",
+      "trace_sha256": "ae581f86bfa2d6bf9f467ee324744a311edf38bf3748502f26af06e0522d97f3"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed519__fai_primary_metrics.json",
+      "sha256": "525a811c46077286457865e7f5251e3e6459e602f63f0d8e8e9ac6a04dbbd691",
+      "legacy_metrics_sha256": "bf80e96b7d41f70549a9b14acb7f5264129394fce791bc998295e7e06a1001ca",
+      "trace_sha256": "00fc228e5bbc82bc8ee36d1db74cb9f0512c54aa823ea42985f6c57aa150d7c1"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed520__fai_primary_metrics.json",
+      "sha256": "0fb70fa46a2bfddd3da1caabb8f13598bb86b59bed77d531c52d0c162801b78f",
+      "legacy_metrics_sha256": "de56acd547944c9a9b36ca17ad96e178908d1a3d88e418dbae9bfd7a29993517",
+      "trace_sha256": "919c3e1cab83a2a39b26cd79a72c3d3a18ee9ebc77133d6496358396496f04c0"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed521__fai_primary_metrics.json",
+      "sha256": "e517fd400ff8aff1089b3f81d32a04d597d7470edc2a8527227cc70dc0b69a3a",
+      "legacy_metrics_sha256": "27233800775150c6d6c3e0ae16563f6bdaa4f7f53fcfddc0e17970016e6868c4",
+      "trace_sha256": "865abf8f8b116d2aab8e03b7f158315e59469a9159a94b02f4294498395d3978"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed522__fai_primary_metrics.json",
+      "sha256": "1ead5635db18bb6576d074699c1ed3cb43395425fd464557d2a5ca4bee2486de",
+      "legacy_metrics_sha256": "989d6c213dbb49630c634c5e94c930fc846cc9fb482b5b3fc2082c3c7930c0ee",
+      "trace_sha256": "956265613d5e84d9bfd4fda918db3dadd0f2473055d4e9bfe9554b9a6ed5e7cc"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed523__fai_primary_metrics.json",
+      "sha256": "445cf0955e94a002d1e9de796923a0a466f253cf13d9a1c397e29160effa2b67",
+      "legacy_metrics_sha256": "cd835a4e51d9276cadb9a3f5a3dd1a392f232c2c5bd73666cf8e8d25ddc562a4",
+      "trace_sha256": "9e1cee83ebe9c8705dd8855bcd7f4e3754f7baa8a0181f856fce4a22c5351875"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed524__fai_primary_metrics.json",
+      "sha256": "97af01cadb76d7ae8e8177dd3552fad3eddbdd2cac9369d296758b5fbb57f487",
+      "legacy_metrics_sha256": "133d6d46bdb9c2d7efabbaafed254dca0848ecc98718c44c9d404d1b909e36ec",
+      "trace_sha256": "08eb83566b9174ed905ef7418d831c91cd7bcb7639b77fc51ad2cf9306b2de5c"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed525__fai_primary_metrics.json",
+      "sha256": "1517647b24c1e6ef73134527a2b66a5db9052d99720cc1e19a5341a3eda6b6ea",
+      "legacy_metrics_sha256": "84aca6dc46f3630f4dfbd1a04f00ff2cee70374f6ea107c910dcc5d947eb4143",
+      "trace_sha256": "c77261a7ba40a5b8e3e270772d66a01318954b4ab7e93c0d6aacb8b529f2daa0"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed526__fai_primary_metrics.json",
+      "sha256": "7b91ec9d610fca5d291ea29e58692223fbe20be7b782b4e7e82cb8c06d1303b6",
+      "legacy_metrics_sha256": "6601605e497e1cbe2214a312b406a2162c0dc7cbe3f32c204176e0adb288e67e",
+      "trace_sha256": "4028fc735eb3a2f95b5468b9215c883083d8e5d2e9c9d0dad8a7c54b7ecc055a"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed527__fai_primary_metrics.json",
+      "sha256": "8043089e5c87daa4bb16dcdd9af133049a5490a1a8716aca5692460286d69e85",
+      "legacy_metrics_sha256": "7025d342be1d4217473b14ab7430bb2da5aed63aa937aff406bc10de343902a2",
+      "trace_sha256": "8339664ca5b6fc660cf575bfda26aa4c9ed43c80aa77ee152136d11043a2d945"
+    },
+    {
+      "policy": "Main",
+      "N": 8,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n8_seed528__fai_primary_metrics.json",
+      "sha256": "3fa5094b00b8ac15712867aa31c39cbb526f16b1aca2a4c027b3eea8d5666501",
+      "legacy_metrics_sha256": "d0f02801855a6d8772912bf0baecb0ae39df4891e3c6796e3f84a290480bd41f",
+      "trace_sha256": "4d118f004b95bd55a0c7e4d85f397a590faaf2d50b7ebb701c6cf890f494821d"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 509,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed509__fai_primary_metrics.json",
+      "sha256": "c7c4439cd8b035bf3bd8dc12a0e5afbe88741808fcdb65df75b8e71f0f37b7f9",
+      "legacy_metrics_sha256": "be876977715c74e1bce1dfe185657dca2e27c0cae85b31619321d6eea43cb553",
+      "trace_sha256": "c8138c80245f673a22a5cc0acfde34f0377cc1a26af7fea047d3209a16bd2a09"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 510,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed510__fai_primary_metrics.json",
+      "sha256": "eac29492e56bceeefb3d0314088fdf390b7cdcb7c3680cf61773f69d8f573f5e",
+      "legacy_metrics_sha256": "452a55260e392a6539ba36ec8937a1c13c95cb623bd9efc3881c238ffa7e17fd",
+      "trace_sha256": "402ce00b02157d8d88655978a50afe6c63c63c65fbd039e47c3c335ac824f495"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 511,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed511__fai_primary_metrics.json",
+      "sha256": "165e8f5d0a8a3ff206398c98cf6ab00231336e44413ffc0a97a28b9e9614fb46",
+      "legacy_metrics_sha256": "f23425c017758f0d72b412ec0b775ac27d7880fb1f91e1163f122ae06bb82541",
+      "trace_sha256": "2ec8b4eb38704820e07fc74b31094f66582dcf4e822e81c6ba16f961411ad1c1"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 512,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed512__fai_primary_metrics.json",
+      "sha256": "a44656ad835af679c28f2cdfca448ccfa23ee51b2131ee9a47bfe79673eb991f",
+      "legacy_metrics_sha256": "8e9b587e4aadf5d4cf723328e43e7bff46a9e0de41cd70f3c8ff32a42193903d",
+      "trace_sha256": "f269e366e5adf4e6f964c3f694e6b841af73654cb2d810073e018c830a69d5ee"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 513,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed513__fai_primary_metrics.json",
+      "sha256": "b573196d6567a727da991a45990c8dc545fbddaf4232e541e3dd2cac3bc963e4",
+      "legacy_metrics_sha256": "c69d4a849dbf376005556b4391caccdc2ecc3d3f22add2b5d8c8c37c9ae0a3ce",
+      "trace_sha256": "11d8e99f1a8cc67fbcbab65ecb3f6615b564e0a6846437f612f590e3bde858e7"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 514,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed514__fai_primary_metrics.json",
+      "sha256": "2cc500c194bdf4514d07b342027d3a5887e349a88debd81122dbd54044be2b86",
+      "legacy_metrics_sha256": "198bafbc35647ca32102de8a154302dcf281e58e3a39b9046f3b99690ea34982",
+      "trace_sha256": "0c71e9ba35094d997874ec4a246645d12c0d6fb544e542e5d9487fa71d738ca9"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 515,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed515__fai_primary_metrics.json",
+      "sha256": "cb1730a1b894a0b16c235fdf7942b9ac4526bd546491d81645fc58c010e550de",
+      "legacy_metrics_sha256": "3e402cff84300495e9f09152e4644ed30efee33e999cc3bb7780b6b162a0da7c",
+      "trace_sha256": "60f9f7c9c7bec55e6527e0b5eddc09cc5ea1d087d977b725c7839a30dd1ba136"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 516,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed516__fai_primary_metrics.json",
+      "sha256": "19554adbb645ed9375b2245e2936897be7f53845f398b39a62ff4f586633c939",
+      "legacy_metrics_sha256": "5e41a1b11e1146432a5ae45c36de3ae6378adca347126225d5c561e0e3d7c117",
+      "trace_sha256": "51e66be8b193a9490ea18d2ce21fddc31c265b446b19c3ba7dd74bff3986b23b"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 517,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed517__fai_primary_metrics.json",
+      "sha256": "70836dbade777b51d7ccf9bcf2553dacc68d44734d003dd53a8a886da66ceb13",
+      "legacy_metrics_sha256": "28f3dbc5b4873fe15f617cfc60faee48906e638f19975eeee4402e728862a305",
+      "trace_sha256": "af8631cd34f8f255efbc7c3b88ad450e5c2db6c0492c1d762d0ba2321b5bf107"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 518,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed518__fai_primary_metrics.json",
+      "sha256": "918b0e6ceab3a3e66eed69676b84d9d5de4f8c9a2fac49ea23c0a56a65b395eb",
+      "legacy_metrics_sha256": "847250e789d90d93bb21f0d893cc8754866f58d425c4938dcd0c1a63a8667804",
+      "trace_sha256": "6c980281a5dd777d1300059d5a34aa06aede0f354981150db5dc7e929d5d778d"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 519,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed519__fai_primary_metrics.json",
+      "sha256": "4def0aca249524fd59b5da7ec5301d2f3e7abde8bd37f3a89ea565fecf3f5148",
+      "legacy_metrics_sha256": "88f6403d91653df61d77f86d49bc298672a3e2bef74ca2c0c0de8d28e7ea1f7b",
+      "trace_sha256": "1461038dade22491e71a62982fe88a6059082d1662747093885aa8a0eeefbca3"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 520,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed520__fai_primary_metrics.json",
+      "sha256": "d1d122e4a27cbf0b4e63379be8c1315ef2c29875335d82e64b0d1b0d56ad9f08",
+      "legacy_metrics_sha256": "b8bc3b298bed40e36abb09d5a45c0aa0531a2512c560e3743cff6b762e200928",
+      "trace_sha256": "0aaaf496011eb5441585587a84ea7aef6064ce4c19df2d2b094c591154e8e38b"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 521,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed521__fai_primary_metrics.json",
+      "sha256": "58b227a1b1a79241dc3b58dfdebbc2129e67914e3ea781e73499f2493ea22e59",
+      "legacy_metrics_sha256": "39cee1894535a1f38ee6d2c60aeb7a21a3a61044985a184242ecc22c19b23ea9",
+      "trace_sha256": "9d73097544ff154fe3c72a8fde3f41a7b0a6435b7af2d0cf7e111affb9d35e39"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 522,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed522__fai_primary_metrics.json",
+      "sha256": "4d571301839ebbf2acb44194f87b90b36773fe5caeed65c4bf25e3ec80985fb4",
+      "legacy_metrics_sha256": "adae16886f1602ff0bc7435978e50074c04ca6c526aa816dbd0a4d1f41f039dc",
+      "trace_sha256": "dedda5d26b81956496b9181c17525fc806a9f7cad0751633302ca2069a31f8da"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 523,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed523__fai_primary_metrics.json",
+      "sha256": "94ba7f995967295da6d97d3411f4ae26ed078c3fce00d1b3d389be74ef7fc6a3",
+      "legacy_metrics_sha256": "446b7524d5574d7fea8be795d685207e90e7553505bdb9bcc78d73f261bf51b0",
+      "trace_sha256": "acbf06654309bb6e7be59ebe1d96e5f8eb637a95d31c78a278828b110e9d100c"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 524,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed524__fai_primary_metrics.json",
+      "sha256": "cab703c896bc3d7944ab96dc68ba88868fb4d7fb14d50455547dfe6006f6cc7a",
+      "legacy_metrics_sha256": "40536bfb3de01a2782a8d358b07e716d638bea787de174141fd5409ab4cdcd18",
+      "trace_sha256": "be07ec2cbea21680cc82c41e54538142d68c3edbec004cae4adff54d04ada179"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 525,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed525__fai_primary_metrics.json",
+      "sha256": "f8d9573e08386f4c69e6279a8a5672942aaae7dffc32b3e85e27b0028e2f698f",
+      "legacy_metrics_sha256": "089c30a56cd9d334572e059815d5f853d8d0358ca61b0495368b7c41672c0b34",
+      "trace_sha256": "f6890ca34ddc4077b358d7e4e5484ae06ea1ac1ccbd15d7768e3304b2edb75b2"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 526,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed526__fai_primary_metrics.json",
+      "sha256": "0f81baca68d68eab4583358bdfd7d0d286b609a876c1c90e2aa34723cb69847f",
+      "legacy_metrics_sha256": "e9341dff9e0016bea77a564f155a5dbd04c74f22c9b12e7f506e45837682b061",
+      "trace_sha256": "e1e89ab9038211ecd304e02ce24edfef847c42224174718c671e2d51cb09e1b6"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 527,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed527__fai_primary_metrics.json",
+      "sha256": "660fbeda1ed3239d8dc2890fa13891e138cee1408e5a2beee27119a0fa6c77c0",
+      "legacy_metrics_sha256": "8536569563eeaa19b1bcde55bbe42559e132490e61c952bbc1300e91f09d684f",
+      "trace_sha256": "2ccdc7c97a2d69dfb39927d24a13101866bfd98f3ac216482eed2c10413519b6"
+    },
+    {
+      "policy": "Main",
+      "N": 16,
+      "seed": 528,
+      "metrics": "artifacts\\implementation\\M5-primary\\20261022T003252Z_404\\results\\cocotb_switch_top_fai_primary_n16_seed528__fai_primary_metrics.json",
+      "sha256": "c71ceb95ecf4aae7068709de83697f98b4edeb5c7b98a15474a54e695aed3036",
+      "legacy_metrics_sha256": "4d7fcd9fb76faa8574c2610132d007c253e611760e2c159f6871b08ba7997f2e",
+      "trace_sha256": "3436a3576b462a13ef58cf5a260f1b0ceb3b37e7d1cbd5c4661fd95f4a1decb2"
+    }
+  ]
+}

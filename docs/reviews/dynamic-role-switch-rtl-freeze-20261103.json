@@ -1,0 +1,33 @@
+{
+  "schema": "cxl-dynamic-plan-freeze-receipt-v1",
+  "date": "2026-11-03",
+  "status": "FROZEN_PROTOCOL_NOT_RUN",
+  "execution_status": "BLOCKED_ON_MAIN_AND_AUDIT_IMPLEMENTATION",
+  "base_commit": "9d59fe858d30542178969b11eed7818399c539f6",
+  "artifacts": {
+    "docs/reviews/dynamic-role-switch-rtl-plan-20261103.md": "d4f8d73ef6675da9bc7c81d1de164f9a1acdff47afa01681c41a76a575f4ad1c",
+    "docs/reviews/dynamic-role-switch-rtl-plan-20261103.json": "f4f7429272e6d42cb3d550593f49b24894c40fa6e046135403651b6afefc4cd6"
+  },
+  "source_count": 112,
+  "source_index_sha256": "efec76e39ccf45f140382f2c63f4bcd774821f1d0bc00889d1610b7439c75d62",
+  "reviewer_channels": [
+    "Orca Worker reviewer",
+    "Orca Worker reviewer-2"
+  ],
+  "planning": "Astra via Codex CLI requested high, exit0; effective backend UNKNOWN; review of supplied prompt only; Lead final corrections.",
+  "seed_reuse_scan": {
+    "path": ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/lead-structured-seed-scan.json",
+    "sha256": "ee2305fc86e15c5a41e86e0a3332aff84bf9e88b4f8d86df7d87324336e74539"
+  },
+  "validation": {
+    "script": ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/verify_final_plan.py",
+    "sha256": "9b4adb50836a5af855fed913dff74d781549a297d13fc5f3185732b92fc7fb4d",
+    "result": "PASS"
+  },
+  "limitations": [
+    "Main/audit implementation NOT_RUN",
+    "All simulation and EDA NOT_RUN",
+    "Cost estimates unmeasured for Main/new collectors",
+    "No start date or execution authorization recorded"
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "schema_version": "cxl-report-revision-release/1.0",
+  "date": "2026-10-28",
+  "timezone": "Asia/Taipei",
+  "status": "APPLIED_AND_ACCEPTED",
+  "path_base": "repository_root",
+  "manuscript_entry": "docs/final-report/main-v3.tex",
+  "pdf": "output/pdf/cxl-scheduler-revised-20261028.pdf",
+  "pages": 11,
+  "read_order": [
+    "docs/final-report/improvement-20261028/REVISION_QA.md",
+    "docs/final-report/improvement-20261028/EVIDENCE_SUPPLEMENT.md",
+    "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+    "docs/final-report/improvement-20261028/agent-handoff.json"
+  ],
+  "planning_snapshot": {
+    "path": "docs/final-report/improvement-20261028/agent-handoff.json",
+    "sha256": "95507756077e841330763a4065ffeb19f54a84faa99289f46f2b1aff3177cf18",
+    "status_at_snapshot": "PLAN_COMPLETE_NOT_APPLIED",
+    "immutable": true,
+    "all_52_matched_at_intake": true,
+    "unchanged_source_files_at_release": 50,
+    "expected_manuscript_evolution": [
+      {
+        "path": "docs/final-report/main-v3.tex",
+        "planning_sha256": "0b1c5ad0704765a7916aafb0246ec5356a6805ed8ad530fe877aec776465c1fd",
+        "release_sha256": "a9f452f7927787726b34952cd68f79b70e0e832469ae598d7a6e887130e0eb16"
+      },
+      {
+        "path": "docs/final-report/sections/hotnets-body-v3.tex",
+        "planning_sha256": "cf5939464081d43775f1352e2d60c53056838e4aa3c75f24365eeb15729610d6",
+        "release_sha256": "cbbbffd97ca2953206c2b93dee66b6bfd60784105402891055d91bbb8ba5821e"
+      }
+    ]
+  },
+  "narrative_order": [
+    "CXL pooling and shared-path contention",
+    "FAI purpose and transitional Buffer",
+    "Executable FAI-inspired RTL and paper differences",
+    "Common platform for queueing and full hardware cost",
+    "Results, diagnosis and applicability"
+  ],
+  "scope": {
+    "manuscript_rewritten": true,
+    "new_figures": 5,
+    "total_figures": 7,
+    "total_tables": 6,
+    "references": 19,
+    "new_experiments_run": false,
+    "automation_created": false
+  },
+  "models": {
+    "stage": "ACCEPTED",
+    "date": "2026-10-28",
+    "timezone": "Asia/Taipei",
+    "primary_author": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "agent_id": "01a18133-bdee-75a3-ac7d-854470d0a44b"
+    },
+    "figure_author": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "agent_id": "01a18133-c5b5-7493-824e-697ce2519023"
+    },
+    "evidence_reviewer": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "agent_id": "01a18136-49a6-7620-b117-71bd001b8e86"
+    },
+    "language_model": {
+      "cli_model_id": "gemini-3.8-flash-high",
+      "effort": "high",
+      "style_conversation": "cc8a39c6-641d-4417-99c3-faea38834c2f",
+      "polish_status": "COMPLETED_SELECTIVELY_ACCEPTED",
+      "polish_conversation": "1ccd2d69-42d5-44b6-94b7-18ed29cba063",
+      "polish_exit_code": 0
+    },
+    "style_brief_rejected_examples": [
+      "SAED32 28nm",
+      "Feedback-driven Adaptive Interleaving",
+      "stateless round-robin",
+      "pooling eliminates stranded capacity",
+      "universal bounded response or anti-thrashing benefit"
+    ],
+    "new_experiments_run": false
+  },
+  "editorial_acceptance": {
+    "strategy": "Sol scientific draft plus selected Gemini language edits and parent evidence/layout corrections",
+    "full_gemini_rewrite_adopted": false,
+    "gemini_conversation": "1ccd2d69-42d5-44b6-94b7-18ed29cba063",
+    "gemini_exit_code": 0,
+    "gemini_seconds": 722.66,
+    "decision_record": "docs/final-report/improvement-20261028/REVISION_QA.md"
+  },
+  "validation": {
+    "table_report_tests": {
+      "passed": 10,
+      "total": 10,
+      "seconds": 31.963
+    },
+    "figure_tests": {
+      "passed": 5,
+      "total": 5,
+      "seconds": 13.937
+    },
+    "compile_passes": 2,
+    "compile_exit_codes": [
+      0,
+      0
+    ],
+    "overfull_or_undefined_or_latex_package_warnings": 0,
+    "all_pages_visually_reviewed": true,
+    "off_page_text_boxes": 0,
+    "input_binding_count": 471,
+    "new_experiment_tests_run": false,
+    "logs_root": ".setup-logs/report-improvement-20261028"
+  },
+  "figure_usage": [
+    {
+      "artifact_id": "pooling-path",
+      "section": 1,
+      "manuscript_label": "fig:pooling",
+      "body_line": 15,
+      "source_pdf": "docs/final-report/generated/figures/improvement/pooling-path.pdf"
+    },
+    {
+      "artifact_id": "buffer-transition",
+      "section": 2,
+      "manuscript_label": "fig:buffer",
+      "body_line": 44,
+      "source_pdf": "docs/final-report/generated/figures/improvement/buffer-transition.pdf"
+    },
+    {
+      "artifact_id": "allocation-shares",
+      "section": 5,
+      "manuscript_label": "fig:allocation",
+      "body_line": 147,
+      "source_pdf": "docs/final-report/generated/figures/improvement/allocation-shares.pdf"
+    },
+    {
+      "artifact_id": "heavy-sparse-tradeoff",
+      "section": 5,
+      "manuscript_label": "fig:tradeoff",
+      "body_line": 171,
+      "source_pdf": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.pdf"
+    },
+    {
+      "artifact_id": "cgof-hardware",
+      "section": 5,
+      "manuscript_label": "fig:cgof-hardware",
+      "body_line": 208,
+      "source_pdf": "docs/final-report/generated/figures/improvement/cgof-hardware.pdf"
+    }
+  ],
+  "followup_experiments": [
+    {
+      "id": "H1",
+      "title": "Buffer stability and adaptation",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        2,
+        5
+      ],
+      "primary_metrics": [
+        "effective_class_flips",
+        "adaptation_cycles",
+        "sparse_run_p99"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H1：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H2",
+      "title": "Allocation versus eligible ordering",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "service_share_error",
+        "sparse_run_p99",
+        "heavy_gap"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H2：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H3",
+      "title": "Multi-seed multi-window RTL replication",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "sparse_run_p99",
+        "heavy_gap_p99",
+        "heavy_max_gap",
+        "mixed_isolated_completion_ratio"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H3：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H4",
+      "title": "Admission boundary and FIFO depth",
+      "priority": "P2",
+      "existing_evidence": "HYPOTHESIS",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        4,
+        5
+      ],
+      "primary_metrics": [
+        "generation_to_acceptance",
+        "acceptance_to_fire",
+        "generation_to_fire",
+        "external_backlog"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H4：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H5",
+      "title": "CXL response and application translation",
+      "priority": "P3",
+      "existing_evidence": "UNTESTED",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "completed_bytes_per_second",
+        "issue_to_response_p99",
+        "application_slowdown",
+        "max_application_slowdown"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H5：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    }
+  ],
+  "followup_analysis_prerequisites": [
+    {
+      "issue": "Fixed-horizon active-rate fields use post-drain numerators",
+      "status": "DOCUMENTED_NOT_REPAIRED",
+      "use_in_this_report": "EXCLUDED",
+      "future_action": "Before using these fields, reconcile numerator/denominator phases and rerun the affected analysis. Preserve original run evidence."
+    }
+  ],
+  "corrections_to_frozen_plan": [
+    {
+      "item": "CGOF (1:1), fixed-class source 3 share",
+      "corrected_percent": 24.9962,
+      "reason": "4999 / 19999 * 100 rounded to four decimal places"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/pdf/cxl-scheduler-revised-20261028.pdf",
+      "sha256": "f9e65b9b7629afe99a2d3409b49e76798967832cada8b34ed2573f894fb084e3",
+      "bytes": 334323
+    },
+    {
+      "path": "docs/final-report/main-v3.tex",
+      "sha256": "a9f452f7927787726b34952cd68f79b70e0e832469ae598d7a6e887130e0eb16",
+      "bytes": 8966
+    },
+    {
+      "path": "docs/final-report/sections/hotnets-body-v3.tex",
+      "sha256": "cbbbffd97ca2953206c2b93dee66b6bfd60784105402891055d91bbb8ba5821e",
+      "bytes": 38374
+    },
+    {
+      "path": "docs/final-report/generate_revision_v3.py",
+      "sha256": "bc8e34bf4741b1051699c7c8d2d3a2bcdb25b9eb6342b66d467435bc08fd4d30",
+      "bytes": 44212
+    },
+    {
+      "path": "docs/final-report/generate_revision_figures.py",
+      "sha256": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+      "bytes": 26924
+    },
+    {
+      "path": "docs/final-report/test_generate_revision_v3.py",
+      "sha256": "696e7bac08a1bd938cce3d22fc7031bee677cf625336ab078e4ae74eb29fc1ea",
+      "bytes": 10771
+    },
+    {
+      "path": "docs/final-report/test_revision_figures.py",
+      "sha256": "7d57902447738b5c8723ac6b703811734e6d1cc2b656fd8d77b5f0ca41e2aa87",
+      "bytes": 4127
+    },
+    {
+      "path": "docs/final-report/generated/improvement_results.tex",
+      "sha256": "7a77999c59c5cae4f54985b4e9987981bd11d9dc0e5186aecf61d0781d1aa62d",
+      "bytes": 1922
+    },
+    {
+      "path": "docs/final-report/generated/improvement_evidence_manifest.json",
+      "sha256": "d2e424095f0bcb7719f1d5cba1d2b1a379dd5fcccddbf32635eccf188023121c",
+      "bytes": 173104
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/REVISION_QA.md",
+      "sha256": "19d422ab41a85e1a1b11b7d62ecceee93e5da9e855828b44971be69ba2903ff8",
+      "bytes": 9422
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/EVIDENCE_SUPPLEMENT.md",
+      "sha256": "15ea979f16f4595312c3b89b320c6eeadd271daa200f376c1a31e2fcbcd645d3",
+      "bytes": 8424
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/AUTHOR_HANDOFF.md",
+      "sha256": "7286b2aa68bdcdb8d88a103af62b1605fea197ca53173c0c6f29abd93c2ce5f1",
+      "bytes": 6690
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/FIGURE_HANDOFF.md",
+      "sha256": "03a9ffc3df539293d3c6c22465b5864ec7c08a98d737b3d9173b9baaae332710",
+      "bytes": 9957
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/allocation-shares.pdf",
+      "sha256": "878c373ba3bbdf32b25233eebe323d19161fd47af6dee599d677d17b7a734c35",
+      "bytes": 36657
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/allocation-shares.png",
+      "sha256": "2105ca8cb1bbd4a8877d1898ac254d01d86926a2a3ac4aab8db60e92010ad1a7",
+      "bytes": 181956
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/allocation-shares.svg",
+      "sha256": "d93a9d019f7b073fecbdcb310141937661e8554016283927a7f3ee0c4f28195f",
+      "bytes": 85857
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/buffer-transition.pdf",
+      "sha256": "cbdf2cdef013153678a705a8eb8fa17bff29ad46a2f0e1830edc05a27bf4fb14",
+      "bytes": 25767
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/buffer-transition.png",
+      "sha256": "37c19d2ddd484138a60db64d08ef2d156e35d555415b5577d6c10ef04bf76727",
+      "bytes": 113642
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/buffer-transition.svg",
+      "sha256": "9156d48ab2567af437f27e965e56b95eba36254f6a592874fb51189cf9f7b17f",
+      "bytes": 13605
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/cgof-hardware.pdf",
+      "sha256": "f67ad680f93d360ef309cc99c0c0ed7ac9fbf69ff76f2c08526a5562d1c66f1d",
+      "bytes": 26577
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/cgof-hardware.png",
+      "sha256": "859524f674761ed52e59f964d3dab49f4b4d7d02f51cab9010d69bef24e09a28",
+      "bytes": 202030
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/cgof-hardware.svg",
+      "sha256": "28afdf59177bbc623b88957aa374505e2eee7395a1b435ceaca7c1c0966756bf",
+      "bytes": 21889
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/figure-manifest.json",
+      "sha256": "0ed877479dfa6da7d9f908acbb69f541ccabcb8708115fcc1279fb17b176e27d",
+      "bytes": 5165
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.pdf",
+      "sha256": "0a82a9ef0272657839e8230a0b45c6c388b32d371a51acb11ada383b54915882",
+      "bytes": 26542
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.png",
+      "sha256": "ec901f0250b2802904700201b28ebb282478da525b91893408655f01aeff35cb",
+      "bytes": 212417
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.svg",
+      "sha256": "dfae1b2b0ebcb4c7835b9db9c52f6b63466ed3b3ac746426041c7b0aae100047",
+      "bytes": 22803
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/plot-data.json",
+      "sha256": "f095eadd2f1b92b38d53a3cd2716c7b1b60cfcca42ada0dfc9d5d78e23ec099e",
+      "bytes": 68420
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/pooling-path.pdf",
+      "sha256": "246dd7c1e4a0d57b8ed862db24c93daad18db6ccdd154b32b8bde12683c683ef",
+      "bytes": 24068
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/pooling-path.png",
+      "sha256": "3586ad50cb82519c29d32565d6e77a3d4f7cc5f70d899af3d7497b3be50665e3",
+      "bytes": 201914
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/pooling-path.svg",
+      "sha256": "a873c9aa5ba5a6e9c2890a7199883b85f1981dc82b8b42826c04ee030aef58dd",
+      "bytes": 14169
+    }
+  ]
+}

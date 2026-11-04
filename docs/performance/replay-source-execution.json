@@ -1,0 +1,103 @@
+{
+  "source_base_revision": "1dfbfb03928e215a577f533f2e66f0fdf21a91e4",
+  "sources": {
+    "refc/cxl_model/__init__.py": "4f7d5e7c098545d0c3c3ff2c7bddb3412ebc514d28e77c365325fd85e2af682b",
+    "refc/cxl_model/common_ctrl_model.py": "f35544ad94266029210f8884c01a97bd747958c7531868b17bfad71556a797d4",
+    "refc/cxl_model/fai_alg2_model.py": "bd97a7fcfaa53326dd9b737f088e9c371ba5288b6df7acaac08c02361fbea070",
+    "refc/cxl_model/fai_main_model.py": "7f2bbdfb9b3ba20d82f0965136f1458efebf157dc844364aa40696aa6ad8c381",
+    "refc/cxl_model/fcfs_model.py": "f868aab7b961db8801ac0a943a4ca03d89273867f20ea25cb0845362d318d421",
+    "refc/cxl_model/fifo_model.py": "3fe85ab0f07658ad65aca46f7a1b25d508d195d56ec9a4c605bb60ed0f0749e8",
+    "refc/cxl_model/rr_model.py": "faf0e9f28c2eabcdce324f92b36db7afcb2119d11b5fbd033b7e87617948986b",
+    "refc/tests/test_common_ctrl_model.py": "fae26ac2c41f9b19126396319d30f910fb237586a588ea429bda8174dbf2b750",
+    "refc/tests/test_fai_alg2_model.py": "2637e0112178e2a482c78cb643cc0bfc0b4d2cd2196b691014c61d810955291e",
+    "refc/tests/test_fai_main_model.py": "ff787bdd17ac366e8045712763a58c32bc81c2567208a0aca4fdb3273fc8752e",
+    "refc/tests/test_fcfs_model.py": "311c67085b07714869245b32283e5037c96c95c78f6943d983a229f303ad7017",
+    "refc/tests/test_fifo_model.py": "8268cc84086262219bef121081b8900d23f78e2a54fc2ea48d720b89a133e4a9",
+    "refc/tests/test_rr_model.py": "3adbce05aefbc26c27cb96e70cb3fdb5bbb025b12b34574f1ed549e8f4864c34",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_fai_main_sched.sv": "12d1d4f973503f3096260de932fbb3b2887d22a3f947399b5666690e624e3ff6",
+    "rtl/common/cxl_fcfs_sel.sv": "3418505168ca4a0c93422101f1e1a7a042833c935e0f9b021661535b7b6a2c20",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/common/cxl_rr_sched.sv": "84803ce5fafefcd2f58739c9768bd0e533cb10823c74203d9e039319f0714fdf",
+    "rtl/filelist_common.f": "e73058f11ffafe5dbae6fac1a32cfe39edeaec9a85370ea87ead63235feb1c98",
+    "rtl/filelist_switch.f": "8358645db33088c0963b8cf93f0feee629ed4bab3dd735c21589306e4f3e5cc5",
+    "rtl/filelist_top.f": "aebb7c603629a7ee38a97bbcd02607235658e4f4e203375905a467092c04f7f9",
+    "rtl/include/cxl_sched_pkg.sv": "05d2cb6af0c4055873b99bfa26e61fa899fdf1e227af34b42dec04080e3c5556",
+    "rtl/top/switch_top.sv": "142d7b6495c9b8f1f03072301cd5db7620d6c076168bc756c4e36847030fe56f",
+    "scripts/run_verify.py": "32492f4a479cb53670997b5a20337092dd0e5c8940cffc59a04a0024f7c688c8",
+    "scripts/run_verify.sh": "d7345a2789c23e7af922ae315e55e8023372701273054d88b0e9af55d64a8123",
+    "sim/common/common_ctrl_tb.py": "25c7d999db4eb7ff9089cf72ad4c5ba529a40491c8c8746cddb3a1cfc8241664",
+    "sim/common/fifo_tb.py": "50b7138fa247b667293d4aaffa7b5f00b7378f9301841df8eb0d2c70bd0d4d3c",
+    "sim/common/hier_util.py": "80e557a8e6644caff26879705fadfe139a78ece2183f374f406de7caf6314784",
+    "sim/common/input_hold.py": "4fc1c66f33a0019848a3fd726cd4f0b5dd9505bd4367f5a5a7a50972387fa903",
+    "sim/common/out_hold_tb.py": "d23493558aaca48e9ff550afcb90787d589e2f5d8c4982beeff74cef33584da1",
+    "sim/common/primary_phase_metrics.py": "e3f9ad288db50f8b7f2a2ef2dfe04c914efbbfefff1af2e9c894c6aee3e997ea",
+    "sim/common/switch_fai_tb.py": "061fa6698142566bee2e6f8e5abed00a88506cd82eae6a849e29526d317c38a4",
+    "sim/common/switch_fcfs_tb.py": "1920633816bfc34849ec75e6458a50ab3e1a05210f19d96abcc17152ea741456",
+    "sim/common/switch_rr_tb.py": "3307c587b0883b7f907e368c5181fb081880aaccce78c15c7a44bb6d2f873933",
+    "sim/common/tag_response.py": "3091842a23e8b3974272a3ec8e90db91ec0cede26da3ba5fdf761c42b0f27554",
+    "sim/common/tests/test_fai_stream.py": "cb9cb8d87d219411485a3f4f8d92e6b8f801de364777fe5b4e654f90db524b80",
+    "sim/common/tests/test_input_hold.py": "125a9bd89e67179648b866cdfbc9e55803feaecbbfc27b679537f2f239c07fd2",
+    "sim/common/tests/test_traffic_trace.py": "5722c73dd0d66f141f34e24f3e44ea093c220ff276c747cd040f3441a4886782",
+    "sim/common/traffic_trace.py": "8dde83d3f52ec1550b314ced05312918a61404ce7c4e31863f448b3d8892bd1c",
+    "sim/cxl_common_ctrl/cxl_common_ctrl_fixture.sv": "561f4d0181dc91fc4b92ba8e5ca5d3498ed04fad5ca949579e6a65fa324cd3fe",
+    "sim/cxl_common_ctrl/filelist_fixture.f": "e9fb9d8bad4f34e90a65a16f3f3c96e2098f91d62dcffcb2b7ab16858dd976a1",
+    "sim/cxl_common_ctrl/test_cxl_common_ctrl.py": "3255bfe8aac24de6e25e01cd34164d430ad00a8816e88edf5a6cdd5d976c9141",
+    "sim/cxl_desc_fifo/test_cxl_desc_fifo.py": "c67dbe66c93708e38b223626b2a2724a28c7026b29a7d08b42c069f48043579d",
+    "sim/cxl_fcfs_sel/test_cxl_fcfs_sel.py": "acaeeb10a94c1c4fd0607ba8dcfde428e47cbdc10b8f7d0c2c5e7a5cffe7436d",
+    "sim/cxl_out_hold/test_cxl_out_hold.py": "2d5dd04ba53d843ca700e81b63fc49750d42f6e7f6b6a2a673fa826579fcf2f0",
+    "sim/power/tb_power.sv": "d2bf2978c0ae228278d5a4fc36bde981a6f55c24d033f8672a6839ef3309a187",
+    "sim/switch_top_fai/fai_stream.py": "3367aa2708a91218551824303f767394c4c0a550061df75783ea5868f04a27e2",
+    "sim/switch_top_fai/test_switch_fai.py": "6982bbac7f29811eaa64ddfd17bf09e2f724e7fbf853d7bafb771ad8714c3234",
+    "sim/switch_top_fai/test_switch_fai_primary.py": "52005235359f5616bdea2ccd2926f561ff6895c2f87e35a4e49b551ef1520ff9",
+    "sim/switch_top_fai/test_switch_fai_production.py": "1b2ea613e44bc97680e072214200966369dcf5d2107f68d7beda4d42809f78d8",
+    "sim/switch_top_fai/test_switch_fai_stress.py": "32a523998cede41074d54f8364f92501668996d5dab7d7d6c7536d3361499f8c",
+    "sim/switch_top_fai_alg2/test_switch_fai_alg2.py": "8632485fdcea47018e2d9ee7e90fae49dd15347c58a0597f2fbfe4d97e9f85a4",
+    "sim/switch_top_fai_alg2/test_switch_fai_alg2_production_smoke.py": "0f906e659bee82aed2758683ad2f8913f16569391f0cba8d1c179b1bcb03baa7",
+    "sim/switch_top_fai_alg2/test_switch_fai_compare.py": "43499a77d09a4ca66747f7507d04c9b5b0fb6290a1f1ce6bb671f336b69728cc",
+    "sim/switch_top_fcfs/test_switch_fcfs.py": "1cc6cadddd2a211e49c6004957dccc94e325095729c71ff572b269eda1a02600",
+    "sim/switch_top_fcfs/test_switch_fcfs_primary.py": "b9a5882bcdbe8f40b1205e95082e1810b20066d48371a21d896cae50836eb8ac",
+    "sim/switch_top_rr/test_switch_rr.py": "6cac17d2b7cf40e318f49cadf56fabe2523c95d0d02d029d01b8a74ab022edcc",
+    "sim/switch_top_rr/test_switch_rr_primary.py": "3783839317bf233fb24355a2f557494126635d25f7b6634b71321600b54c33c9",
+    "scripts/audit_descriptor_performance.py": "02ad95a1591118cc085106c7f53fcda7c6bedcfc09b548438a5086efa6d9cc82",
+    "scripts/summarize_primary_phases.py": "8a459d7828cebaa953dec1b3e0e0c7ca5ab5739b92b1b60def6112f34f938fb6",
+    "scripts/test_primary_phase_metrics.py": "e78a3c6e3267fe8c3bba903a746cf2101f3b4208b9abe1a5ae2568ef45fd3364",
+    "scripts/test_audit_descriptor_performance.py": "c01a00f0a4b395a8b560e0a1b56a6505e1337dd28f06a32af535f17de7272f92",
+    "scripts/test_summarize_primary_phases.py": "1e4905f784725259ee95c0efdd49a0a269e7722b08414f88156169c00dbfd261"
+  },
+  "preservation": {
+    "entry-dirty-hashes.json": {
+      "files": 188,
+      "changed": []
+    },
+    "functional-before-full.json": {
+      "files": 58,
+      "changed": []
+    }
+  },
+  "execution": [
+    {
+      "scope": "M3-primary",
+      "start_utc": "2026-10-22T00:32:52.040078+00:00",
+      "end_utc": "2026-10-22T00:47:18.953833+00:00",
+      "exit": 0,
+      "elapsed_s": 866.9379999999655
+    },
+    {
+      "scope": "M4-primary",
+      "start_utc": "2026-10-22T00:32:52.040078+00:00",
+      "end_utc": "2026-10-22T00:47:06.503230+00:00",
+      "exit": 0,
+      "elapsed_s": 854.484999999986
+    },
+    {
+      "scope": "M5-primary",
+      "start_utc": "2026-10-22T00:32:52.040078+00:00",
+      "end_utc": "2026-10-22T00:51:39.820213+00:00",
+      "exit": 0,
+      "elapsed_s": 1127.8129999999655
+    }
+  ],
+  "command_template": "source scripts/wsl_env.sh; python scripts/run_verify.py SCOPE -j 3 --make-jobs 2",
+  "note": "Three scopes concurrently; source hashes define dirty functional state. No claim clean base HEAD contained new instrumentation. Files preserved; Final not edited/rebuilt."
+}

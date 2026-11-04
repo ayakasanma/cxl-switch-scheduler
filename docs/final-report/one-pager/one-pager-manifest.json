@@ -1,0 +1,11 @@
+{
+  "generated_by": "make_one_pager.py",
+  "source_sha256": {
+    "docs\\final-report\\generated\\hog_sparse_results.tex": "3ab4ff1ec1e9fd47fef4f724d13de117222aa3c56c39fdc1c84b8d45f9d50eda",
+    "docs\\final-report\\generated\\results.tex": "c1ae15bb7b7a2c5084b46a2eef043f2e0af1d46fe36fb712ecf489f2526a94db",
+    "docs\\performance\\HOG_SPARSE_RESULTS_2026-10-22.md": "3411af339969f787a11264dac1a02d00b2a838e3b98fed751ea03dbdc4fb7472",
+    "docs\\performance\\FOLLOWUP_RESULTS_2026-10-22.md": "a3a4bb5408753785c5d08b49da46e8c523187ef51404e0f42333caeb3f47b273",
+    "docs\\performance\\PLACEMENT_RESULTS_2026-10-22.md": "637b02408a8d1ef81601c802bb0e2940a33de67118727f6771a74445041eb588"
+  },
+  "boundary": "Descriptor-level synthetic RTL evidence; does not establish application IPC, application slowdown, DRAM behavior, or complete CXL-link bandwidth."
+}

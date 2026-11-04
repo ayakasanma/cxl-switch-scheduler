@@ -1,0 +1,4 @@
+policy,source0_share,jain_equal_demand_service,fires_per_cycle,avoidable_bubbles,max_complete_service_gap_ready,generation_cohort_g2f_mean,generation_cohort_g2f_p99,acceptance_cohort_wait_mean,acceptance_cohort_wait_p99
+FCFS,0.25000250002500024,0.999999999699994,0.99999,0,4,150001.0,297001,62.974385880753935,63
+RR,0.24999249992499925,0.999999999699994,0.99999,0,31,150001.0,297001,62.975095440826685,75
+FAI_MAIN,0.5000050000500005,0.749992499775,0.99999,0,13,150001.0,297334,62.980012392316766,97

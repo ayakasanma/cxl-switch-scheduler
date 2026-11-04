@@ -1,0 +1,24 @@
+scope,run_id,recorded_status,accepted_scope,tests,reason,summary_sha256
+M3-primary,20261015T100116Z_4475,RUNNING,False,3,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,edd60bb1276abedec204ae849eab803d95925cb1cded6c71d970282c244c44ef
+M3-primary,20261015T100158Z_4684,FAIL,False,3,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,62589a67eca15d88a99284e2f5343b43798c22ec19b7d0015f38b423619475e7
+M3-primary,20261015T100230Z_4891,FAIL,False,0,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,e7022b144bef6fb875684f11cd8f119aa5ec5e880e71584867db24351b1880a6
+M3-primary,20261015T100236Z_4922,FAIL,False,19,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,82ea379af6e408c8bfb1e37c5a7d4812c92bf3612fc9a060d04a477edaef0768
+M3-primary,20261015T100412Z_272,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,55fa5917a8316e97abd8efb18f43752144d2505e1ce9bb057157122b3a4924ba
+M3-primary,20261015T174542Z_2220,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,0d0f6fe4b10b4691c01ec7b7f52561a5a10cf2ff8569a2be8ede442657a36467
+M3-primary,20261015T175309Z_4038,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,6764b154b54965fb7ab27358bd0891a6b48bf78648de6738eac211d8dcba63e6
+M3-primary,20261016T014224Z_3877,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,02c22e0f4a8784db2991b76f2878f7b8a06f1d0fb5cc2598670e7fb4af8f6258
+M3-primary,20261020T165716Z_534,PASS,True,60,selected accepted evidence,3111d8115055f206d570f76516a502ef3a1b6f3629fb4d7cce34e6c122c73da2
+M4-primary,20261016T013046Z_370,FAIL,False,3,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,0e486eac842fb07639fee94ec905dbdd8add1316eaf3e39d64fb9ae63a5bbb6d
+M4-primary,20261016T013811Z_371,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,a4d1ddd3837e9d88aff3c08f0665f51f8174c1a60dca169eec0af006abc5a4fe
+M4-primary,20261020T170247Z_5075,PASS,True,60,selected accepted evidence,584482b2b08fec87bedbd0fe427beef504dd7d8dc49625221404d9c614894543
+M5-primary,20261017T015238Z_9805,PASS,True,60,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,4cd62cb735ebfbaa6bbfcf471e70cdaa0a36429a95f107847cc1b4f387d87706
+M5-primary,20261020T172119Z_10354,RUNNING,False,37,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,d22ffeefd2ae6506d7d04d25a5920c6187171c560252283ff47e2f0a0881b191
+M5-primary,20261020T172737Z_382,PASS,True,60,selected accepted evidence,83ae554e05b6eb8bbe83e75cb54748671395cf1e9d361fe4c011a96966cc88aa
+M5-stress,20261017T010035Z_1025,FAIL,False,9,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,8b1a3ce3008e3cb8153002757565fee31df11cc3fc8c859e8241c8fef31b151f
+M5-stress,20261017T011825Z_1587,FAIL,False,6,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,9bb407da61df273b94ff00203febbde957ace7b617529e2b814f61569a080df0
+M5-stress,20261017T013952Z_8032,PASS,True,30,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,fd448902a7edcb3ee9b317c6f868bb60879d9d27d7139a4655a890a22f11f213
+M5-stress,20261020T170825Z_8460,PASS,True,30,selected accepted evidence,c17af6c00525ab2e7bdc0feea0e360f96f3896cc9eb074959a05f5e5d2b4c0ef
+M5-production,20261017T015838Z_13196,PASS,True,3,retained historical / not selected; RUNNING may be a stale interrupted checkpoint,ca6a1c6c3219b697c3f47514248631a64618a6725a6340882c5f3cd7abfbd669
+M5-production,20261020T173518Z_3766,PASS,True,3,selected accepted evidence,be80abad048ab1576597d5ea9393315498a40098c5bf1fb379811f198dc00d23
+M6-stress,20261021T011237Z_23789,PASS,True,10,selected accepted evidence,02a031717863d6e7e6d9f476fef6d4ad8be2c34a333bc381964eac63bec646a1
+M6-production,20261021T011237Z_23785,PASS,True,1,selected accepted evidence,619f0f9c898df093eeee4d12fa695d5a9fe17c51c7d190b5c760b2a03a869e41

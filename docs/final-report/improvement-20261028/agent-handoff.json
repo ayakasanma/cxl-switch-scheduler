@@ -1,0 +1,672 @@
+{
+  "schema_version": "cxl-report-improvement-handoff/1.0",
+  "date": "2026-10-28",
+  "timezone": "Asia/Taipei",
+  "status": "PLAN_COMPLETE_NOT_APPLIED",
+  "path_base": "repository_root",
+  "language": "zh-TW",
+  "workflow": "ARS-Codex academic-paper outline-only; explicit user-directed experiment planning",
+  "scope": {
+    "manuscript_rewritten": false,
+    "new_experiments_run": false,
+    "automation_created": false
+  },
+  "read_order": [
+    "docs/final-report/improvement-20261028/IMPROVEMENT_PLAN.md",
+    "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md"
+  ],
+  "manuscript": {
+    "entry": "docs/final-report/main-v3.tex",
+    "body": "docs/final-report/sections/hotnets-body-v3.tex",
+    "release_receipt": "docs/final-report/CGOF_DIAGNOSIS_QA.md"
+  },
+  "narrative_order": [
+    "CXL pooling and shared-path contention",
+    "FAI purpose and transitional Buffer",
+    "Executable FAI-inspired RTL and paper differences",
+    "Common platform for queueing and full hardware cost",
+    "Results, diagnosis and applicability"
+  ],
+  "evidence": {
+    "model_cohorts": [
+      {
+        "id": "equal-demand",
+        "tier": "MODEL_ONLY",
+        "jobs": 180,
+        "seeds": [
+          6201,
+          6202,
+          6203,
+          6204,
+          6205,
+          6206,
+          6207,
+          6208,
+          6209,
+          6210,
+          6211,
+          6212,
+          6213,
+          6214,
+          6215,
+          6216,
+          6217,
+          6218,
+          6219,
+          6220
+        ],
+        "summary": "artifacts/implementation/diagnosis-20261027/equal-demand-confirmation-20261028T014300Z/summary.json",
+        "manifest_digest": "dd4ccc8fc7c0861483dacba976b9933c4d7d8634ab28df2f89d8cb7d40509cde"
+      },
+      {
+        "id": "fixed-class",
+        "tier": "MODEL_ONLY",
+        "jobs": 100,
+        "seeds": [
+          6201,
+          6202,
+          6203,
+          6204,
+          6205,
+          6206,
+          6207,
+          6208,
+          6209,
+          6210,
+          6211,
+          6212,
+          6213,
+          6214,
+          6215,
+          6216,
+          6217,
+          6218,
+          6219,
+          6220
+        ],
+        "summary": "artifacts/implementation/diagnosis-20261027/fixed-class-confirmation-20261028T014300Z/summary.json",
+        "manifest_digest": "739a6704972d5c2c969157bea27b3360d90a54e0699ffc67738ffb9cbea78bea"
+      },
+      {
+        "id": "finite-heavy",
+        "tier": "MODEL_ONLY",
+        "jobs": 300,
+        "seeds": [
+          6201,
+          6202,
+          6203,
+          6204,
+          6205,
+          6206,
+          6207,
+          6208,
+          6209,
+          6210,
+          6211,
+          6212,
+          6213,
+          6214,
+          6215,
+          6216,
+          6217,
+          6218,
+          6219,
+          6220
+        ],
+        "summary": "artifacts/implementation/diagnosis-20261027/finite-heavy-confirmation-20261028T014300Z/summary.json",
+        "manifest_digest": "1f67b0a09ffccd8ccff0f9f1550edb871c8b2f9f040bc72dd1972a803360e84d"
+      }
+    ],
+    "production_rtl": [
+      {
+        "run_id": "20261027T203657Z_1135",
+        "tier": "SCHEDULER_RTL",
+        "seed": 6201,
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/summary.json",
+        "result_files": [
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw1.json",
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw2.json"
+        ]
+      },
+      {
+        "run_id": "20261027T195414Z_1179",
+        "tier": "SCHEDULER_RTL",
+        "seed": 6201,
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/summary.json",
+        "result_files": [
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-isolated-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_finite-heavy-isolated-w5000000-hw1.json",
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-isolated-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_finite-heavy-isolated-w5000000-hw2.json",
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-mixed-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_finite-heavy-mixed-w5000000-hw1.json",
+          "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-mixed-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_finite-heavy-mixed-w5000000-hw2.json"
+        ]
+      }
+    ],
+    "cgof_area_sta": [
+      {
+        "policy": "CGOF (1:1)",
+        "n": 4,
+        "depth": 16,
+        "window": 5000000,
+        "area": 106163.066946,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 12.683299,
+        "hold_slack_ns": 0.034898,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n4-20261028/reports"
+      },
+      {
+        "policy": "CGOF (1:1)",
+        "n": 8,
+        "depth": 16,
+        "window": 5000000,
+        "area": 212027.006396,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 8.135937,
+        "hold_slack_ns": 0.054674,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n8-20261028/reports"
+      },
+      {
+        "policy": "CGOF (1:1)",
+        "n": 16,
+        "depth": 16,
+        "window": 5000000,
+        "area": 423513.448454,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 3.158005,
+        "hold_slack_ns": 0.078278,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n16-20261028/reports"
+      },
+      {
+        "policy": "CGOF (2:1)",
+        "n": 4,
+        "depth": 16,
+        "window": 5000000,
+        "area": 109794.784709,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 10.3988,
+        "hold_slack_ns": 0.038578,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-20261028T0723/reports"
+      },
+      {
+        "policy": "CGOF (2:1)",
+        "n": 8,
+        "depth": 16,
+        "window": 5000000,
+        "area": 218863.73416,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 5.675092,
+        "hold_slack_ns": 0.10386,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n8-20261028/reports"
+      },
+      {
+        "policy": "CGOF (2:1)",
+        "n": 16,
+        "depth": 16,
+        "window": 5000000,
+        "area": 436771.124393,
+        "area_units": "library_cell_area_units",
+        "setup_slack_ns": 1.248813,
+        "hold_slack_ns": 0.084335,
+        "period_ns": 25,
+        "power_status": "NOT_RUN",
+        "report_root": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n16-20261028/reports"
+      }
+    ],
+    "n4_confirmation": {
+      "seeds": [
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        548
+      ],
+      "tier": "SCHEDULER_RTL",
+      "metric": "sparse_generation_to_fire_mean_run_p99_cycles",
+      "policy_order": [
+        "FCFS",
+        "RR1",
+        "RR10",
+        "FAI-inspired",
+        "Algorithm-2",
+        "BLISS-inspired",
+        "CGOF (2:1)"
+      ],
+      "values": {
+        "A": [
+          18.1,
+          2,
+          11,
+          10,
+          10,
+          1.15,
+          1.1
+        ],
+        "B": [
+          33.45,
+          16.65,
+          17.7,
+          21.05,
+          21.35,
+          33,
+          12.35
+        ]
+      }
+    }
+  },
+  "interpretation_corrections": [
+    {
+      "source": [
+        "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw1.json",
+        "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw2.json"
+      ],
+      "observation": "First boundary is B_H/B_H/B_H/H; B_H retains effective High. Later boundaries are all H.",
+      "use": "Do not describe this as effective demotion to Low or evidence that weights never matter."
+    }
+  ],
+  "experiment_protocol": {
+    "proposed_exploration_seeds": [
+      7101,
+      7102,
+      7103,
+      7104,
+      7105
+    ],
+    "proposed_confirmation_seeds": [
+      7201,
+      7202,
+      7203,
+      7204,
+      7205,
+      7206,
+      7207,
+      7208,
+      7209,
+      7210,
+      7211,
+      7212,
+      7213,
+      7214,
+      7215,
+      7216,
+      7217,
+      7218,
+      7219,
+      7220
+    ],
+    "seed_collision_check_required": true,
+    "paired_by": "seed and input trace",
+    "new_run_status": "PLANNED",
+    "outcome_vocabulary": [
+      "SUPPORTED",
+      "REFUTED",
+      "MIXED",
+      "INCONCLUSIVE"
+    ],
+    "integration_checks": [
+      "source_and_trace_binding",
+      "conservation_and_censoring",
+      "complete_declared_cohort",
+      "metric_and_comparator_match",
+      "paired_statistics_or_deterministic_scope",
+      "claim_matches_actual_outcome"
+    ]
+  },
+  "experiments": [
+    {
+      "id": "H1",
+      "title": "Buffer stability and adaptation",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        2,
+        5
+      ],
+      "primary_metrics": [
+        "effective_class_flips",
+        "adaptation_cycles",
+        "sparse_run_p99"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H1：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H2",
+      "title": "Allocation versus eligible ordering",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "service_share_error",
+        "sparse_run_p99",
+        "heavy_gap"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H2：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H3",
+      "title": "Multi-seed multi-window RTL replication",
+      "priority": "P1",
+      "existing_evidence": "PARTIAL_EVIDENCE",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "sparse_run_p99",
+        "heavy_gap_p99",
+        "heavy_max_gap",
+        "mixed_isolated_completion_ratio"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H3：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H4",
+      "title": "Admission boundary and FIFO depth",
+      "priority": "P2",
+      "existing_evidence": "HYPOTHESIS",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        4,
+        5
+      ],
+      "primary_metrics": [
+        "generation_to_acceptance",
+        "acceptance_to_fire",
+        "generation_to_fire",
+        "external_backlog"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H4：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    },
+    {
+      "id": "H5",
+      "title": "CXL response and application translation",
+      "priority": "P3",
+      "existing_evidence": "UNTESTED",
+      "new_work_status": "PLANNED",
+      "report_sections": [
+        5
+      ],
+      "primary_metrics": [
+        "completed_bytes_per_second",
+        "issue_to_response_p99",
+        "application_slowdown",
+        "max_application_slowdown"
+      ],
+      "protocol_file": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "protocol_search_prefix": "## H5：",
+      "report_integration_ready": false,
+      "outcome": null,
+      "result_paths": []
+    }
+  ],
+  "agent_instructions": [
+    "Read both plan documents before changing the report.",
+    "Resolve all paths from the repository root and check source SHA-256 values; reconcile changed evidence before reuse.",
+    "Execute experiments only within the active user-authorized scope and repository workflow.",
+    "For completed experiments, record direction and evidence; integrate negative and mixed results as well as supporting results.",
+    "Keep model, RTL, pre-layout, and application populations separate.",
+    "Reuse existing report generators and check original policy/configuration identity before publishing numerical rows."
+  ],
+  "validation": {
+    "json_parse": true,
+    "source_existence": true,
+    "n4_confirmation_against_plot_data": true,
+    "model_job_counts_against_raw_summaries": true,
+    "cgof_area_and_slack_against_raw_reports": true,
+    "rtl_class_trace_checked": true,
+    "full_experiment_reexecution": false
+  },
+  "source_files": [
+    {
+      "path": "docs/final-report/main-v3.tex",
+      "sha256": "0b1c5ad0704765a7916aafb0246ec5356a6805ed8ad530fe877aec776465c1fd"
+    },
+    {
+      "path": "docs/final-report/sections/hotnets-body-v3.tex",
+      "sha256": "cf5939464081d43775f1352e2d60c53056838e4aa3c75f24365eeb15729610d6"
+    },
+    {
+      "path": "docs/final-report/CGOF_DIAGNOSIS_QA.md",
+      "sha256": "d630f4ecfde4519042edf50a4e6783a16b24d272b788199464ce2e0046d99520"
+    },
+    {
+      "path": "docs/final-report/generated/revision_v3_results.tex",
+      "sha256": "8e8675907d91d9739a27db6d1319b1f403ca032a13b81ee4f154eaabf40b2b26"
+    },
+    {
+      "path": "docs/final-report/generated/figures/plot-data.json",
+      "sha256": "eacbb284a36c8ca5f93af8d28a4b661a51d43465c4167fe38045af3cac98fc2d"
+    },
+    {
+      "path": "docs/final-report/generated/revision_v3_evidence_manifest.json",
+      "sha256": "2c4cc54af9cd821faf7c2ae3a51bf5d653ae1ef076728f2d50df1c7e2619c0a8"
+    },
+    {
+      "path": "docs/experiments/diagnosis-20261027/DIAGNOSIS_SUMMARY.md",
+      "sha256": "37eafb34a0727383a68cef2e8aedc56c84dc0da3c90185040717269a6c04a7ee"
+    },
+    {
+      "path": "docs/experiments/diagnosis-20261027/CGOF_RTL_PPA.md",
+      "sha256": "5ade7b5090914003200590b52646d37fce33950296bbd8ad09eacf0356b77755"
+    },
+    {
+      "path": "specs/CXL_SPEC.md",
+      "sha256": "797a5cdf01d2f769f44ca45225a33cc0510b04a408a8ff847e1db1c80928a4cf"
+    },
+    {
+      "path": "scripts/run_diagnosis.py",
+      "sha256": "70d3c0463e6820764b0676493c26d5120e56cdb7c4d645afca6777eabc2b1ae1"
+    },
+    {
+      "path": "scripts/run_rtl_diagnosis.py",
+      "sha256": "b97ffcea6a958acc142e9362b73cd962c7959a5e04bb16765b68fde4617d4bab"
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/IMPROVEMENT_PLAN.md",
+      "sha256": "eacab0fccc10965cb11153e48540bc16f13fe777ceb45a2d5086b6a69f86c508"
+    },
+    {
+      "path": "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+      "sha256": "5fbad50728fbee5026edda86aaf9d417e83224886297742e3e22569f4e34a14e"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/pond.txt",
+      "sha256": "2f56dc68fc43e5a81fac706676f1ae3a88deac602394e3ff062e2ae339bd30c2"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/cxl_intro.txt",
+      "sha256": "85121608d62c280981ab8355870e6a2f5b949d69e1409a9f62c27ac634a26ac3"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/fai.txt",
+      "sha256": "e39bf3c1fc9a9b710cf7ea3ff252ceeff08a0d9ca4ee06acbf2c4aa8a2acf2de"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/bliss.txt",
+      "sha256": "dfe904eb4412cb77eb4ae89987071d8ee719f99d987b62554415ffff2a4a7807"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/stfm.txt",
+      "sha256": "b73eb55b855a57f6bb3310f0042eafedbf55ac4bf248193b0e97285d1775a29a"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/gupta.txt",
+      "sha256": "d86b7bd1cd76ca24aab541d9a4215563d98b493a105559d292acde602a34f8a1"
+    },
+    {
+      "path": "docs/final-report/lit-review/fulltexts/wrr_arxiv.txt",
+      "sha256": "011e5abb9c325c135f00903a697799ce4adceff3751b2405ce4df7cd5de33e62"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/equal-demand-confirmation-20261028T014300Z/summary.json",
+      "sha256": "cdbd1c906a39af60a74f02f083c17b842b2a1a6d15a95e04fba3fa6d717ebeb1"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/equal-demand-confirmation-20261028T014300Z/manifest.json",
+      "sha256": "46a8b576d4405c733af126530427c850bb38cccaec7acf5a07a13151f3ffc166"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/fixed-class-confirmation-20261028T014300Z/summary.json",
+      "sha256": "f048b0264764634abe7e0723429592b317668528a0a081ae01f5a6c22805927c"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/fixed-class-confirmation-20261028T014300Z/manifest.json",
+      "sha256": "7778ecb6b936cf4e4bf56e2923f290f5b563672485452f39cf67c57f73788081"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/finite-heavy-confirmation-20261028T014300Z/summary.json",
+      "sha256": "c0ee9ace1c2c32f8b7a33259f6033421e083773a069cd69a32e1cb86ab30eafe"
+    },
+    {
+      "path": "artifacts/implementation/diagnosis-20261027/finite-heavy-confirmation-20261028T014300Z/manifest.json",
+      "sha256": "557e2b2aa74f546079eaf28a364183647e4475547c0d43fb4d2418364946362e"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/summary.json",
+      "sha256": "34a085fc4ebdde40fdcf794acce637527468edd2bc7d1bc8d4e277fc287c1378"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw1.json",
+      "sha256": "b2bd658c8d894be667f1e7e0805f1cf56b87ab901ee95a84133b990161aad2a5"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T203657Z_1135/results/cocotb_common-demand-mixed-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_common-demand-mixed-w5000000-hw2.json",
+      "sha256": "f39192c2bfa54f38ed89edb86e9a88877f7c19efc4a46491c4f5a7b2d4ad7ff5"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/summary.json",
+      "sha256": "d01e88fff4d018f906021f2af7fb9b44f9f6b825cf7b315f41c0117c9c1996f4"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-isolated-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_finite-heavy-isolated-w5000000-hw1.json",
+      "sha256": "fa7d6f0a326b320076448fc0b19e1c108ec7a139c5f180b219c357bed30e25d4"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-isolated-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_finite-heavy-isolated-w5000000-hw2.json",
+      "sha256": "118a003298748f264bb06f8ed112156c382b50ddace335a7c7c19bdf4bc76761"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-mixed-w5000000-hw1-seed6201_seed6201__cgof_diagnosis_finite-heavy-mixed-w5000000-hw1.json",
+      "sha256": "6dbbc451f06aa11baba4c8dd8334533b839c722575bb8662718a16a01cc0350b"
+    },
+    {
+      "path": "artifacts/implementation/cgof-rtl-diagnosis/20261027T195414Z_1179/results/cocotb_finite-heavy-mixed-w5000000-hw2-seed6201_seed6201__cgof_diagnosis_finite-heavy-mixed-w5000000-hw2.json",
+      "sha256": "22670f4ecf9c0f7d55b98a3f3965e46c8768754d6174046acd9105f23234de51"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n4-20261028/reports/pt_timing_max.rpt",
+      "sha256": "a630bf7bab61f3b509469696169f26b9a252cec761b6b20081c48bb56aef2241"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n4-20261028/reports/pt_timing_min.rpt",
+      "sha256": "200f64fe33ef3a580a43b8a21538a805b14cecf098fd2a96dfab86f33e93a220"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n4-20261028/reports/area_summary.rpt",
+      "sha256": "86d64e27eec1dd4aa20e078cd158664a62a46cc606bcdb2ac7ddc2044427e406"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n8-20261028/reports/pt_timing_max.rpt",
+      "sha256": "3b8f32123a286b9ad15551d86efaa13ba7328af15e31c0f48dacef262df2a4b3"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n8-20261028/reports/pt_timing_min.rpt",
+      "sha256": "71bdb093eee3b9bf74ffc36576d03ad6b8a5fe6619c6f8b97e571b497209077c"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n8-20261028/reports/area_summary.rpt",
+      "sha256": "fb7c119c1d76b711caad47b85310a925f4fe4911a4ea4862da16a5ab5679d5d8"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n16-20261028/reports/pt_timing_max.rpt",
+      "sha256": "812763cb526daefedaf4a44d0ee04afab0c36412c4cf4fdeb5cca10416148a9f"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n16-20261028/reports/pt_timing_min.rpt",
+      "sha256": "02340b829e7ad1f40c838c9aaca09b5510f2a392e0733f30cbc31c640fa0354f"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof1-n16-20261028/reports/area_summary.rpt",
+      "sha256": "111022bb4fbcbebd95db2770381657177a020e8f47c043b65a68a1478d085903"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-20261028T0723/reports/pt_timing_max.rpt",
+      "sha256": "d7aff506266b60e905db0d42241ef3ecf1e88f4ee44dcf38374743b0259cc2b0"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-20261028T0723/reports/pt_timing_min.rpt",
+      "sha256": "c55aa43900c1cf65f124a0506859ec53fdf98708d552a3fc4e12d02f915733bc"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-20261028T0723/reports/area_summary.rpt",
+      "sha256": "4812d5be69c4155e9205a8ae1dde2ba94b71f2677aa6a12766e9dfd7b2e43c0d"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n8-20261028/reports/pt_timing_max.rpt",
+      "sha256": "e4f7b95a535d47ac274eb4b7208f11451d9eba5114db5e2e20d2ef14dff87341"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n8-20261028/reports/pt_timing_min.rpt",
+      "sha256": "c3003eae0608cfe8c54f7404515a0713c7feb4cd3d190f4217407f1da92c5180"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n8-20261028/reports/area_summary.rpt",
+      "sha256": "cdb84374ae35876827c69ae3c5f713c4e408a9edfcf67304cf63fced36fbaa7a"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n16-20261028/reports/pt_timing_max.rpt",
+      "sha256": "bb044bb404736dc9d9b9309b68358543cd7f1460c0b261ceacd456efe753ae08"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n16-20261028/reports/pt_timing_min.rpt",
+      "sha256": "6717b7e97a9a13091dc29b5d2970a40d4cfad66c7227ddea678df95d25a578e6"
+    },
+    {
+      "path": "artifacts/fastx/cgof-ppa-dcpt-cgof2-n16-20261028/reports/area_summary.rpt",
+      "sha256": "9535607069de7f34aa7e48176a7ec54e5b3671661081b96d97a98e3037f9955e"
+    }
+  ]
+}

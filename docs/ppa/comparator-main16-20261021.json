@@ -1,0 +1,121 @@
+{
+  "source": "b257ee8d878b94c14fb7ad78d03ff0ddb2ee7ee6",
+  "parameters": {
+    "top_module": "switch_top",
+    "policy_name": "fai-main",
+    "N_SRC": 16,
+    "POLICY": 2,
+    "RR_QUANTUM": 10,
+    "FAI_W": 5000000,
+    "D": 16,
+    "M": 1,
+    "DESC_W": 105,
+    "elab_parameters": "N_SRC=16,POLICY=2,RR_QUANTUM=10,FAI_W=5000000",
+    "arrival_metadata": true,
+    "expected": {
+      "fifo_instances": 16,
+      "out_hold_instances": 1,
+      "descriptor_storage_bits": 26880,
+      "timestamp_storage_bits": 8192,
+      "min_register_bits": 35072,
+      "max_register_bits_exclusive": null,
+      "policy_module": "cxl_fai_main_sched",
+      "forbidden_modules": [
+        "cxl_rr_sched"
+      ],
+      "port_bits": {
+        "clk": 1,
+        "rst_n": 1,
+        "i_in_valid": 16,
+        "o_in_ready": 16,
+        "i_in_desc": 1680,
+        "o_out_valid": 1,
+        "i_out_ready": 1,
+        "o_out_desc": 105,
+        "o_out_source": 4
+      },
+      "timed_input_bits": 1698
+    }
+  },
+  "profile_sha256": "51a518e98d01ffd5788ee73ab4e39951e680411f494294c59da52bd4cb98fe6f",
+  "library_sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+  "source_hashes": {
+    "rtl/include/cxl_sched_pkg.sv": "05d2cb6af0c4055873b99bfa26e61fa899fdf1e227af34b42dec04080e3c5556",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/common/cxl_fcfs_sel.sv": "3418505168ca4a0c93422101f1e1a7a042833c935e0f9b021661535b7b6a2c20",
+    "rtl/common/cxl_fai_main_sched.sv": "b40ce3083fc44a2804dd6da4d6cf16cf046d40a907dfb13c6866e07624b2a18d",
+    "rtl/common/cxl_rr_sched.sv": "84803ce5fafefcd2f58739c9768bd0e533cb10823c74203d9e039319f0714fdf",
+    "rtl/top/switch_top.sv": "82fdfccb4f5027c6e4ae3ea88335886226c4f5516d59a163a2ef95096671bd1d",
+    "rtl/filelist_switch.f": "8358645db33088c0963b8cf93f0feee629ed4bab3dd735c21589306e4f3e5cc5"
+  },
+  "cell_area": 437622.506788,
+  "comb_area": 201218.766809,
+  "sequential_area": 236403.739979,
+  "sequential_cells": 35773.0,
+  "leaf_cells": 116698,
+  "setup_slack_ns": 1.158148,
+  "hold_slack_ns": 0.084335,
+  "coverage": {
+    "all_checks_total": 143344,
+    "met": 143344,
+    "violated": 0,
+    "untested": 0
+  },
+  "pt_design_rules": {},
+  "dc_design_rules": {},
+  "emitted_sdc_check": {
+    "all_input_min_max_and_transition_ports_checked": 1698,
+    "all_output_min_max_and_load_ports_checked": 126,
+    "exceptions": "none",
+    "clock_period_ns": 25,
+    "uniform_constraints": "VERIFIED_EMITTED_SDC"
+  },
+  "area_partition": {
+    "full_fifo_subtrees": 406858.3751,
+    "policy_subtree": 26673.1754,
+    "common_hold_subtree": 3525.4856,
+    "top_logic_and_arrival_helpers": 565.4704,
+    "fifo_instances": 16,
+    "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+  },
+  "worst_setup_path": {
+    "startpoint": "gen_fifo_0__u_fifo/rd_ptr_q_reg_1_ (rising edge-triggered flip-flop clocked by core_clk)",
+    "endpoint": "gen_policy_fai_main_u_fai_sched/cls_q_reg_3__1_ (rising edge-triggered flip-flop clocked by core_clk)"
+  },
+  "power": "NOT_RUN",
+  "status": "SINGLE_PILOT_MEASURED_MET_NOT_NINE_CASE_REPLACEMENT",
+  "comparison": {
+    "same_profile_previous_source": "aa89771d5b5bc48bb7e054d8a8df9558de32b4ee",
+    "previous_area": 437228.837383,
+    "previous_setup_slack_ns": -0.907946,
+    "previous_hold_slack_ns": 0.085328,
+    "area_delta": 393.6694049999933,
+    "area_percent": 0.09003738348007939,
+    "setup_slack_delta_ns": 2.066094
+  },
+  "cap_overlay": {
+    "applied_count": 390,
+    "restored_count": 390,
+    "undefined_output_limit_count": 20
+  },
+  "driver_load_audit": [
+    {
+      "case": "main16-comparator",
+      "pins": 116993,
+      "constant_pseudo_drivers": 20,
+      "all_used_original_limits_defined_positive": true,
+      "ordinary_and_ccs_cap_violations": 0,
+      "source_hashes": "PASS",
+      "transfer_hashes": "PASS",
+      "dc_exit": 0
+    }
+  ],
+  "raw_results": "artifacts/fastx/comparator-cap075-main-n16-20261021a",
+  "raw_driver_loads": "artifacts/fastx/comparator-full-loads-main16-20261021a",
+  "dc_pt_wrapper_exit": 0,
+  "clock_ns": 25,
+  "source_spec_frozen": "1af80967bbc2fb83224f4725c4fb450889e69c62",
+  "backend": "fastx4-NN.ews.illinois.edu",
+  "profile_status": "PILOT"
+}

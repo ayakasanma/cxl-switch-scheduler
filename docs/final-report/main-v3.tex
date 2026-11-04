@@ -1,0 +1,91 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[letterpaper,left=0.75in,right=0.75in,top=0.75in,bottom=1in,columnsep=24pt,headheight=12pt,headsep=22pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\renewcommand{\ttdefault}{pcr}
+\usepackage{amsmath,booktabs,graphicx,array,float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\definecolor{figblue}{HTML}{0072B2}
+\definecolor{figred}{HTML}{D55E00}
+\definecolor{figgray}{HTML}{4D4D4D}
+\usepackage[font=small,labelfont=bf,labelsep=colon]{caption}
+\usepackage{balance}
+\usepackage[hidelinks]{hyperref}
+\input{generated/results.tex}
+\input{generated/revision_v3_results.tex}
+\input{generated/improvement_results.tex}
+\input{generated/update_20261029_results.tex}
+\input{generated/update_20261102_results.tex}
+\pdfinfoomitdate=1
+\pdfsuppressptexinfo=-1
+\pdftrailerid{}
+\hypersetup{pdftitle={From Service Classes to Hardware Costs: An RTL Study of CXL-Inspired Switch Scheduling},pdfauthor={Jay Chiang; Daniel Chou},pdfsubject={ECE 509 final report; completed evidence through 2026-11-02}}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{7pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\renewcommand{\dbltopfraction}{0.88}
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setcounter{dbltopnumber}{3}
+\setlength{\abovedisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\belowdisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\abovedisplayshortskip}{2pt plus 1pt}
+\setlength{\belowdisplayshortskip}{2pt plus 1pt}
+\setlength{\headheight}{12pt}
+\setlength{\emergencystretch}{1.3em}
+\clubpenalty=10000
+\widowpenalty=10000
+\brokenpenalty=10000
+\raggedbottom
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}{-2.6ex plus -0.6ex minus -0.2ex}{1.1ex plus 0.2ex}{\normalfont\large\bfseries\raggedright}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-2.2ex plus -0.5ex minus -0.2ex}{0.8ex plus 0.2ex}{\normalfont\normalsize\bfseries\raggedright}}
+\def\ps@report{%
+  \def\@oddhead{\footnotesize CXL Switch Arbitration: Policy to Hardware Cost\hfil Chiang and Chou}%
+  \let\@evenhead\@oddhead
+  \def\@oddfoot{\hfil\footnotesize\thepage\hfil}%
+  \let\@evenfoot\@oddfoot}
+\makeatother
+\pagestyle{report}
+\newcommand{\FaiInspired}{FAI-inspired}
+\newcommand{\Alg}{FAI-ImmBuf}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\reportaxis}{\pgfplotsset{every axis/.append style={width=\columnwidth,height=4.25cm,scale only axis=false,tick label style={font=\scriptsize,text=figgray},label style={font=\scriptsize,text=figgray},legend style={font=\scriptsize,draw=none,fill=white,inner sep=1pt},grid=major,grid style={figgray!15,line width=.25pt},axis line style={figgray!70,line width=.45pt},tick style={figgray!70,line width=.4pt},xmin=2.5,xmax=17.5,xtick={4,8,16},xlabel={Number of sources $N$},axis x line=bottom,axis y line=left}}}
+\title{\vspace{-2em}\bfseries From Service Classes to Hardware Costs:\\ An RTL Study of CXL-Inspired Switch Scheduling}
+\author{Jay Chiang\qquad Daniel Chou}
+\date{\normalsize ECE 509 Final Project Report\\\small Revised November 2, 2026 (Asia/Taipei)}
+\begin{document}
+\maketitle
+\input{sections/hotnets-body-v3.tex}
+\clearpage
+
+\begingroup\footnotesize\balance
+\begin{thebibliography}{99}
+\bibitem{cxl_intro} D. Das Sharma, R. Blankenship, and D. Berger, ``An Introduction to the Compute Express Link (CXL) Interconnect,'' \emph{ACM Computing Surveys}, vol.~56, no.~11, pp.~1--37, 2024. doi: \href{https://doi.org/10.1145/3669900}{10.1145/3669900}.
+\bibitem{pond} H. Li \emph{et al.}, ``Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,'' arXiv:2203.00241v4, October 21, 2022. ASPLOS 2023 preprint; version used here. \href{https://arxiv.org/abs/2203.00241v4}{arXiv:2203.00241v4}.
+\bibitem{tpp} H. Al Maruf \emph{et al.}, ``TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory,'' in \emph{Proc. 28th ACM Int. Conf. Architectural Support for Programming Languages and Operating Systems}, vol.~3, 2023, pp.~742--755. doi: \href{https://doi.org/10.1145/3582016.3582063}{10.1145/3582016.3582063}.
+\bibitem{directcxl} D. Gouk, M. Kwon, H. Bae, S. Lee, and M. Jung, ``Memory Pooling With CXL,'' \emph{IEEE Micro}, vol.~43, no.~2, pp.~48--57, 2023. doi: \href{https://doi.org/10.1109/MM.2023.3237491}{10.1109/MM.2023.3237491}.
+\bibitem{case_pool} P. Levis, K. Lin, and A. Tai, ``A Case Against CXL Memory Pooling,'' in \emph{Proc. 22nd ACM Workshop on Hot Topics in Networks}, 2023, pp.~18--24. doi: \href{https://doi.org/10.1145/3626111.3628195}{10.1145/3626111.3628195}.
+\bibitem{my_cxl_pool} Y. Zhong \emph{et al.}, ``My CXL Pool Obviates Your PCIe Switch,'' in \emph{Proc. Workshop on Hot Topics in Operating Systems}, 2025, pp.~58--66. doi: \href{https://doi.org/10.1145/3713082.3730393}{10.1145/3713082.3730393}.
+\bibitem{stfm} O. Mutlu and T. Moscibroda, ``Stall-Time Fair Memory Access Scheduling for Chip Multiprocessors,'' in \emph{Proc. 40th IEEE/ACM Int. Symp. Microarchitecture}, 2007, pp.~146--160. doi: \href{https://doi.org/10.1109/MICRO.2007.21}{10.1109/MICRO.2007.21}.
+\bibitem{fqmem} K. J. Nesbit, N. Aggarwal, J. Laudon, and J. E. Smith, ``Fair Queuing Memory Systems,'' in \emph{Proc. 39th IEEE/ACM Int. Symp. Microarchitecture}, 2006, pp.~208--222. doi: \href{https://doi.org/10.1109/MICRO.2006.24}{10.1109/MICRO.2006.24}.
+\bibitem{atlas} Y. Kim, D. Han, O. Mutlu, and M. Harchol-Balter, ``ATLAS: A Scalable and High-Performance Scheduling Algorithm for Multiple Memory Controllers,'' in \emph{Proc. 16th IEEE Int. Symp. High-Performance Computer Architecture}, 2010, pp.~1--12. doi: \href{https://doi.org/10.1109/HPCA.2010.5416658}{10.1109/HPCA.2010.5416658}.
+\bibitem{tcm} Y. Kim, M. Papamichael, O. Mutlu, and M. Harchol-Balter, ``Thread Cluster Memory Scheduling: Exploiting Differences in Memory Access Behavior,'' in \emph{Proc. 43rd IEEE/ACM Int. Symp. Microarchitecture}, 2010, pp.~65--76. doi: \href{https://doi.org/10.1109/MICRO.2010.51}{10.1109/MICRO.2010.51}.
+\bibitem{bliss} L. Subramanian, D. Lee, V. Seshadri, H. Rastogi, and O. Mutlu, ``The Blacklisting Memory Scheduler: Achieving High Performance and Fairness at Low Cost,'' in \emph{Proc. IEEE 32nd Int. Conf. Computer Design}, 2014, pp.~8--15. doi: \href{https://doi.org/10.1109/ICCD.2014.6974655}{10.1109/ICCD.2014.6974655}.
+\bibitem{fai} J. Li, Y. Liu, Y. Gu, and C. Wu, ``FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL Memory Pool Management with Fine-Grained Cacheline-Level Interleaving,'' in \emph{Proc. IEEE Int. Conf. Parallel and Distributed Systems (ICPADS)}, 2025, pp.~1--8. doi: \href{https://doi.org/10.1109/ICPADS67057.2025.11322896}{10.1109/ICPADS67057.2025.11322896}. Algorithm 2, p.~5.
+\bibitem{cxl_interplay} S. Mao \emph{et al.}, ``CXL-INTERPLAY: Unraveling and Characterizing CXL Interference in Modern Computer Systems,'' in \emph{Proc. 62nd ACM/IEEE Design Automation Conference}, 2025, pp.~1--7. doi: \href{https://doi.org/10.1109/DAC63849.2025.11132607}{10.1109/DAC63849.2025.11132607}.
+\bibitem{contention_cache} C. Tirumalasetty and N. R. Annapareddy, ``Contention Aware DRAM Caching for CXL-Enabled Pooled Memory,'' in \emph{Proc. Int. Symp. Memory Systems}, 2024, pp.~157--171. doi: \href{https://doi.org/10.1145/3695794.3695808}{10.1145/3695794.3695808}.
+\bibitem{hpc_pool} J. Wahlgren, M. Gokhale, and I. B. Peng, ``Evaluating Emerging CXL-Enabled Memory Pooling for HPC Systems,'' in \emph{Proc. IEEE/ACM Workshop on Memory Centric High Performance Computing}, 2022, pp.~11--20. doi: \href{https://doi.org/10.1109/MCHPC56545.2022.00007}{10.1109/MCHPC56545.2022.00007}.
+\bibitem{cxldmsim} Y. Wang \emph{et al.}, ``CXL-DMSim: A Full-System CXL Disaggregated Memory Simulator With Comprehensive Silicon Validation,'' \emph{IEEE Trans. Computer-Aided Design of Integrated Circuits and Systems}, vol.~45, no.~4, pp.~1787--1801, 2026. doi: \href{https://doi.org/10.1109/TCAD.2025.3607145}{10.1109/TCAD.2025.3607145}.
+\bibitem{gupta} P. Gupta and N. McKeown, ``Designing and Implementing a Fast Crossbar Scheduler,'' \emph{IEEE Micro}, vol.~19, no.~1, pp.~20--28, 1999. doi: \href{https://doi.org/10.1109/40.748793}{10.1109/40.748793}.
+\bibitem{wrr_mandal} S. K. Mandal, J. Tong, R. Ayoub, M. Kishinevsky, A. Abousamra, and U. Y. Ogras, ``Theoretical Analysis and Evaluation of NoCs with Weighted Round-Robin Arbitration,'' arXiv:2108.09534v2, August 12, 2023. \href{https://arxiv.org/abs/2108.09534v2}{arXiv:2108.09534v2}.
+\bibitem{artifact} J. Chiang and D. Chou, \emph{CXL Scheduler Project: Frozen Specification v1.0 and Experimental Evidence}, ECE 509 project artifact, revised November 2, 2026. Includes source-bound RTL experiments, model diagnosis cohorts, complete area/STA and activity reports, and manuscript-update evidence manifests.
+\end{thebibliography}
+\endgroup
+\end{document}

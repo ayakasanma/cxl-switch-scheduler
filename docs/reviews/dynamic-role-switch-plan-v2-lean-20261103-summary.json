@@ -1,0 +1,1099 @@
+{
+ "schema": "cxl-dynamic-role-switch-plan-v2-summary-v1",
+ "plan": "docs/reviews/dynamic-role-switch-plan-v2-lean-20261103.md",
+ "v1_plan": "docs/reviews/dynamic-role-switch-rtl-plan-20261103.md",
+ "status": "PROPOSED_NOT_FROZEN",
+ "authorizes_execution": false,
+ "replaces_v1": false,
+ "promotes_C7": false,
+ "evidence_classification": {
+  "primary": "MODEL_ONLY",
+  "rtl_anchor_coverage": "separate metadata describing actual anchors; not an evidence level"
+ },
+ "provenance_dir_ignored_local": ".setup-logs/implementation/dynamic-role-switch-v2-probes-20261103",
+ "provenance_manifest_sha256": "a27fa5994663e62c429e4b38725df0a25a551b6d370492ac004c6f8fc52a6980",
+ "provenance_files_sha256": {
+  "compare-7291-model-vs-rtl.log": "523e2e0b79800c6a0c25867c17827402e21fd94cf20c284cf0f1246d39f011cb",
+  "rss-cpu-snapshot-1.txt": "e18a62cd2b4aaa8a1ed5ec05676d9332f005a7083469f72a511769ab3505f259",
+  "stdout-a-b-c-from-session-transcript.json": "714c29f427402ad98970c9f10fa51b59a4bada5f47e1f2981b22e0f243fa0355"
+ },
+ "scripts_sha256": {
+  "bench.py": "4fdaf1cb8c10e3c5d47e87db7c2e1750dd163dae4432e482e8e970fe7d6d5c06",
+  "iso.py": "42e4132695a472b93536a433cca78c44150c3144868038161100f7b91cd4f7ad",
+  "probe.py": "b0e632f16af1a36eb4390bbf9720e08265e319db0c97a05ee16ef38a9985adcf"
+ },
+ "script_notes": {
+  "iso_py": "edited in place after two failing attempts; earlier versions NOT_RETAINED",
+  "exit_codes": "all 7 probes NOT_RECORDED (background '&' under one wrapper whose wait returned 0); completion evidenced by JSON written by the last statement and empty stderr",
+  "smoke": "probe smoke (seed 9901, timeout 120 s) killed, no output",
+  "stdout": "bench/iso stdout kept only in the ignored provenance dir (verbatim transcript extract); not copied to Git"
+ },
+ "executor": {
+  "agent": "Claude Code Orca worker gjuqmud18vgc3oxpb911cs3s",
+  "model": "claude-opus-5-5",
+  "effort_runtime_reported": "high",
+  "effort_in_original_manifest": "session default (not set by Lead)",
+  "note": "both recorded; original manifest not modified"
+ },
+ "seeds": {
+  "pilot_7301": "engineering only: bench (first 200k W5M cycles, throughput) and iso (W256 heavy_work 900, isolated policy invariance)",
+  "replay_7291": "2 model replays vs existing RTL run 20261029T182230Z_52853",
+  "exploration_9901": "5 W5M probes + 1 killed smoke; excluded from any confirmation",
+  "heldout_7401_7420": "NOT USED"
+ },
+ "probes": [
+  {
+   "id": "rs_main",
+   "evidence": "MODEL_ONLY",
+   "seed": 9901,
+   "policy": "FAI-inspired",
+   "heavy_sources": "0,0,1,1",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21873609,
+   "end": 21873609,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    19,
+    1312454
+   ],
+   "per_source_sparse_p99_count": [
+    [
+     13,
+     236960
+    ],
+    [
+     19,
+     199749
+    ],
+    [
+     19,
+     437643
+    ],
+    [
+     19,
+     438102
+    ]
+   ],
+   "start_utc": "2026-11-03T10:05:27Z",
+   "end_utc": "2026-11-03T10:25:47.800845Z",
+   "wall_s_internal": 1220.0,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "a71c8159577b50ec9767748fec00e3805f3259c3f0ec35596f4207955d33606d",
+   "log_sha256": "d61b5cef60321bfc8e228ec70a594dfc8a646d36087bf1e94b677a0d76778774",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "FAI-inspired",
+    "0,0,1,1",
+    "9901",
+    "<probe_dir>/rs_main.json"
+   ]
+  },
+  {
+   "id": "rs_c11",
+   "evidence": "MODEL_ONLY",
+   "seed": 9901,
+   "policy": "CGOF(1:1)",
+   "heavy_sources": "0,0,1,1",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21873609,
+   "end": 21873609,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    3,
+    1312454
+   ],
+   "per_source_sparse_p99_count": [
+    [
+     3,
+     236960
+    ],
+    [
+     3,
+     199749
+    ],
+    [
+     3,
+     437643
+    ],
+    [
+     3,
+     438102
+    ]
+   ],
+   "start_utc": "2026-11-03T10:05:27Z",
+   "end_utc": "2026-11-03T10:25:11.117017Z",
+   "wall_s_internal": 1183.3,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "bc7848442693cc9565421a73ac7eae13439bcc6d101ea37f5f5f4f393f07b57d",
+   "log_sha256": "b630a7b01b673e1ad130da17f1e028eb439d85bb8ac4e89edae8fffcdbfa9daf",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "CGOF(1:1)",
+    "0,0,1,1",
+    "9901",
+    "<probe_dir>/rs_c11.json"
+   ]
+  },
+  {
+   "id": "rs_c21",
+   "evidence": "MODEL_ONLY",
+   "seed": 9901,
+   "policy": "CGOF(2:1)",
+   "heavy_sources": "0,0,1,1",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21873609,
+   "end": 21873609,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    4,
+    1312454
+   ],
+   "per_source_sparse_p99_count": [
+    [
+     4,
+     236960
+    ],
+    [
+     4,
+     199749
+    ],
+    [
+     4,
+     437643
+    ],
+    [
+     4,
+     438102
+    ]
+   ],
+   "start_utc": "2026-11-03T10:05:27Z",
+   "end_utc": "2026-11-03T10:24:35.929551Z",
+   "wall_s_internal": 1148.1,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "d579fcb1561c89f14bc285c6b010db21779e712abab8726684e8c7323d78c50e",
+   "log_sha256": "001ed96f9cff5f7515ee876ef1bed6d18ffe335ff17afad71e5c47c5dd807b20",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "CGOF(2:1)",
+    "0,0,1,1",
+    "9901",
+    "<probe_dir>/rs_c21.json"
+   ]
+  },
+  {
+   "id": "mw_main",
+   "evidence": "MODEL_ONLY",
+   "seed": 9901,
+   "policy": "FAI-inspired",
+   "heavy_sources": "0",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21873609,
+   "end": 21873609,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    18,
+    1313729
+   ],
+   "per_source_sparse_p99_count": [
+    null,
+    [
+     18,
+     437984
+    ],
+    [
+     18,
+     437643
+    ],
+    [
+     18,
+     438102
+    ]
+   ],
+   "start_utc": "2026-11-03T10:05:27Z",
+   "end_utc": "2026-11-03T10:25:48.226331Z",
+   "wall_s_internal": 1220.4,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "6f603ff7ce7db43d48289e96cbe9828edb1c1e5be7430ad66f951a1465dae543",
+   "log_sha256": "07ffc399355d670e5917f09fc0b5190f817040f1af8b6b68a7f3763c07a44a73",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "FAI-inspired",
+    "0",
+    "9901",
+    "<probe_dir>/mw_main.json"
+   ]
+  },
+  {
+   "id": "mw_c21",
+   "evidence": "MODEL_ONLY",
+   "seed": 9901,
+   "policy": "CGOF(2:1)",
+   "heavy_sources": "0",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21873609,
+   "end": 21873609,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    4,
+    1313729
+   ],
+   "per_source_sparse_p99_count": [
+    null,
+    [
+     4,
+     437984
+    ],
+    [
+     4,
+     437643
+    ],
+    [
+     4,
+     438102
+    ]
+   ],
+   "start_utc": "2026-11-03T10:05:27Z",
+   "end_utc": "2026-11-03T10:25:32.633062Z",
+   "wall_s_internal": 1204.8,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "e440b4babd5a64c417a5356f3ed4d9e53233098f7040278331b5bdbaa5a60706",
+   "log_sha256": "ae4869d89eb28e067d1fc606381164ff8f28e80ea47da9616d0c34936aabe189",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "CGOF(2:1)",
+    "0",
+    "9901",
+    "<probe_dir>/mw_c21.json"
+   ]
+  },
+  {
+   "id": "v7291_c11",
+   "evidence": "MODEL_ONLY",
+   "seed": 7291,
+   "policy": "CGOF(1:1)",
+   "heavy_sources": "0,0,1,1",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21876819,
+   "end": 21876819,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    3,
+    1313003
+   ],
+   "per_source_sparse_p99_count": [
+    [
+     3,
+     237793
+    ],
+    [
+     3,
+     199869
+    ],
+    [
+     3,
+     438567
+    ],
+    [
+     3,
+     436774
+    ]
+   ],
+   "start_utc": "2026-11-03T10:06:36Z",
+   "end_utc": "2026-11-03T10:26:11.485260Z",
+   "wall_s_internal": 1175.1,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "41686b52667ebeed4f2f531a3c734c1da61dfa94e062846dfd8415ab5b915f2f",
+   "log_sha256": "1ccb4c9975c6d532b2e670820c291b0fcaccde2ca6fbd6c4e552d7a6b04320d3",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "CGOF(1:1)",
+    "0,0,1,1",
+    "7291",
+    "<probe_dir>/v7291_c11.json"
+   ]
+  },
+  {
+   "id": "v7291_c21",
+   "evidence": "MODEL_ONLY",
+   "seed": 7291,
+   "policy": "CGOF(2:1)",
+   "heavy_sources": "0,0,1,1",
+   "shape": "N4 D16 W5M windows4 heavy_work17.5M near bernoulli",
+   "cut": 21876819,
+   "end": 21876819,
+   "closes": [
+    [
+     4999999,
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     9999999,
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     14999999,
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ]
+    ],
+    [
+     19999999,
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ]
+   ],
+   "sparse_gf_p99_count": [
+    4,
+    1313003
+   ],
+   "per_source_sparse_p99_count": [
+    [
+     5,
+     237793
+    ],
+    [
+     4,
+     199869
+    ],
+    [
+     4,
+     438567
+    ],
+    [
+     4,
+     436774
+    ]
+   ],
+   "start_utc": "2026-11-03T10:06:36Z",
+   "end_utc": "2026-11-03T10:26:08.632627Z",
+   "wall_s_internal": 1172.2,
+   "exit_code": "NOT_RECORDED",
+   "output_sha256": "a4b8ac85a340e76f4461a80bbc3fad2122ebae081f8e7df1fe2ab0756fbd297d",
+   "log_sha256": "479a411d9efcafe853c432e7093b3cc17005c715553dd2ee9ca3fe55ccf6ccc5",
+   "argv_normalized": [
+    "<python>",
+    "-I",
+    "<probe_dir>/probe.py",
+    "<repo>",
+    "CGOF(2:1)",
+    "0,0,1,1",
+    "7291",
+    "<probe_dir>/v7291_c21.json"
+   ]
+  }
+ ],
+ "probe_limitations": [
+  "probe.py: lightweight accounting (no Metrics/RoleBook); Sparse = source != heavy(generation cycle)",
+  "probe.py: 1 reset edge (cocotb Harness.start = 1 + reset(2) = 3 reset edges); impact not verified",
+  "probe.py: drain uses ready=1 (same as the ruled protocol) with a 1e6-cycle guard (formal bound 2*(backlog+fifo)+128); see drain_policy",
+  "probe.py: per-source P99 has no RTL schema counterpart",
+  "bench.py: 200k cycles only, never crosses the first W5M close (4,999,999); no role switch",
+  "7 probes ran concurrently with lightweight accounting; no equal-workload serial/parallel control; full runner and 8 processes untested",
+  "RSS 14-20 MiB working set / 23.6-24.1 MiB peak is the 10:18:11Z snapshot high-water, not a full-runner peak"
+ ],
+ "rtl_comparison_7291": {
+  "overall": "PASS",
+  "equal": 12,
+  "compared": 12,
+  "rows": [
+   {
+    "policy": "CGOF(1:1)",
+    "field": "active_cycles vs cut",
+    "rtl": 21876819,
+    "model": 21876819,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(1:1)",
+    "field": "active+drain vs end",
+    "rtl": 21876819,
+    "model": 21876819,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(1:1)",
+    "field": "classifier closing_cycle",
+    "rtl": [
+     4999999,
+     9999999,
+     14999999,
+     19999999
+    ],
+    "model": [
+     4999999,
+     9999999,
+     14999999,
+     19999999
+    ],
+    "equal": true
+   },
+   {
+    "policy": "CGOF(1:1)",
+    "field": "classifier classes",
+    "rtl": [
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ],
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ],
+    "model": [
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ],
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ],
+    "equal": true
+   },
+   {
+    "policy": "CGOF(1:1)",
+    "field": "sparse G->F count",
+    "rtl": 1313003,
+    "model": 1313003,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(1:1)",
+    "field": "sparse G->F p99_nearest_rank",
+    "rtl": 3,
+    "model": 3,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "active_cycles vs cut",
+    "rtl": 21876819,
+    "model": 21876819,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "active+drain vs end",
+    "rtl": 21876819,
+    "model": 21876819,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "classifier closing_cycle",
+    "rtl": [
+     4999999,
+     9999999,
+     14999999,
+     19999999
+    ],
+    "model": [
+     4999999,
+     9999999,
+     14999999,
+     19999999
+    ],
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "classifier classes",
+    "rtl": [
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ],
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ],
+    "model": [
+     [
+      "B_H",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "L",
+      "H",
+      "H",
+      "H"
+     ],
+     [
+      "B_L",
+      "B_H",
+      "H",
+      "H"
+     ],
+     [
+      "H",
+      "L",
+      "H",
+      "H"
+     ]
+    ],
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "sparse G->F count",
+    "rtl": 1313003,
+    "model": 1313003,
+    "equal": true
+   },
+   {
+    "policy": "CGOF(2:1)",
+    "field": "sparse G->F p99_nearest_rank",
+    "rtl": 4,
+    "model": 4,
+    "equal": true
+   }
+  ],
+  "rtl_files_sha256": {
+   "CGOF(1:1)": "fac2c007f59bfd088e86af3f980608a1f64cb865e4b45e203154b1a6e4f23c38",
+   "CGOF(2:1)": "c81662205b9297061cec60f324c84e9821e2c8f2b87ac640fd288bb2174aa8d0"
+  },
+  "not_compared": "sparse histogram/min/max/mean, G->A, A->F, heavy gaps (all), heavy completion, metrics phases/cohorts, fairness, service_shares, generation_roles counts/at_cut/bursts, accepted/fired totals, trace_sha256, per-source sparse P99 (RTL has no such field)",
+  "drain_exercised": false,
+  "note": "all 20 legacy 7291 RTL jobs have drain_cycles=0; partial endpoint match only, not protocol equivalence"
+ },
+ "holm": {
+  "rule": "exact one-sided sign test, Holm step-down over P1-P3, FWER .05, plus mean delta >= 1 (v1 unchanged)",
+  "exact_p": {
+   "14": 0.057659149169921875,
+   "15": 0.020694732666015625,
+   "16": 0.005908966064453125
+  },
+  "step_thresholds": [
+   0.016666666666666666,
+   0.025,
+   0.05
+  ],
+  "minimum_K_by_sorted_step": [
+   16,
+   15,
+   15
+  ]
+ },
+ "g_eq": {
+  "legacy": "fields present in frozen 7291 outputs; a field absent there is NOT_AVAILABLE (never 0, never skip-PASS)",
+  "new": "new shared-accounting / ledger-B fields; checked only on the 6 new Main W5M anchors and the short-W CGOF regression (4 closes + role switch); drain not part of the gate",
+  "coverage": {
+   "legacy_inputs_cgof_w5m": 20,
+   "new_inputs_main_w5m": 6,
+   "cgof_w5m_new_fields": "NONE in default (see cost.alternative_v2_plus_cgof_w5m)"
+  }
+ },
+ "main_anchors": [
+  {
+   "id": "A3",
+   "seed": 7301,
+   "jobs": [
+    "role-switch mixed",
+    "role-switch isolated",
+    "multi-window mixed",
+    "depth8-bursty mixed"
+   ]
+  },
+  {
+   "id": "A4",
+   "seed": 7401,
+   "jobs": [
+    "role-switch mixed",
+    "role-switch isolated"
+   ],
+   "note": "held-out; not used in this round"
+  }
+ ],
+ "cost": {
+  "status": "ESTIMATE (runner, shared module, Main harness not implemented; full-runner speed/RSS unmeasured)",
+  "formulas": {
+   "model_job_h": "active_cycles / model_rate / 3600 = 21876819/17500/3600",
+   "rtl_job_h": "6332.058/3600 (seed7291 CGOF mean, jobs2 environment; Main unmeasured)",
+   "batches": "ceil(jobs / workers) per stage; seeds are sequential (per-seed release, v1 sec.6)",
+   "wall_linear": "batches * job_h; model and RTL never overlap",
+   "budget": "wall_linear * 1.2 (operating reserve, not a measured bound)",
+   "job_hours_note": "sum of per-job wall estimates; NOT measured CPU-hours"
+  },
+  "inputs": {
+   "model_rate_cyc_s": 17500,
+   "model_job_h": 0.3473,
+   "rtl_job_h": 1.7589,
+   "model_workers_default": 7,
+   "rtl_workers": 2,
+   "overlap_model_rtl": false,
+   "reserve": 1.2
+  },
+  "stages": {
+   "G1_A1_model_replay_7291": {
+    "model_jobs": 20,
+    "batches": 3,
+    "job_h": 6.95,
+    "wall_linear_h": 1.04,
+    "wall_budget_h": 1.25
+   },
+   "P_pilot_7301": {
+    "model_jobs": 30,
+    "model_batches": 5,
+    "rtl_jobs": 4,
+    "rtl_batches": 2,
+    "job_h": 17.45,
+    "wall_linear_h": 5.25,
+    "order": "model 30 -> RTL A3 4 (no overlap) -> G-EQ-legacy/new -> release",
+    "wall_budget_h": 6.3
+   },
+   "C_confirm_7401_7420": {
+    "model_jobs": 600,
+    "rtl_jobs": 2,
+    "batches_per_seed": 5,
+    "rtl_batches": 1,
+    "job_h": 211.87,
+    "wall_linear_h": 36.48,
+    "order": "7401 model 30 -> A4 RTL 2 -> G-EQ (fail = stop per protocol) -> 7402..7420 one seed at a time, release after audit",
+    "wall_budget_h": 43.78
+   }
+  },
+  "G0_short_w": {
+   "content": "A2 Main W256 5 cases x 2 lanes + CGOF W256 regression 5 cases x 1:1/2:1 x 2 lanes (G-EQ-new short-W evidence)",
+   "rtl_jobs_short": 30,
+   "wall_estimate_h": "<=0.5 (unmeasured)",
+   "cap_h": 2
+  },
+  "total_job_h_G1_P_C": 236.27,
+  "machine_wall_linear_h_G1_P_C": 42.77,
+  "machine_wall_budget_h_G1_P_C": 51.32,
+  "person_hours": {
+   "E_engineering": "13-18 (estimate, cap 24)",
+   "per_seed_audit": "0.5 x 21 = 10.5 (estimate, cap 1 h/seed)",
+   "G_EQ_reviews": "2 x 0.5 = 1",
+   "final_aggregate_report": "4 (cap 8)"
+  },
+  "hard_caps_h": {
+   "E": 24,
+   "G0": 2,
+   "G1": 2,
+   "P": 8,
+   "C": 50,
+   "audit": 21,
+   "G_EQ": 2,
+   "final": 8,
+   "total": 117
+  },
+  "not_in_budget": [
+   "any pilot rerun after a correctness fix: new source freeze + full P stage again (about 6.3 h wall budget each, plus audit)",
+   "Main RTL job speed (CGOF proxy used)",
+   "contention at 7 full-accounting model processes"
+  ],
+  "optional_untested_speedups": {
+   "model_workers_8": {
+    "batches_per_seed": 4,
+    "C_model_wall_linear_h": 27.78,
+    "note": "8 concurrent processes never measured; not a default guarantee"
+   }
+  },
+  "alternative_v2_plus_cgof_w5m": {
+   "purpose": "W5M RTL evidence for G-EQ-new fields on CGOF (A1 reuse cannot supply new fields)",
+   "rtl_jobs": "2 (7301 role-switch mixed CGOF 1:1/2:1)",
+   "job_h": 3.52,
+   "wall_linear_h": 1.76,
+   "budget_h": 2.11,
+   "note": "separate alternative, NOT included in the default 6-Main-anchor budget"
+  },
+  "plan_B_all_rtl_primary_cells": {
+   "jobs": 147,
+   "job_h": 258.56,
+   "wall_linear_jobs2_h": 129.28,
+   "batches_per_seed_release": 84,
+   "wall_batch_aware_h": 147.75,
+   "reserve_budget_h": 177.3,
+   "audit_h": "2 x 21 = 42 (v1 unmeasured estimate)",
+   "engineering_h": "8-16 (v1 estimate)",
+   "final_h": 8,
+   "note": "the earlier 309 job-h / 155 h figures included the 20% reserve; fields are now separated"
+  }
+ },
+ "reviewers": [
+  {
+   "source": "reviewer fzfqgpl9",
+   "item": "B1/B2 non-blocking; C7 SINGLE_SEED",
+   "handling": "kept; v2 is an extension, C7 not promoted"
+  },
+  {
+   "source": "reviewer fzfqgpl9",
+   "item": "W256 NOT_CONFIRMED vs W5M DESCRIPTIVE kept separate",
+   "handling": "kept"
+  },
+  {
+   "source": "reviewer fzfqgpl9",
+   "item": "per-path hash validation",
+   "handling": "v1 112 pins kept as immutable baseline; independent new source freeze"
+  },
+  {
+   "source": "reviewer-2 fe32ywtp",
+   "item": "multi-seed four-window/role/ready/D8 + Main control",
+   "handling": "model extension to 20 seeds; Main W5M RTL only 6 anchors"
+  },
+  {
+   "source": "reviewer-2 fe32ywtp",
+   "item": "RR10",
+   "handling": "deferred to a separately frozen plan"
+  },
+  {
+   "source": "both",
+   "item": "dual ledger, gap distinctions",
+   "handling": "v1 sec.3.2; ledger-B fields via G-EQ-new"
+  },
+  {
+   "source": "reviewer-2 fe32ywtp",
+   "item": "under/over, power, recovery, N8/N16, system",
+   "handling": "out of scope"
+  }
+ ],
+ "remaining_rtl_gaps": [
+  "Main W5M RTL for ready-spread and ready-bursty D16",
+  "any RTL for seeds 7402-7420",
+  "CGOF W5M RTL for new fields",
+  "RTL drain behaviour (no W5M anchor with drain>0)",
+  "RR10",
+  "under/over W5M RTL",
+  "power / latency_recovery / N8-N16 / system level"
+ ],
+ "revision": {
+  "number": 3,
+  "date": "2026-11-03",
+  "previous_sha256": "1f6785afdc5d44cfacbfdec933621cb6f3ef78b4fc77d0e46a62b52aeed86ca7",
+  "change": "drain is not an A2 or anchor gate (Lead 2026-11-03); A2 scope clarified; probe hashes/history unchanged"
+ },
+ "drain_policy": {
+  "ruling": "after cut: ready=1 cleanup, no reset; bound = 2*(producer_backlog + fifo_occupancy) + 128",
+  "decided_by": "Lead, 2026-11-03",
+  "implementation_refs": [
+   "docs/reviews/dynamic-role-switch-rtl-plan-20261103.md sec.3.1",
+   "sim/experimental/test_cgof_diagnosis.py L160-L165 (drain_bound, edge(k, [], 1))"
+  ],
+  "scenario_ready_scope": "sim/experimental/cgof_diagnosis_traffic.py scenario.ready applies to the active phase only",
+  "probe_difference": "probe.py also uses ready=1 but with a 1e6-cycle guard instead of the formal bound",
+  "evidence_status": "NOT_EXERCISED",
+  "evidence_note": "all 20 existing W5M RTL anchors (seed 7291) have drain_cycles=0; drain behaviour is not RTL-verified; drain remains NOT_EXERCISED for the whole plan regardless of new-anchor outcomes",
+  "future_change": "scenario-ready drain requires a new, separately named and separately frozen protocol; never mixed with this one",
+  "a2_scope": "A2 (short W) must cross 4 closes, include the role switch and compare legacy+new fields; drain behaviour is outside A2's verifiable scope; drain_cycles>0, if it occurs naturally, is recorded only and is not a gate",
+  "anchor_gate": "drain is not a gate for any anchor A1-A4; equal drain_cycles values (e.g. all 0) in G-EQ-legacy do not verify drain behaviour"
+ },
+ "revision_history": [
+  {
+   "number": 2,
+   "date": "2026-11-03",
+   "previous_sha256": "358090527cabc95d020799a53589c8ca862a2dc278b6d28784625cff7e92b6b5",
+   "change": "add drain_policy ruling (Lead 2026-11-03); drain no longer pending; probe hashes/history unchanged"
+  }
+ ]
+}

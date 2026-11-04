@@ -1,0 +1,174 @@
+{
+  "schema": "cxl-scheduler-fai-supplementary-n4-area-sta/v1",
+  "status": "ACCEPTED_FOR_SUPPLEMENTARY_PRE_LAYOUT_AREA_STA",
+  "date": "2026-10-21",
+  "timezone": "Asia/Taipei",
+  "source_commit": "c8e7ea8c0e4530572b3abf5b14ea9958e24f1789",
+  "frozen_spec_commit": "1af80967bbc2fb83224f4725c4fb450889e69c62",
+  "source_worktree_clean": true,
+  "profile_id": "saed32-rvt-tt-25ns-forqa-cap075-v2",
+  "profile_canonical_sha256": "6f4777f001fba4e80c28ebda22bd071bc316d6ff3b2b267ff688145d8aa9774d",
+  "library_sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+  "host_backend": "fastx4-NN.ews.illinois.edu",
+  "tools": {
+    "dc": "W-2024.09",
+    "pt": "W-2024.09"
+  },
+  "method": "same source and frozen profile, serial DC/PT, original library limits restored before reports and fresh original DB in PT",
+  "results": [
+    {
+      "cell_area": 110089.845892,
+      "comb_area": 50507.308009,
+      "sequential_area": 59582.537883,
+      "sequential_cells": 9011.0,
+      "leaf_cells": 29344,
+      "area_partition": {
+        "full_fifo_subtrees": 101724.95019999999,
+        "policy_subtree": 7143.9879,
+        "common_hold_subtree": 859.7692,
+        "top_logic_and_arrival_helpers": 361.1386,
+        "fifo_instances": 4,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "setup_slack_ns": 10.496409,
+      "hold_slack_ns": 0.03994,
+      "coverage": {
+        "all_checks_total": 36404,
+        "met": 36336,
+        "violated": 0,
+        "untested": 68
+      },
+      "untested_reasons": {
+        "constant_disabled": 68
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 426,
+        "all_output_min_max_and_load_ports_checked": 112,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {},
+      "policy": "fai-main",
+      "N_SRC": 4,
+      "POLICY": 2,
+      "D": 16,
+      "M": 1,
+      "DESC_W": 105,
+      "FAI_W": 5000000,
+      "status": "SETUP_HOLD_ELECTRICAL_MET",
+      "evidence": "artifacts/fastx/supplement-20261021-main-n4",
+      "command_exits": {
+        "dc": 0,
+        "pt": 0,
+        "wrapper": 0
+      },
+      "restored_library_limits": 390
+    },
+    {
+      "cell_area": 110058.332037,
+      "comb_area": 50475.794154,
+      "sequential_area": 59582.537883,
+      "sequential_cells": 9011.0,
+      "leaf_cells": 29334,
+      "area_partition": {
+        "full_fifo_subtrees": 101719.10500000001,
+        "policy_subtree": 7120.8608,
+        "common_hold_subtree": 857.2277,
+        "top_logic_and_arrival_helpers": 361.1386,
+        "fifo_instances": 4,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "setup_slack_ns": 10.547482,
+      "hold_slack_ns": 0.03994,
+      "coverage": {
+        "all_checks_total": 36404,
+        "met": 36336,
+        "violated": 0,
+        "untested": 68
+      },
+      "untested_reasons": {
+        "constant_disabled": 68
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 426,
+        "all_output_min_max_and_load_ports_checked": 112,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {},
+      "policy": "fai-alg2",
+      "N_SRC": 4,
+      "POLICY": 3,
+      "D": 16,
+      "M": 1,
+      "DESC_W": 105,
+      "FAI_W": 5000000,
+      "status": "SETUP_HOLD_ELECTRICAL_MET",
+      "evidence": "artifacts/fastx/supplement-20261021-alg2-n4",
+      "command_exits": {
+        "dc": 0,
+        "pt": 0,
+        "wrapper": 0
+      },
+      "restored_library_limits": 390
+    }
+  ],
+  "delta_alg2_minus_main": {
+    "cell_area": -31.51385499999742,
+    "sequential_cells": 0.0,
+    "setup_slack_ns": 0.05107300000000059,
+    "hold_slack_ns": 0.0
+  },
+  "total_area_relative_percent": -0.02862557826714962,
+  "policy_subtree_area_relative_percent": -0.3237281518911783,
+  "source_hashes": {
+    "rtl/include/cxl_sched_pkg.sv": "05d2cb6af0c4055873b99bfa26e61fa899fdf1e227af34b42dec04080e3c5556",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/common/cxl_fcfs_sel.sv": "3418505168ca4a0c93422101f1e1a7a042833c935e0f9b021661535b7b6a2c20",
+    "rtl/common/cxl_fai_main_sched.sv": "12d1d4f973503f3096260de932fbb3b2887d22a3f947399b5666690e624e3ff6",
+    "rtl/common/cxl_rr_sched.sv": "84803ce5fafefcd2f58739c9768bd0e533cb10823c74203d9e039319f0714fdf",
+    "rtl/top/switch_top.sv": "142d7b6495c9b8f1f03072301cd5db7620d6c076168bc756c4e36847030fe56f",
+    "rtl/filelist_switch.f": "8358645db33088c0963b8cf93f0feee629ed4bab3dd735c21589306e4f3e5cc5"
+  },
+  "load_audits": [
+    {
+      "policy": "fai-main",
+      "used_driver_pins": 29458,
+      "constant_pseudo_drivers": 9,
+      "all_used_original_limits_defined_positive": true,
+      "ordinary_and_ccs_cap_violations": 0,
+      "source_and_transfer_hashes": "PASS",
+      "dc_exit": 0
+    },
+    {
+      "policy": "fai-alg2",
+      "used_driver_pins": 29448,
+      "constant_pseudo_drivers": 9,
+      "all_used_original_limits_defined_positive": true,
+      "ordinary_and_ccs_cap_violations": 0,
+      "source_and_transfer_hashes": "PASS",
+      "dc_exit": 0
+    }
+  ],
+  "primary_nine_replaced": false,
+  "scope_decision": "N4 difference does not materially alter primary PPA cost conclusions; do not expand supplementary N8/16 at this checkpoint",
+  "limitations": [
+    "one synthesis run per interpretation",
+    "pre-layout single library/PVT/clock",
+    "68 constant_disabled untested timing checks per case retained",
+    "no power/activity annotation",
+    "no physical/multicorner/formal signoff",
+    "no IEEE PDF inspection or cycle-identical dispatch claim"
+  ]
+}

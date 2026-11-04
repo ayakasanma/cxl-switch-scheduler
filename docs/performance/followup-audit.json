@@ -1,0 +1,264 @@
+{
+  "status": "PASS",
+  "actual_runs": 42,
+  "trace_groups": 14,
+  "inputs": [
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "19bd685d0b3847cd5bd36cc73707a4ee286c84c44f58025afe7095599f3dcec4"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p0_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "84052ed7bb8d22c372970a227428e3b6e05aa03d33d5ea621ab2a32ebff44c2e"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p0_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "46767cf73378df73223c13e712450069f07c7c75c2a0f9109b53bd4f178046fa"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "544f40ae8fc535a9b94223d0ed3b7f76db8c375811fcbbec8bb35e9c333643ec"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p1_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "e88f1604f7d298ef2c1544e42db311ee683382a18458a483ec94bd6d6f87ceb0"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p1_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "a9605fa789405e6db025fe1f2f87b71cf7677ad6b39812e40d1cffbdd581ecc3"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "7b2b373b583a1fb18522b654579a12e8aceba5d682a88a30af81b39f5957e1b4"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p2_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "4a3a3ea902f827bd945f646d58b39170af28828ddb8e87d9f032c90f1c13cd86"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load030_p2_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "c90fe0b54a953a885976204438812cd642c142eab5011be2d6673beffe26bf2e"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "99711dddb6cc19a080e16ce5f8b2c162de6ea69733258d9df6d3cff1a7884162"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p0_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "f29d9345a6d1d225157cc334dae8814e467aa880b527bbfcf4dcb0b206288150"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p0_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "8280dbca02b14a41f8b1bc5c02d9c16b24b3be4794c3390d0d5638c6fd3ff20f"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "084148444994aae5ff3d01c919afb1ca77da850530fc80e241fd58f55802b9fe"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p1_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "891c34c77307228444445556077496e1aa45a4dd2f36ee58e8f3c722c272ed4e"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p1_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "881c102274e868ffe4d4927c68805f47dd0cdd88898bc6875299690256e276a7"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "be06a3e2e444694aa5a2d881f3d76c4365c19cdbb51b2e00dc4b53581734f97a"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p2_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "64307183607cae0652cd4e1cb38c10ffd6e109b529b67710951b9b66a10c626b"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load090_p2_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "a86297443a6f3d03e9182415553013a52e34513b1b1ae3a7ae517143a1567d88"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "d288f7baf0401d11969e6d1e634ca8909bab26b070ab6a7c2133d6bfff8647e1"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p0_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "5361c0e48a2577fc7574c8c834784b03fc3080230bb415838354a669fb3660c9"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p0_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "1594341726726ec83b95a3572dd9825a9420eb11318ae3d9348a49ff6ad402ce"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "301bd78cfae272a3ed5e202536952a4ca8834716e3fba5045db84080c79856fa"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p1_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "1e8486fb51e67939609d84441cf2f9a4ef218caed115de1194372c12c9d3f747"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p1_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "5d054dbf61310e8a0afca840a150f11f916d24162aa6adc43fddab782b1a4cf5"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "d8e9cb0e51ce99ff136017c21f4ffa4fd7d4bddee44e854811e070f3de19c587"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p2_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "7ab2dd4255eb212e933e954ffc7b9b539d8da2756b7b0e598a006b78a24009f2"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_load120_p2_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "ce375ba4a4ed4a461ea568a5e26ba5961fa1ee956670756ffc54350570cabe3b"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "29ff5e803031e6907badc85f8457234a5f1156a60d96be8b9ec2fe80bfa9a79c"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p0_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "049b1fb5532e2186be14582c1f183edf1cf2f6623762c4dddd45268acbf77db7"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p0_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "b12a28e99e1f101cd8b512dcf2a00a2740126c85b9f2504838a2270091f3b7d9"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "89694401e08c9c10447b6d5624b1979a6b7de3bd8b6ed8e082018c804f5a3d50"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p1_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "af506eac82d389117aad38e9bb6ab778921a71ef6e45105d049ce242d3e037af"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p1_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "c6fe632c4845f8889d1fedf776be04cd1a53b717540a75bb04a6942fbdb785a0"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "2e2e3b1d5f9fa0bc051a94571c7ddd5d4cd8eae7c892d1542238c75b68ca634d"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p2_w5000000_seed510__descriptor_followup_metrics.json",
+      "sha256": "8c400a4b30ccd4efb1ee624f3407ec48fefbf8675ee614a32d177af083fa12ca"
+    },
+    {
+      "scope": "DF-controls",
+      "run_id": "20261022T012724Z_281",
+      "path": "artifacts/implementation/DF-controls/20261022T012724Z_281/results/cocotb_df_ready075_p2_w5000000_seed511__descriptor_followup_metrics.json",
+      "sha256": "bdda90fa60a731c8d41e2c539ca42a4f5d2d24027f92585b5ea8a37b6b1333da"
+    },
+    {
+      "scope": "DF-finite",
+      "run_id": "20261022T012724Z_283",
+      "path": "artifacts/implementation/DF-finite/20261022T012724Z_283/results/cocotb_df_finite_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "94f97fc83097b0d95ab764df08a382c4f9118da95a26c806a3ea6a0d34fa5bb8"
+    },
+    {
+      "scope": "DF-finite",
+      "run_id": "20261022T012724Z_283",
+      "path": "artifacts/implementation/DF-finite/20261022T012724Z_283/results/cocotb_df_finite_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "1426f7853606625262df9303932f5583dc97678f44a6c8e89cdcef8f860abe21"
+    },
+    {
+      "scope": "DF-finite",
+      "run_id": "20261022T012724Z_283",
+      "path": "artifacts/implementation/DF-finite/20261022T012724Z_283/results/cocotb_df_finite_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "db84ad5d591b2dd37403920b501f6e19429545e4602e5171fc480fb9dd1a355d"
+    },
+    {
+      "scope": "DF-trained",
+      "run_id": "20261022T012724Z_287",
+      "path": "artifacts/implementation/DF-trained/20261022T012724Z_287/results/cocotb_df_trained_p0_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "a609c471d874a4ba7b991e9ef8e0267061cab02783104fedc4afcdc824a7989b"
+    },
+    {
+      "scope": "DF-trained",
+      "run_id": "20261022T012724Z_287",
+      "path": "artifacts/implementation/DF-trained/20261022T012724Z_287/results/cocotb_df_trained_p1_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "5d618b3092b146ab6e4153f3200328f66d59ff989b359ec2ae215c974f94c9f7"
+    },
+    {
+      "scope": "DF-trained",
+      "run_id": "20261022T012724Z_287",
+      "path": "artifacts/implementation/DF-trained/20261022T012724Z_287/results/cocotb_df_trained_p2_w5000000_seed509__descriptor_followup_metrics.json",
+      "sha256": "4895e7cb5d552f71da15e8db23a003841f66c85b0237ee09049fe31219f0fe3d"
+    }
+  ],
+  "real_non_reset_cycles": 35376594,
+  "warmup_cycles": 30360000,
+  "measurement_cycles": 3903072,
+  "drain_cycles": 1113522,
+  "claims": "N4 mechanistic single-seed trained/finite comparisons; three control seeds; no application/steady-state/WCET inference"
+}

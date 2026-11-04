@@ -1,0 +1,196 @@
+{
+  "_snapshot_note": "Initial pre-install plugin scan, retained without machine-specific paths. Source scripts/wsl_env.sh and audit the selected WSL profile for current tools; detected:false is not a current WSL inventory.",
+  "project": {
+    "name": "cxl-scheduler",
+    "top_module": "",
+    "filelist": "rtl/filelist_top.f"
+  },
+  "tools": {
+    "_comment": "All known EDA tools. 'detected' is auto-filled. Edit 'path' or 'env_source' for tools needing setup, then re-run generate_config.sh.",
+    "simulators": {
+      "vcs": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "xrun": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "vsim": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "verilator": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "iverilog": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "synthesis": {
+      "yosys": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "dc_shell": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "genus": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "lint": {
+      "verilator": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "verible": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "slang": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "sg_shell": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "formal": {
+      "sby": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "jg": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "vcf": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "cdc": {
+      "structural": {
+        "detected": true,
+        "path": "(built-in)",
+        "env_source": ""
+      },
+      "svlens": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "sg_shell": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "vc_cdc": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "questa_cdc": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "equivalence": {
+      "fm_shell": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "lec": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "debug": {
+      "verdi": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "simvision": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    },
+    "coverage": {
+      "urg": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "imc": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      },
+      "vcover": {
+        "detected": false,
+        "path": "",
+        "env_source": ""
+      }
+    }
+  },
+  "preferences": {
+    "_comment": "Preferred tool per category. Auto-set to first detected (commercial priority). User-overridable.",
+    "simulator": "",
+    "synthesis": "",
+    "lint": "",
+    "formal": "",
+    "cdc": "structural",
+    "equivalence": ""
+  },
+  "technology": {
+    "target": "",
+    "liberty": "",
+    "sram_lib": "",
+    "nand2_cell_pattern": "NAND2X1",
+    "nand2_area_um2": null
+  },
+  "coverage": {
+    "targets": {
+      "line": 90,
+      "toggle": 80,
+      "fsm": 70,
+      "branch": 80,
+      "functional": 95
+    },
+    "seeds": "42 123 456 789 1337",
+    "max_fail_rate": 5
+  },
+  "waivers": {
+    "verilator": "",
+    "verible": "",
+    "spyglass_lint": "",
+    "spyglass_cdc": "",
+    "cdc": ""
+  }
+}

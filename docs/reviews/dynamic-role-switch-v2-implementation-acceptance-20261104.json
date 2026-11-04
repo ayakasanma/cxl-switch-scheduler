@@ -1,0 +1,1836 @@
+{
+  "schema": "cxl-v2-implementation-acceptance-v1",
+  "date": "2026-11-04",
+  "status": "E1_E2_G1_E3_E4_A2_PASS",
+  "protocol": "v2",
+  "execution_channels": {
+    "E1_E2_G1": "Orca Worker designer (Claude Code)",
+    "E3_E4_A2": "Lead direct (Codex, GPT-6)"
+  },
+  "authorization": "Owner: proceed with plan; Lead takeover when designer stops",
+  "gates": {
+    "G1_legacy_w5m_pairs": 20,
+    "G1_status": "PASS",
+    "A2_W256_RTL_model_pairs": 30,
+    "W64_RTL_model_pairs": 6,
+    "main_directed_held_class_close": 4,
+    "strict_lint_configurations": 15,
+    "unit_tests": 25,
+    "unit_subtests": 18,
+    "current_model_vs_pre_refactor_W256_legacy_pairs": 20
+  },
+  "source_freeze": "docs/reviews/dynamic-role-switch-v2-a2-source-freeze-20261104.json",
+  "a2_rtl": {
+    "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/summary.json",
+    "sha256": "2810d5ccc2231de69d7cb589f44e288297a6b3005ce1dd4d80a12e9ee8e53925",
+    "wall_time_s": 215.224,
+    "counts": {
+      "steps": 56,
+      "pass": 56,
+      "expected_rejection": 0,
+      "fail": 0,
+      "not_run": 0,
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "a2_lint": {
+    "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181748Z_1381/summary.json",
+    "sha256": "e5f10e01e0f2e0eb4c980af3b86a3b2480e9451ad4b97488d0bf11110be42580",
+    "scope": "lint-only; supplements A2 RTL/model verification",
+    "configurations": [
+      {
+        "name": "a2_0",
+        "top": "switch_experiment_top",
+        "filelist": "rtl/experimental/filelist.f",
+        "params": {
+          "N_SRC": 4,
+          "POLICY": 2,
+          "DEPTH": 16,
+          "RR_QUANTUM": 10,
+          "FAI_W": 256,
+          "HIGH_QUOTA": 10,
+          "MAIN_1W": 0
+        }
+      },
+      {
+        "name": "a2_1",
+        "top": "switch_experiment_top",
+        "filelist": "rtl/experimental/filelist.f",
+        "params": {
+          "N_SRC": 4,
+          "POLICY": 2,
+          "DEPTH": 16,
+          "RR_QUANTUM": 10,
+          "FAI_W": 5000000,
+          "HIGH_QUOTA": 10,
+          "MAIN_1W": 0
+        }
+      },
+      {
+        "name": "a2_2",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 256,
+          "HIGH_WEIGHT": 1,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_3",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 5000000,
+          "HIGH_WEIGHT": 1,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_4",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 256,
+          "HIGH_WEIGHT": 2,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_5",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 5000000,
+          "HIGH_WEIGHT": 2,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_6",
+        "top": "switch_experiment_top",
+        "filelist": "rtl/experimental/filelist.f",
+        "params": {
+          "N_SRC": 4,
+          "POLICY": 2,
+          "DEPTH": 8,
+          "RR_QUANTUM": 10,
+          "FAI_W": 256,
+          "HIGH_QUOTA": 10,
+          "MAIN_1W": 0
+        }
+      },
+      {
+        "name": "a2_7",
+        "top": "switch_experiment_top",
+        "filelist": "rtl/experimental/filelist.f",
+        "params": {
+          "N_SRC": 4,
+          "POLICY": 2,
+          "DEPTH": 8,
+          "RR_QUANTUM": 10,
+          "FAI_W": 5000000,
+          "HIGH_QUOTA": 10,
+          "MAIN_1W": 0
+        }
+      },
+      {
+        "name": "a2_8",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 8,
+          "FAI_W": 256,
+          "HIGH_WEIGHT": 1,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_9",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 8,
+          "FAI_W": 5000000,
+          "HIGH_WEIGHT": 1,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_10",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 8,
+          "FAI_W": 256,
+          "HIGH_WEIGHT": 2,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_11",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 8,
+          "FAI_W": 5000000,
+          "HIGH_WEIGHT": 2,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_12",
+        "top": "switch_experiment_top",
+        "filelist": "rtl/experimental/filelist.f",
+        "params": {
+          "N_SRC": 4,
+          "POLICY": 2,
+          "DEPTH": 16,
+          "RR_QUANTUM": 10,
+          "FAI_W": 64,
+          "HIGH_QUOTA": 10,
+          "MAIN_1W": 0
+        }
+      },
+      {
+        "name": "a2_13",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 64,
+          "HIGH_WEIGHT": 1,
+          "ELIGIBLE_RR": 0
+        }
+      },
+      {
+        "name": "a2_14",
+        "top": "cgof_unit_top",
+        "filelist": "rtl/experimental/filelist_cgof_unit.f",
+        "params": {
+          "N_SRC": 4,
+          "DEPTH": 16,
+          "FAI_W": 64,
+          "HIGH_WEIGHT": 2,
+          "ELIGIBLE_RR": 0
+        }
+      }
+    ]
+  },
+  "g_eq_new": [
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-mixed-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-main-rr0.json",
+      "reference_sha256": "461dc98dde5669a10ab8f43d34a0c343b30b1c7484a088cacc45bee6eb558ff5",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_00.json",
+      "candidate_sha256": "753194cf62cb311606de3f63965358944845742d6fd90b832f014d3c386c018d",
+      "active_cycles": 1159,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-isolated-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-main-rr0.json",
+      "reference_sha256": "dae2f145749463b055c4f3e58dd820f96c2ebff1750fd2cb5d67b041ed399b2f",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_01.json",
+      "candidate_sha256": "db56d4cff4946a8a201dce9cd705aa48ded66f0726f8cd04a56696426e9dc590",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-mixed-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw1-rr0.json",
+      "reference_sha256": "7ce57c1e585c87e7af1331ad7a59ecd79ebb0b2207fa50055d362e3f22553727",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_02.json",
+      "candidate_sha256": "f3e6475937f1c6d862adc211fc3ac2c88e53afcda71ee68d74f06892cd5f9c30",
+      "active_cycles": 1159,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-isolated-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw1-rr0.json",
+      "reference_sha256": "4c966cda3743a4020e0beadcd881809c8f66ae21070b0d3bb3b2c620043ff1c9",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_03.json",
+      "candidate_sha256": "df3119f2531fb6dfbb7269e8c02306763dab6b16af8a7bcef166d133f2fed001",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-mixed-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw2-rr0.json",
+      "reference_sha256": "b64f2051a122d5d0cef22f0851ebae862f8eab2254b779a894f1ec5b35158a3e",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_04.json",
+      "candidate_sha256": "8e4fc1cd1c0404333b8226a422089a0c4e771557d2b404bfa303c1ddc2ace841",
+      "active_cycles": 1159,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_multi-window-finite-heavy-isolated-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw2-rr0.json",
+      "reference_sha256": "45069e37bea21dc91f2ee1ff69c9ee17a73473848a298e01cb6603561e5667e7",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_05.json",
+      "candidate_sha256": "6a37bd85ebcfcc159ced469eadb98f91033cacc74b49d5b36d73578da1a32d28",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-main-rr0.json",
+      "reference_sha256": "8040d78fb0d9cc8ae76aa362ff1b1ae926fcac69903d4f40f01ff604463c0865",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_06.json",
+      "candidate_sha256": "b8f29fcba8c2ebb62997e610bc6d4d0193544863a48ec8bff72070af18f4b9e1",
+      "active_cycles": 1158,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-main-rr0.json",
+      "reference_sha256": "56f513bbc656ae60cb2424f2ddbf6d0bf189ace7ecfe601c0a32e9e02c7f77ca",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_07.json",
+      "candidate_sha256": "8e83e9c7dd8ebc9ac91ba0cd97e94167e8a9187541632c5efc17cb17ca835f66",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw1-rr0.json",
+      "reference_sha256": "d10774c8f70faabfc0e9baa8c0c1fedceea5b5525215452387dc93ee2a744296",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_08.json",
+      "candidate_sha256": "a13ec47e95f9fd72f56170065ca02c18b2151ad36c1d7a021e8fa5e936a16dfb",
+      "active_cycles": 1158,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw1-rr0.json",
+      "reference_sha256": "1eb076c48064341d279c668bd0df4d6fa20bd7d10fd6fe769ac32f214ca1b54e",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_09.json",
+      "candidate_sha256": "2f4964f34c685a140afdc130d45e45c31402d4bdfcbfca506d48211a845fde9c",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw2-rr0.json",
+      "reference_sha256": "101f1a1a0f589149f5a4a23bbb3defaa7db9b6edfc2b9005e5d48fede0e27fdf",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_10.json",
+      "candidate_sha256": "8eb3df5815d6091ff855267727259257c9e745c046b88d08be4b95fe6a520221",
+      "active_cycles": 1158,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw2-rr0.json",
+      "reference_sha256": "09dcf44bc18fdec19876d1f8b6a7e16e0630e9b97555c22f382f7b27e005b5b6",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_11.json",
+      "candidate_sha256": "d639b87a1692462e250a2e4c1ae9adaedfd6f3dc3c8df09fbc8f7aaa11aa7e6b",
+      "active_cycles": 1151,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-mixed-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-main-rr0.json",
+      "reference_sha256": "fed1f4486af3ecf9b30e6ccb4912617ab220323e39bf2e05f9f298a9935fb029",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_12.json",
+      "candidate_sha256": "6de44e4be2402edb9b2279f6bb08cafdc09f496dc06485f77cb9de0257129663",
+      "active_cycles": 1153,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-isolated-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-main-rr0.json",
+      "reference_sha256": "89f5b348d62a69dfe251b97a706a3c9d1b0bf543444e2e593266e3450bb2e180",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_13.json",
+      "candidate_sha256": "b9ec0c60f14c66ffeb888fd585841ca0f35ebfecb34af009292520f99c388692",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-mixed-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw1-rr0.json",
+      "reference_sha256": "ffd1a72c5bf9e418d253f4a88e640373942e20f225f371c7e3a76c7b7eb75c41",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_14.json",
+      "candidate_sha256": "e4509eef847cc6068d146fc63caf8b93dc297265628e774997bb6b9c1bff5bbb",
+      "active_cycles": 1154,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-isolated-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw1-rr0.json",
+      "reference_sha256": "6b7d0118f1764cdbe7f72055089838943896a65639e97df3785ad6bdda5caff6",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_15.json",
+      "candidate_sha256": "180f43b85a9a0da7f5bfb110afeee9e332e4fc3682db00aec34d410fc5c1bff2",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-mixed-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw2-rr0.json",
+      "reference_sha256": "374a09effe77982a0e3adf1f5de0c38fe33e61d777a120a0bebb176d8b5ca535",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_16.json",
+      "candidate_sha256": "06dc8afbba91c35e8c8d57f7093c3cc6a44627112143e9636694026952a1beab",
+      "active_cycles": 1154,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-spread-finite-heavy-isolated-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw2-rr0.json",
+      "reference_sha256": "2be8ca8ec9876d5aa5a1f5f5ec063ffe405c8619ff7597fc3bee1d0675fd7328",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_17.json",
+      "candidate_sha256": "0cc6e6d5a6cc5b8f753b66b6c72373765cfa19dde529fdb9b9bb7ddf26786456",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-mixed-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-main-rr0.json",
+      "reference_sha256": "8aeb21ef3c1143b269f15226f8ae887b96da66165168016b5e041b75b05cc3a9",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_18.json",
+      "candidate_sha256": "57e09df6d8f1fc79657798110b8cc5223a1f55d060c15061cba14c9ee54b895c",
+      "active_cycles": 1154,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-isolated-w256-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-main-rr0.json",
+      "reference_sha256": "2a71645adc6b7710dc3c134dae39424c60b739428f25ec7517a2c547aab8b474",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_19.json",
+      "candidate_sha256": "4e94dd56ca049fc8d0bf62914e5682edf4c335b1433fa78dbbe7b002ed1d4881",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-mixed-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw1-rr0.json",
+      "reference_sha256": "bf8d085f92bbbd904945b986d6c166de7ec543fb4d1a33c2621006c0f57fb299",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_20.json",
+      "candidate_sha256": "9041de43c674862a1aabf51b640a432ae918dd9536bc7a2da536c13ffcb46b33",
+      "active_cycles": 1155,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-isolated-w256-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw1-rr0.json",
+      "reference_sha256": "0702fe23a8e1ac386143eb5adc93858b2279f06f5ce1b848fd762bff35549f2a",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_21.json",
+      "candidate_sha256": "accabe606572a60db6736d5ffa25cf90635f53a1e3645d5a5c2bf43a95e3c84b",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-mixed-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d16-hw2-rr0.json",
+      "reference_sha256": "b6becee8304ecf14d9c03fe70f2341b5292ac529dbd8908fb91b06f0e785be31",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_22.json",
+      "candidate_sha256": "d1d04777e91c027659e6211c8e79485325bca6c16c2eed391174af63e01ab950",
+      "active_cycles": 1155,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_ready-bursty-finite-heavy-isolated-w256-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d16-hw2-rr0.json",
+      "reference_sha256": "794e069cfcef613ca0855a29cfbc17333f46ff39474d65daed0739abcb655c7e",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_23.json",
+      "candidate_sha256": "273f9901a453e055de96b2c71827c7ef4c6c902b4b8544e572cb3b160b5bd567",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-mixed-w256-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d8-main-rr0.json",
+      "reference_sha256": "03b64f3aa7de4b789da0a8eb517cb546d067d44adcb088f16a0c527f158fe9f9",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_24.json",
+      "candidate_sha256": "5ce184edcfd138869d58314e0a46f80ad1437de8d2a304de76525bd0a41ad665",
+      "active_cycles": 1154,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-isolated-w256-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d8-main-rr0.json",
+      "reference_sha256": "83032c6f1e168dd43a4161ec36397c6abeca3f98f4054cc284ac9ddd4928d63c",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_25.json",
+      "candidate_sha256": "ce92e7ae86d1b3ba94b5ccaa3cf6487692c380b0ee7759e545a77243e125b30e",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-mixed-w256-d8-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d8-hw1-rr0.json",
+      "reference_sha256": "0b98c9695a400a0ac4a29a2e7d043506ec55cbd54659114b29f55e95a7a7d113",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_26.json",
+      "candidate_sha256": "de969043473de00376a487f5b773fead032fc682475df2fa3ef33458d63271e3",
+      "active_cycles": 1155,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-isolated-w256-d8-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d8-hw1-rr0.json",
+      "reference_sha256": "c77cafb6edf2af6771134026c9ca99a79d460d4065b2ef4307fc23b16586af17",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_27.json",
+      "candidate_sha256": "a9d9a9725dbfdc39fcc0de97fcfc97529b2f8d35a9503c60eee5feeab53b7a33",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-mixed-w256-d8-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w256-d8-hw2-rr0.json",
+      "reference_sha256": "5591790bc228d1930c978d3ec1588c50a1b52b443f0cdad9b825b72f30deb5fd",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_28.json",
+      "candidate_sha256": "c50369b7dab47b64c8d37d7852e75dddaf1ee884068c96c5d66a6bdaa891b412",
+      "active_cycles": 1155,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "heavy_work": 896,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 2048,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 256,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_depth8-bursty-finite-heavy-isolated-w256-d8-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w256-d8-hw2-rr0.json",
+      "reference_sha256": "a3bdce8e664272aefad5a736fc3d5a16baebdd69bae22a04755ea3c39e61e858",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_29.json",
+      "candidate_sha256": "5ced8567543bbbfca62c6707d2559c673239d8091658e0e3866f0737a5bc369d",
+      "active_cycles": 1150,
+      "closing_cycles": [
+        255,
+        511,
+        767,
+        1023
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": null,
+        "lane": "mixed",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w64-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w64-d16-main-rr0.json",
+      "reference_sha256": "4a0815cd0b4f101bdccd74d60a9b38fa56bdc952a54d935fd326472fc1d9897e",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_30.json",
+      "candidate_sha256": "a81333691bcdcd8612cb77e2bbb039e3a0aac9d7ffb2f7f61f7f57da5564d435",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": null,
+        "lane": "isolated",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "policy": "FAI-inspired",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "FAI-inspired",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w64-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w64-d16-main-rr0.json",
+      "reference_sha256": "698317566d07564e07fd58e01cc3ba372e5c2a8a7a3cb50b223c550df358c28f",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_31.json",
+      "candidate_sha256": "a5e331419571a45e635084c31c99f8540561620cb046911795dfe76b7ee54e54",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": 1,
+        "lane": "mixed",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w64-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w64-d16-hw1-rr0.json",
+      "reference_sha256": "368bfbf6e81212dd8ca75de963ce421de26b660cc0c65ec9ff272fe17c458eda",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_32.json",
+      "candidate_sha256": "6df55ac6d87f376dff13c58cf91cc2faf09aed23fdb6939c33393863b477a07b",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": 1,
+        "lane": "isolated",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "CGOF(1:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w64-d16-hw1-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w64-d16-hw1-rr0.json",
+      "reference_sha256": "12e4cc615c0d3f5f43fc535cc2a662b326ef4da38e638e07257d7ca351725fdb",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_33.json",
+      "candidate_sha256": "0b4e347fba14a202f050204c7eed39ae98edd24a44ef6108ff65a2d8cad696ea",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": 2,
+        "lane": "mixed",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-mixed-w64-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w64-d16-hw2-rr0.json",
+      "reference_sha256": "81864e573b76d172282f44686fe8b73d20ef78fea7664e4c4ca8c6bf4d7a5ea7",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_34.json",
+      "candidate_sha256": "cc7393162efd9aecf6b7218d68a1eb5fa82596a8cfb8d6169fa3dc95b4a80e36",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "job": {
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "heavy_work": 224,
+        "high_weight": 2,
+        "lane": "isolated",
+        "max_active_cycles": 512,
+        "mode": "finite-heavy",
+        "n_src": 4,
+        "ordering": "oldest-first",
+        "profile": "near",
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "seed": 7301,
+        "window": 64,
+        "windows": 4
+      },
+      "policy": "CGOF(2:1)",
+      "status": "PASS",
+      "reference": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_role-switch-finite-heavy-isolated-w64-d16-hw2-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w64-d16-hw2-rr0.json",
+      "reference_sha256": "1bc5088157ecb506d71782ac488e4c1f510a39a17938ed9450782a04d3c25dd1",
+      "candidate": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/model_35.json",
+      "candidate_sha256": "e199837f1999b1dd8b1e38c677de541d3965a06d610ce9a06e25336358031951",
+      "active_cycles": 303,
+      "closing_cycles": [
+        63,
+        127,
+        191,
+        255
+      ],
+      "new_physical_sources": "EQUAL",
+      "final_censored": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "directed": [
+    {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_main_held_close_w256_d16_seed7301__main_held_close.json",
+      "sha256": "937c68891ee3c6ddb42963881288c1d78a7a4a551002223ac20425d49c6ad670",
+      "params": {
+        "N_SRC": 4,
+        "POLICY": 2,
+        "DEPTH": 16,
+        "RR_QUANTUM": 10,
+        "FAI_W": 256,
+        "HIGH_QUOTA": 10,
+        "MAIN_1W": 0
+      },
+      "changed_class": "B_H to L",
+      "status": "PASS"
+    },
+    {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_main_held_close_w256_d8_seed7301__main_held_close.json",
+      "sha256": "f05ac6a49f3b5bf7b94fd0ac005108f501052b4545218cca122ddda91faad03a",
+      "params": {
+        "N_SRC": 4,
+        "POLICY": 2,
+        "DEPTH": 8,
+        "RR_QUANTUM": 10,
+        "FAI_W": 256,
+        "HIGH_QUOTA": 10,
+        "MAIN_1W": 0
+      },
+      "changed_class": "B_H to L",
+      "status": "PASS"
+    },
+    {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_main_held_close_w64_d16_seed7301__main_held_close.json",
+      "sha256": "5557eec80af918845190e72c1f95d9c6c7424ec83156257da61eb5b3d111d87b",
+      "params": {
+        "N_SRC": 4,
+        "POLICY": 2,
+        "DEPTH": 16,
+        "RR_QUANTUM": 10,
+        "FAI_W": 64,
+        "HIGH_QUOTA": 10,
+        "MAIN_1W": 0
+      },
+      "changed_class": "B_H to L",
+      "status": "PASS"
+    },
+    {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/results/cocotb_main_held_close_w64_d8_seed7301__main_held_close.json",
+      "sha256": "074da6cc16879941bc16380e66f93a405e7a507a63d59756e26ac4435a422008",
+      "params": {
+        "N_SRC": 4,
+        "POLICY": 2,
+        "DEPTH": 8,
+        "RR_QUANTUM": 10,
+        "FAI_W": 64,
+        "HIGH_QUOTA": 10,
+        "MAIN_1W": 0
+      },
+      "changed_class": "B_H to L",
+      "status": "PASS"
+    }
+  ],
+  "model_evidence_classification": "MODEL_ONLY",
+  "rtl_evidence": "short-window anchors only",
+  "confirmation_seeds_used": [],
+  "production_main_traffic_run": false,
+  "C7": "unchanged: SINGLE_SEED / SCHEDULER_RTL",
+  "drain": "NOT_EXERCISED",
+  "remaining": [
+    "E5 frozen-statistics analysis and seed audit tooling",
+    "pilot 7301: 30 W5M model jobs and 4 Main W5M A3 jobs",
+    "A4/confirmation seeds 7401..7420 have not run",
+    "CGOF new fields have no W5M RTL anchor in the default v2 plan"
+  ]
+}

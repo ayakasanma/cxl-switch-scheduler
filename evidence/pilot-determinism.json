@@ -1,0 +1,61 @@
+{
+  "schema": "cxl-pilot-determinism-lead-v1",
+  "compared": 7,
+  "identical": 7,
+  "excluded": [
+    "wall_s"
+  ],
+  "reference": "20261103T182900Z_w5m (ThreadPoolExecutor launch)",
+  "candidate": "20261103T230208Z_w5m_process (ProcessPoolExecutor launch)",
+  "results": [
+    {
+      "name": "multi-window-isolated-CGOF_1_1.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "905f38828fb5c35afdb6090504be9da2136243f017e2d0f018cfecd1b64c34c6",
+      "candidate_sha256": "e662fbe8c719f06d16328515d5da5aad8c96342983f519ce11f5e0345aebc971"
+    },
+    {
+      "name": "multi-window-isolated-CGOF_2_1.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "fd46ab8ad326ebcb023b68db9e5a014edcb224f7527db8ee36ac4cf038bff242",
+      "candidate_sha256": "817f01780b563742e50d3b3bcf3376d53935bfca0e890ff1a10cfacd71253e80"
+    },
+    {
+      "name": "multi-window-isolated-FAI-inspired.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "77285883a4e19dc02b791fe6eb9da78e0db5c91e9d73dd1b17e088871ddb1d4c",
+      "candidate_sha256": "b473af8946d0fc94b6514f5c5961dde66e6eaa10a4bcfcead110ed06230e3f26"
+    },
+    {
+      "name": "multi-window-mixed-CGOF_1_1.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "10d8363fd14ea92e963739331899a96162e425f38f2cb7d7d22ffeb3cc2fe907",
+      "candidate_sha256": "43ea7d92f903741a78322d72e0de07880844a781d219c1a4c2e99fca35f7277a"
+    },
+    {
+      "name": "multi-window-mixed-CGOF_2_1.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "ba3527b29c3dac1fbee71b545967103328b28f1d71c28a7d1f389032a7c6447e",
+      "candidate_sha256": "9a0f40dc2f1d9f61c2bb2d9f904f906003a5b522b13fd62611104abbb8969eb1"
+    },
+    {
+      "name": "multi-window-mixed-FAI-inspired.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "503bee04a0c297aec4921c5d9004d241561692e2ab8c41725020ebe9f0cf8881",
+      "candidate_sha256": "b0b3e2c9c3aed234bb52bfc0f7bb20f9df0fa0e43848f62144734c44f3f79506"
+    },
+    {
+      "name": "role-switch-mixed-FAI-inspired.json",
+      "status": "PASS",
+      "difference": null,
+      "reference_sha256": "d822d1add3d3c62d18f4d94ce201993c739ff953bf252994a248fc1ad2cdad26",
+      "candidate_sha256": "e6472601eb9a9c833147ea21363c77794a62df6bc885be8f5676fed3555a4194"
+    }
+  ]
+}

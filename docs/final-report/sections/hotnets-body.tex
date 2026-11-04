@@ -1,0 +1,298 @@
+\begin{abstract}
+CXL memory pooling turns arbitration into a hardware design decision: each policy requires different ordering state, service history, and control logic. This report compares first-come, first-served (FCFS), round robin (RR), and an FAI-inspired fairness-aware scheduler in one SystemVerilog switch framework. We hold the 105-bit descriptor datapath, depth-16 FIFOs, one-output interface, and synthesis boundary fixed while varying only the policy and its required metadata. Independent Python models, directed and randomized simulation, mapped-netlist equivalence, and a controlled side-effect test support correctness. All nine primary configurations close at 25\,ns in a pre-layout SAED32 flow. Relative to FCFS, the fairness-aware design adds 4.97--5.89\% total mapped area; relative to RR it adds 38.22--39.27\%. FIFO subtrees occupy 92.40--98.63\% of the complete area. Qualified cold-start power preserves RR $<$ FCFS $<$ Main across three seeds. A second, pseudocode-grounded FAI interpretation changes behavior but changes the measured four-source area by only 0.028626\%. These are descriptor-level results, not claims of full CXL compliance, application fairness, maximum frequency, or physical signoff.
+\end{abstract}
+
+\section{Introduction}
+Compute Express Link (CXL) exposes load/store memory semantics over a cache-coherent interconnect and enables capacity expansion, tiering, and multi-host pooling~\cite{cxl_intro}. A CXL switch therefore cannot be treated as passive fan-out. When several sources have eligible requests for one downstream memory endpoint, the switch must choose a request while preserving ordering, applying backpressure, and updating policy state. FCFS needs arrival order, RR needs a polling pointer and service quota, and an adaptive policy additionally measures delivered traffic and maintains classification state. These differences are small in a block diagram but can become material when the complete switch is synthesized.
+
+This report asks a narrow question: when the datapath and synthesis boundary are fixed, what area and timing cost is associated with changing only the arbitration policy and its required per-request metadata? We implement 4, 8, and 16 source ports with depth-16 FIFOs, a common 105-bit descriptor, one ready/valid output, and three primary policies. Every design is checked against an independent software model, mapped with Design Compiler and analyzed with PrimeTime, and then replayed at gate level for power activity. The reported percentages consequently describe this controlled boundary rather than a universal scheduler ranking.
+
+The contribution is an implementation-grounded comparison, not a new scheduling algorithm. First, we define a common RTL contract for descriptor movement, output holding, and successful-transfer accounting. Second, we distinguish a hysteresis interpretation of FAI-CXL from a second interpretation derived from its pseudocode and quantify both. Third, we separate complete-switch area from policy-subtree and FIFO-storage costs, because a selector that looks expensive in isolation can appear almost free when standard-cell FIFOs dominate the denominator. Fourth, we report qualified power, formal RTL/netlist equivalence, negative controls, and explicit threats to validity. The project artifact and reproduction metadata are recorded separately~\cite{artifact}.
+
+\section{Related Work}
+CXL system research establishes why shared memory is attractive and why contention cannot be assumed away. Pond reports that pooling across 8--16 sockets can reduce DRAM cost while keeping VM slowdown within a small degradation margin across 158 workloads, although it emulates CXL latency on NUMA hardware~\cite{pond}. TPP manages placement between local DRAM and a slower CXL tier~\cite{tpp}, while DirectCXL demonstrates directly accessible pooled memory and reports roughly a $7\times$ advantage over an RDMA-based design in its tested workloads~\cite{directcxl}. These studies optimize allocation, placement, or end-to-end application behavior. Levis et al.\ question whether pooling benefits justify its cost and complexity~\cite{case_pool}, and My CXL Pool examines CXL pools as an alternative to PCIe switching~\cite{my_cxl_pool}. Together they make switch-side arbitration a first-order design question, but do not synthesize alternative arbiters under one RTL boundary.
+
+Memory-controller research has long separated fairness from throughput. Stall-time fair scheduling equalizes per-thread slowdown rather than bandwidth and reports a reduction in its maximum-to-minimum slowdown ratio from $5.26\times$ to $1.4\times$ on 8-core workloads~\cite{stfm}. Fair queuing brings network-style quality of service to shared memory~\cite{fqmem}; ATLAS ranks threads by attained service across controllers~\cite{atlas}; and TCM separates latency-sensitive from bandwidth-sensitive threads and shuffles priority within the latter group~\cite{tcm}. Such policies require history, ranking, sorting, or priority state. BLISS makes the hardware consequence explicit: its two-group blacklisting design reduces critical-path latency and area by 79\% and 43\% relative to TCM in a 32\,nm RTL study while improving fairness over earlier schedulers~\cite{bliss}. This is the closest lesson from prior work: fairness mechanisms consume state and logic, so their metadata must be included in a credible comparison.
+
+FAI-CXL is the closest direct precedent. It integrates weighted cacheline-granularity interleaving and adaptive fairness-aware scheduling into a CXL switch~\cite{fai}. Its ChampSim/Ramulator evaluation reports application-level gains of up to 21\% IPC and 17\% throughput. Its hardware section estimates less than 200\,KB of added storage for a 4\,TB pool, 1\,GB block size, and 16 hosts, and less than 2\,ns of lookup/priority delay~\cite{fai}. These are useful first-order bounds, not a synthesized comparison of alternative scheduler RTL. Other work characterizes host-side CXL interference~\cite{cxl_interplay}, contention-aware caching~\cite{contention_cache}, HPC pooling interference~\cite{hpc_pool}, and simulator accuracy down to an average 3.4\% error while retaining an abstract switch model~\cite{cxldmsim}. Memory-side directories~\cite{redit}, synchronization~\cite{sync_cxl}, and adaptive coherence~\cite{rethinking_pool} likewise show that fabric metadata and sharing policy affect performance. They do not isolate the standard-cell cost of arbitration itself.
+
+The literature also disagrees on how much of a switch can be represented by a latency constant. The CXL overview gives an analytical direct-access estimate near 170\,ns and a switched estimate near 250\,ns, while Pond models a fixed 70--90\,ns remote-memory adder and still reports a 7--9\% DRAM saving with a 1--5\% VM-slowdown target across 158 workloads~\cite{cxl_intro,pond}. In contrast, CXL-DMSim reports 284\,ns for a direct CXL ASIC and 487\,ns for the same class of device behind a switch on its validated testbed, although its simulator still represents the switch as a latency-and-buffer model~\cite{cxldmsim}. DirectCXL supplies a real FPGA switch prototype, but uses a static 1:1 upstream-to-downstream mapping and reports end-to-end memory behavior rather than a dynamic arbitration cost~\cite{directcxl}. These results are not directly subtractable because their platforms and workloads differ. They do show why an arbiter study must state whether it measures policy logic alone, the complete descriptor switch, or an application-visible path; otherwise a fixed-latency abstraction can hide the very hardware being discussed.
+
+The economics reinforce the same boundary question. A Case Against CXL Memory Pooling uses an analytical cost model and an Ethernet-switch price proxy to argue that a costly switch must save enough DRAM capacity to justify itself; the estimate is not a measured CXL switch price, but it makes switch complexity an adoption constraint rather than an implementation afterthought~\cite{case_pool}. My CXL Pool instead bypasses a conventional switch with a multi-headed CXL pod and software routing~\cite{my_cxl_pool}. Pooling is therefore not a single architecture with a single cost target: the value of an arbitration policy depends on whether the deployed design uses a crossbar-like switch, a static fabric, or a software-mediated alternative. Our controlled comparison isolates one such target, the standard-cell descriptor slice, and does not claim that it represents every CXL topology.
+
+Hardware scheduling has a separate implementation literature. Rixner et al.\ show that memory-access reordering can improve bandwidth by exploiting bank and row locality~\cite{rixner}. Input-queued crossbar schedulers use multiple round-robin arbiters, and the Tiny Tera design configured its crossbar every 51\,ns~\cite{gupta}. Weighted fair queuing requires tag computation and sorting; a 130\,nm packet-sorting circuit supported 40\,Gb/s line rates~\cite{wfq_sort}. A NoC switch-arbiter study reports area and power in 180\,nm technology~\cite{arbiter_ppa}. These works establish that arbitration is not free, but their DRAM, packet-switch, and NoC boundaries differ from CXL memory semantics. BLISS remains the closest memory-scheduler hardware baseline, yet its commercial 32\,nm DRAM-controller boundary and lack of power results preclude numerical reuse~\cite{bliss}.
+
+Those precedents are individually useful but do not compose a common baseline. BLISS reports a 79\% shorter critical path and 43\% lower area than TCM after synthesis, but no power and no CXL switch datapath~\cite{bliss}. Gupta and McKeown compare a programmable priority encoder at 1.64 versus 2.48\,ns and 918 versus 3,760 NAND2-equivalent gates for 32 ports, yet the result is a packet-crossbar component without a power report~\cite{gupta}. The WFQ sorting circuit targets 40\,Gb/s packet scheduling rather than descriptor arbitration, and the 180\,nm NoC study lowers total power from 15.703 to 10.646\,mW and area from 768 to 709\,$\mu$m$^2$ for one small arbiter while omitting timing and frequency~\cite{wfq_sort,arbiter_ppa}. Rixner's scheduling study is simulation-based; its familiar 0.18\,$\mu$m test-chip numbers belong to an external Hitachi chip, not to the proposed scheduler~\cite{rixner}. Cross-paper area, delay, and power totals would therefore combine different technologies, boundaries, workloads, and in some cases unverified or incomplete evidence.
+
+Across these lines, CXL system studies expose contention, CXL-specific studies propose interleaving or coherence mechanisms, and hardware studies show nonzero scheduler cost. Missing is a like-for-like comparison of alternative arbitration policies under one descriptor datapath, FIFO organization, and synthesis boundary for a CXL-oriented switch slice. In the literature reviewed here, no directly comparable complete area, timing, and power baseline exists at the same CXL switch boundary. This report addresses that controlled comparison and makes no claim to a new fairness algorithm.
+
+\section{Design}
+\subsection{Common Boundary and Arbitration Contract}
+Figure~\ref{fig:architecture} defines the synthesized boundary. Each source has a depth-16 FIFO carrying a 105-bit descriptor: Tag $[104{:}73]$, Address $[72{:}41]$, Opcode $[40]$, Length $[39{:}32]$, and Payload $[31{:}0]$. Tags support testbench response matching but do not affect arbitration. Every policy preserves all descriptor bits and per-source FIFO order. FCFS and both FAI interpretations also store a 32-bit arrival field per entry; RR omits it. This metadata difference is intentional because it belongs to the policy contract rather than to a common datapath optimization.
+
+\begin{figure*}[t]
+\centering
+\resizebox{0.62\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,>=Latex,
+  block/.style={draw=figgray,line width=.45pt,rounded corners=1pt,fill=white,align=center,inner sep=1.6pt},
+  data/.style={-{Latex[length=1.2mm,width=.8mm]},draw=figgray,line width=.5pt},
+  feedback/.style={-{Latex[length=1.2mm,width=.8mm]},draw=figred,line width=.65pt},
+  note/.style={font=\scriptsize,text=figgray,align=center}]
+  % Synthesized boundary
+  \draw[dashed,figgray,line width=.45pt,rounded corners=2pt] (-.25,1.22) rectangle (17.10,6.70);
+  \node[anchor=north west,fill=white,inner sep=1pt,font=\footnotesize\bfseries]
+    at (-.18,6.62) {Synthesized RTL boundary};
+
+  % Ingress lanes and per-source FIFOs
+  \node[block,minimum width=1.55cm,minimum height=.72cm] (s0) at (1.00,5.95)
+    {src 0\\[-1pt]R/V, 105b};
+  \node[note] at (1.00,5.10) {$\vdots$};
+  \node[block,minimum width=1.55cm,minimum height=.72cm] (sn) at (1.00,4.25)
+    {src $N{-}1$\\[-1pt]R/V, 105b};
+  \node[block,minimum width=1.70cm,minimum height=.72cm] (f0) at (3.20,5.95)
+    {FIFO$_0$\\[-1pt]depth 16};
+  \node[note] at (3.20,5.10) {$\vdots$};
+  \node[block,minimum width=1.70cm,minimum height=.72cm] (fn) at (3.20,4.25)
+    {FIFO$_{N-1}$\\[-1pt]depth 16};
+  \draw[data] (s0) -- (f0);
+  \draw[data] (sn) -- (fn);
+
+  % FIFO-head candidate bus
+  \draw[data] (f0.east) -- (4.55,5.95) -- (4.55,5.28);
+  \draw[data] (fn.east) -- (4.55,4.25) -- (4.55,5.28);
+  \draw[data] (4.55,5.28) -- (5.18,5.28);
+  \node[note,fill=white,inner sep=1pt,anchor=south] at (4.55,5.68) {heads};
+
+  % One elaboration-time policy slot plus its retained context
+  \draw[draw=figgray,line width=.55pt,rounded corners=1.5pt,fill=figblue!4]
+    (5.18,3.35) rectangle (8.85,6.45);
+  \node[font=\footnotesize\bfseries] at (7.015,6.20) {Policy slot};
+  \node[note] at (7.015,5.93) {one selected at elaboration};
+  \node[block,draw=figblue!75,fill=figblue!9,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (6.27,5.52) {FCFS};
+  \node[block,draw=figblue!75,fill=figblue!9,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (7.75,5.52) {RR};
+  \node[block,draw=figred!75,fill=figred!7,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (6.27,4.98) {Main};
+  \node[block,draw=figred!75,fill=figred!7,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (7.75,4.98) {Alg-2};
+  \draw[figgray!55,dashed,line width=.4pt] (5.35,4.58) -- (8.68,4.58);
+  \node[block,draw=figgray!55,fill=white,minimum width=2.75cm,minimum height=.86cm,inner sep=1pt]
+    at (7.015,4.05) {candidate source\\+ policy context};
+
+  % Common datapath and output
+  \draw[data] (8.85,5.28) -- (9.23,5.28);
+  \draw[draw=figgray,line width=.5pt,fill=white]
+    (9.23,4.75) -- (9.23,5.81) -- (10.68,5.55) -- (10.68,5.01) -- cycle;
+  \node[font=\footnotesize\bfseries] at (9.90,5.28) {MUX};
+  \node[block,minimum width=1.85cm,minimum height=.74cm] (hold) at (11.75,5.28)
+    {source/context\\[-1pt]hold};
+  \draw[data] (10.68,5.28) -- (10.80,5.28);
+  \draw[data] (hold.east) -- (16.78,5.28);
+  \node[note,above] at (14.90,5.38) {105b R/V};
+  \node[note,anchor=east] at (16.68,5.10) {to CXL};
+
+  % Fire controls FIFO pop, quota use, and held context.
+  \draw[feedback] (16.78,5.28) -- (16.78,2.62) -- (3.20,2.62);
+  \draw[feedback] (3.20,2.62) -- (3.20,3.88);
+  \draw[feedback] (7.02,2.62) -- (7.02,3.33);
+  \node[note,fill=white,inner sep=2pt,anchor=south] at (11.35,2.77)
+    {\code{fire} = valid $\land$ ready};
+  \node[note,fill=white,inner sep=2pt,anchor=south] at (5.85,2.77)
+    {pop + quota};
+
+  % Descriptor layout is called out separately; it is not to scale.
+  \draw[draw=figgray!65,line width=.4pt,rounded corners=1pt,fill=white]
+    (0.18,1.35) rectangle (8.95,2.23);
+  \node[anchor=south west,font=\scriptsize,fill=white,inner sep=1pt]
+    at (.30,2.26) {FIFO entry (not to scale)};
+  \foreach \x/\w in {.33/1.26,1.59/1.26,2.85/.78,3.63/1.00,4.63/1.43,6.06/1.58}
+    \draw[figgray!55,line width=.35pt] (\x,1.43) rectangle ++(\w,.55);
+  \node[note] at (.96,1.705) {Tag\\[-1pt][104:73]};
+  \node[note] at (2.22,1.705) {Addr.\\[-1pt][72:41]};
+  \node[note] at (3.24,1.705) {Opcode\\[-1pt][40]};
+  \node[note] at (4.13,1.705) {Length\\[-1pt][39:32]};
+  \node[note] at (5.345,1.705) {Payload\\[-1pt][31:0]};
+  \draw[dashed,figred!75,line width=.45pt] (6.06,1.43) rectangle (7.64,1.98);
+  \node[note] at (6.85,1.705) {Arrival\\[-1pt][31:0]$^{*}$};
+  \node[note,anchor=west] at (9.18,1.70)
+    {$^{*}$Arrival metadata is present only for\\FCFS, Main, and Algorithm-2.};
+
+  % Non-synthesized testbench
+  \draw[dashed,figgray,line width=.45pt,rounded corners=2pt,fill=figgray!2]
+    (-.25,.08) rectangle (17.10,1.12);
+  \node[anchor=north west,fill=figgray!2,inner sep=1pt,font=\footnotesize\bfseries]
+    at (-.18,1.08) {Testbench only (not synthesized)};
+  \node[block,minimum width=2.55cm,minimum height=.50cm] at (1.45,.47) {Traffic producers};
+  \node[block,minimum width=2.65cm,minimum height=.50cm] at (5.00,.47) {Memory-ready trace};
+  \node[block,minimum width=2.55cm,minimum height=.50cm] at (8.80,.47) {Python oracle};
+  \node[block,minimum width=2.75cm,minimum height=.50cm] at (12.75,.47) {Response scoreboard};
+\end{tikzpicture}
+}
+\caption{Controlled synthesis boundary. The selected policy proposes a source independently of downstream readiness. The orange path denotes \code{fire}; it pops the selected FIFO, consumes service quota, and preserves the source/context hold through a stall. The testbench drives and observes DUT pins; its Python oracle is an independent reference model, and the scoreboard checks observed responses. These blocks are not synthesized.}
+\label{fig:architecture}
+\end{figure*}
+
+An input push is accepted only when beginning-of-cycle occupancy is below 16; a simultaneous pop does not create an empty-bypass path. The policy proposes a source independently of downstream readiness, and
+\begin{equation}
+\mathit{fire}=\mathit{out\_valid}\land\mathit{out\_ready}.
+\end{equation}
+Only fire pops a FIFO or consumes service quota. If the downstream stalls, the common controller holds both the source and its policy context, while the selected FIFO head holds the descriptor. Reset clears valid/hold state, pending class transitions, quota use, and counters. Every source starts in the High class, the first FAI turn is High, and the RR pointer starts at source zero.
+
+\subsection{FCFS, RR, and Main Hysteresis}
+FCFS timestamps each accepted request with a shared counter and chooses the oldest nonempty head; simultaneous arrivals tie by increasing source ID. Modular comparison assumes outstanding age remains below $2^{31}$ cycles, and directed tests exercise wraparound. RR polls from its pointer, skips empty sources, and advances after ten successful transfers. Stalls consume no quantum. The primary comparison uses RR10; RR1 is verified only as a functional supplement.
+
+For source $h$, let $B[h]$ be successful transfers in the current $W$-cycle window and $S=\sum_h B[h]$. Main classifies
+\begin{align}
+\mathrm{UP}:&\quad 10NB[h]<3S,\\
+\mathrm{DOWN}:&\quad NB[h]>S,\\
+\mathrm{KEEP}:&\quad \text{otherwise, including equality}.
+\end{align}
+Production uses $W=5{,}000{,}000$, 23-bit counters, and unsigned 32-bit comparison intermediates. The last fire of a window participates in classification at the closing edge, and new classes take effect in the next cycle. Main uses two-window hysteresis: a pending transition is committed only after a second supporting window, while KEEP, opposite evidence, or zero service cancels it. The effective class remains unchanged during a buffer-pending state. A one-output dispatcher alternates High and Low visits of up to ten fires; within a class, it uses the same oldest-head rule as FCFS. An empty class relinquishes unused quota without banking it, and the sole nonempty class proceeds without an artificial idle cycle.
+
+\subsection{Supplementary FAI Interpretation}
+The source-grounded supplementary variant reuses the scheduler module with an immediate-target transition function. From stable High, DOWN enters a buffer that stores Low; from stable Low, UP enters a buffer that stores High. Buffer service uses the stored target immediately, and KEEP retains the buffer. This agrees with Algorithm~2's stored-target assignments while differing from Main's previous-effective-class hysteresis. Neither interpretation is a cycle-identical reconstruction of FAI-CXL, because the paper does not uniquely determine the project's one-output 10/10 schedule. The variant is synthesized and measured separately at $N=4$, not promoted to the primary matrix.
+
+\section{Implementation}
+The RTL is synthesizable SystemVerilog with one policy-selectable top, a common FIFO module, and a common output-hold controller. Each policy has an independent Python reference model using software queues rather than a translated copy of the RTL. Cocotb checks valid/ready, source, every descriptor bit, conservation, per-source order, response tags, occupancy bounds, one-hot pops, and held-output stability. Directed cases cover simultaneous arrivals, all descriptor bits, full-plus-pop refusal, no bypass, quota expiration, skipped empty visits, reset during a hold, timestamp wrap, threshold equality, and classification boundaries.
+
+\begin{table}[t]
+\caption{Accepted correctness evidence. Counts are scoped runs, not a sum of unique coverage points.}
+\label{tab:verification}
+\centering\setlength{\tabcolsep}{2.4pt}\scriptsize
+\begin{tabular}{@{}P{0.39\columnwidth}P{0.56\columnwidth}@{}}\toprule
+Scope & Completed evidence\\\midrule
+Primary randomized & 180/180: 3 policies $\times$ 3 $N$ $\times$ 20 seeds; 100k cycles/run\\
+Main stress & 30/30; 18M trace cycles; $W=64,256$\\
+Main production & 3/3; 60M nonreset cycles; 12 full $W=5$M windows\\
+Algorithm-2 & 10/10 stress; one 20M-cycle production run at $N=4$\\
+Gate replay & 900k original cold cycles; 32.1M supplementary checked cycles\\
+Equivalence & 14/14 mapped-netlist pairs; intentional inversion control fails\\\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:verification} summarizes the accepted regressions. The primary runs test all-High behavior because they end before a production window closes; the production regression exercises real classification at $N=4,8,16$. Main and Algorithm-2 stress runs cover all 16 state/evidence combinations. Formality W-2024.09 verifies nine primary RTL/netlist pairs, two supplementary pairs, and three current-Main bridges. All 14 have zero failing, aborted, unverified, unmatched, or active-blackbox points and no manual don't-verify exclusions. Six FCFS/RR pairs contain one explicitly un-compared propagated-constant register. An isolated RR netlist with inverted output-valid fails exactly the expected compare point while 6,892 others pass, guarding against a vacuous equivalence flow.
+
+Primary synthesis uses Design Compiler and PrimeTime W-2024.09 with SAED32 RVT at TT, 0.78\,V, and 25\,$^\circ$C. The common profile uses a 25\,ns clock, 0.10/0.05\,ns setup/hold uncertainty, 0/2\,ns input and output delays, 0.1/0.1\,ns input/clock transitions, and a 2.656828\,fF nominal output load. A fixed wire-load estimate is used; no false paths, multicycle paths, case analysis, or policy-specific pipeline is added. During optimization only, output-pin capacitance targets are tightened to 0.75 of their library limits; all 390 defined limits are restored before final reports and PrimeTime checks the original database. Area remains in library units because no validated square-micrometer or NAND2 normalization is available.
+
+Power uses zero-delay VCS replay of accepted mapped netlists without SDF, with SAIF activity consumed by PrimeTime/PrimePower at the same corner and clock. Every replayed output is compared cycle by cycle with the policy's Python export. The cold matrix contains three seeds and 100,000 measured cycles per case, for 27 cases and 2.7 million cycles. This estimates switching plus leakage for a fixed traffic window; it does not include SDF glitches, routed wires, clock-tree power, or application effects.
+
+\section{Evaluation}
+\subsection{Area and Timing}
+Table~\ref{tab:primary} reports the nine primary mappings. Total area grows approximately linearly with the number of depth-16 source FIFOs. RR is smallest because it omits per-entry arrival metadata and the oldest-head selection network. Main adds counters, classes, quota context, and classification logic to an arrival-ordered design.
+
+\begin{table}[t]
+\caption{Primary full-switch results. Area is in $10^3$ library units; setup and hold are positive slack in ns at 25\,ns. Values are rounded presentation data.}
+\label{tab:primary}
+\centering\setlength{\tabcolsep}{2.7pt}\scriptsize
+\begin{tabular}{@{}rlrrrr@{}}\toprule
+$N$ & Policy & Area & FF cells & Setup & Hold\\\midrule
+\PrimaryRows\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=3 by 1,horizontal sep=2.1em},
+  width=.185\textwidth,height=3.15cm,
+  title style={font=\scriptsize,yshift=-1pt},
+  tick label style={font=\scriptsize,text=figgray},
+  label style={font=\scriptsize,text=figgray},
+  axis line style={figgray!70,line width=.45pt},
+  tick style={figgray!70,line width=.4pt},
+  grid=major,grid style={figgray!15,line width=.25pt},
+  xmin=2.5,xmax=17.5,xtick={4,8,16},xlabel={Sources $N$}]
+\nextgroupplot[title={(a) Complete-switch area},ylabel={Area ($10^3$ units)},
+  ymin=0,ymax=480,ytick={0,200,400}]
+\addplot[figblue,line width=.75pt,mark=square*,mark size=1.5pt] coordinates {\AreaFCFS};
+\addplot[figgray,line width=.75pt,dashed,mark=triangle*,mark options={fill=white},mark size=1.8pt] coordinates {\AreaRR};
+\addplot[figred,line width=.75pt,mark=*,mark size=1.5pt] coordinates {\AreaMain};
+\nextgroupplot[title={(b) Policy-subtree area},ylabel={},
+  ymin=0,ymax=30,ytick={0,10,20,30}]
+\addplot[figblue,line width=.75pt,mark=square*,mark size=1.5pt] coordinates {\PolicyFCFS};
+\addplot[figgray,line width=.75pt,dashed,mark=triangle*,mark options={fill=white},mark size=1.8pt] coordinates {\PolicyRR};
+\addplot[figred,line width=.75pt,mark=*,mark size=1.5pt] coordinates {\PolicyMain};
+\nextgroupplot[title={(c) Setup slack at 25\,ns},ylabel={},
+  ymin=0,ymax=22.5,ytick={0,5,10,15,20}]
+\addplot[figblue,line width=.75pt,mark=square*,mark size=1.5pt] coordinates {\SetupFCFS};
+\addplot[figgray,line width=.75pt,dashed,mark=triangle*,mark options={fill=white},mark size=1.8pt] coordinates {\SetupRR};
+\addplot[figred,line width=.75pt,mark=*,mark size=1.5pt] coordinates {\SetupMain};
+\end{groupplot}
+\node[anchor=south] at (current bounding box.north)
+  {\tikz\draw[figblue,line width=.75pt] (0,0)--(.35,0)
+   node[black,right,font=\scriptsize] {FCFS};\quad
+   \tikz\draw[figgray,line width=.75pt,dashed] (0,0)--(.35,0)
+   node[black,right,font=\scriptsize] {RR};\quad
+   \tikz\draw[figred,line width=.75pt] (0,0)--(.35,0)
+   node[black,right,font=\scriptsize] {Main};};
+\end{tikzpicture}
+\caption{Single-run mapped-netlist measurements from the accepted data in Table~\ref{tab:primary}. Each panel has an independent source-count axis. Lines connect measured points only; they are not fitted trends, and every point has $n=1$, so no uncertainty interval is implied. Panel~(c) reports setup slack from the fixed 25\,ns pre-layout experiment, not $F_{\max}$ or physical signoff. Arrival storage remains in the FIFO hierarchy, so panel~(b) is not a full decomposition of policy cost.}
+\label{fig:area}
+\end{figure*}
+
+Main exceeds FCFS total area by 5.89\%, 5.23\%, and 4.97\% at $N=4,8,16$; its increases over RR are 39.27\%, 38.60\%, and 38.22\%. The small full-switch percentage over FCFS does not make the adaptive selector free. FIFO subtrees, including enabled arrival metadata, occupy 92.40--98.63\% of mapped area. At $N=16$, 256 entries contain 26,880 descriptor bits, and FCFS/FAI add 8,192 arrival bits plus the shared timestamp counter. Main contains 35,773 mapped flip-flop cells versus 35,318 for FCFS and 27,102 for RR. The policy subtree itself grows from 1,132.0 to 7,144.0 library units for FCFS, from 263.0 to 1,268.7 for RR, and from 2,767.6 to 26,673.2 for Main over $N=4$ to $16$. These subtree values remain diagnostics, not substitutes for total policy overhead, because arrival storage lives in the FIFO hierarchy.
+
+All nine configurations meet setup, hold, and original electrical limits. RR setup slack remains above 18.69\,ns. FCFS falls from 13.072\,ns at four sources to 3.892\,ns at sixteen; Main falls from 10.496 to 1.158\,ns. Main16 therefore has the smallest observed margin at the common target without requiring a different pipeline. Its limiting paths run from FIFO read-pointer state to a class-state register, coupling head selection with the closing-window update. There are 140 propagated-constant-disabled timing checks in four configurations; they are retained and not reported as tested. The other five configurations have none, and all used output pins have positive capacitance limits. This is comparative pre-layout closure, not placement, routing, clock-tree, or multicorner signoff.
+
+\subsection{Power and Behavioral Sensitivity}
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 1,horizontal sep=3.2em},
+  width=.36\textwidth,height=3.35cm,
+  title style={font=\scriptsize,yshift=-1pt},
+  tick label style={font=\scriptsize,text=figgray},
+  label style={font=\scriptsize,text=figgray},
+  axis line style={figgray!70,line width=.45pt},
+  tick style={figgray!70,line width=.4pt},
+  grid=major,grid style={figgray!15,line width=.25pt}]
+\nextgroupplot[title={(a) Cold total power},xlabel={Sources $N$},
+  ylabel={Power (mW)},xmin=2.5,xmax=17.5,xtick={4,8,16},
+  ymin=0,ymax=18,ytick={0,5,10,15},
+  legend style={font=\scriptsize,draw=none,fill=white,inner sep=1pt,
+    at={(.98,.98)},anchor=north east,legend columns=1}]
+\addplot[figblue,line width=.75pt,mark=square*,mark size=1.45pt] coordinates {\ColdMeanFCFS};
+\addlegendentry{FCFS}
+\addplot[figgray,line width=.75pt,dashed,mark=triangle*,mark options={fill=white},mark size=1.7pt] coordinates {\ColdMeanRR};
+\addlegendentry{RR}
+\addplot[figred,line width=.75pt,mark=*,mark size=1.45pt] coordinates {\ColdMeanMain};
+\addlegendentry{Main}
+\addplot[only marks,figblue,mark=*,mark size=.65pt,opacity=.65,forget plot] coordinates {\ColdSeedsFCFS};
+\addplot[only marks,figgray,mark=*,mark size=.65pt,opacity=.65,forget plot] coordinates {\ColdSeedsRR};
+\addplot[only marks,figred,mark=*,mark size=.65pt,opacity=.65,forget plot] coordinates {\ColdSeedsMain};
+\nextgroupplot[title={(b) $N=4$ boundary power},
+  xlabel={Policy},ylabel={Power (mW)},ybar stacked,bar width=9pt,
+  xmin=.5,xmax=3.5,xtick={1,2,3},xticklabels={FCFS,RR,Main},
+  ymin=0,ymax=4.5,ytick={0,1,2,3,4},
+  legend style={font=\scriptsize,draw=none,fill=white,inner sep=1pt,
+    at={(.98,.98)},anchor=north east,legend columns=1}]
+\addplot[fill=figblue!75,draw=figblue!85,line width=.25pt] coordinates {\BoundaryInternal};
+\addlegendentry{Internal}
+\addplot[fill=figgray!55,draw=figgray!80,line width=.25pt] coordinates {\BoundarySwitching};
+\addlegendentry{Switching}
+\addplot[fill=figblue!18,draw=figblue!65,line width=.25pt] coordinates {\BoundaryLeakage};
+\addlegendentry{Leakage}
+\end{groupplot}
+\end{tikzpicture}
+\caption{Qualified zero-delay power from accepted mapped-netlist replays. (a) Lines join the mean of the three printed seed estimates; small dots show the individual seeds with horizontal jitter for display only. The $N=16$ points retain PrimeTime's 0.1\,mW precision, so the seeds coincide. (b) The boundary-focused $N=4$ sample has 50 times the natural classification-event density and is not production-average power. Its rounded internal, switching, and leakage components can differ from the printed total by 0.001\,mW.}
+\label{fig:power}
+\end{figure*}
+
+Figure~\ref{fig:power}(a) preserves the tool's printed precision. RR $<$ FCFS $<$ Main holds for all three cold seeds. At $N=4$, total powers are approximately 2.600, 3.398, and 3.500\,mW; at $N=16$, they are 10.3, 13.4, and 13.8\,mW for RR, FCFS, and Main. Energy is $P_{\rm total}T_{\rm measured}/F_{\rm measured}$, where $F$ is accepted output transfers; it includes clocked buffering and leakage and is not incremental scheduler energy. Offered load and sink readiness determine achieved transfers/cycle, so this is descriptor-level activity, not application IPC or link bandwidth.
+
+To exercise production classification without preloading state, each four-source policy runs 9,999,500 warmup cycles followed by 100,000 measured cycles at the true $W=5$M. Main first classifies during a held grant at cycle 4,999,999 and applies the second-window result at cycle 10,000,000. In the measured interval, the model attributes 44,207 fires to High visits and 10,901 to Low visits. FCFS and Main pin streams first differ exactly when the second class becomes effective and then differ in 11,173 rows. The boundary-focused power sample contains one classification in 100,000 cycles, 50 times the natural event density, so it is not production-average power.
+
+Algorithm-2 produces matching intended stimulus hashes but different effective classes, selected sources, and acceptance timing. Across ten shortened-window stress pairs, mean acceptance-to-fire wait is higher for Algorithm-2 in eight pairs, with per-run differences of 0.15--1.92 cycles in either direction. It also completes a 20-million-cycle production run covering four real windows. Under a separate synthesis of the same $N=4$ source, Main reproduces its primary area, flip-flop count, and timing. Algorithm-2 reduces total area by 31.513855 library units (0.028626\%), reduces policy-subtree area by 0.323728\%, improves setup slack by 0.051073\,ns, and retains 9,011 flip-flops. This single-run difference establishes behavioral sensitivity and a small measured PPA effect, not universal equivalence.
+
+\subsection{Interpretation and Validity}
+The dominant result is structural: at this standard-cell FIFO boundary, required storage makes a roughly 5\% Main-over-FCFS total-area premium possible even while the adaptive policy subtree is much larger than FCFS. A memory macro, different FIFO depth, or different partition would change that ratio. RR's missing timestamps are a real policy difference, not an omitted common cost. Timing margins are similarly conditional: increasing $N$ enlarges head selection and class-update logic, and Main16's 1.158148\,ns slack supports only the fixed 25\,ns wire-load experiment. No frequency sweep, placed netlist, clock tree, or silicon result is supplied.
+
+Correct adaptation is not application fairness. Production-length windows and distinct output sequences establish implementation behavior, but this report does not measure application slowdown, row-buffer locality, IPC, or a general fairness bound. Power is a zero-delay estimate with cold-state X, finite windows, table-range warnings, and no routed wires. Missing studies include trained-state power at $N=8,16$, Algorithm-2 power, additional workload families, and naturally weighted multiwindow averages. The report also excludes full CXL protocol compliance, multi-output routing, application-level performance, $F_{\max}$, and physical signoff.
+
+Within those limits, the evidence supports a reproducible hardware-cost case study: a common verified boundary; positive timing closure for every primary configuration; a controlled distinction between policy, FIFO storage, and total area; and qualified power measurements that consistently order RR below FCFS below Main. The pseudocode interpretation changes service behavior while changing complete area by only 0.028626\% in the measured four-source pair. The central implication is that scheduler PPA claims must name their boundary: storage and metadata can dominate the complete switch even when policy logic is the conceptual focus.
+
+\section{AI Use Acknowledgment}
+Claude Code/RTL Agent Team implemented and verified the RTL; Codex orchestrated tasks, reviewed specifications/RTL/results, ran remote EDA, and prepared this report. Gemini 3.8 Flash read the 23 external full texts via agy; Gemini 4 Argon audited the gap and claims. DeepSeek produced no usable output after a provider 502. Later work used GPT-6.1 Sol/high and Opus 5.5/medium under owner authorization. Prompt/response provenance is retained and available on request. Numerical results come from executed tools and archived evidence, not model predictions.

@@ -1,0 +1,433 @@
+{
+  "schema": "cxl-a3-geq-v1",
+  "anchors": 4,
+  "passed": 4,
+  "excluded": {
+    "schema": "different RTL/model output schemas",
+    "evidence_kind": "SCHEDULER_RTL versus MODEL_ONLY",
+    "limitations": "evidence boundary text",
+    "native_coverage": "DUT-only",
+    "native_cgof": "DUT-only",
+    "native_main": "DUT-only",
+    "input_hold_checks": "DUT-only",
+    "wall_s": "runtime"
+  },
+  "results": [
+    {
+      "anchor": "a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "failing": {},
+      "fields": {
+        "accepted": {
+          "status": "EQUAL"
+        },
+        "active_cycles": {
+          "status": "EQUAL"
+        },
+        "classifier": {
+          "status": "EQUAL"
+        },
+        "drain_cycles": {
+          "status": "EQUAL"
+        },
+        "evidence_kind": {
+          "status": "EXCLUDED",
+          "reason": "SCHEDULER_RTL versus MODEL_ONLY"
+        },
+        "fairness": {
+          "status": "EQUAL"
+        },
+        "fired": {
+          "status": "EQUAL"
+        },
+        "generated": {
+          "status": "EQUAL"
+        },
+        "generation_roles": {
+          "status": "EQUAL"
+        },
+        "heavy": {
+          "status": "EQUAL"
+        },
+        "input_hold_checks": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "job": {
+          "status": "EQUAL"
+        },
+        "lane": {
+          "status": "EQUAL"
+        },
+        "limitations": {
+          "status": "EXCLUDED",
+          "reason": "evidence boundary text"
+        },
+        "metrics": {
+          "status": "EQUAL"
+        },
+        "mode": {
+          "status": "EQUAL"
+        },
+        "native_coverage": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "native_main": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "params": {
+          "status": "EQUAL"
+        },
+        "physical_sources": {
+          "status": "EQUAL"
+        },
+        "policy": {
+          "status": "EQUAL"
+        },
+        "ready_cycles": {
+          "status": "EQUAL"
+        },
+        "schema": {
+          "status": "EXCLUDED",
+          "reason": "different RTL/model output schemas"
+        },
+        "service_shares": {
+          "status": "EQUAL"
+        },
+        "status": {
+          "status": "EQUAL"
+        },
+        "trace_config": {
+          "status": "EQUAL"
+        },
+        "trace_sha256": {
+          "status": "EQUAL"
+        },
+        "wall_s": {
+          "status": "EXCLUDED",
+          "reason": "runtime"
+        }
+      },
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "fd8a43da2fe3d52237ccfa4f70a090b3b3f22ccfd8863b2719a88c055e7af0ba",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "model_sha256": "8ad4ca076f81f9c15f6c56cc1151fb0fb05b16501656ac2ea5a1f887117a5f12",
+      "active_cycles": 21873605,
+      "drain_cycles": 0
+    },
+    {
+      "anchor": "a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "failing": {},
+      "fields": {
+        "accepted": {
+          "status": "EQUAL"
+        },
+        "active_cycles": {
+          "status": "EQUAL"
+        },
+        "classifier": {
+          "status": "EQUAL"
+        },
+        "drain_cycles": {
+          "status": "EQUAL"
+        },
+        "evidence_kind": {
+          "status": "EXCLUDED",
+          "reason": "SCHEDULER_RTL versus MODEL_ONLY"
+        },
+        "fairness": {
+          "status": "EQUAL"
+        },
+        "fired": {
+          "status": "EQUAL"
+        },
+        "generated": {
+          "status": "EQUAL"
+        },
+        "generation_roles": {
+          "status": "EQUAL"
+        },
+        "heavy": {
+          "status": "EQUAL"
+        },
+        "input_hold_checks": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "job": {
+          "status": "EQUAL"
+        },
+        "lane": {
+          "status": "EQUAL"
+        },
+        "limitations": {
+          "status": "EXCLUDED",
+          "reason": "evidence boundary text"
+        },
+        "metrics": {
+          "status": "EQUAL"
+        },
+        "mode": {
+          "status": "EQUAL"
+        },
+        "native_coverage": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "native_main": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "params": {
+          "status": "EQUAL"
+        },
+        "physical_sources": {
+          "status": "EQUAL"
+        },
+        "policy": {
+          "status": "EQUAL"
+        },
+        "ready_cycles": {
+          "status": "EQUAL"
+        },
+        "schema": {
+          "status": "EXCLUDED",
+          "reason": "different RTL/model output schemas"
+        },
+        "service_shares": {
+          "status": "EQUAL"
+        },
+        "status": {
+          "status": "EQUAL"
+        },
+        "trace_config": {
+          "status": "EQUAL"
+        },
+        "trace_sha256": {
+          "status": "EQUAL"
+        },
+        "wall_s": {
+          "status": "EXCLUDED",
+          "reason": "runtime"
+        }
+      },
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "f06c1438e0ab74d0e13c889015327068c9dfdf1163818a583758de8c9e502f1e",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "model_sha256": "d7a67106f8c2945e2abc86b322a5c66d7dae5b6a78db099dd6b1331cef5c3e16",
+      "active_cycles": 21873605,
+      "drain_cycles": 0
+    },
+    {
+      "anchor": "a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "failing": {},
+      "fields": {
+        "accepted": {
+          "status": "EQUAL"
+        },
+        "active_cycles": {
+          "status": "EQUAL"
+        },
+        "classifier": {
+          "status": "EQUAL"
+        },
+        "drain_cycles": {
+          "status": "EQUAL"
+        },
+        "evidence_kind": {
+          "status": "EXCLUDED",
+          "reason": "SCHEDULER_RTL versus MODEL_ONLY"
+        },
+        "fairness": {
+          "status": "EQUAL"
+        },
+        "fired": {
+          "status": "EQUAL"
+        },
+        "generated": {
+          "status": "EQUAL"
+        },
+        "generation_roles": {
+          "status": "EQUAL"
+        },
+        "heavy": {
+          "status": "EQUAL"
+        },
+        "input_hold_checks": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "job": {
+          "status": "EQUAL"
+        },
+        "lane": {
+          "status": "EQUAL"
+        },
+        "limitations": {
+          "status": "EXCLUDED",
+          "reason": "evidence boundary text"
+        },
+        "metrics": {
+          "status": "EQUAL"
+        },
+        "mode": {
+          "status": "EQUAL"
+        },
+        "native_coverage": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "native_main": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "params": {
+          "status": "EQUAL"
+        },
+        "physical_sources": {
+          "status": "EQUAL"
+        },
+        "policy": {
+          "status": "EQUAL"
+        },
+        "ready_cycles": {
+          "status": "EQUAL"
+        },
+        "schema": {
+          "status": "EXCLUDED",
+          "reason": "different RTL/model output schemas"
+        },
+        "service_shares": {
+          "status": "EQUAL"
+        },
+        "status": {
+          "status": "EQUAL"
+        },
+        "trace_config": {
+          "status": "EQUAL"
+        },
+        "trace_sha256": {
+          "status": "EQUAL"
+        },
+        "wall_s": {
+          "status": "EXCLUDED",
+          "reason": "runtime"
+        }
+      },
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "1faf9ef51cb360628e945cbdf2f62b04e73e341472cb75cf6ca3a7050c03e75c",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "model_sha256": "438e8cd1c1aad10e32ba375eeaf9b4402a10fc2cb1777970557750222cd41c4e",
+      "active_cycles": 21873605,
+      "drain_cycles": 0
+    },
+    {
+      "anchor": "a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "failing": {},
+      "fields": {
+        "accepted": {
+          "status": "EQUAL"
+        },
+        "active_cycles": {
+          "status": "EQUAL"
+        },
+        "classifier": {
+          "status": "EQUAL"
+        },
+        "drain_cycles": {
+          "status": "EQUAL"
+        },
+        "evidence_kind": {
+          "status": "EXCLUDED",
+          "reason": "SCHEDULER_RTL versus MODEL_ONLY"
+        },
+        "fairness": {
+          "status": "EQUAL"
+        },
+        "fired": {
+          "status": "EQUAL"
+        },
+        "generated": {
+          "status": "EQUAL"
+        },
+        "generation_roles": {
+          "status": "EQUAL"
+        },
+        "heavy": {
+          "status": "EQUAL"
+        },
+        "input_hold_checks": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "job": {
+          "status": "EQUAL"
+        },
+        "lane": {
+          "status": "EQUAL"
+        },
+        "limitations": {
+          "status": "EXCLUDED",
+          "reason": "evidence boundary text"
+        },
+        "metrics": {
+          "status": "EQUAL"
+        },
+        "mode": {
+          "status": "EQUAL"
+        },
+        "native_coverage": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "native_main": {
+          "status": "EXCLUDED",
+          "reason": "DUT-only"
+        },
+        "params": {
+          "status": "EQUAL"
+        },
+        "physical_sources": {
+          "status": "EQUAL"
+        },
+        "policy": {
+          "status": "EQUAL"
+        },
+        "ready_cycles": {
+          "status": "EQUAL"
+        },
+        "schema": {
+          "status": "EXCLUDED",
+          "reason": "different RTL/model output schemas"
+        },
+        "service_shares": {
+          "status": "EQUAL"
+        },
+        "status": {
+          "status": "EQUAL"
+        },
+        "trace_config": {
+          "status": "EQUAL"
+        },
+        "trace_sha256": {
+          "status": "EQUAL"
+        },
+        "wall_s": {
+          "status": "EXCLUDED",
+          "reason": "runtime"
+        }
+      },
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "rtl_sha256": "de3a8c4c0ce8c5c77139bdc8588df94b63920b4d125e6cd22d537b00bb673c6c",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "model_sha256": "63ca761fd8e5a5eb02425216e2c29a4ab6927956f83846a242d92c51ac873fca",
+      "active_cycles": 21873610,
+      "drain_cycles": 2
+    }
+  ]
+}

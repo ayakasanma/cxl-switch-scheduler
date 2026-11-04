@@ -1,0 +1,897 @@
+{
+  "schema": "cxl-dynamic-role-switch-frozen-plan-v1",
+  "plan_id": "dynamic-role-switch-rtl-20261103",
+  "date": "2026-11-03",
+  "protocol_status": "FROZEN_PROTOCOL_NOT_RUN",
+  "execution_status": "BLOCKED_ON_MAIN_AND_AUDIT_IMPLEMENTATION",
+  "authority": "Planning and commit only; no simulation, RTL implementation or EDA launched.",
+  "base_commit": "9d59fe858d30542178969b11eed7818399c539f6",
+  "reviewers": [
+    {
+      "id": "R1",
+      "source": "reviewer:fzfqgpl9p81gsljob6qhey68",
+      "decision": "ADOPT",
+      "feedback": "B1/B2 non-blocking for bounded manuscript; C7 SINGLE_SEED, C5/C6 MODEL_ONLY.",
+      "action": "Separate existing claims from this extension; no automatic confirmation."
+    },
+    {
+      "id": "R2",
+      "source": "reviewer:fzfqgpl9p81gsljob6qhey68",
+      "decision": "ADOPT",
+      "feedback": "Separate W256 NOT_CONFIRMED from W5M DESCRIPTIVE; no unconditional Pareto/universal winner.",
+      "action": "Whole-protocol effects; no fixed-High ordering estimand after class transitions."
+    },
+    {
+      "id": "R3",
+      "source": "reviewer:fzfqgpl9p81gsljob6qhey68",
+      "decision": "ADOPT",
+      "feedback": "Correct C1/C2 hash binding and validate each of 24 evidence inputs.",
+      "action": "Pin actual path hashes, not only a source count."
+    },
+    {
+      "id": "R4",
+      "source": "reviewer-2:fe32ywtpnoekmp81ca1l95mr / 9d59fe8",
+      "decision": "ADOPT",
+      "feedback": "Extend four-window role-switch, readiness shape and D8/D16.",
+      "action": "Five fixed cases; pilot7301, held-out7401..7420."
+    },
+    {
+      "id": "R5",
+      "source": "reviewer-2:fe32ywtpnoekmp81ca1l95mr / 9d59fe8",
+      "decision": "PARTIAL_ADOPT",
+      "feedback": "Add Main and RR10 controls.",
+      "action": "Main mandatory; RR10 deferred to separately frozen plan, never added based on null outcomes."
+    },
+    {
+      "id": "R6",
+      "source": "both reviewers",
+      "decision": "ADOPT",
+      "feedback": "Role/source ledgers, latency decomposition and wall/ready-gap distinction.",
+      "action": "Source-local completed Heavy inter-service episodes; no P99 addition or post-hoc phase slicing."
+    },
+    {
+      "id": "R7",
+      "source": "reviewer-2:fe32ywtpnoekmp81ca1l95mr / 9d59fe8",
+      "decision": "DEFER",
+      "feedback": "Other four gaps: under/over, power/pruning, recovery/scaling, REAL_CXL/application.",
+      "action": "Separate future plans; existing B3 repair is complete, not new power evidence."
+    },
+    {
+      "id": "R8",
+      "source": "Astra CLI review",
+      "decision": "ADOPT_WITH_LEAD_CORRECTIONS",
+      "feedback": "Separate 554h linear cost from 665h contingency; Main gates first.",
+      "action": "Lead corrected raw profile/CLI, inference, accounting, storage and audit assumptions."
+    }
+  ],
+  "matrix": {
+    "n_src": 4,
+    "descriptor_bits": 105,
+    "window": 5000000,
+    "windows": 4,
+    "heavy_work": 17500000,
+    "profile": "near",
+    "heavy_p": 0.8,
+    "sparse_p_per_nonheavy_source": 0.02,
+    "ready_p": 0.9,
+    "ordering": "oldest-first",
+    "policies": [
+      "Main",
+      "CGOF-1:1",
+      "CGOF-2:1"
+    ],
+    "lanes": [
+      "mixed",
+      "isolated"
+    ],
+    "cases": [
+      {
+        "id": "multi-window",
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "baseline_run_id": "20261029T182230Z_52851",
+        "argv_cgof_supported": [
+          "--production-reviewed",
+          "--mode",
+          "finite-heavy",
+          "--policy",
+          "both",
+          "--ordering",
+          "oldest-first",
+          "--window",
+          "5000000",
+          "--windows",
+          "4",
+          "--heavy-work",
+          "17500000",
+          "--profile",
+          "near",
+          "--depth",
+          "16",
+          "--heavy-sources",
+          "0",
+          "--ready-pattern",
+          "bernoulli",
+          "--ready-period",
+          "100",
+          "--max-active-cycles",
+          "24000000",
+          "--seed",
+          "{seed}",
+          "--jobs",
+          "2",
+          "--make-jobs",
+          "1"
+        ]
+      },
+      {
+        "id": "role-switch",
+        "depth": 16,
+        "heavy_sources": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "ready_pattern": "bernoulli",
+        "ready_period": 100,
+        "baseline_run_id": "20261029T182230Z_52853",
+        "argv_cgof_supported": [
+          "--production-reviewed",
+          "--mode",
+          "finite-heavy",
+          "--policy",
+          "both",
+          "--ordering",
+          "oldest-first",
+          "--window",
+          "5000000",
+          "--windows",
+          "4",
+          "--heavy-work",
+          "17500000",
+          "--profile",
+          "near",
+          "--depth",
+          "16",
+          "--heavy-sources",
+          "0",
+          "0",
+          "1",
+          "1",
+          "--ready-pattern",
+          "bernoulli",
+          "--ready-period",
+          "100",
+          "--max-active-cycles",
+          "24000000",
+          "--seed",
+          "{seed}",
+          "--jobs",
+          "2",
+          "--make-jobs",
+          "1"
+        ]
+      },
+      {
+        "id": "ready-spread",
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "ready_pattern": "spread",
+        "ready_period": 100,
+        "baseline_run_id": "20261029T182230Z_52850",
+        "argv_cgof_supported": [
+          "--production-reviewed",
+          "--mode",
+          "finite-heavy",
+          "--policy",
+          "both",
+          "--ordering",
+          "oldest-first",
+          "--window",
+          "5000000",
+          "--windows",
+          "4",
+          "--heavy-work",
+          "17500000",
+          "--profile",
+          "near",
+          "--depth",
+          "16",
+          "--heavy-sources",
+          "0",
+          "--ready-pattern",
+          "spread",
+          "--ready-period",
+          "100",
+          "--max-active-cycles",
+          "24000000",
+          "--seed",
+          "{seed}",
+          "--jobs",
+          "2",
+          "--make-jobs",
+          "1"
+        ]
+      },
+      {
+        "id": "ready-bursty",
+        "depth": 16,
+        "heavy_sources": [
+          0
+        ],
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "baseline_run_id": "20261029T182230Z_52849",
+        "argv_cgof_supported": [
+          "--production-reviewed",
+          "--mode",
+          "finite-heavy",
+          "--policy",
+          "both",
+          "--ordering",
+          "oldest-first",
+          "--window",
+          "5000000",
+          "--windows",
+          "4",
+          "--heavy-work",
+          "17500000",
+          "--profile",
+          "near",
+          "--depth",
+          "16",
+          "--heavy-sources",
+          "0",
+          "--ready-pattern",
+          "bursty",
+          "--ready-period",
+          "100",
+          "--max-active-cycles",
+          "24000000",
+          "--seed",
+          "{seed}",
+          "--jobs",
+          "2",
+          "--make-jobs",
+          "1"
+        ]
+      },
+      {
+        "id": "depth8-bursty",
+        "depth": 8,
+        "heavy_sources": [
+          0
+        ],
+        "ready_pattern": "bursty",
+        "ready_period": 100,
+        "baseline_run_id": "20261029T182230Z_52852",
+        "argv_cgof_supported": [
+          "--production-reviewed",
+          "--mode",
+          "finite-heavy",
+          "--policy",
+          "both",
+          "--ordering",
+          "oldest-first",
+          "--window",
+          "5000000",
+          "--windows",
+          "4",
+          "--heavy-work",
+          "17500000",
+          "--profile",
+          "near",
+          "--depth",
+          "8",
+          "--heavy-sources",
+          "0",
+          "--ready-pattern",
+          "bursty",
+          "--ready-period",
+          "100",
+          "--max-active-cycles",
+          "24000000",
+          "--seed",
+          "{seed}",
+          "--jobs",
+          "2",
+          "--make-jobs",
+          "1"
+        ]
+      }
+    ],
+    "jobs_per_seed": 30,
+    "pairs_per_seed": 15,
+    "active_cap_cycles": 24000000,
+    "total_cycles_exclusive_cap": 25000000,
+    "expected_close_cycles": [
+      4999999,
+      9999999,
+      14999999,
+      19999999
+    ]
+  },
+  "seeds": {
+    "engineering_pilot": [
+      7301
+    ],
+    "held_out": [
+      7401,
+      7402,
+      7403,
+      7404,
+      7405,
+      7406,
+      7407,
+      7408,
+      7409,
+      7410,
+      7411,
+      7412,
+      7413,
+      7414,
+      7415,
+      7416,
+      7417,
+      7418,
+      7419,
+      7420
+    ],
+    "original_probe_excluded": [
+      7291
+    ],
+    "pilot_in_inference": false,
+    "first_five": "Interim descriptive accounting only; no confirmation or optional stopping.",
+    "reuse_audit": "Scoped structured-field scan; mandatory recheck before execution; no global zero-collision claim."
+  },
+  "estimand": {
+    "scope": "Whole finite protocol with policy-specific Heavy completion cut and ready=1 cleanup.",
+    "sparse_population": "All generation-time Sparse requests through own completion cut, including drain completions.",
+    "cohort_rule": "Publish counts/digests; PROTOCOL_COHORTS_DIFFER diagnostic, not exclusion; no common-prefix P99 replacement.",
+    "primary_endpoint": "Mixed generation-time Sparse G->F nearest-rank P99.",
+    "secondary_endpoints": [
+      "Heavy source-local active inter_service wall-gap max/P99",
+      "A=Cmixed-Cisolated",
+      "G->A/A->F/G->F histograms",
+      "Ready-opportunity gaps",
+      "Physical-source/role counts",
+      "Class trajectories and Low exposure"
+    ]
+  },
+  "inference": {
+    "n": 20,
+    "unit": "entire seed block",
+    "bootstrap_resamples": 10000,
+    "bootstrap_rng_seed": 20261103,
+    "bootstrap": "Paired seed-block descriptive percentile95 CI for mean deltas; stdlib random.Random, rank250/9750 of sorted10000.",
+    "primary_contrasts": [
+      {
+        "id": "P1",
+        "case": "role-switch",
+        "delta": "Main minus CGOF-2:1"
+      },
+      {
+        "id": "P2",
+        "case": "role-switch",
+        "delta": "CGOF-2:1 minus CGOF-1:1"
+      },
+      {
+        "id": "P3",
+        "case": "multi-window",
+        "delta": "Main minus CGOF-2:1"
+      }
+    ],
+    "endpoint": "Mixed Sparse G->F P99",
+    "practical_delta_cycles": 1,
+    "test": "K=sum(delta_s>=1); exact one-sided binomial upper tail under p=.5; all20seeds, ties/below-margin=nonsuccess.",
+    "null": "Pr_seed(delta_s>=1 cycle)<=.5; seed-sampling interpretation, no power guarantee.",
+    "multiplicity": "Holm step-down exactly P1/P2/P3, FWER=.05, ties by ID.",
+    "support": "Per contrast Holm adjusted p<=.05 AND mean(delta)>=1 cycle: SUPPORTED_WITHIN_PROTOCOL; else NOT_CONFIRMED.",
+    "missing": "Stop and report STOPPED_INCOMPLETE; no confirmatory inference on successful subsets."
+  },
+  "cost": {
+    "baseline_runs": [
+      {
+        "run_id": "20261029T182230Z_52849",
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/summary.json",
+        "summary_sha256": "382dab1ce038245553d946b5823e6e1b372df318258d308ac97d69ced4755789",
+        "run_wall_s": 12663.13,
+        "job_wall_s": [
+          6550.97,
+          6146.783,
+          6514.575,
+          6110.625
+        ],
+        "job": {
+          "depth": 16,
+          "heavy_sources": [
+            0
+          ],
+          "heavy_work": 17500000,
+          "high_weight": 1,
+          "lane": "mixed",
+          "mode": "finite-heavy",
+          "n_src": 4,
+          "profile": "near",
+          "ready_pattern": "bursty",
+          "ready_period": 100,
+          "seed": 7291,
+          "window": 5000000,
+          "windows": 4
+        },
+        "scenario": {
+          "generator": "cxl-model-diagnosis-scenario-v1",
+          "heavy_p": 0.8,
+          "heavy_release": "one request per heavy_p opportunity until heavy_work releases",
+          "heavy_source": 0,
+          "heavy_work": 17500000,
+          "load_profile": "near",
+          "n_src": 4,
+          "ready_p": 0.9,
+          "ready_pattern": "bursty",
+          "ready_period": 100,
+          "ready_slots_per_period": 90,
+          "seed": 7291,
+          "sparse_p": 0.02,
+          "sparse_sources": [
+            1,
+            2,
+            3
+          ],
+          "sparse_stop": "when finite Heavy work completes",
+          "subwindow": 1250000,
+          "timing": "events generated before the closing edge; model-only cycle index",
+          "window": 5000000,
+          "windows": 4
+        },
+        "sparse_count": 1312570,
+        "retained_file_bytes": 674285
+      },
+      {
+        "run_id": "20261029T182230Z_52850",
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/summary.json",
+        "summary_sha256": "a4d42d153e0e5c036d01965a1466e4495fe6f364eb9a73fcfb5a86715516fec3",
+        "run_wall_s": 12611.574,
+        "job_wall_s": [
+          6475.665,
+          6162.219,
+          6433.516,
+          6134.364
+        ],
+        "job": {
+          "depth": 16,
+          "heavy_sources": [
+            0
+          ],
+          "heavy_work": 17500000,
+          "high_weight": 1,
+          "lane": "mixed",
+          "mode": "finite-heavy",
+          "n_src": 4,
+          "profile": "near",
+          "ready_pattern": "spread",
+          "ready_period": 100,
+          "seed": 7291,
+          "window": 5000000,
+          "windows": 4
+        },
+        "scenario": {
+          "generator": "cxl-model-diagnosis-scenario-v1",
+          "heavy_p": 0.8,
+          "heavy_release": "one request per heavy_p opportunity until heavy_work releases",
+          "heavy_source": 0,
+          "heavy_work": 17500000,
+          "load_profile": "near",
+          "n_src": 4,
+          "ready_p": 0.9,
+          "ready_pattern": "spread",
+          "ready_period": 100,
+          "ready_slots_per_period": 90,
+          "seed": 7291,
+          "sparse_p": 0.02,
+          "sparse_sources": [
+            1,
+            2,
+            3
+          ],
+          "sparse_stop": "when finite Heavy work completes",
+          "subwindow": 1250000,
+          "timing": "events generated before the closing edge; model-only cycle index",
+          "window": 5000000,
+          "windows": 4
+        },
+        "sparse_count": 1312569,
+        "retained_file_bytes": 640993
+      },
+      {
+        "run_id": "20261029T182230Z_52851",
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/summary.json",
+        "summary_sha256": "aace6bb9f1498648e88c2f77a5b362ab6a205894bdb6b5f9bd760ef761cda240",
+        "run_wall_s": 12674.273,
+        "job_wall_s": [
+          6458.74,
+          6182.519,
+          6489.904,
+          6199.985
+        ],
+        "job": {
+          "depth": 16,
+          "heavy_sources": [
+            0
+          ],
+          "heavy_work": 17500000,
+          "high_weight": 1,
+          "lane": "mixed",
+          "mode": "finite-heavy",
+          "n_src": 4,
+          "profile": "near",
+          "ready_pattern": "bernoulli",
+          "ready_period": 100,
+          "seed": 7291,
+          "window": 5000000,
+          "windows": 4
+        },
+        "scenario": {
+          "generator": "cxl-model-diagnosis-scenario-v1",
+          "heavy_p": 0.8,
+          "heavy_release": "one request per heavy_p opportunity until heavy_work releases",
+          "heavy_source": 0,
+          "heavy_work": 17500000,
+          "load_profile": "near",
+          "n_src": 4,
+          "ready_p": 0.9,
+          "seed": 7291,
+          "sparse_p": 0.02,
+          "sparse_sources": [
+            1,
+            2,
+            3
+          ],
+          "sparse_stop": "when finite Heavy work completes",
+          "subwindow": 1250000,
+          "timing": "events generated before the closing edge; model-only cycle index",
+          "window": 5000000,
+          "windows": 4
+        },
+        "sparse_count": 1312569,
+        "retained_file_bytes": 665062
+      },
+      {
+        "run_id": "20261029T182230Z_52852",
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/summary.json",
+        "summary_sha256": "4d75d009383b8232eae5b465f211ec7439ae06a841372614b5af495d60bfeed1",
+        "run_wall_s": 12705.253,
+        "job_wall_s": [
+          6462.622,
+          6095.056,
+          6608.655,
+          6165.91
+        ],
+        "job": {
+          "depth": 8,
+          "heavy_sources": [
+            0
+          ],
+          "heavy_work": 17500000,
+          "high_weight": 1,
+          "lane": "mixed",
+          "mode": "finite-heavy",
+          "n_src": 4,
+          "profile": "near",
+          "ready_pattern": "bursty",
+          "ready_period": 100,
+          "seed": 7291,
+          "window": 5000000,
+          "windows": 4
+        },
+        "scenario": {
+          "generator": "cxl-model-diagnosis-scenario-v1",
+          "heavy_p": 0.8,
+          "heavy_release": "one request per heavy_p opportunity until heavy_work releases",
+          "heavy_source": 0,
+          "heavy_work": 17500000,
+          "load_profile": "near",
+          "n_src": 4,
+          "ready_p": 0.9,
+          "ready_pattern": "bursty",
+          "ready_period": 100,
+          "ready_slots_per_period": 90,
+          "seed": 7291,
+          "sparse_p": 0.02,
+          "sparse_sources": [
+            1,
+            2,
+            3
+          ],
+          "sparse_stop": "when finite Heavy work completes",
+          "subwindow": 1250000,
+          "timing": "events generated before the closing edge; model-only cycle index",
+          "window": 5000000,
+          "windows": 4
+        },
+        "sparse_count": 1312570,
+        "retained_file_bytes": 676586
+      },
+      {
+        "run_id": "20261029T182230Z_52853",
+        "summary": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/summary.json",
+        "summary_sha256": "c2c455dea1c7fc23436ffe92c171109f33904808274317071175c962481a8386",
+        "run_wall_s": 12826.211,
+        "job_wall_s": [
+          6589.692,
+          6093.804,
+          6531.149,
+          6234.407
+        ],
+        "job": {
+          "depth": 16,
+          "heavy_sources": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "heavy_work": 17500000,
+          "high_weight": 1,
+          "lane": "mixed",
+          "mode": "finite-heavy",
+          "n_src": 4,
+          "profile": "near",
+          "ready_pattern": "bernoulli",
+          "ready_period": 100,
+          "seed": 7291,
+          "window": 5000000,
+          "windows": 4
+        },
+        "scenario": {
+          "generator": "cxl-model-diagnosis-scenario-v1",
+          "heavy_p": 0.8,
+          "heavy_release": "one request per heavy_p opportunity until heavy_work releases",
+          "heavy_source": null,
+          "heavy_sources_by_window": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "heavy_work": 17500000,
+          "load_profile": "near",
+          "n_src": 4,
+          "ready_p": 0.9,
+          "role_schedule": "one source per generation window; last entry repeats",
+          "seed": 7291,
+          "sparse_p": 0.02,
+          "sparse_sources": null,
+          "sparse_stop": "when finite Heavy work completes",
+          "subwindow": 1250000,
+          "timing": "events generated before the closing edge; model-only cycle index",
+          "window": 5000000,
+          "windows": 4
+        },
+        "sparse_count": 1313003,
+        "retained_file_bytes": 722867
+      }
+    ],
+    "baseline_sum_step_wall_s": 126641.16,
+    "baseline_mean_step_wall_s": 6332.058,
+    "baseline_step_range_s": [
+      6093.804,
+      6608.655
+    ],
+    "baseline_sum_run_wall_s": 63480.441,
+    "arithmetic": {
+      "pilot": {
+        "jobs": 30,
+        "pairs": 15,
+        "serial_job_hours": 52.76715,
+        "linear_wall_hours": 26.383575,
+        "linear_range_hours": [
+          25.39085,
+          27.5360625
+        ],
+        "simulation_budget_hours": 31.66029
+      },
+      "confirmation": {
+        "jobs": 600,
+        "pairs": 300,
+        "serial_job_hours": 1055.3429999999998,
+        "linear_wall_hours": 527.6714999999999,
+        "linear_range_hours": [
+          507.817,
+          550.72125
+        ],
+        "simulation_budget_hours": 633.2057999999998
+      },
+      "total": {
+        "jobs": 630,
+        "pairs": 315,
+        "serial_job_hours": 1108.11015,
+        "linear_wall_hours": 554.055075,
+        "linear_range_hours": [
+          533.20785,
+          578.2573125
+        ],
+        "simulation_budget_hours": 664.86609
+      }
+    },
+    "contingency": "20% of linear simulation wall; unmeasured Main overhead assumption, not a confidence or guaranteed bound.",
+    "engineering_hours": {
+      "expected_range": [
+        16,
+        24
+      ],
+      "hard_cap": 32
+    },
+    "audit_hours": {
+      "per_seed_expected": 2,
+      "per_seed_hard_cap": 4,
+      "final_expected": 8,
+      "final_hard_cap": 12
+    },
+    "campaign_hours": {
+      "simulation_hard_cap": 680,
+      "expected_total": 714.86609,
+      "whole_campaign_hard_cap": 810,
+      "engineering_plus_campaign_hard_cap": 842
+    },
+    "caps": {
+      "job_hours": 3,
+      "seed_simulation_hours": 34,
+      "max_concurrent_jobs": 2,
+      "make_jobs": 1,
+      "concurrent_seeds": 1
+    },
+    "storage": {
+      "baseline_retained_bytes": 3379793,
+      "records_only_linear_mib": 101.53148603439331,
+      "unmeasured": [
+        "WSL build cache",
+        "Main new sources/build",
+        "audit scratch/trace",
+        "new ledger volume",
+        "RSS"
+      ],
+      "preflight_free_gib_each_volume": 100,
+      "stop_free_gib_each_volume": 20,
+      "forecast": "Pilot measured all-volume retained+peak scratch remaining-work projection with50%headroom must fit above reserve."
+    },
+    "alternatives": "RR10/jobs>2 are NOT_SELECTED; no adaptive downsizing or selective reruns."
+  },
+  "provenance": {
+    "worker_channel": "Orca Worker reviewer-2",
+    "worker_requested_model": "auto/gemini-4-argon/high",
+    "astra": {
+      "requested_model": "codex/gpt-6-astra",
+      "requested_effort": "high",
+      "effective_backend": "UNKNOWN",
+      "thread_id": "01a1a06d-07d7-7c21-8d9a-8160055293bc",
+      "exit_code": 0,
+      "log_dir": ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103",
+      "key_adjustment_adopted": "Separated pure linear jobs=2 wall-time extrapolation (mean 554.06 h, min-max range 533.21-578.26 h) from the +20% Main RTL complexity & operational contingency upper bound (664.87 h; hard cap 680.0 h)."
+    },
+    "effective_backend": "UNKNOWN",
+    "final_editor": "Lead supervisor",
+    "review_limit": "Astra reviewed supplied conditions, not files; prompt has escaped control chars. Lead corrected draft from local evidence."
+  },
+  "frozen_source_index": {
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/astra-exit.json": "e48ad197c203bd49d0bfccf33e5a8e409877fec89b12e685e1cba6ccaccd8c4c",
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/astra-last-message.txt": "6646e2866d2d1f19c1a16e5570bb85ad3fcce8444afc32391e8cdcb5cbc07fb0",
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/astra-plan.jsonl": "4d4acfa4cb88c65301dd3521f0f122210084f456a166e9c9684ea537cdc04418",
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/astra-prompt.txt": "b2a60d45a39f67fee9016ed428ca250072aca911699bbe25ee53155c1ad61717",
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/astra-stderr.txt": "121bbc53828eb762ffeef8c04ee7d2ddad94cc085870f93910fa95ed45d8e774",
+    ".setup-logs/implementation/dynamic-role-switch-rtl-plan-20261103/development-report-before-plan.md": "3c3afac2c3462e4b68fcfc86a4420a4edc5ae0066f9418509e61c254ee724869",
+    ".setup-logs/implementation/ordering-rtl-confirmation-20261101/astra-plan.jsonl": "8943f434356afcbd7751f8fe50a73a20117e03fcc1fbbe8ed139314da05dd06c",
+    ".setup-logs/implementation/ordering-w5m-production-20261101/astra-plan.jsonl": "2fafc72c197ee4d323bcdcdd971185c608928336a1c58d82a18ac645dc758f19",
+    "AGENTS.md": "c75cf2ac002481c687fb43296f548b156470eb691a532599607d1da3095e480d",
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/acceptance.json": "242c8a15f85b495914d13e68e4bb574518faea6729dff9cb55b691c3e3eb7d54",
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/exploration-6101-6105.json": "f9a769b87e77334c9e4b5e03e5f7e16d2d07807460153392bd9b5e60095f53b4",
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/manifest.json": "d95bcdd4a38adddaa44a53be39fad3fc8d21007d63d0251d98d7c84bfd3a984a",
+    "artifacts/implementation/buffer-transition-screen/20261031T234344Z/manifest.json": "66bb7863873e584ddca31b9c2882c46a30b041c1a6759fe3e359f4399e86441d",
+    "artifacts/implementation/buffer-transition-screen/20261031T234344Z/screen-w256.json": "7cccbb640a972b04fabe5426373d2a50fc5fe43c03f34002fd1047caf2d909b2",
+    "artifacts/implementation/cgof-dynamic-20261030/aggregate.json": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+    "artifacts/implementation/cgof-dynamic-20261030/completed-runs.jsonl": "e6a58ef9dc0f76eb8bbbccd8d91bde51e9a19b690841c34a46a3c229beef6e8c",
+    "artifacts/implementation/cgof-dynamic-20261030/manifest.json": "527a9206c16e0198f6ae6067f37b6652d72009eb956acfbdffa9cb85a529a03a",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/diagnosis_scope.json": "7e2a3236e0a4a881a0fd0be940dbc8c6eb2f4f2aa75ee7abc659cbe9b5661254",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json": "ded64a1578432b16e3cf6b16d38ed2f6452f0d49768a69ebffec83390bb90ada",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json": "5cddcf3c9899fa14b67a59738408b8eafb3367fbbab1b42557e14528242aaf81",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json": "088cf6a63ac515d8d12f08b665d42987eabe7c6bd00f48f4d207ee59721b29fb",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json": "58d2b052645adba55b6b6ed54eb8c8e712ea03ffa8f7ba1999482eb67b352a71",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/summary.json": "382dab1ce038245553d946b5823e6e1b372df318258d308ac97d69ced4755789",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/diagnosis_scope.json": "f20303cd5b4c26434d98fc14f473c88b954328b19b4242302d8bbcd4af1368ef",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json": "7b7eb7c105a398a36f7ffc6fa0d31d83573cf422655c5c502d75e622d2a4d49d",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json": "3d5eb54087e762c21ef673cb0cfca79676c1f785a4e6b48398107afcfd08c280",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json": "da9bf764ec4210a40562bb8ab192856d7cd7907f037ddbf9082c816dd31fcd15",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json": "9fd8484721c205208f1f3947bd4a5598aa5e5503f168dec1bbb231fe4eba65d5",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/summary.json": "a4d42d153e0e5c036d01965a1466e4495fe6f364eb9a73fcfb5a86715516fec3",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/diagnosis_scope.json": "8e41723046c09bf137e37db40e9926b6699657de9470cfb07408e8df822ccdc6",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json": "7a62b94c34457c021af1a761e75aa947bcfcf07f018086ddf957944eb495ef5d",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json": "7fdf004f5eae569a7547e1724d98f25931cb8e6e45badfcc37968025c962776f",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json": "9ea911ed9b44bae6a9c8c1e6c807baddbd4f58fe4c56d4b7372e3187e18dac33",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json": "624d5fc4f8b5434eb295d41122ea25d19e421bcd8aec988f91460ce442c8f279",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/summary.json": "aace6bb9f1498648e88c2f77a5b362ab6a205894bdb6b5f9bd760ef761cda240",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/diagnosis_scope.json": "530533ebe4399a0613e5b02be94fc785a4ac20b47c4c136ed88e4074bf9dba89",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-isolated-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw1.json": "0b3660d0ba6de8a7b42248eee397cc51659cec26b8460974ea89e15e9294ebbc",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-isolated-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw2.json": "4150d90468ebb885ff25bb3bbe70a42c720d9e96df35234409065498b127d481",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-mixed-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw1.json": "201c81349ce8282a6a535bc02fe964e6ab9230c32e786997b187bc6b3b4ca349",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-mixed-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw2.json": "76f80d78f9c90a4503fba0a13b294ec483ed933ca5f29b244bdb816ca8d77457",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/summary.json": "4d75d009383b8232eae5b465f211ec7439ae06a841372614b5af495d60bfeed1",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/diagnosis_scope.json": "8cbfda7f8efa5dc3074c0a0bd5f7d6660186fa331aa40ae828e0371f379cd5e8",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json": "f10c08ac59d62bd9ba0c06046fadafdbd2f0908227f76e220054ad04b8c05c62",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json": "c7bf63b15a20ffc1bb819df2beaa2190ad1e778060719ba3312ae391842af82f",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json": "fac2c007f59bfd088e86af3f980608a1f64cb865e4b45e203154b1a6e4f23c38",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json": "c81662205b9297061cec60f324c84e9821e2c8f2b87ac640fd288bb2174aa8d0",
+    "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/summary.json": "c2c455dea1c7fc23436ffe92c171109f33904808274317071175c962481a8386",
+    "artifacts/implementation/cgof-rtl-diagnosis/aggregate-current-20261029.json": "da0a2fd16a40f2eea871be967a6f7e93fa454544bdd19f015856199508904097",
+    "artifacts/implementation/cgof-rtl-diagnosis/confirmation-finite-heavy-fixed-20261029/aggregate.json": "0f39a3c5e8342c44d6d05bcfd46cfd249f69f1e7ef5ef15615b63a95aa98226d",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/acceptance-20261101T045246Z.json": "abdde975d65137f01620c3c32f5f901df55d242b691cb379a6e36b3cfb354989",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/analysis-20261101T045246Z.json": "101b1c1c8ee4327b99104af267761c98f17182205f4154e7e2f7825bf2e0c954",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/manifest-20261101T045246Z.json": "5d6e690d1844eeae66f4b3da9fc505fdfc34f0a7176b49352abf978ce5d49384",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/acceptance-w5m-campaign-20261102T154205Z.json": "9b3f8588f87b6fe980b6181bb61f1224907686242ec24e1e89e4dba8c455ffab",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/analysis-w5m-campaign-20261102T154205Z.json": "76c1ac380a594787531ba597cc71bf06267cad690bd3bdf51109a48724d50b3c",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6601-20261101T102548Z.json": "fb2b6658fa6a9fa5ca52dd6c5e057e0a2586a3bc2d495db192aaca0b737c2b53",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6602-20261102T101510Z.json": "67524ff90e3dc8e58d10194b219182b5e5c271dcec09f93eca96bde5c650ef4e",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6603-20261102T120102Z.json": "688d6ef898a1661b0bdfd2c1da3ce33d42b6256b0091d57657d1faff8a0593be",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6604-20261102T134650Z.json": "c353aa354145a6e27b3da6704a9a9cad0af8e37f93a2b2ce6ce7c2f517216818",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6605-20261102T153133Z.json": "e2068925fb52284534ada8fef326e1446824077d5e72cddecd42c633877b6afe",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/manifest-w5m-campaign-20261102T154205Z.json": "de7f657240ed4dc24c46be3e2166893502dbd2b229aebedf6cc07739649edee5",
+    "artifacts/implementation/evidence-review-arrival-20261101T072532Z/manifest.json": "8a7443b449ea8e421ac555fe3a7f4be6abcfb599cc2785af0fe1b8a043614f9c",
+    "artifacts/implementation/evidence-review-arrival-20261101T072532Z/summary.json": "9f2d897545437ef16048d61c43d1161ae520e439898c2741c631aac5b1cfc788",
+    "artifacts/implementation/followup-20261030/A-credit-refill/decision-trace.json": "0c351647d5d27efe5a4d580053b3053e1facbbd8a4a9e8fbbbbc4a312026c704",
+    "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/manifest.json": "0906fdc5dddcb1fcb390e0069411e95dd90f599f5dfca9631e171bf73f486006",
+    "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/summary.json": "92afb0f1bd189942864eb853286195d398de2cefcf3503c8fae1d1f2c268c9ac",
+    "docs/ENVIRONMENT.md": "039042678d491d3c52b76a0bc30253baf04626fe27dac217c7dfd2fb5d862eff",
+    "docs/PROGRESS_TRACKER.md": "88f5af11f1fb56160892326a0c05acc640f43d287738c627b9f994d88eb75ecf",
+    "docs/PROJECT_STORY_AND_GAPS_OUTLINE.md": "6a8da721ba35f218e9c8ff9e4c2cd3862450839d675e5330b3211396d4dd7ea2",
+    "docs/SPEC_REVIEW.md": "a6bbf110c70dc92439b364138ab90ed601e02f928f7beb0078dd86391fdb2c1d",
+    "docs/STATUS.md": "c145cc27bb0bfaff516273df2b5b6a09b79f2fc20c846a1799e39947f6c23179",
+    "docs/THEORY_ANALYSIS_AND_REVIEW_GAPS_2026-11-02.md": "808b18759c10ed797e2acbd7daad7c780fe6cce2a82ec1512f17efef72283193",
+    "docs/final-report/generate_update_20261102.py": "8c06f4b7496d6bebc26561d4d211d5f514ab23f4c4411c8a69872ca7df923d29",
+    "docs/final-report/generated/update_20261102_manifest.json": "ba42467010f8ecaa49522df6424314d58347595f889d4b62a285c27711ce6938",
+    "docs/final-report/generated/update_20261102_results.tex": "88d2f56c161c024b28ebb7855da8a71089384ea41223423aef45b79cfe188831",
+    "docs/final-report/improvement-20261028/EVIDENCE_SUPPLEMENT.md": "15ea979f16f4595312c3b89b320c6eeadd271daa200f376c1a31e2fcbcd645d3",
+    "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md": "5fbad50728fbee5026edda86aaf9d417e83224886297742e3e22569f4e34a14e",
+    "docs/final-report/improvement-20261028/IMPROVEMENT_PLAN.md": "eacab0fccc10965cb11153e48540bc16f13fe777ceb45a2d5086b6a69f86c508",
+    "docs/final-report/improvement-20261028/REVISION_QA.md": "19d422ab41a85e1a1b11b7d62ecceee93e5da9e855828b44971be69ba2903ff8",
+    "docs/final-report/improvement-20261028/agent-handoff.json": "95507756077e841330763a4065ffeb19f54a84faa99289f46f2b1aff3177cf18",
+    "docs/final-report/improvement-20261028/revision-release.json": "e5829edc8cbe443453ab00800633666581534d1fe4a9ef9b84faad8ec1118db6",
+    "docs/final-report/main-v3.tex": "7550a7bce8671c15abe8a0f67ca9c64e93cc34123576b0c81f3acb09bf6a8696",
+    "docs/final-report/sections/hotnets-body-v3.tex": "823ec50f835e982ba375339828d09d2308889fea78dd1d9ebd3418c7d3073093",
+    "docs/final-report/update-20261029/EVIDENCE_REVIEW.md": "d5942945247bcc9b0f9d03dcf21be0c1186fc668f91e00095eaabf6440f9d304",
+    "docs/final-report/update-20261029/FOLLOWUP_EXPERIMENTS.md": "e96561ea317adc118dcdfc4ee836ceb463fdcaa0e33450d4605273e892b80ba2",
+    "docs/final-report/update-20261029/REVISION_QA.md": "c4689bf937cfcd2d9f6c522b51c72a6f57288fe1c9715cb94c80c088a8264502",
+    "docs/final-report/update-20261029/THEORY_AND_EVIDENCE.md": "ba759af81527ccf7df157db5eeee508fa8b07a069294cc07340e5d6c293877db",
+    "docs/final-report/update-20261029/hypothesis-status.json": "6e7c6b2ab2c2849e926151a5eaa8042c58318f4a93476966ff36991f0a7add8b",
+    "docs/final-report/update-20261029/revision-release.json": "173e3e9176e1df1a4abd78f1bbd1da6479d50d68750fe18f7616d4a4a00fafd2",
+    "docs/final-report/update-20261102/ACCEPTANCE_20261102.md": "fee0ee8d53dcab6ac37bfd6c521e1df59f22e74e92bfba8cad54af86dc23a3fb",
+    "docs/final-report/update-20261102/CLAIM_EVIDENCE_MATRIX_20261102.md": "ccfb40fd547e222ada60022763d5d9dd19aca4a1af0a4c9c8bc6b1b496fd46d9",
+    "docs/reviews/evidence-review-fixes-plan-20261101.md": "acd86f14f76359ded8656c071b3b3cd98fc977487184d06fba0faa8f88fba884",
+    "docs/reviews/evidence-review-followup-20261101.md": "2d212bd5f7bcd5ce02fcb07f8ee6d9cb6080954c406be9cca8b1266ee4253067",
+    "docs/reviews/ordering-rtl-confirmation-plan-20261101.md": "e68ab2ef3506029e2b719d6d80eadec3dcf6277debe1b13a5a674309f28c93ec",
+    "docs/reviews/ordering-w5m-production-plan-20261101.md": "ee96755baaf1d38fc9470a8565b92b247813f061b1e86c93ece88dd008179063",
+    "refc/cxl_model/diagnosis.py": "1b817ceda2a41806f17fee4ebd21da5637b3c5798e19b3716a766e11d3622619",
+    "refc/cxl_model/experimental.py": "225f549839e8a267fe5c2b010f87a8e64bd0c59291d011869906362dd563330e",
+    "refc/cxl_model/fai_main_model.py": "7f2bbdfb9b3ba20d82f0965136f1458efebf157dc844364aa40696aa6ad8c381",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_fai_main_sched.sv": "12d1d4f973503f3096260de932fbb3b2887d22a3f947399b5666690e624e3ff6",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/experimental/cgof_unit_top.sv": "4d278d422486657b1f870fea25c863446facf37f0b7db38c021f79ee7cad6b61",
+    "rtl/experimental/cxl_cgof_sched.sv": "d136e786340bb9a9ab103ec76cf7141868cbb0fc8df5567cb628008e5a63997e",
+    "rtl/experimental/switch_experiment_top.sv": "c74c0a8a58128ddc57911a4a543ba68f17c11804312f37d4db521b06316d67ff",
+    "rtl/top/switch_top.sv": "142d7b6495c9b8f1f03072301cd5db7620d6c076168bc756c4e36847030fe56f",
+    "scripts/analyze_cgof_dynamic.py": "f2e9df9ba116c533784788f02e94dd0c586774b0ccfd0ff14e1227cf0f944bd5",
+    "scripts/run_rtl_diagnosis.py": "86c886e5de3ed6d230df1cb77f7ad9ae0e8b89c5b4033d32e1d1cfbf2da2f4b9",
+    "scripts/wsl_env.sh": "eee4c42925a3b9803c8c6a11390e8eca602d4d0bc49fd169002240fba5672706",
+    "sim/experimental/cgof_diagnosis_traffic.py": "6a0f1d641e4c99d1dd820dc514caeb1c88b67c3c8394a764d58828c77b2a77b9",
+    "sim/experimental/test_cgof_diagnosis.py": "64acddf82fb311d6bfc1dfbad5191e88a7bf8a6c2c0f0c22346213be82db039a",
+    "specs/APPROVAL.md": "a4675fbff117c2f9e86557d813e0f8e8daddf59cd002acb511bcc1efae3aca7c",
+    "specs/CXL_SPEC.md": "797a5cdf01d2f769f44ca45225a33cc0510b04a408a8ff847e1db1c80928a4cf",
+    "specs/DECISIONS.md": "25357f70bf5e4b8912cf73e922484f8cf89ec70df397e1fd85ee97749317333f"
+  }
+}

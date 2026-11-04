@@ -1,0 +1,337 @@
+{
+  "schema_version": "cxl-report-revision-release/1.0",
+  "date": "2026-10-29",
+  "timezone": "Asia/Taipei",
+  "status": "APPLIED_AND_ACCEPTED",
+  "path_base": "repository_root",
+  "manuscript_entry": "docs/final-report/main-v3.tex",
+  "pdf": "output/pdf/cxl-scheduler-revised-20261029.pdf",
+  "pages": 13,
+  "figures": 9,
+  "tables": 7,
+  "cited_references": 19,
+  "read_order": [
+    "docs/final-report/update-20261029/REVISION_QA.md",
+    "docs/final-report/update-20261029/THEORY_AND_EVIDENCE.md",
+    "docs/final-report/update-20261029/hypothesis-status.json",
+    "docs/final-report/update-20261029/FOLLOWUP_EXPERIMENTS.md",
+    "docs/final-report/update-20261029/EVIDENCE_REVIEW.md",
+    "docs/final-report/improvement-20261028/HYPOTHESES_AND_EXPERIMENTS.md",
+    "docs/final-report/improvement-20261028/agent-handoff.json"
+  ],
+  "previous_release": {
+    "path": "docs/final-report/improvement-20261028/revision-release.json",
+    "sha256": "e5829edc8cbe443453ab00800633666581534d1fe4a9ef9b84faad8ec1118db6",
+    "outputs_verified_at_intake": 30,
+    "outputs_unchanged_at_acceptance": 28,
+    "historical_generated_products_unchanged": 19
+  },
+  "planning_snapshot": {
+    "path": "docs/final-report/improvement-20261028/agent-handoff.json",
+    "sha256": "95507756077e841330763a4065ffeb19f54a84faa99289f46f2b1aff3177cf18",
+    "immutable": true,
+    "status_at_snapshot": "PLAN_COMPLETE_NOT_APPLIED",
+    "source_files": 52,
+    "current_evolution": [
+      {
+        "path": "docs/final-report/main-v3.tex",
+        "planning_sha256": "0b1c5ad0704765a7916aafb0246ec5356a6805ed8ad530fe877aec776465c1fd",
+        "current_sha256": "3e5ff313576331f82260410fadb90555de9fd152f67ebe71bf31f74957906366"
+      },
+      {
+        "path": "docs/final-report/sections/hotnets-body-v3.tex",
+        "planning_sha256": "cf5939464081d43775f1352e2d60c53056838e4aa3c75f24365eeb15729610d6",
+        "current_sha256": "f317aec279431fc650989ab250ee9bd3cac93ee0d80c87ceba6a71e7ab948286"
+      },
+      {
+        "path": "docs/experiments/diagnosis-20261027/DIAGNOSIS_SUMMARY.md",
+        "planning_sha256": "37eafb34a0727383a68cef2e8aedc56c84dc0da3c90185040717269a6c04a7ee",
+        "current_sha256": "95bebbe4cbd9bce3599ed4fbeb64167196e30405d7b2c36bb45868244400e451"
+      }
+    ]
+  },
+  "narrative_order": [
+    "CXL pooling and shared-path contention",
+    "FAI purpose and transitional Buffer",
+    "Executable FAI-inspired RTL and paper differences",
+    "Common platform for queueing and full hardware cost",
+    "Results, diagnosis and applicability"
+  ],
+  "scope": {
+    "new_figures": 2,
+    "new_generated_tables": 2,
+    "new_simulations_run": false,
+    "new_eda_run": false,
+    "new_experiments_launched": false,
+    "hypothesis_status": "docs/final-report/update-20261029/hypothesis-status.json",
+    "new_followups_status": "PLANNED_NOT_RUN"
+  },
+  "evidence": {
+    "manifest": "docs/final-report/generated/update_20261029_manifest.json",
+    "manifest_sha256": "a631ab818bb8215498453abf2e3e592af9c9459d773ecc77aaeb14c2f7e80399",
+    "inputs_verified": 241,
+    "coverage": {
+      "finite_raw_jobs": 80,
+      "finite_pairs": 40,
+      "finite_seeds": 20,
+      "performance_runs": 30,
+      "performance_endpoints": 60
+    },
+    "conditions": {
+      "finite": "N4 D16 W5M; 5M Heavy work; Heavy p=.8, each Sparse p=.02, ready p=.9; one class boundary, B_H/H/H/H, all effective High.",
+      "performance": "N4 D16 W5M; 10M training; CGOF2 only; A independent arrivals, B bursts; always-ready 20 seeds529-548, readiness exploration5 seeds509-513."
+    },
+    "source_drift_policy": "Only documentation AGENTS.md may differ from archived run sources; current hash is recorded. Executable source drift is rejected."
+  },
+  "language_review": {
+    "model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "exit_code": 0,
+    "seconds": 290.34,
+    "conversation_id": "b216a9d4-7f89-4e41-808c-4295fadfb971",
+    "proposal_count": 6,
+    "disposition": "P8/P10 accepted; P4/P14 revised by parent; one P2 sentence used; P11 original retained.",
+    "adjudication_log": ".setup-logs/report-update-20261029/gemini-adjudication.json"
+  },
+  "verification": {
+    "focused_tests": {
+      "passed": 5,
+      "command": "python -m pytest -q docs/final-report/test_update_20261029.py",
+      "exit_code": 0,
+      "elapsed_seconds": 4.88,
+      "reason_for_rerun": "Agent navigation changed a documentation-only source hash; generator products were refreshed."
+    },
+    "pdf": {
+      "build": [
+        {
+          "pass": 1,
+          "exit_code": 0,
+          "seconds": 1.16
+        },
+        {
+          "pass": 2,
+          "exit_code": 0,
+          "seconds": 1.06
+        }
+      ],
+      "pages": 13,
+      "figures": 9,
+      "tables": 7,
+      "warnings": [
+        "Overfull \\vbox (1.7849pt too high) has occurred while \\output is active []"
+      ],
+      "pdf_sha256": "3cf656cedf4a245b8f48c3198cb3106636ae6bb116c1323d2cd46156e2e07782",
+      "renders_dpi": 120,
+      "rendered_pages": 13,
+      "render_pages_changed_from_last_inspection": []
+    },
+    "visual_acceptance": "All 13 pages inspected; enlarged checks of new result figures, tables, and balanced closing pages. No clipping or overlap.",
+    "local_logs": ".setup-logs/report-update-20261029/",
+    "local_renders": "tmp/pdfs/report-update-20261029-final/",
+    "acronym_check": "Advisory partial coverage on PDF extraction; manually reviewed; no automated clean certification claimed."
+  },
+  "not_measured": [
+    "CGOF activity-based power",
+    "finite-Heavy RTL adaptation across multiple effective-class changes",
+    "calibrated CXL response latency and completed bytes",
+    "application slowdown",
+    "physical signoff"
+  ],
+  "outputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c75cf2ac002481c687fb43296f548b156470eb691a532599607d1da3095e480d",
+      "bytes": 9248
+    },
+    {
+      "path": "docs/DEVELOPMENT_REPORT.md",
+      "sha256": "586c84478015cd157b6faa66c354511aa3b7ef408ed1b3cad3e930c0449e5f1d",
+      "bytes": 275583
+    },
+    {
+      "path": "docs/PROGRESS_TRACKER.md",
+      "sha256": "24692e0cf3546e7fa897c55590a5d472098780fca75405be3842cbb16e4df936",
+      "bytes": 36559
+    },
+    {
+      "path": "docs/STATUS.md",
+      "sha256": "ee3e096f58ce4bd1c5801a3ecf445e668e133b7c3eae8e7a5bcb13081678fbcb",
+      "bytes": 42780
+    },
+    {
+      "path": "docs/experiments/diagnosis-20261027/DIAGNOSIS_SUMMARY.md",
+      "sha256": "95bebbe4cbd9bce3599ed4fbeb64167196e30405d7b2c36bb45868244400e451",
+      "bytes": 22491
+    },
+    {
+      "path": "docs/experiments/diagnosis-20261027/README.md",
+      "sha256": "4070d97553aa9a0c4c2960b1b52b3e9e26b5667f38ad8a2db579bed4792480ea",
+      "bytes": 6421
+    },
+    {
+      "path": "docs/final-report/README.md",
+      "sha256": "f9f3c551447ed7b6276182e5da48c194331df6643966f60c0cc896f004cc8f99",
+      "bytes": 16716
+    },
+    {
+      "path": "docs/final-report/generate_update_20261029.py",
+      "sha256": "8ddd10edd95cf086949bbee34140f8dff28fb57b571fb2b9eccda23f4532e5cf",
+      "bytes": 19782
+    },
+    {
+      "path": "docs/final-report/generated/figures/confirmation.pdf",
+      "sha256": "2e21c969a898c9380951666b23b87408ce37c23804714f3d64504e6f1c591237",
+      "bytes": 14938
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/allocation-shares.pdf",
+      "sha256": "878c373ba3bbdf32b25233eebe323d19161fd47af6dee599d677d17b7a734c35",
+      "bytes": 36657
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/buffer-transition.pdf",
+      "sha256": "cbdf2cdef013153678a705a8eb8fa17bff29ad46a2f0e1830edc05a27bf4fb14",
+      "bytes": 25767
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/cgof-hardware.pdf",
+      "sha256": "f67ad680f93d360ef309cc99c0c0ed7ac9fbf69ff76f2c08526a5562d1c66f1d",
+      "bytes": 26577
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/heavy-sparse-tradeoff.pdf",
+      "sha256": "0a82a9ef0272657839e8230a0b45c6c388b32d371a51acb11ada383b54915882",
+      "bytes": 26542
+    },
+    {
+      "path": "docs/final-report/generated/figures/improvement/pooling-path.pdf",
+      "sha256": "246dd7c1e4a0d57b8ed862db24c93daad18db6ccdd154b32b8bde12683c683ef",
+      "bytes": 24068
+    },
+    {
+      "path": "docs/final-report/generated/figures/sensitivity.pdf",
+      "sha256": "77772e3768382c201d7ccb5a73e9d182bd432e8c34557031d800c509b516dc03",
+      "bytes": 18886
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/figure-manifest.json",
+      "sha256": "a631ab818bb8215498453abf2e3e592af9c9459d773ecc77aaeb14c2f7e80399",
+      "bytes": 58811
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/finite-heavy-confirmation.pdf",
+      "sha256": "0422658d9677bc1755b589e606aa045f1c7dbfa61a0b87a76c99038a3afb3882",
+      "bytes": 35370
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/finite-heavy-confirmation.png",
+      "sha256": "cd3a00fdeb3540361d94f4d52488acd2eaaf9a285561f46a53f5c254a1c0df25",
+      "bytes": 206403
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/finite-heavy-confirmation.svg",
+      "sha256": "e24a6984101a443456332b8b1dbfde759308cf52fcfaf6191ea06de3a9c2c49b",
+      "bytes": 68106
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/plot-data.json",
+      "sha256": "ea6cd25d143691fa61853cec8df2cd109ac59ee36b8e7c479da0c6ed5e61c63c",
+      "bytes": 263962
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/readiness-confirmation.pdf",
+      "sha256": "01482d5ecc9c957b3f4554e6af654288e2519d0bc67b393449175cc6c3fcee33",
+      "bytes": 18711
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/readiness-confirmation.png",
+      "sha256": "9dfc8bd543f1c2cb3b37ff5ed9ea1c6f31aa4d9130e2120595f8b03aed810afa",
+      "bytes": 154066
+    },
+    {
+      "path": "docs/final-report/generated/figures/update-20261029/readiness-confirmation.svg",
+      "sha256": "a9f5220022e9ae62897635cd3a21fef51a357841518367ea2e48bb9ccd3b60ac",
+      "bytes": 28236
+    },
+    {
+      "path": "docs/final-report/generated/improvement_results.tex",
+      "sha256": "7a77999c59c5cae4f54985b4e9987981bd11d9dc0e5186aecf61d0781d1aa62d",
+      "bytes": 1922
+    },
+    {
+      "path": "docs/final-report/generated/results.tex",
+      "sha256": "c1ae15bb7b7a2c5084b46a2eef043f2e0af1d46fe36fb712ecf489f2526a94db",
+      "bytes": 3149
+    },
+    {
+      "path": "docs/final-report/generated/revision_v3_results.tex",
+      "sha256": "8e8675907d91d9739a27db6d1319b1f403ca032a13b81ee4f154eaabf40b2b26",
+      "bytes": 3643
+    },
+    {
+      "path": "docs/final-report/generated/update_20261029_manifest.json",
+      "sha256": "a631ab818bb8215498453abf2e3e592af9c9459d773ecc77aaeb14c2f7e80399",
+      "bytes": 58811
+    },
+    {
+      "path": "docs/final-report/generated/update_20261029_results.tex",
+      "sha256": "cf5881c18654d95002ca0da464e2d486c6081fa6123fd9abb53e5585a799b775",
+      "bytes": 750
+    },
+    {
+      "path": "docs/final-report/main-v3.tex",
+      "sha256": "3e5ff313576331f82260410fadb90555de9fd152f67ebe71bf31f74957906366",
+      "bytes": 9008
+    },
+    {
+      "path": "docs/final-report/sections/hotnets-body-v3.tex",
+      "sha256": "f317aec279431fc650989ab250ee9bd3cac93ee0d80c87ceba6a71e7ab948286",
+      "bytes": 45042
+    },
+    {
+      "path": "docs/final-report/test_update_20261029.py",
+      "sha256": "9f78ac0d2e874250394f14d4d8edaccdc3adbe360b19dcf68f6dda6d29247b2f",
+      "bytes": 3379
+    },
+    {
+      "path": "docs/final-report/update-20261029/AUTHOR_HANDOFF.md",
+      "sha256": "f6a7bb87135f84e04e71af2eb4138436941dfe0d147e90740ccc38ac5707070d",
+      "bytes": 6528
+    },
+    {
+      "path": "docs/final-report/update-20261029/EVIDENCE_REVIEW.md",
+      "sha256": "d5942945247bcc9b0f9d03dcf21be0c1186fc668f91e00095eaabf6440f9d304",
+      "bytes": 22728
+    },
+    {
+      "path": "docs/final-report/update-20261029/FIGURE_HANDOFF.md",
+      "sha256": "c6618f2e9b43385e380207f37e0ac0001de099ed835cfb97fa7bceb5035869ca",
+      "bytes": 10727
+    },
+    {
+      "path": "docs/final-report/update-20261029/FOLLOWUP_EXPERIMENTS.md",
+      "sha256": "96c37f43610b077e7ef6f6f9c87abab5ed461c490d0dd1cafe295465be6ccf24",
+      "bytes": 4189
+    },
+    {
+      "path": "docs/final-report/update-20261029/REVISION_QA.md",
+      "sha256": "c4689bf937cfcd2d9f6c522b51c72a6f57288fe1c9715cb94c80c088a8264502",
+      "bytes": 8917
+    },
+    {
+      "path": "docs/final-report/update-20261029/THEORY_AND_EVIDENCE.md",
+      "sha256": "e25243f42194f7de8d8d758f7e1348594d7dc37ac3ed967c8ab082ec0ac203f9",
+      "bytes": 6672
+    },
+    {
+      "path": "docs/final-report/update-20261029/hypothesis-status.json",
+      "sha256": "e16dba1f42d0503b3c16d37a13e07612a10e7541db9570cefa6686ec173ffa01",
+      "bytes": 3359
+    },
+    {
+      "path": "output/pdf/cxl-scheduler-revised-20261029.pdf",
+      "sha256": "3cf656cedf4a245b8f48c3198cb3106636ae6bb116c1323d2cd46156e2e07782",
+      "bytes": 396001
+    }
+  ]
+}

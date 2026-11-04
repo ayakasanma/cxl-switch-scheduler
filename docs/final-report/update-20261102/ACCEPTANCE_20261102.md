@@ -1,0 +1,51 @@
+# November 2, 2026 Report Update: Acceptance Record
+
+Status: **APPLIED_AND_ACCEPTED** — 2026-11-02, Asia/Taipei.
+
+## 1. Deliverables and Cryptographic Hashes
+
+| Artifact | Path | SHA-256 |
+| :--- | :--- | :--- |
+| **Accepted 15-page PDF** | `output/pdf/cxl-scheduler-revised-20261102.pdf` | `27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf` |
+| **Compiled Working PDF** | `docs/final-report/main-v3.pdf` | `27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf` |
+| **LaTeX Driver** | `docs/final-report/main-v3.tex` | Deterministic PDF flags (`\pdfinfoomitdate=1`, `\pdfsuppressptexinfo=-1`, `\pdftrailerid{}`) enabled |
+| **LaTeX Body** | `docs/final-report/sections/hotnets-body-v3.tex` | Integrates `FAI-ImmBuf` naming, `CGOF` scoped positioning, and Oct 30 – Nov 02 follow-ups |
+| **Generator Script** | `docs/final-report/generate_update_20261102.py` | `8c06f4b7496d6bebc26561d4d211d5f514ab23f4c4411c8a69872ca7df923d29` (reads 24 frozen manifests/acceptances/summaries without manual transcription) |
+| **Generated LaTeX Macros** | `docs/final-report/generated/update_20261102_results.tex` | `88d2f56c161c024b28ebb7855da8a71089384ea41223423aef45b79cfe188831` |
+| **Generated Manifest** | `docs/final-report/generated/update_20261102_manifest.json` | `ba42467010f8ecaa49522df6424314d58347595f889d4b62a285c27711ce6938` (binds all 24 input hashes, figure exports, and Claim-Evidence Matrix) |
+| **Vector Synthesis Figure** | `docs/final-report/generated/figures/update-20261102/followup-synthesis-20261102.pdf` | 3-panel vector figure (PDF/SVG/PNG) |
+| **Claim-Evidence Matrix** | `docs/final-report/update-20261102/CLAIM_EVIDENCE_MATRIX_20261102.md` | `ccfb40fd547e222ada60022763d5d9dd19aca4a1af0a4c9c8bc6b1b496fd46d9` (8-row matrix `C1`–`C8` with explicit tier labels and gap review) |
+| **Theory & Gap Analysis** | `docs/THEORY_ANALYSIS_AND_REVIEW_GAPS_2026-11-02.md` | Comprehensive plain-language and formal synthesis |
+
+## 2. Claim-Evidence Matrix Summary
+
+| ID | Tier | Scope | Claim Summary | Bound Artifact & SHA-256 |
+| :---: | :---: | :--- | :--- | :--- |
+| **C1** | `CONFIRMED` | `SCHEDULER_RTL` (20 confirmation seeds 529–548; 30-run current-source replay) | Trained N4 Sparse tail protection: CGOF (2:1) lowers Sparse G→F P99 from 10.00 to 1.10 cycles (Arm A) and 21.05 to 12.35 cycles (Arm B) vs. FAI-inspired; `FAI-ImmBuf` (`Algorithm-2`) reaches 10.00/21.35. | `artifacts/implementation/cgof-rtl-diagnosis/aggregate-current-20261029.json` (`da0a2fd16a40f2ee...`) |
+| **C2** | `CONFIRMED` | `SCHEDULER_RTL` (20 held-out seeds 529–548, 80 jobs, 40 pairs, W5M) | Single-boundary near-load finite-Heavy quota contrast: CGOF (1:1) vs. (2:1) gives Sparse P99 3.00 vs. 4.00 cycles (+1.00 `[1.00, 1.00]`) and Heavy max wall gap 9.45 vs. 10.85 cycles (+1.40 `[1.10, 1.75]`), with 3.05/3.00 extra completion cycles. | `artifacts/implementation/cgof-rtl-diagnosis/confirmation-finite-heavy-fixed-20261029/aggregate.json` (`0f39a3c5e8342c44...`) |
+| **C3** | `CONFIRMED` | `SCHEDULER_RTL` (20 fresh seeds 6501–6520, 160 jobs, 80 pairs, W256; null confirmation) | W256 20-seed quota × ordering confirmation: Q1 RR−OF delta is 0 in 20/20 seeds; Q2 RR−OF delta and interaction $I$ are −1 cycle in 7/20 seeds and 0 in 13/20 (mean −0.35), below the 15/20 gate (`NOT_CONFIRMED`). | `artifacts/implementation/cgof-rtl-ordering-confirmation/acceptance-20261101T045246Z.json` (`abdde975d65137f0...`) |
+| **C4** | `DESCRIPTIVE` | `SCHEDULER_RTL` (5 fresh seeds 6601–6605, 40 jobs, 20 pairs, W5M production) | W5M 5-seed production quota × ordering tradeoff: all 5 seeds give Sparse P99 $S = 11/11/12/11$ cycles ($d_1=0, d_2=-1, I=-1$); RR lowers Q2 Sparse P99 by 1 cycle but raises Q1 Heavy max gap by +1.6 cycles on average (`+2,+2,+1,+2,+1`), with zero completion-delay contrast (0 in 10/10). | `artifacts/implementation/cgof-rtl-ordering-w5m-production/acceptance-w5m-campaign-20261102T154205Z.json` (`9b3f8588f87b6fe9...`) |
+| **C5** | `MODEL_ONLY` | `MODEL_ONLY` (20 confirmation seeds 6201–6220 at W5M; 5 exploration seeds × 4 phases at W256) | Spare-capacity absorption and transient lag recovery: W5M 20-seed model confirmation gives 0 extra Heavy completion cycles `[0.0, 0.0]` under under-load (20/20 within ±20-cycle margin) vs. +834.25 cycles `[820.4, 849.3]` under over-load (0/20 within margin); W256 common-horizon screen shows near-load transient lag (mean max 5.00/4.95 descriptors) recovers in 20/20 observations. | `artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/summary.json` (`92afb0f1bd189942...`) |
+| **C6** | `MODEL_ONLY` | `MODEL_ONLY` (Refill trace; 156 Buffer transition replays; 720 closed-loop runs across seeds 6101–6105) | Credit-refill and Buffer mechanism separation: changing High credit from 1 to 2 shifts first selection divergence in 3/5 arrival phases via refill/eligibility; Main filters 1-window noise (0 flips vs. 2 for Main-1W/`FAI-ImmBuf`) while adding one window to persistent settle delay (448–704 vs. 192–448 cycles at W256); CGOF(1:1) passes 120/120 classifier-leakage negative controls; latency recovery is not claimed. | `artifacts/implementation/buffer-closed-loop/20261101T015630Z/acceptance.json` (`242c8a15f85b4959...`) |
+| **C7** | `SINGLE_SEED` | `SCHEDULER_RTL` (1 seed 7291, 5 cases, 20 runs, 10 pairs, W5M; `CI: null`) | Multi-window adaptation, readiness shape and admission boundary: across four W5M boundaries, role schedule `[0,0,1,1]` induces 3 effective-class transitions; bursty 90% readiness raises Sparse P99 and Heavy wall-gap P99 from 3 to 11 cycles while ready-opportunity gap P99 stays 2; D8 shifts Heavy P99 wait from A→F (18→16) to G→A (2→11) with total G→F P99 unchanged at 20. | `artifacts/implementation/cgof-dynamic-20261030/aggregate.json` (`e8a398b18348a99a...`) |
+| **C8** | `NOT_RUN` | Explicitly unmeasured boundaries and deferred follow-up gates | End-to-end CXL.mem response latency, completed memory bandwidth, application IPC/slowdown, CGOF gate-level SAIF power, and multi-seed W5M dynamic/under-over RTL confirmation. | `docs/final-report/update-20261102/ACCEPTANCE_20261102.md` (`NOT_RUN`) |
+
+## 3. Non-Claims and Explicit Boundaries
+
+1. **No universal winner or unconditional Pareto dominance**: CGOF is positioned strictly as the strongest overall operating point across the three specified objectives (Sparse tail protection, per-source fairness under asymmetric class cardinality, and complete pre-layout hardware cost) within the measured scope, retaining three explicit boundaries:
+   - Overload contention increases Heavy maximum inter-service gap by 1–2.55 cycles while preserving long-run completion and throughput;
+   - When arrival-order timestamps and dynamic classification are unnecessary, `RR10` occupies 24–28% less cell area;
+   - In the single-boundary all-effective-High near-load RTL confirmation, `CGOF (1:1)` yields lower Sparse P99 (3 vs. 4 cycles) and smaller maximum Heavy gaps (9.45 vs. 10.85 cycles) than `CGOF (2:1)`.
+2. **No pooling across denominators or horizons**: W256 20-seed confirmation (`NOT_CONFIRMED`) and W5M 5-seed descriptive production (`COMPLETE_DESCRIPTIVE_EXPLORATION`) are kept strictly separate.
+3. **No latency-recovery claim from Buffer state counts**: Classifier settle delay and cohort waiting P99 are reported as distinct quantities (`latency_recovery = NOT_DEFINED_THIS_ROUND`).
+4. **No end-to-end CXL or application extrapolation**: Scheduler `fire/cycle` is not memory bandwidth, and descriptor `G->F` waiting is not CXL.mem issue-to-response latency or application slowdown.
+
+## 4. Verification, Tests, and Visual Inspection
+
+- **Generator & Report Tests**:
+  - `python -m pytest -q docs/final-report/test_update_20261102.py`: **4/4 PASS** (1.83s).
+  - `python -m pytest -q docs/final-report/test_generate_revision_v3.py -k "RevisionV3Tests"`: **5/5 PASS** (6.78s), confirming historical `ALG2` keys and `revision_v3` SHA-256 pins remain untouched.
+  - `python -m pytest -q scripts/test_revision_power_vectors.py`: **14/14 PASS** (1.39s) after aligning `POLICIES["fai-main"] = "FAI-inspired"` in `scripts/export_revision_power_vectors.py`.
+- **Two-Pass Deterministic PDF Build & Visual Inspection**:
+  - Two consecutive `pdflatex` passes exited `0` with identical SHA-256 `27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf` (15 pages, 10 figures, 9 tables, 19 resolved citations, 0 undefined references).
+  - All 15 pages rendered to PNG at 130 dpi (`tmp/pdfs/report-update-20261102/page-01.png` .. `page-15.png`) and visually inspected; Figure 10 and Tables 8–9 on page 13 are crisp with zero label overlap or clipping.

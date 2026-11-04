@@ -1,0 +1,102 @@
+{
+  "schema": "cxl-v2-a3-acceptance-v1",
+  "status": "A3_JOBS_PASS_GEQ_PASS_SOURCE_GATE_FAILED",
+  "date": "2026-11-04",
+  "seed": 7301,
+  "window": 5000000,
+  "heavy_work": 17500000,
+  "active_cap": 24000000,
+  "run_id": "20261103T224623Z_714733",
+  "rtl_jobs": 4,
+  "rtl_jobs_pass": 4,
+  "wall_s": 15328.372,
+  "lint": 5,
+  "unit_tests": 7,
+  "source_stable": false,
+  "source_changes_during_run": [
+    {
+      "path": "scripts/analyze_dynamic_role_switch.py",
+      "at_launch": "af856bfc2e0f935ea19b3cbdf24c9b40023332693cef7347fc755832a3fefa55",
+      "now": "5d3386f034b43d403aae1903afbff6a8fd5531f0b03d043cc27d3729b7b7911b"
+    },
+    {
+      "path": "scripts/run_dynamic_role_switch_pilot.py",
+      "at_launch": "b99f9c9ee9cc5f1228499c8ba68af7e1d45f20e645f9761717eb4144033d6e85",
+      "now": "6478ede90606f3b6b26fe9381683cea4fae15bc3638c6c90f306122ed2d196c7"
+    },
+    {
+      "path": "scripts/run_rtl_diagnosis.py",
+      "at_launch": "a02bdb245625b4c49fefba1996a898119aa96c5db68007c281c28335c895fb26",
+      "now": "4283478aed9fafdcc0cd37ac8e6a64b213793e68a2d4723e07ca07921afd9587"
+    }
+  ],
+  "source_gate_note": "three files changed while the run was in flight: the offline analyzer, the pilot runner, and a source-index list entry. None is imported by the simulation path, but the frozen source-stability gate did not pass, so this is engineering evidence rather than a frozen-gate PASS.",
+  "g_eq": {
+    "anchors": 4,
+    "passed": 4,
+    "excluded": [
+      "schema",
+      "evidence_kind",
+      "limitations",
+      "native_coverage",
+      "native_cgof",
+      "native_main",
+      "input_hold_checks",
+      "wall_s"
+    ],
+    "note": "model replayed at the exact A3 job specification; the pilot matrix used a 40M cap, which never bound but was a descriptor difference"
+  },
+  "results": [
+    {
+      "anchor": "a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "fd8a43da2fe3d52237ccfa4f70a090b3b3f22ccfd8863b2719a88c055e7af0ba",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "model_sha256": "8ad4ca076f81f9c15f6c56cc1151fb0fb05b16501656ac2ea5a1f887117a5f12",
+      "active_cycles": 21873605,
+      "drain_cycles": 0,
+      "sparse_p99": 19,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "f06c1438e0ab74d0e13c889015327068c9dfdf1163818a583758de8c9e502f1e",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "model_sha256": "d7a67106f8c2945e2abc86b322a5c66d7dae5b6a78db099dd6b1331cef5c3e16",
+      "active_cycles": 21873605,
+      "drain_cycles": 0,
+      "sparse_p99": null,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "1faf9ef51cb360628e945cbdf2f62b04e73e341472cb75cf6ca3a7050c03e75c",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "model_sha256": "438e8cd1c1aad10e32ba375eeaf9b4402a10fc2cb1777970557750222cd41c4e",
+      "active_cycles": 21873605,
+      "drain_cycles": 0,
+      "sparse_p99": 18,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/results/cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "rtl_sha256": "de3a8c4c0ce8c5c77139bdc8588df94b63920b4d125e6cd22d537b00bb673c6c",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec/cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "model_sha256": "63ca761fd8e5a5eb02425216e2c29a4ab6927956f83846a242d92c51ac873fca",
+      "active_cycles": 21873610,
+      "drain_cycles": 2,
+      "sparse_p99": 19,
+      "physical_sources": "EQUAL"
+    }
+  ],
+  "drain": "RTL drain_cycles=0 in all four anchors; NOT_EXERCISED on RTL",
+  "confirmation_seeds_used": [],
+  "evidence_classification": "SCHEDULER_RTL anchors + MODEL_ONLY statistics"
+}

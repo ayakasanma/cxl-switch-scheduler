@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Main-SQ diagnosis closeout; no new RTL simulation from these audits",
+  "analysis_unit_tests": 6,
+  "analysis_subtests": 14,
+  "analysis_test_exit": 0,
+  "analysis_test_output": "test_exact_nearest_rank (test_trace_analysis.TraceControls.test_exact_nearest_rank) ... ok\r\ntest_full_before_pop_invalidates_fixed_admissions (test_trace_analysis.TraceControls.test_full_before_pop_invalidates_fixed_admissions) ... ok\r\ntest_partial_quota_carries_across_low_visit (test_trace_analysis.TraceControls.test_partial_quota_carries_across_low_visit) ... ok\r\ntest_rejects_corrupt_heads_and_incomplete_population (test_trace_analysis.TraceControls.test_rejects_corrupt_heads_and_incomplete_population) ... ok\r\ntest_simultaneous_generation_same_complete_histogram (test_trace_analysis.TraceControls.test_simultaneous_generation_same_complete_histogram) ... ok\r\ntest_single_eligible_source_has_no_lost_slots (test_trace_analysis.TraceControls.test_single_eligible_source_has_no_lost_slots) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 6 tests in 0.002s\r\n\r\nOK\r\n",
+  "scoped_git_diff_check_exit": 0,
+  "protected_existing_files": 694,
+  "protected_final_files": 518,
+  "preserved_prior_raw_metrics": 264,
+  "unchanged_runtime_files": 110,
+  "owner_development_report_prefix_preserved": true,
+  "markdown_relative_links": "PASS",
+  "current_status_documents": "COMPLETE",
+  "archive_sha256": "e2e75552d02885568eb05b7a6503b4e980c546922807759b5de9b2afbf7bea66",
+  "independent_read_only_reviews": [
+    "sq_arch_review: passive recorder sound, no must-fix",
+    "sq_evidence_audit: full actual trace/statistics/provenance and closeout package PASS",
+    "sq_gate_challenge: independently recomputed SQ schedule; gate FAIL; final document claims consistent after clarity fixes"
+  ],
+  "unrun": [
+    "SQ RTL/model and five-policy performance matrix",
+    "SQ lint/regression/Formality/synthesis/STA/power",
+    "new Main-HQ or Main-AGE design",
+    "Final manuscript edits/build/render"
+  ]
+}

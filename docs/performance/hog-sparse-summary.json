@@ -1,0 +1,559 @@
+{
+  "status": "ACCEPTED_DESCRIPTIVE_RESULTS",
+  "summary": [
+    {
+      "profile": "cold",
+      "policy": "FCFS",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 16.384170970351395,
+        "sample_sd": 0.0165421961669813,
+        "minimum": 16.367116137451067,
+        "maximum": 16.409052092228865
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 18.0,
+        "sample_sd": 0.0,
+        "minimum": 18.0,
+        "maximum": 18.0
+      },
+      "generation_to_fire_max": {
+        "mean": 19.4,
+        "sample_sd": 0.5477225575051661,
+        "minimum": 19.0,
+        "maximum": 20.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 16.384170970351395,
+        "sample_sd": 0.0165421961669813,
+        "minimum": 16.367116137451067,
+        "maximum": 16.409052092228865
+      },
+      "fires_per_cycle": null,
+      "heavy_fires_per_cycle": null,
+      "heavy_backlog_mean": null,
+      "heavy_backlog_end": null
+    },
+    {
+      "profile": "cold",
+      "policy": "RR",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 5.611744246606075,
+        "sample_sd": 0.04608496398272025,
+        "minimum": 5.537130801687764,
+        "maximum": 5.652892561983471
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 11.0,
+        "sample_sd": 0.0,
+        "minimum": 11.0,
+        "maximum": 11.0
+      },
+      "generation_to_fire_max": {
+        "mean": 12.0,
+        "sample_sd": 0.7071067811865476,
+        "minimum": 11.0,
+        "maximum": 13.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 5.611744246606075,
+        "sample_sd": 0.04608496398272025,
+        "minimum": 5.537130801687764,
+        "maximum": 5.652892561983471
+      },
+      "fires_per_cycle": null,
+      "heavy_fires_per_cycle": null,
+      "heavy_backlog_mean": null,
+      "heavy_backlog_end": null
+    },
+    {
+      "profile": "cold",
+      "policy": "FAI_MAIN",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 16.384170970351395,
+        "sample_sd": 0.0165421961669813,
+        "minimum": 16.367116137451067,
+        "maximum": 16.409052092228865
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 18.0,
+        "sample_sd": 0.0,
+        "minimum": 18.0,
+        "maximum": 18.0
+      },
+      "generation_to_fire_max": {
+        "mean": 19.4,
+        "sample_sd": 0.5477225575051661,
+        "minimum": 19.0,
+        "maximum": 20.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 16.384170970351395,
+        "sample_sd": 0.0165421961669813,
+        "minimum": 16.367116137451067,
+        "maximum": 16.409052092228865
+      },
+      "fires_per_cycle": null,
+      "heavy_fires_per_cycle": null,
+      "heavy_backlog_mean": null,
+      "heavy_backlog_end": null
+    },
+    {
+      "profile": "A",
+      "policy": "FCFS",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 16.39212501025939,
+        "sample_sd": 0.02239006728865711,
+        "minimum": 16.36999147485081,
+        "maximum": 16.418158567774935
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 18.2,
+        "sample_sd": 0.4472135954999579,
+        "minimum": 18.0,
+        "maximum": 19.0
+      },
+      "generation_to_fire_max": {
+        "mean": 20.0,
+        "sample_sd": 1.224744871391589,
+        "minimum": 19.0,
+        "maximum": 22.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 16.39212501025939,
+        "sample_sd": 0.02239006728865711,
+        "minimum": 16.36999147485081,
+        "maximum": 16.418158567774935
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976728,
+        "sample_sd": 0.0005843543445547439,
+        "minimum": 0.97595,
+        "maximum": 0.97744
+      },
+      "heavy_backlog_mean": {
+        "mean": 235766.399604,
+        "sample_sd": 482.59219629979305,
+        "minimum": 235038.95747,
+        "maximum": 236364.91929
+      },
+      "heavy_backlog_end": {
+        "mean": 236931.2,
+        "sample_sd": 482.17496824285683,
+        "minimum": 236207.0,
+        "maximum": 237508.0
+      }
+    },
+    {
+      "profile": "A",
+      "policy": "RR",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 5.59793450501385,
+        "sample_sd": 0.06378907205627214,
+        "minimum": 5.516637478108581,
+        "maximum": 5.685866194062915
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 11.0,
+        "sample_sd": 0.0,
+        "minimum": 11.0,
+        "maximum": 11.0
+      },
+      "generation_to_fire_max": {
+        "mean": 12.2,
+        "sample_sd": 0.4472135954999579,
+        "minimum": 12.0,
+        "maximum": 13.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 5.59793450501385,
+        "sample_sd": 0.06378907205627214,
+        "minimum": 5.516637478108581,
+        "maximum": 5.685866194062915
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976726,
+        "sample_sd": 0.000583977739301779,
+        "minimum": 0.97595,
+        "maximum": 0.97743
+      },
+      "heavy_backlog_mean": {
+        "mean": 235766.650822,
+        "sample_sd": 482.59200139262924,
+        "minimum": 235039.21067,
+        "maximum": 236365.16808
+      },
+      "heavy_backlog_end": {
+        "mean": 236931.8,
+        "sample_sd": 482.42999492154297,
+        "minimum": 236207.0,
+        "maximum": 237509.0
+      }
+    },
+    {
+      "profile": "A",
+      "policy": "FAI_MAIN",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 5.529562782023446,
+        "sample_sd": 0.0844221115525948,
+        "minimum": 5.424693520140105,
+        "maximum": 5.614663256606991
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 10.0,
+        "sample_sd": 0.0,
+        "minimum": 10.0,
+        "maximum": 10.0
+      },
+      "generation_to_fire_max": {
+        "mean": 10.6,
+        "sample_sd": 0.5477225575051661,
+        "minimum": 10.0,
+        "maximum": 11.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 5.529562782023446,
+        "sample_sd": 0.0844221115525948,
+        "minimum": 5.424693520140105,
+        "maximum": 5.614663256606991
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976724,
+        "sample_sd": 0.0005820910581687598,
+        "minimum": 0.97595,
+        "maximum": 0.97743
+      },
+      "heavy_backlog_mean": {
+        "mean": 235766.652404,
+        "sample_sd": 482.5912788182737,
+        "minimum": 235039.21443,
+        "maximum": 236365.17016
+      },
+      "heavy_backlog_end": {
+        "mean": 236931.8,
+        "sample_sd": 482.42999492154297,
+        "minimum": 236207.0,
+        "maximum": 237509.0
+      }
+    },
+    {
+      "profile": "B",
+      "policy": "FCFS",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 23.298916666666667,
+        "sample_sd": 0.09049948204271673,
+        "minimum": 23.168333333333333,
+        "maximum": 23.399583333333332
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 33.8,
+        "sample_sd": 1.7888543819998317,
+        "minimum": 31.0,
+        "maximum": 36.0
+      },
+      "generation_to_fire_max": {
+        "mean": 39.4,
+        "sample_sd": 3.1304951684997055,
+        "minimum": 38.0,
+        "maximum": 45.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 3.5,
+        "sample_sd": 0.0,
+        "minimum": 3.5,
+        "maximum": 3.5
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 19.798916666666667,
+        "sample_sd": 0.09049948204271673,
+        "minimum": 19.668333333333333,
+        "maximum": 19.899583333333332
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976576171875,
+        "sample_sd": 3.0571241879901785e-05,
+        "minimum": 0.9765625,
+        "maximum": 0.976630859375
+      },
+      "heavy_backlog_mean": {
+        "mean": 238132.3627128906,
+        "sample_sd": 482.86007475465664,
+        "minimum": 237407.2637109375,
+        "maximum": 238710.2850488281
+      },
+      "heavy_backlog_end": {
+        "mean": 239330.4,
+        "sample_sd": 480.3418574307261,
+        "minimum": 238607.0,
+        "maximum": 239902.0
+      }
+    },
+    {
+      "profile": "B",
+      "policy": "RR",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 9.169333333333334,
+        "sample_sd": 0.1281795615533149,
+        "minimum": 8.953333333333333,
+        "maximum": 9.273333333333333
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 17.2,
+        "sample_sd": 0.4472135954999579,
+        "minimum": 17.0,
+        "maximum": 18.0
+      },
+      "generation_to_fire_max": {
+        "mean": 25.2,
+        "sample_sd": 3.8340579025361627,
+        "minimum": 23.0,
+        "maximum": 32.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 3.5,
+        "sample_sd": 0.0,
+        "minimum": 3.5,
+        "maximum": 3.5
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 5.669333333333333,
+        "sample_sd": 0.12817956155331484,
+        "minimum": 5.453333333333333,
+        "maximum": 5.773333333333333
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976564453125,
+        "sample_sd": 4.3673202685503045e-06,
+        "minimum": 0.9765625,
+        "maximum": 0.976572265625
+      },
+      "heavy_backlog_mean": {
+        "mean": 238132.69375585936,
+        "sample_sd": 482.85880822406773,
+        "minimum": 237407.596875,
+        "maximum": 238710.6140917969
+      },
+      "heavy_backlog_end": {
+        "mean": 239331.6,
+        "sample_sd": 482.1309987959704,
+        "minimum": 238607.0,
+        "maximum": 239908.0
+      }
+    },
+    {
+      "profile": "B",
+      "policy": "FAI_MAIN",
+      "n_seeds": 5,
+      "generation_to_fire_mean": {
+        "mean": 9.324333333333334,
+        "sample_sd": 0.1757349645852457,
+        "minimum": 9.026666666666667,
+        "maximum": 9.483333333333333
+      },
+      "generation_to_fire_p99_nearest_rank": {
+        "mean": 20.8,
+        "sample_sd": 3.1144823004794873,
+        "minimum": 17.0,
+        "maximum": 24.0
+      },
+      "generation_to_fire_max": {
+        "mean": 32.4,
+        "sample_sd": 3.7815340802378072,
+        "minimum": 28.0,
+        "maximum": 38.0
+      },
+      "generation_to_acceptance_mean": {
+        "mean": 3.5,
+        "sample_sd": 0.0,
+        "minimum": 3.5,
+        "maximum": 3.5
+      },
+      "acceptance_to_fire_mean": {
+        "mean": 5.824333333333334,
+        "sample_sd": 0.17573496458524648,
+        "minimum": 5.526666666666666,
+        "maximum": 5.983333333333333
+      },
+      "fires_per_cycle": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "heavy_fires_per_cycle": {
+        "mean": 0.976564453125,
+        "sample_sd": 4.3673202685503045e-06,
+        "minimum": 0.9765625,
+        "maximum": 0.976572265625
+      },
+      "heavy_backlog_mean": {
+        "mean": 238132.69012304686,
+        "sample_sd": 482.86023904449803,
+        "minimum": 237407.587890625,
+        "maximum": 238710.61077148438
+      },
+      "heavy_backlog_end": {
+        "mean": 239331.6,
+        "sample_sd": 482.1309987959704,
+        "minimum": 238607.0,
+        "maximum": 239908.0
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "profile": "A",
+      "baseline": "FCFS",
+      "n_seeds": 5,
+      "reduction_cycles": {
+        "mean": 8.2,
+        "sample_sd": 0.4472135954999579,
+        "minimum": 8.0,
+        "maximum": 9.0
+      },
+      "reduction_percent": {
+        "mean": 45.02923976608187,
+        "sample_sd": 1.3076420921051424,
+        "minimum": 44.44444444444444,
+        "maximum": 47.36842105263158
+      },
+      "seeds_lower_main_p99": 5,
+      "seeds_tied_p99": 0,
+      "seeds_higher_main_p99": 0
+    },
+    {
+      "profile": "A",
+      "baseline": "RR",
+      "n_seeds": 5,
+      "reduction_cycles": {
+        "mean": 1.0,
+        "sample_sd": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "reduction_percent": {
+        "mean": 9.090909090909092,
+        "sample_sd": 0.0,
+        "minimum": 9.090909090909092,
+        "maximum": 9.090909090909092
+      },
+      "seeds_lower_main_p99": 5,
+      "seeds_tied_p99": 0,
+      "seeds_higher_main_p99": 0
+    },
+    {
+      "profile": "B",
+      "baseline": "FCFS",
+      "n_seeds": 5,
+      "reduction_cycles": {
+        "mean": 13.0,
+        "sample_sd": 2.0,
+        "minimum": 10.0,
+        "maximum": 15.0
+      },
+      "reduction_percent": {
+        "mean": 38.64010120177103,
+        "sample_sd": 6.933371573789074,
+        "minimum": 29.41176470588235,
+        "maximum": 45.16129032258065
+      },
+      "seeds_lower_main_p99": 5,
+      "seeds_tied_p99": 0,
+      "seeds_higher_main_p99": 0
+    },
+    {
+      "profile": "B",
+      "baseline": "RR",
+      "n_seeds": 5,
+      "reduction_cycles": {
+        "mean": -3.6,
+        "sample_sd": 2.8809720581775866,
+        "minimum": -7.0,
+        "maximum": 0.0
+      },
+      "reduction_percent": {
+        "mean": -20.784313725490197,
+        "sample_sd": 16.556730849085923,
+        "minimum": -41.1764705882353,
+        "maximum": 0.0
+      },
+      "seeds_lower_main_p99": 0,
+      "seeds_tied_p99": 1,
+      "seeds_higher_main_p99": 4
+    }
+  ],
+  "convention": "arithmetic mean of five run values; sampleSD/min/max; P99 means are not pooled request P99; no population inference"
+}

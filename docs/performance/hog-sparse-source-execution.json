@@ -1,0 +1,277 @@
+{
+  "execution_head": "906ac86",
+  "frozen_tooling_commit": "70bc6006eaecaaa93b5c9a56939a9a3e2bcf633b",
+  "run_id": "20261022T034507Z_311",
+  "outer_process": {
+    "scope": "HS-main",
+    "exit": 0,
+    "start_utc": "2026-10-22T03:45:02.607380+00:00",
+    "end_utc": "2026-10-22T05:45:13.076822+00:00",
+    "elapsed_s": 7210.593921399908,
+    "evidence_lines": [
+      "run_verify: evidence /mnt/c/Users/USER/Documents/Coding Space/CXL/cxl-scheduler/artifacts/implementation/HS-main/20261022T034507Z_311",
+      "run_verify: summary /mnt/c/Users/USER/Documents/Coding Space/CXL/cxl-scheduler/artifacts/implementation/HS-main/20261022T034507Z_311/summary.json",
+      "run_verify: summary /mnt/c/Users/USER/Documents/Coding Space/CXL/cxl-scheduler/artifacts/implementation/HS-main/20261022T034507Z_311/summary.json"
+    ]
+  },
+  "native": {
+    "model": "claude/claude-opus-5-5",
+    "effort": "medium",
+    "session": "ba43dac0-d728-4c88-9e91-25be271a795b",
+    "exit": 1,
+    "elapsed_s": 248.6756011999678,
+    "blocker": "weekly quota429 before code writes"
+  },
+  "fallback": {
+    "agent": "GPT6.1Sol",
+    "effort": "high",
+    "authorization": "owner-approved quota fallback",
+    "task": "/root/sol_hog_sparse"
+  },
+  "pilot": {
+    "run_id": "20261022T034155Z_369",
+    "exit": 0,
+    "rtl_cases": 3,
+    "units": 26,
+    "nonresetcycles": 629217,
+    "excluded_repeat": "20261022T033946Z_567: realPASS but outerexitNOT_RECORDED; preserve history"
+  },
+  "concurrency": {
+    "jobs": 6,
+    "make_jobs": 2,
+    "reason": "resource-only adjustment;16 logical CPUs/~14GiB initiallyavailable"
+  },
+  "performance_scope": "N4 two real W5M windows then finite heavy/sparse phases;5seeds;no application or postlayout inference",
+  "parent_checks": {
+    "pooled_stat_unit_cases": 3,
+    "actual_evidence_mutations": 13
+  },
+  "actual_total_wall_s": [
+    {
+      "policy": "FCFS",
+      "seed": 509,
+      "active_wall_s": 1861.559004226,
+      "total_wall_s": 1905.169432179,
+      "peak_rss_kib": 77672
+    },
+    {
+      "policy": "FCFS",
+      "seed": 510,
+      "active_wall_s": 1859.1838626620001,
+      "total_wall_s": 1903.2288538880002,
+      "peak_rss_kib": 77476
+    },
+    {
+      "policy": "FCFS",
+      "seed": 511,
+      "active_wall_s": 1870.2001418870002,
+      "total_wall_s": 1914.8419637630002,
+      "peak_rss_kib": 77544
+    },
+    {
+      "policy": "FCFS",
+      "seed": 512,
+      "active_wall_s": 1931.031225746,
+      "total_wall_s": 1975.053346837,
+      "peak_rss_kib": 77236
+    },
+    {
+      "policy": "FCFS",
+      "seed": 513,
+      "active_wall_s": 1852.9429437980002,
+      "total_wall_s": 1896.1094646400002,
+      "peak_rss_kib": 76996
+    },
+    {
+      "policy": "RR",
+      "seed": 509,
+      "active_wall_s": 1928.5656487969998,
+      "total_wall_s": 1972.050059551,
+      "peak_rss_kib": 77588
+    },
+    {
+      "policy": "RR",
+      "seed": 510,
+      "active_wall_s": 2251.751065785,
+      "total_wall_s": 2301.603494733,
+      "peak_rss_kib": 77548
+    },
+    {
+      "policy": "RR",
+      "seed": 511,
+      "active_wall_s": 2239.6754836050004,
+      "total_wall_s": 2288.207927061,
+      "peak_rss_kib": 77868
+    },
+    {
+      "policy": "RR",
+      "seed": 512,
+      "active_wall_s": 2238.998895962,
+      "total_wall_s": 2288.294809927,
+      "peak_rss_kib": 77764
+    },
+    {
+      "policy": "RR",
+      "seed": 513,
+      "active_wall_s": 2283.9156482750004,
+      "total_wall_s": 2341.0460678609998,
+      "peak_rss_kib": 77976
+    },
+    {
+      "policy": "FAI_MAIN",
+      "seed": 509,
+      "active_wall_s": 3290.6851898170003,
+      "total_wall_s": 3365.287919889,
+      "peak_rss_kib": 77584
+    },
+    {
+      "policy": "FAI_MAIN",
+      "seed": 510,
+      "active_wall_s": 3400.0137436689997,
+      "total_wall_s": 3467.15507373,
+      "peak_rss_kib": 77932
+    },
+    {
+      "policy": "FAI_MAIN",
+      "seed": 511,
+      "active_wall_s": 2819.1606519039997,
+      "total_wall_s": 2875.375927819,
+      "peak_rss_kib": 77948
+    },
+    {
+      "policy": "FAI_MAIN",
+      "seed": 512,
+      "active_wall_s": 2789.059614273,
+      "total_wall_s": 2844.122846737,
+      "peak_rss_kib": 77792
+    },
+    {
+      "policy": "FAI_MAIN",
+      "seed": 513,
+      "active_wall_s": 2812.169898059,
+      "total_wall_s": 2867.957048384,
+      "peak_rss_kib": 78008
+    }
+  ],
+  "worker_hashes": {
+    "scripts/run_hog_sparse.py": "960faa4ae2112a24d08836001a3f3af51def19648844ce70f6ab5c079e353cfa",
+    "sim/performance/hog_sparse.py": "13f6833c611b285a6ac07c48ce1fe8e8d1b80e3834dd10dc48fa62603600343b",
+    "sim/performance/test_hog_sparse.py": "4abb521694785b40f7fcb1158a5ee6a9b0a81b836675adbfcb6116816ebfe46e",
+    "sim/performance/tests/test_hog_sparse.py": "c8b239402799c401e739efd041eea6eca3ac125b521924ad3f90e41eeb366f11",
+    "sim/performance/HOG_SPARSE_README.md": "1dda28a83ae1b7728e06e1aaf0eb121e72fff2da93e8be78466a80c3ebb021b1"
+  },
+  "runtime_hashes": {
+    "refc/CLAUDE.md": "ee87ed9f9ce1cc7d16615a5ab9156133dff7afb01e6bf1f33d2438ef9ce66aea",
+    "refc/cxl_model/__init__.py": "4f7d5e7c098545d0c3c3ff2c7bddb3412ebc514d28e77c365325fd85e2af682b",
+    "refc/cxl_model/common_ctrl_model.py": "f35544ad94266029210f8884c01a97bd747958c7531868b17bfad71556a797d4",
+    "refc/cxl_model/fai_alg2_model.py": "bd97a7fcfaa53326dd9b737f088e9c371ba5288b6df7acaac08c02361fbea070",
+    "refc/cxl_model/fai_main_model.py": "7f2bbdfb9b3ba20d82f0965136f1458efebf157dc844364aa40696aa6ad8c381",
+    "refc/cxl_model/fcfs_model.py": "f868aab7b961db8801ac0a943a4ca03d89273867f20ea25cb0845362d318d421",
+    "refc/cxl_model/fifo_model.py": "3fe85ab0f07658ad65aca46f7a1b25d508d195d56ec9a4c605bb60ed0f0749e8",
+    "refc/cxl_model/rr_model.py": "faf0e9f28c2eabcdce324f92b36db7afcb2119d11b5fbd033b7e87617948986b",
+    "refc/tests/test_common_ctrl_model.py": "fae26ac2c41f9b19126396319d30f910fb237586a588ea429bda8174dbf2b750",
+    "refc/tests/test_fai_alg2_model.py": "2637e0112178e2a482c78cb643cc0bfc0b4d2cd2196b691014c61d810955291e",
+    "refc/tests/test_fai_main_model.py": "ff787bdd17ac366e8045712763a58c32bc81c2567208a0aca4fdb3273fc8752e",
+    "refc/tests/test_fcfs_model.py": "311c67085b07714869245b32283e5037c96c95c78f6943d983a229f303ad7017",
+    "refc/tests/test_fifo_model.py": "8268cc84086262219bef121081b8900d23f78e2a54fc2ea48d720b89a133e4a9",
+    "refc/tests/test_rr_model.py": "3adbce05aefbc26c27cb96e70cb3fdb5bbb025b12b34574f1ed549e8f4864c34",
+    "rtl/CLAUDE.md": "6d9714b0f4cf2792aeb4df6f50037672fd88aef9ed34febb10bb3d32d24eb91b",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_fai_main_sched.sv": "12d1d4f973503f3096260de932fbb3b2887d22a3f947399b5666690e624e3ff6",
+    "rtl/common/cxl_fcfs_sel.sv": "3418505168ca4a0c93422101f1e1a7a042833c935e0f9b021661535b7b6a2c20",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/common/cxl_rr_sched.sv": "84803ce5fafefcd2f58739c9768bd0e533cb10823c74203d9e039319f0714fdf",
+    "rtl/filelist_common.f": "e73058f11ffafe5dbae6fac1a32cfe39edeaec9a85370ea87ead63235feb1c98",
+    "rtl/filelist_switch.f": "8358645db33088c0963b8cf93f0feee629ed4bab3dd735c21589306e4f3e5cc5",
+    "rtl/filelist_top.f": "aebb7c603629a7ee38a97bbcd02607235658e4f4e203375905a467092c04f7f9",
+    "rtl/include/cxl_sched_pkg.sv": "05d2cb6af0c4055873b99bfa26e61fa899fdf1e227af34b42dec04080e3c5556",
+    "rtl/top/switch_top.sv": "142d7b6495c9b8f1f03072301cd5db7620d6c076168bc756c4e36847030fe56f",
+    "scripts/audit_descriptor_followup.py": "08c8635a72c4cdb6915fc7bfc60e8951fbd041e500aa951d2391d52cdaaef47a",
+    "scripts/audit_descriptor_performance.py": "02ad95a1591118cc085106c7f53fcda7c6bedcfc09b548438a5086efa6d9cc82",
+    "scripts/audit_descriptor_placement.py": "f76eea3adb7fcad3757933abd5f82677ec9088f411c49483b541c7046b7cd663",
+    "scripts/audit_hog_sparse.py": "1cc194e5b019a993e8fb7c8c6da6fcc26fd1d7fe3f427ba53ae0c6252bd82f49",
+    "scripts/check_environment.py": "f04a2de4121a6c5ec47f16a39d433dda92cdd41ecb1205f60b23e71ed9a4ea2e",
+    "scripts/check_power_replay.py": "d175f703cea2d009abd7ab60b296a35d43a7309c6ce82b68b87c9a3f428c4540",
+    "scripts/check_ts_older_equiv.sh": "d3aad33f9c7e36bd90b0c6a16ea8a6ae00eec6dd239f46010a414afa78328515",
+    "scripts/compare_fai_interps.py": "69313f8378e50cd1ddceb2a543946551a753c7c2096132fc55f072e0b814c266",
+    "scripts/export_power_vectors.py": "ea76b3cf3e79439fff62bee04bf76d1944784bb2688bfe50f5cc6ba46b37aa15",
+    "scripts/prepare_ppa_run.py": "8b8a4f3a3324f5a3527661bf098a4b2715758fc65504f3ce968b20fb43173a7e",
+    "scripts/remote_eda.py": "f918d67ba89b69c0fc8f5594a259ce9a219a4d21bbfe047079bf1abd1be02168",
+    "scripts/remote_entry.sh": "05338546410938c02b8748c11eaf8f1c801b812cc1be0405819def1c2977915d",
+    "scripts/run_descriptor_followup.py": "b3a68f1a5a72da8824853bd03c92ce9b18f6fb8604dae8adf2804bc4505ebf60",
+    "scripts/run_hog_sparse.py": "960faa4ae2112a24d08836001a3f3af51def19648844ce70f6ab5c079e353cfa",
+    "scripts/run_power_pilot.sh": "5446b882c6d4f61447a14f9b64d9330de8aa41c00a92da272f92539496ba4712",
+    "scripts/run_sim.sh": "e766fe740fe3adf89f6057ee34c4608eed01eb4c0990ca39a13bc7a80fd269cd",
+    "scripts/run_verify.py": "32492f4a479cb53670997b5a20337092dd0e5c8940cffc59a04a0024f7c688c8",
+    "scripts/run_verify.sh": "d7345a2789c23e7af922ae315e55e8023372701273054d88b0e9af55d64a8123",
+    "scripts/setup_wsl.sh": "edc697822776f64a66a2cee2d26b2f9b6dff6e0fbff2c69f20af9e27f6bfda6c",
+    "scripts/smoke_wsl_toolchain.py": "71b10d0e76223d349ce9211a15151591be6e9209aa1559304b6bd86b5864e5f2",
+    "scripts/summarize_primary_phases.py": "8a459d7828cebaa953dec1b3e0e0c7ca5ab5739b92b1b60def6112f34f938fb6",
+    "scripts/test_alg2_long_scope.py": "402168f8773cc53b6e9e97377a8773ea40422bfaf73b7c09c72ec7cd2bbacf6d",
+    "scripts/test_audit_descriptor_followup.py": "5e2e30885117ec920802f874f6b0320ec2d0f3ef569ccbf4547fde57c1277198",
+    "scripts/test_audit_descriptor_performance.py": "c01a00f0a4b395a8b560e0a1b56a6505e1337dd28f06a32af535f17de7272f92",
+    "scripts/test_audit_descriptor_placement.py": "7e9e1d017ce1ecc142c53a04a09627a009e137d6a0857c82a0a9daa83819435c",
+    "scripts/test_audit_hog_sparse.py": "224d4f52b2738ecaf2c36b963bfedbd6ab8efada4f20fb02942dad6a3c635bdd",
+    "scripts/test_compare_fai_interps.py": "331c5e535a29cd24b97a7ffdcb0c12706dbae7bce81486e96944cc01d3180c36",
+    "scripts/test_power_extension.py": "0711c06ff983db5e5b03b9800ea0ba054f3525e698e38a6b3c4cba1c0a46a622",
+    "scripts/test_power_flow.py": "38a703aadf4eb985f36df97381d9f2fbecc265052f7a848b092f52c8a633c38c",
+    "scripts/test_prepare_ppa_run.py": "cd52c330a14f8aeb28b4450d707b3c91650efc138cd033e9807bc8ef13f3eede",
+    "scripts/test_primary_phase_metrics.py": "e78a3c6e3267fe8c3bba903a746cf2101f3b4208b9abe1a5ae2568ef45fd3364",
+    "scripts/test_remote_eda.py": "0d78cece0c0a2d9638d2e3b608169242d4a61510a91108690476716b05ff7d09",
+    "scripts/test_summarize_primary_phases.py": "1e4905f784725259ee95c0efdd49a0a269e7722b08414f88156169c00dbfd261",
+    "scripts/ts_older_equiv/tb_ts_older_equiv.sv": "3e0abf02b9a59854b6a46367832f6c9a23180c2a22d2821d053ad87d04b9a468",
+    "scripts/wsl_env.sh": "eee4c42925a3b9803c8c6a11390e8eca602d4d0bc49fd169002240fba5672706",
+    "sim/CLAUDE.md": "6b9bf3fc6b9a8e1f52bb147cd703a04983f5aa82f165e5772e53f80be6fab5fc",
+    "sim/common/common_ctrl_tb.py": "25c7d999db4eb7ff9089cf72ad4c5ba529a40491c8c8746cddb3a1cfc8241664",
+    "sim/common/fifo_tb.py": "50b7138fa247b667293d4aaffa7b5f00b7378f9301841df8eb0d2c70bd0d4d3c",
+    "sim/common/hier_util.py": "80e557a8e6644caff26879705fadfe139a78ece2183f374f406de7caf6314784",
+    "sim/common/input_hold.py": "4fc1c66f33a0019848a3fd726cd4f0b5dd9505bd4367f5a5a7a50972387fa903",
+    "sim/common/out_hold_tb.py": "d23493558aaca48e9ff550afcb90787d589e2f5d8c4982beeff74cef33584da1",
+    "sim/common/primary_phase_metrics.py": "e3f9ad288db50f8b7f2a2ef2dfe04c914efbbfefff1af2e9c894c6aee3e997ea",
+    "sim/common/switch_fai_tb.py": "061fa6698142566bee2e6f8e5abed00a88506cd82eae6a849e29526d317c38a4",
+    "sim/common/switch_fcfs_tb.py": "1920633816bfc34849ec75e6458a50ab3e1a05210f19d96abcc17152ea741456",
+    "sim/common/switch_rr_tb.py": "3307c587b0883b7f907e368c5181fb081880aaccce78c15c7a44bb6d2f873933",
+    "sim/common/tag_response.py": "3091842a23e8b3974272a3ec8e90db91ec0cede26da3ba5fdf761c42b0f27554",
+    "sim/common/tests/test_fai_stream.py": "cb9cb8d87d219411485a3f4f8d92e6b8f801de364777fe5b4e654f90db524b80",
+    "sim/common/tests/test_input_hold.py": "125a9bd89e67179648b866cdfbc9e55803feaecbbfc27b679537f2f239c07fd2",
+    "sim/common/tests/test_traffic_trace.py": "5722c73dd0d66f141f34e24f3e44ea093c220ff276c747cd040f3441a4886782",
+    "sim/common/traffic_trace.py": "8dde83d3f52ec1550b314ced05312918a61404ce7c4e31863f448b3d8892bd1c",
+    "sim/cxl_common_ctrl/cxl_common_ctrl_fixture.sv": "561f4d0181dc91fc4b92ba8e5ca5d3498ed04fad5ca949579e6a65fa324cd3fe",
+    "sim/cxl_common_ctrl/filelist_fixture.f": "e9fb9d8bad4f34e90a65a16f3f3c96e2098f91d62dcffcb2b7ab16858dd976a1",
+    "sim/cxl_common_ctrl/test_cxl_common_ctrl.py": "3255bfe8aac24de6e25e01cd34164d430ad00a8816e88edf5a6cdd5d976c9141",
+    "sim/cxl_desc_fifo/test_cxl_desc_fifo.py": "c67dbe66c93708e38b223626b2a2724a28c7026b29a7d08b42c069f48043579d",
+    "sim/cxl_fcfs_sel/test_cxl_fcfs_sel.py": "acaeeb10a94c1c4fd0607ba8dcfde428e47cbdc10b8f7d0c2c5e7a5cffe7436d",
+    "sim/cxl_out_hold/test_cxl_out_hold.py": "2d5dd04ba53d843ca700e81b63fc49750d42f6e7f6b6a2a673fa826579fcf2f0",
+    "sim/performance/HOG_SPARSE_README.md": "1dda28a83ae1b7728e06e1aaf0eb121e72fff2da93e8be78466a80c3ebb021b1",
+    "sim/performance/README.md": "152fff60d1982bac3f448198951c0a547637309f16496a9237affefe848dfe40",
+    "sim/performance/followup.py": "090e750c2d6b96e8b085907f3f0d32f7659b8e04066490932e227d8bc7d73d7f",
+    "sim/performance/hog_sparse.py": "13f6833c611b285a6ac07c48ce1fe8e8d1b80e3834dd10dc48fa62603600343b",
+    "sim/performance/test_descriptor_followup.py": "d674f35b0b3a65b36cbc07ac9879041aba90af4b8c910055a3db502c8eb1a4e8",
+    "sim/performance/test_hog_sparse.py": "4abb521694785b40f7fcb1158a5ee6a9b0a81b836675adbfcb6116816ebfe46e",
+    "sim/performance/tests/test_followup.py": "17301afe1264f1c665c6a749800973ee4aa9e72704741a1f09d02254f209a028",
+    "sim/performance/tests/test_hog_sparse.py": "c8b239402799c401e739efd041eea6eca3ac125b521924ad3f90e41eeb366f11",
+    "sim/power/tb_power.sv": "d2bf2978c0ae228278d5a4fc36bde981a6f55c24d033f8672a6839ef3309a187",
+    "sim/switch_top_fai/fai_stream.py": "3367aa2708a91218551824303f767394c4c0a550061df75783ea5868f04a27e2",
+    "sim/switch_top_fai/test_switch_fai.py": "6982bbac7f29811eaa64ddfd17bf09e2f724e7fbf853d7bafb771ad8714c3234",
+    "sim/switch_top_fai/test_switch_fai_primary.py": "52005235359f5616bdea2ccd2926f561ff6895c2f87e35a4e49b551ef1520ff9",
+    "sim/switch_top_fai/test_switch_fai_production.py": "1b2ea613e44bc97680e072214200966369dcf5d2107f68d7beda4d42809f78d8",
+    "sim/switch_top_fai/test_switch_fai_stress.py": "32a523998cede41074d54f8364f92501668996d5dab7d7d6c7536d3361499f8c",
+    "sim/switch_top_fai_alg2/test_switch_fai_alg2.py": "8632485fdcea47018e2d9ee7e90fae49dd15347c58a0597f2fbfe4d97e9f85a4",
+    "sim/switch_top_fai_alg2/test_switch_fai_alg2_production_smoke.py": "0f906e659bee82aed2758683ad2f8913f16569391f0cba8d1c179b1bcb03baa7",
+    "sim/switch_top_fai_alg2/test_switch_fai_compare.py": "43499a77d09a4ca66747f7507d04c9b5b0fb6290a1f1ce6bb671f336b69728cc",
+    "sim/switch_top_fcfs/test_switch_fcfs.py": "1cc6cadddd2a211e49c6004957dccc94e325095729c71ff572b269eda1a02600",
+    "sim/switch_top_fcfs/test_switch_fcfs_primary.py": "b9a5882bcdbe8f40b1205e95082e1810b20066d48371a21d896cae50836eb8ac",
+    "sim/switch_top_rr/test_switch_rr.py": "6cac17d2b7cf40e318f49cadf56fabe2523c95d0d02d029d01b8a74ab022edcc",
+    "sim/switch_top_rr/test_switch_rr_primary.py": "3783839317bf233fb24355a2f557494126635d25f7b6634b71321600b54c33c9",
+    "sim/uvm/scripts/run_regression_uvm.sh": "f94be244604389ab7c6394bd0cfb7256eec46433aba22c8b06cd1e9848d13a37",
+    "specs/APPROVAL.md": "a4675fbff117c2f9e86557d813e0f8e8daddf59cd002acb511bcc1efae3aca7c",
+    "specs/CXL_SPEC.md": "797a5cdf01d2f769f44ca45225a33cc0510b04a408a8ff847e1db1c80928a4cf",
+    "specs/DECISIONS.md": "25357f70bf5e4b8912cf73e922484f8cf89ec70df397e1fd85ee97749317333f"
+  },
+  "preserved": {
+    "files": 348,
+    "dirty_final_files": 188,
+    "existing_raw_metric_files": 264,
+    "status": "UNCHANGED"
+  }
+}

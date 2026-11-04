@@ -1,0 +1,106 @@
+{
+  "baseline_commit": "bb7f407623812c1866bafe2352a0433ffad263c8",
+  "branch": "experiment/main-sq",
+  "frozen_spec": "1af80967bbc2fb83224f4725c4fb450889e69c62",
+  "mapped_ppa_source": "759f86b24f13ed5984c19034eeeea2ca43b0e971",
+  "current_main_origin": "c8e7ea8c0e4530572b3abf5b14ea9958e24f1789",
+  "runtime_source_commit": "3e457ccdfcdf0cbc2b2e9f380895b1c7d7b62e05",
+  "run_id": "20261023T083405Z_1850",
+  "outer_exit": 0,
+  "start_utc": "2026-10-23T08:34:05.525004+00:00",
+  "end_utc": "2026-10-23T09:21:11.092159+00:00",
+  "elapsed_s": 2825.62331169995,
+  "native": [
+    {
+      "session": "9f4e4095-5ccb-4e8c-ba98-7769a01f1c44",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "exit": 0,
+      "elapsed_s": 140.45871699997224,
+      "role": "focused workflow: safeguard, no code"
+    },
+    {
+      "session": "9ab3c007-4b1b-4a3d-b32b-526bdc477b88",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "exit": 0,
+      "elapsed_s": 713.2043565999484,
+      "role": "installed testbench-dev: four passive files and pilot"
+    }
+  ],
+  "tools": {
+    "claude": "2.1.306",
+    "rtl_agent_team": "0.14.6",
+    "verilator": "5.052",
+    "cocotb": "2.1.0",
+    "wsl_python": "3.12.3",
+    "plot_matplotlib": "3.10.0"
+  },
+  "fallback_used": false,
+  "core_rtl_changed": false,
+  "SQ_RTL_implemented": false,
+  "new_PPA_run": false,
+  "runtime_file_count": 110,
+  "functional_new_files": {
+    "sim/performance/main_sq_diagnosis.py": "e1a8d7c31ef206b1cdf38786f84d5fdc120ed40734cdb6116c157e82b3f79f9b",
+    "sim/performance/test_main_sq_diagnosis.py": "2df79386562ab4dea97903f19e8179230ed36891aa6c16f093987aa06dfd5e1f",
+    "sim/performance/tests/test_main_sq_diagnosis.py": "de5e7b4f3586e000cb313108be58572112b1c2cec6bd4950d9ef69c1756606e5",
+    "scripts/run_main_sq_diagnosis.py": "aca7be5e0ab5a6b89da13894c7a81330c58478de896a48520fde7eecca74e785"
+  },
+  "trace_sha256": "c6f0c7181bf9742fb585d2cb7375f94dcc0af13fc350b7b70dae781a1952875b",
+  "trace_config": {
+    "burst_block_cycles": 1024,
+    "burst_blocks": 100,
+    "burst_offset_inclusive": [
+      0,
+      1023
+    ],
+    "burst_size": 8,
+    "depth": 16,
+    "desc_w": 105,
+    "generator": "cxl-hog-sparse-traffic-v1",
+    "heavy_per_cycle": 1,
+    "heavy_source": 0,
+    "n_src": 4,
+    "phase_cycles": {
+      "A": 100000,
+      "A_guard": 1024,
+      "B": 102400,
+      "B_guard": 1024,
+      "training": 10000000
+    },
+    "ready": 1,
+    "rng": "independent arrival/offset/descriptor stream per source",
+    "seed": 509,
+    "sparse_probability": [
+      1,
+      128
+    ],
+    "timing": "cycle0 first nonreset; generate before edge; half-open phases",
+    "window": 5000000
+  },
+  "config_canonical_sha256": "a7b9f8d66cc188d3be99f861faf3c5b1f94b17e8d74b959608daa0e7065a2a2c",
+  "production_nonreset_cycles": 31333251,
+  "pilot_nonreset_cycles": 629217,
+  "total_nonreset_cycles": 31962468,
+  "unique_native_unit_cases": 32,
+  "actual_RTL_runs": 6,
+  "independent_reviewers": [
+    "Codex sq_evidence_audit",
+    "Codex sq_arch_review",
+    "Codex sq_gate_challenge"
+  ],
+  "independent_analysis_tests": 6,
+  "independent_analysis_subtests": 14,
+  "preservation": {
+    "protected_files": 694,
+    "final_files": 518,
+    "earlier_raw_metrics": 264
+  },
+  "raw_bundle": {
+    "file": "production-replay-seed509.tar.gz",
+    "sha256": "e2e75552d02885568eb05b7a6503b4e980c546922807759b5de9b2afbf7bea66",
+    "note": "22 files; raw results/JUnit/reference and portable summary projection; full original logs remain in artifacts"
+  },
+  "strict_command": "CXL_MSQ_REFERENCE=artifacts/implementation/HS-main/20261022T034507Z_311 python scripts/run_main_sq_diagnosis.py MSQ-main -j 3 --make-jobs 2"
+}

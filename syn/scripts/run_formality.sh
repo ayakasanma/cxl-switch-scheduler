@@ -1,0 +1,330 @@
+#!/usr/bin/env bash
+# run_formality.sh — Synopsys Formality equivalence checking
+# Usage: syn/scripts/run_formality.sh [OPTIONS]
+#
+# Compares RTL (reference) against gate-level netlist (implementation)
+# to prove functional equivalence after synthesis.
+#
+# Examples:
+#   syn/scripts/run_formality.sh --top top_module --rtl rtl/filelist_top.f --netlist syn/vnet/top_module.v
+#   syn/scripts/run_formality.sh --top top_module --rtl rtl/filelist_top.f --netlist syn/vnet/top_module.v --svf syn/svf/top_module.svf
+
+set -euo pipefail
+
+# Source Docker-aware tool runner (transparent fallback)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+_LIB_RUNNER="$(cd "$SCRIPT_DIR/../../lib" 2>/dev/null && pwd)/tool-runner.sh" 2>/dev/null || true
+if [[ -f "${_LIB_RUNNER:-}" ]]; then
+  source "$_LIB_RUNNER"
+else
+  run_tool() { "$@"; }
+fi
+
+# RAT_PROJECT_ROOT (optional env) overrides the working root so relative paths
+# and default output dirs resolve against the project root even when invoked
+# from a different CWD. Unset ⇒ cd "$(pwd)" is a no-op (behavior unchanged).
+PROJECT_ROOT="${RAT_PROJECT_ROOT:-$(pwd)}"
+cd "$PROJECT_ROOT"
+
+# ─── Defaults ───────────────────────────────────────────────────────────────
+TOP=""
+RTL_FILELIST=""
+NETLIST=""
+SVF=""
+LIBERTY=""
+OUTDIR="syn/rpt"
+SCRIPT_PATH=""
+VERBOSE=0
+
+# ─── Usage ──────────────────────────────────────────────────────────────────
+usage() {
+  cat <<'USAGE'
+Usage: syn/scripts/run_formality.sh [OPTIONS]
+
+Options:
+  --top <module>      Top-level module name (required)
+  --rtl <filelist>    RTL source filelist (.f file, reference)
+  --netlist <file>    Gate-level netlist (.v, implementation)
+  --svf <file>        SVF guidance file from DC (optional)
+  --liberty <file>    Liberty (.lib) technology library
+  --outdir <dir>      Report output directory (default: syn/rpt)
+  --script <file>     Custom Formality Tcl script
+  -v, --verbose       Verbose output
+  -h, --help          Show this help
+USAGE
+  exit 0
+}
+
+# ─── Shell-metacharacter validation (self-contained; template is deployed standalone) ──
+# Values checked here are interpolated into the tool command line (echoed into
+# a replay script) and into the generated Formality Tcl. Reject anything
+# outside a path/identifier-safe whitelist so a hostile filelist entry or CLI
+# arg cannot inject shell or Tcl commands (mirrors the run_syn.sh v0.11.3
+# Tcl-injection hardening precedent).
+validate_shell_safe() {
+  local label="$1"; shift
+  local v
+  for v in "$@"; do
+    [ -z "$v" ] && continue
+    if ! [[ "$v" =~ ^[A-Za-z0-9_./+=@:,-]+$ ]]; then
+      echo "ERROR: $label contains shell-unsafe characters: '$v'" >&2
+      echo "       Allowed: letters, digits, and _ . / + = @ : , -  — rename/move and retry." >&2
+      exit 1
+    fi
+  done
+}
+
+trim_filelist_line() {
+  local line="$1"
+  line="${line%%//*}"
+  # Filelist tokens with whitespace are outside this wrapper's safe replay/Tcl
+  # policy; trim only leading/trailing whitespace before explicit validation.
+  line="${line#"${line%%[![:space:]]*}"}"
+  line="${line%"${line##*[![:space:]]}"}"
+  printf '%s\n' "$line"
+}
+
+filelist_dirname() {
+  local p="$1"
+  if [[ "$p" == */* ]]; then
+    printf '%s\n' "${p%/*}"
+  else
+    printf '%s\n' "."
+  fi
+}
+
+resolve_filelist_path() {
+  local base="$1"
+  local entry="$2"
+  if [[ "$entry" == /* ]]; then
+    printf '%s\n' "$entry"
+  elif [[ -e "$PROJECT_ROOT/$entry" ]]; then
+    # Generated filelists use project-root-relative paths such as rtl/top.sv.
+    printf '%s\n' "$PROJECT_ROOT/$entry"
+  else
+    # Nested filelists may use entries relative to their own directory.
+    printf '%s/%s\n' "$base" "$entry"
+  fi
+}
+
+resolve_incdir_option() {
+  local base="$1"
+  local option="$2"
+  local body="${option#+incdir+}"
+  local item result="+incdir+" separator=""
+
+  [[ -n "$body" ]] || { echo "ERROR: malformed +incdir+ option" >&2; exit 1; }
+  while [[ "$body" == *+* ]]; do
+    item="${body%%+*}"
+    [[ -n "$item" ]] || { echo "ERROR: malformed +incdir+ option" >&2; exit 1; }
+    result+="${separator}$(resolve_filelist_path "$base" "$item")"
+    separator="+"
+    body="${body#*+}"
+  done
+  [[ -n "$body" ]] || { echo "ERROR: malformed +incdir+ option" >&2; exit 1; }
+  result+="${separator}$(resolve_filelist_path "$base" "$body")"
+  printf '%s\n' "$result"
+}
+
+collect_rtl_filelist() {
+  local filelist="$1"
+  local base line nested resolved stack_item
+
+  validate_shell_safe "RTL filelist path" "$filelist"
+  [[ -f "$filelist" ]] || { echo "ERROR: RTL filelist not found: $filelist" >&2; exit 1; }
+
+  if ((${#FILELIST_STACK[@]})); then
+    for stack_item in "${FILELIST_STACK[@]}"; do
+      [[ "$stack_item" == "$filelist" ]] && {
+        echo "ERROR: recursive RTL filelist include cycle at: $filelist" >&2
+        exit 1
+      }
+    done
+  fi
+
+  FILELIST_STACK+=("$filelist")
+  base="$(filelist_dirname "$filelist")"
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    line="$(trim_filelist_line "$line")"
+    line="${line%%#*}"
+    line="${line%"${line##*[![:space:]]}"}"
+    [[ -z "$line" ]] && continue
+    case "$line" in
+      +incdir+*)
+        resolved="$(resolve_incdir_option "$base" "$line")"
+        validate_shell_safe "RTL filelist option" "$resolved"
+        RTL_ARGS+=("$resolved")
+        ;;
+      +define+*)
+        validate_shell_safe "RTL filelist option" "$line"
+        RTL_ARGS+=("$line")
+        ;;
+      -f\ *)
+        nested="${line#-f }"
+        nested="$(resolve_filelist_path "$base" "$nested")"
+        collect_rtl_filelist "$nested"
+        ;;
+      -f*)
+        nested="${line#-f}"
+        nested="$(resolve_filelist_path "$base" "$nested")"
+        collect_rtl_filelist "$nested"
+        ;;
+      -*)
+        echo "ERROR: unsupported RTL filelist option: $line" >&2
+        exit 1
+        ;;
+      *)
+        resolved="$(resolve_filelist_path "$base" "$line")"
+        validate_shell_safe "RTL file path" "$resolved"
+        RTL_ARGS+=("$resolved")
+        RTL_FILES+=("$resolved")
+        ;;
+    esac
+  done < "$filelist"
+  unset 'FILELIST_STACK[${#FILELIST_STACK[@]}-1]'
+}
+
+# ─── Parse args ─────────────────────────────────────────────────────────────
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --top)     TOP="$2"; shift 2 ;;
+    --rtl)     RTL_FILELIST="$2"; shift 2 ;;
+    --netlist) NETLIST="$2"; shift 2 ;;
+    --svf)     SVF="$2"; shift 2 ;;
+    --liberty) LIBERTY="$2"; shift 2 ;;
+    --outdir)  OUTDIR="$2"; shift 2 ;;
+    --script)  SCRIPT_PATH="$2"; shift 2 ;;
+    -v|--verbose) VERBOSE=1; shift ;;
+    -h|--help) usage ;;
+    -*)        echo "ERROR: Unknown option: $1" >&2; exit 1 ;;
+    *)         echo "ERROR: Unexpected argument: $1" >&2; exit 1 ;;
+  esac
+done
+
+# --- Verbose: trace the wrapper itself -------------------------------------
+# Tool output already goes through `tee`; what --verbose adds is visibility
+# into what this wrapper does (path resolution, file discovery, env setup).
+[[ "$VERBOSE" -eq 1 ]] && set -x
+
+[[ -z "$TOP" ]] && { echo "ERROR: --top is required" >&2; exit 1; }
+[[ -z "$RTL_FILELIST" ]] && { echo "ERROR: --rtl is required" >&2; exit 1; }
+[[ -z "$NETLIST" ]] && { echo "ERROR: --netlist is required" >&2; exit 1; }
+
+# --top is emitted into the Tcl (`set_top r:/WORK/$TOP`) and into generated
+# file names — require a plain Verilog module identifier.
+if ! [[ "$TOP" =~ ^[A-Za-z_][A-Za-z0-9_]*$ ]]; then
+  echo "ERROR: --top must be a Verilog module identifier (got: '$TOP')" >&2
+  exit 1
+fi
+# Paths below feed the eval-free but replayed command line and the generated
+# Formality Tcl — validate against shell metacharacters first.
+validate_shell_safe "--rtl path" "$RTL_FILELIST"
+validate_shell_safe "--netlist path" "$NETLIST"
+validate_shell_safe "--svf path" "$SVF"
+validate_shell_safe "--liberty path" "$LIBERTY"
+validate_shell_safe "--outdir path" "$OUTDIR"
+validate_shell_safe "--script path" "$SCRIPT_PATH"
+
+mkdir -p "$OUTDIR"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+RUN_CWD="$(pwd)"
+REPLAY_DIR="$OUTDIR/replay"
+mkdir -p "$REPLAY_DIR"
+REPLAY_SCRIPT="$REPLAY_DIR/run_formality_${TOP}_${TIMESTAMP}.sh"
+REPORT="$OUTDIR/formality_${TOP}_${TIMESTAMP}.log"
+
+# ─── Collect RTL files/options ────────────────────────────────────────────
+RTL_ARGS=()
+RTL_FILES=()
+FILELIST_STACK=()
+collect_rtl_filelist "$RTL_FILELIST"
+
+# ─── Generate Formality Tcl ──────────────────────────────────────────────
+FM_TCL="$SCRIPT_PATH"
+if [[ -z "$FM_TCL" ]]; then
+  FM_TCL="$OUTDIR/formality_${TOP}_${TIMESTAMP}.tcl"
+fi
+
+if [[ ! -f "$FM_TCL" ]] || [[ -z "$SCRIPT_PATH" ]]; then
+  {
+    echo "# Formality equivalence checking script for $TOP"
+    echo "# Generated: $(date)"
+    echo ""
+    [[ -n "$SVF" ]] && echo "set_svf \"$SVF\""
+    echo ""
+    echo "# --- Reference design (RTL) ---"
+    printf 'read_sverilog -container r -libname WORK'
+    for f in "${RTL_ARGS[@]}"; do
+      printf ' "%s"' "$f"
+    done
+    printf '\n'
+    echo "set_top r:/WORK/$TOP"
+    echo ""
+    echo "# --- Implementation design (netlist) ---"
+    [[ -n "$LIBERTY" ]] && echo "read_db -container i \"$LIBERTY\""
+    echo "read_verilog -container i -libname WORK -05 \"$NETLIST\""
+    echo "set_top i:/WORK/$TOP"
+    echo ""
+    echo "# --- Blackbox SRAM wrappers (behavioral vs foundry macro) ---"
+    echo "# Uncomment for designs using rtl/common/ SRAM wrappers:"
+    echo "# set_black_box r:/WORK/sram_sp; set_black_box i:/WORK/sram_sp"
+    echo "# set_black_box r:/WORK/sram_tp; set_black_box i:/WORK/sram_tp"
+    echo "# set_black_box r:/WORK/sram_dp; set_black_box i:/WORK/sram_dp"
+    echo ""
+    echo "# --- Matching and verification ---"
+    echo "match"
+    echo "set result [verify]"
+    echo ""
+    echo "# --- Reports ---"
+    echo "report_matched_points > \"$OUTDIR/formality_matched_${TOP}.rpt\""
+    echo "report_unmatched_points > \"$OUTDIR/formality_unmatched_${TOP}.rpt\""
+    echo "report_failing_points > \"$OUTDIR/formality_failing_${TOP}.rpt\""
+    echo "report_status > \"$OUTDIR/formality_status_${TOP}.rpt\""
+    echo ""
+    echo "if {\$result} {"
+    echo "  puts \"VERIFICATION PASSED\""
+    echo "  exit 0"
+    echo "} else {"
+    echo "  puts \"VERIFICATION FAILED\""
+    echo "  exit 1"
+    echo "}"
+  } > "$FM_TCL"
+fi
+
+# ─── Execute ─────────────────────────────────────────────────────────────
+CMD="fm_shell -64bit -f \"$FM_TCL\""
+
+echo "=== Formality Equivalence Check ==="
+echo "Top:     $TOP"
+echo "RTL:     $RTL_FILELIST (${#RTL_FILES[@]} files)"
+echo "Netlist: $NETLIST"
+[[ -n "$SVF" ]] && echo "SVF:     $SVF"
+echo "Script:  $FM_TCL"
+echo "CMD:     $CMD"
+
+cat > "$REPLAY_SCRIPT" <<EOF
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$RUN_CWD"
+$CMD
+EOF
+chmod +x "$REPLAY_SCRIPT"
+cp "$REPLAY_SCRIPT" "$REPLAY_DIR/run_formality_${TOP}_latest.sh"
+
+# $FM_TCL components (--script / --outdir / --top) validated against shell
+# metacharacters above — execute via argv, no eval.
+run_tool fm_shell -64bit -f "$FM_TCL" 2>&1 | tee "$REPORT"
+EXIT_CODE=${PIPESTATUS[0]}
+
+# ─── Summary ─────────────────────────────────────────────────────────────
+echo ""
+echo "=== Formality Summary ==="
+echo "Top:      $TOP"
+echo "Result:   $(grep -E 'PASSED|FAILED' "$REPORT" 2>/dev/null | tail -1 || echo 'UNKNOWN')"
+echo "Report:   $REPORT"
+echo "Replay:   $REPLAY_SCRIPT"
+echo "Exit:     $EXIT_CODE"
+
+exit "$EXIT_CODE"
+
+# rat-version: 0.8.14

@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "actual_runs": 42,
+  "matched_trace_groups": 14,
+  "real_non_reset_cycles": 63498,
+  "warmup_cycles": 21504,
+  "measurement_cycles": 10080,
+  "drain_cycles": 31914,
+  "evidence_scope": "N4 W256 finite sensitivity, not production or statistical replication",
+  "inputs": [
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low0_seed509__descriptor_followup_metrics.json",
+      "sha256": "92ecb87f58704fca851c7111b7bced1a606b7e255bd275257ddc6d80167efbe8"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low0_seed509__descriptor_followup_metrics.json",
+      "sha256": "1b6eb200618bbc7fdcf828fbe496e1a10197fc9ff2bfbd4474fa82d34ab666b1"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low0_seed509__descriptor_followup_metrics.json",
+      "sha256": "de5719d168fb7498a080d0517bb8f4845ab295cf98e97e50a65fed8a9e74f26e"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low1_seed509__descriptor_followup_metrics.json",
+      "sha256": "f42d754b47ab2ca23cb2f0ae6ea6e88c5526d6451c467b4ecd2a90d84a44e781"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low1_seed509__descriptor_followup_metrics.json",
+      "sha256": "ed1f28b447eafc356f777792a6cb81060a08bb93612585e780034c9c6da0aed3"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low1_seed509__descriptor_followup_metrics.json",
+      "sha256": "787ddf6544b11a667ea770dd90f446204d9b228014c60b5b8bc0118a2c834095"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low2_seed509__descriptor_followup_metrics.json",
+      "sha256": "afe516b0f026b9b0a30ac3374c9a32c9214eb9ec7b1010b1cec1c7638f53fb2c"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low2_seed509__descriptor_followup_metrics.json",
+      "sha256": "c872eac201eab5b5cd5ec6c4c688c7dc66b4ddb034de7b76652efb317dcd89f4"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low2_seed509__descriptor_followup_metrics.json",
+      "sha256": "9c88b3bd5e2c673b0cec84e85d33ac8ef56b8a4888572e6eba05b44885fe2686"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low3_seed509__descriptor_followup_metrics.json",
+      "sha256": "6f93d6ae6dc8a00d0c926faab44deb918c1354f9676ca1853dc043d2d6d0ec83"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low3_seed509__descriptor_followup_metrics.json",
+      "sha256": "e9a7ddb275e12d385c1e306dd6bd80eb296bb2ac1be2c3d75b752e6924bfa4af"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low3_seed509__descriptor_followup_metrics.json",
+      "sha256": "2b5646b4066702a1888a5149faaa45295e517fa357d4d72175fc062acfce4245"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low01_seed509__descriptor_followup_metrics.json",
+      "sha256": "875dcebcebdb2249fbd217b2b36c134742e73638ba27ff0ca6a7f85f100d80b4"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low01_seed509__descriptor_followup_metrics.json",
+      "sha256": "f88203b609c36aa0c24cfec02c07ba591837feac663b0da5c7f4ebaa35f56354"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low01_seed509__descriptor_followup_metrics.json",
+      "sha256": "764e97d107412403e135f9aab4b4cfb98c44417fa207cc63494f25c5f452d37e"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low02_seed509__descriptor_followup_metrics.json",
+      "sha256": "b57640b3ed0a5cb15e7b94925aed615336d082dd25a297988fc66cece78a8feb"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low02_seed509__descriptor_followup_metrics.json",
+      "sha256": "286278a242a6cb9fa0711b56296302b9ded62aaacedde6014c13d38e5e739626"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low02_seed509__descriptor_followup_metrics.json",
+      "sha256": "4007b4869998a5542239245950c7e0b9a0030d4836eb237fe06c453687f3c2a0"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low03_seed509__descriptor_followup_metrics.json",
+      "sha256": "b066b77e4e181257099a51438bf68de04e2f60ac45ca40fe249097b1e3fcecb6"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low03_seed509__descriptor_followup_metrics.json",
+      "sha256": "c5367de12f414044947b828325afbd1302cc6934a8c935924044463275f9e628"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low03_seed509__descriptor_followup_metrics.json",
+      "sha256": "839065e4dda6e07d76a8a5ca8b23665ed9fff9d5bc6d2dc93853e7c999bd11ec"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low12_seed509__descriptor_followup_metrics.json",
+      "sha256": "15d57ecf5bbf3fcf5d001268eef0155e01ffaadbe8c8231272ac65f32489d81c"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low12_seed509__descriptor_followup_metrics.json",
+      "sha256": "7471b35668e62fbae00ea033ca54fd0540ffaf32555616e5e4a4b5d0e5508daf"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low12_seed509__descriptor_followup_metrics.json",
+      "sha256": "41736ee2529827ad9e97c9d9f1e20ec08280669248a8a921439386a09116240c"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low13_seed509__descriptor_followup_metrics.json",
+      "sha256": "080be5742d728454ac89238697bfbf0de36c2e14faaf8867407a08edd6436d8e"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low13_seed509__descriptor_followup_metrics.json",
+      "sha256": "47a44112a9fbfdf7e8ca95fc0bbe6a9a0115eef1caa000c63df58d682fbffece"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low13_seed509__descriptor_followup_metrics.json",
+      "sha256": "ef30a8444a420b5ae0eafe7ddd4a07e7d3db2bce050b0b8cec4dddb49215d8a5"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low23_seed509__descriptor_followup_metrics.json",
+      "sha256": "6f3da02b64c3c7d00c852dfdb79549524a9a8a85d20c6471215e0c25af56a364"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low23_seed509__descriptor_followup_metrics.json",
+      "sha256": "817ef1ec56869caa4120a66a50110884fd71821922fcd1b67beee21f71cf9045"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low23_seed509__descriptor_followup_metrics.json",
+      "sha256": "66a2293b52197279e336aa9a6499f5de23bec3bf70ed8d8b53e1e743724ab779"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low012_seed509__descriptor_followup_metrics.json",
+      "sha256": "70c128059e1e6044ea6400fa8b2ede1d7c8b05485ab7c0ca374174b483de5210"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low012_seed509__descriptor_followup_metrics.json",
+      "sha256": "d63148c19a3dee04f2e35848550b44e5292e9773cdfd2fb3ee6ba95dacb56b7c"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low012_seed509__descriptor_followup_metrics.json",
+      "sha256": "500cb0be7dad320d95e763a3676dad2f3349b7433c89b7e3cddebbdc0c2a1134"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low013_seed509__descriptor_followup_metrics.json",
+      "sha256": "ba959cb578d7a77d49ec1f84e9a87ff6bb4574d180a8c3c6e934830839f898e6"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low013_seed509__descriptor_followup_metrics.json",
+      "sha256": "899c974916fd71a118f3ceff1fbf729a9e0cfef7c8bfc4ad3eab16e7749c20e5"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low013_seed509__descriptor_followup_metrics.json",
+      "sha256": "49d89744c68b7be734f3b4528001c0fc4e75561a03c0753281511e92caa25703"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low023_seed509__descriptor_followup_metrics.json",
+      "sha256": "78410d696fa3241030cc5c5a498598a897bca79f5dff38c3465aa2db31899106"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low023_seed509__descriptor_followup_metrics.json",
+      "sha256": "0c35090a015a0969275d6d5f2cfd594e101c756c252f093b1383f4ff1fffe40e"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low023_seed509__descriptor_followup_metrics.json",
+      "sha256": "1162cc84eb83676cd0bde3140e2a0eea1ed2d363e0a81d23b8668448a2f737c6"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p0_w256_low123_seed509__descriptor_followup_metrics.json",
+      "sha256": "fb5325ccdf262d93db409ad52eb24442622707704efdc2e90116f1bfb4a47109"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p1_w256_low123_seed509__descriptor_followup_metrics.json",
+      "sha256": "d64922b0ee49fc772dee94c4a6266e2ee94721cdcfe00dc77a0737cf82fd28df"
+    },
+    {
+      "path": "artifacts/implementation/DF-placement/20261022T024651Z_297/results/cocotb_df_placement_p2_w256_low123_seed509__descriptor_followup_metrics.json",
+      "sha256": "0d311520985f34e1ba1e98637cb17cef69ca6a86c497d21012c0d587b47234e7"
+    }
+  ]
+}

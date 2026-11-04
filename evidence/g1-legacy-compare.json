@@ -1,0 +1,2080 @@
+{
+ "exclude": {
+  "evidence_kind": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+  "input_hold_checks": "DUT-only (excluded from model output)",
+  "limitations": "label text differs by design",
+  "native_cgof": "DUT-only",
+  "native_coverage": "DUT-only",
+  "schema": "label differs by design (rtl-v1 vs model-v1)",
+  "wall_s": "nondeterministic wall time"
+ },
+ "field_status_union": {
+  "accepted": [
+   "EQUAL"
+  ],
+  "active_cycles": [
+   "EQUAL"
+  ],
+  "classifier": [
+   "EQUAL"
+  ],
+  "drain_cycles": [
+   "EQUAL"
+  ],
+  "evidence_kind": [
+   "EXCLUDED"
+  ],
+  "fairness": [
+   "EQUAL"
+  ],
+  "fired": [
+   "EQUAL"
+  ],
+  "generated": [
+   "EQUAL"
+  ],
+  "generation_roles": [
+   "EQUAL"
+  ],
+  "heavy": [
+   "EQUAL"
+  ],
+  "input_hold_checks": [
+   "EXCLUDED"
+  ],
+  "job": [
+   "EQUAL"
+  ],
+  "lane": [
+   "EQUAL"
+  ],
+  "limitations": [
+   "EXCLUDED"
+  ],
+  "metrics": [
+   "EQUAL"
+  ],
+  "mode": [
+   "EQUAL"
+  ],
+  "native_cgof": [
+   "EXCLUDED"
+  ],
+  "native_coverage": [
+   "EXCLUDED"
+  ],
+  "params": [
+   "EQUAL"
+  ],
+  "policy": [
+   "EQUAL"
+  ],
+  "ready_cycles": [
+   "EQUAL"
+  ],
+  "schema": [
+   "EXCLUDED"
+  ],
+  "service_shares": [
+   "EQUAL"
+  ],
+  "status": [
+   "EQUAL"
+  ],
+  "trace_config": [
+   "EQUAL"
+  ],
+  "trace_sha256": [
+   "EQUAL"
+  ],
+  "wall_s": [
+   "EXCLUDED"
+  ]
+ },
+ "overall": "PASS",
+ "pairs": 20,
+ "pairs_pass": 20,
+ "results": [
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52849__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "candidate_sha256": "b3639cf3ba807a6056abc7315ff20d2edcea2b205094ac6a23b91b0103c512e5",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52849__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "reference_sha256": "ded64a1578432b16e3cf6b16d38ed2f6452f0d49768a69ebffec83390bb90ada",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52849__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "candidate_sha256": "2e59c36133e37e17486af1ec2755e3861bf6b4915864bcfca246af566c275d66",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52849__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "reference_sha256": "5cddcf3c9899fa14b67a59738408b8eafb3367fbbab1b42557e14528242aaf81",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52849__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "candidate_sha256": "5f3cb152014bf9df1555ac65747a026c1d35117c74731722991e0e2c4ef92ebf",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52849__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "reference_sha256": "088cf6a63ac515d8d12f08b665d42987eabe7c6bd00f48f4d207ee59721b29fb",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52849__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "candidate_sha256": "bcdb55ae4aa20a32387886ae26145bca0b677ba09041786bd01de07fab397747",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52849__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52849/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "reference_sha256": "58d2b052645adba55b6b6ed54eb8c8e712ea03ffa8f7ba1999482eb67b352a71",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52850__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "candidate_sha256": "6ed48f2089d3ee8822d18a36346be371ad8ccd86fd75a12591b922b1b50e8e31",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52850__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "reference_sha256": "7b7eb7c105a398a36f7ffc6fa0d31d83573cf422655c5c502d75e622d2a4d49d",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52850__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "candidate_sha256": "7b90d7f260964733d6f079e071668c8d6096232755060ac7082aa17d63dd8e69",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52850__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "reference_sha256": "3d5eb54087e762c21ef673cb0cfca79676c1f785a4e6b48398107afcfd08c280",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52850__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "candidate_sha256": "1b7af536d925f899bc8ece1cca03776d0d29ae87a2b87a1059da25f069272c7c",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52850__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "reference_sha256": "da9bf764ec4210a40562bb8ab192856d7cd7907f037ddbf9082c816dd31fcd15",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52850__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "candidate_sha256": "de6d1e1201ef9c61399739490995f69e00f11929a19cf83fb750c30a093f7d3b",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52850__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52850/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "reference_sha256": "9fd8484721c205208f1f3947bd4a5598aa5e5503f168dec1bbb231fe4eba65d5",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52851__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "candidate_sha256": "ee117cbfa3ca15855e5cc15d48e1afc6857fdf5f37960567b4888108d521b77e",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52851__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "reference_sha256": "7a62b94c34457c021af1a761e75aa947bcfcf07f018086ddf957944eb495ef5d",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52851__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "candidate_sha256": "376ddcbcdd79e7f394e49722b948dfca19a4032b7197f007dcf2b882d6fab91c",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52851__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "reference_sha256": "7fdf004f5eae569a7547e1724d98f25931cb8e6e45badfcc37968025c962776f",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52851__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "candidate_sha256": "d8fd1a5841cd38073d001752694be5b0277bbfe76747f95e829928bdf3cd9ba6",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52851__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "reference_sha256": "9ea911ed9b44bae6a9c8c1e6c807baddbd4f58fe4c56d4b7372e3187e18dac33",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52851__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "candidate_sha256": "18c48bad796f37b6e38d7cf17eeba115a20dc3abe59169834e79ee77afb7a897",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52851__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52851/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "reference_sha256": "624d5fc4f8b5434eb295d41122ea25d19e421bcd8aec988f91460ce442c8f279",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52852__cocotb_finite-heavy-isolated-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw1.json",
+   "candidate_sha256": "49728c1224239db710d255a37a80dc8f657040e787d30f9d35d0930026118572",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52852__cocotb_finite-heavy-isolated-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-isolated-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw1.json",
+   "reference_sha256": "0b3660d0ba6de8a7b42248eee397cc51659cec26b8460974ea89e15e9294ebbc",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52852__cocotb_finite-heavy-isolated-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw2.json",
+   "candidate_sha256": "9280c49c823d05e0200d6430f9f1008c253599d62d1588147894d3247ee84155",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52852__cocotb_finite-heavy-isolated-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-isolated-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d8-hw2.json",
+   "reference_sha256": "4150d90468ebb885ff25bb3bbe70a42c720d9e96df35234409065498b127d481",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52852__cocotb_finite-heavy-mixed-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw1.json",
+   "candidate_sha256": "79bd68196ed199eca5070ce5c5487b703fc8c3983ffde92b318d25f4b0cb2d03",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52852__cocotb_finite-heavy-mixed-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-mixed-w5000000-d8-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw1.json",
+   "reference_sha256": "201c81349ce8282a6a535bc02fe964e6ab9230c32e786997b187bc6b3b4ca349",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52852__cocotb_finite-heavy-mixed-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw2.json",
+   "candidate_sha256": "a16dd01e05606a2644c65a6cdd6f5d668749a937f8b11623da19634a6d92df52",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52852__cocotb_finite-heavy-mixed-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52852/results/cocotb_finite-heavy-mixed-w5000000-d8-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-hw2.json",
+   "reference_sha256": "76f80d78f9c90a4503fba0a13b294ec483ed933ca5f29b244bdb816ca8d77457",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52853__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "candidate_sha256": "f5670174ee39d582e44d564bb0e17fd8527e31b6512e4497470ad4b9306d949c",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52853__cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-isolated-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw1.json",
+   "reference_sha256": "f10c08ac59d62bd9ba0c06046fadafdbd2f0908227f76e220054ad04b8c05c62",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52853__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "candidate_sha256": "260c84907a635edb44b59eab8013badc6e89e351a697b4438bde46ba896028c6",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52853__cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-isolated-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-hw2.json",
+   "reference_sha256": "c7bf63b15a20ffc1bb819df2beaa2190ad1e778060719ba3312ae391842af82f",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52853__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "candidate_sha256": "0fe510ba9bed33b8d94306235d130951858b76a441098e88f27be988393da488",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52853__cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-mixed-w5000000-d16-hw1-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw1.json",
+   "reference_sha256": "fac2c007f59bfd088e86af3f980608a1f64cb865e4b45e203154b1a6e4f23c38",
+   "status": "PASS"
+  },
+  {
+   "candidate": ".setup-logs/implementation/dynamic-role-switch-v2-exec-20261103/model-g1-7291/results/20261029T182230Z_52853__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "candidate_sha256": "91616111c825bf079fdc1c773aebf5f89c73855215a2fc2e2d22186f79894fcd",
+   "failing_fields": [],
+   "fields": {
+    "accepted": {
+     "status": "EQUAL"
+    },
+    "active_cycles": {
+     "status": "EQUAL"
+    },
+    "classifier": {
+     "status": "EQUAL"
+    },
+    "drain_cycles": {
+     "status": "EQUAL"
+    },
+    "evidence_kind": {
+     "reason": "label differs by design (SCHEDULER_RTL vs MODEL_ONLY)",
+     "status": "EXCLUDED"
+    },
+    "fairness": {
+     "status": "EQUAL"
+    },
+    "fired": {
+     "status": "EQUAL"
+    },
+    "generated": {
+     "status": "EQUAL"
+    },
+    "generation_roles": {
+     "status": "EQUAL"
+    },
+    "heavy": {
+     "status": "EQUAL"
+    },
+    "input_hold_checks": {
+     "reason": "DUT-only (excluded from model output)",
+     "status": "EXCLUDED"
+    },
+    "job": {
+     "status": "EQUAL"
+    },
+    "lane": {
+     "status": "EQUAL"
+    },
+    "limitations": {
+     "reason": "label text differs by design",
+     "status": "EXCLUDED"
+    },
+    "metrics": {
+     "status": "EQUAL"
+    },
+    "mode": {
+     "status": "EQUAL"
+    },
+    "native_cgof": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "native_coverage": {
+     "reason": "DUT-only",
+     "status": "EXCLUDED"
+    },
+    "params": {
+     "status": "EQUAL"
+    },
+    "policy": {
+     "status": "EQUAL"
+    },
+    "ready_cycles": {
+     "status": "EQUAL"
+    },
+    "schema": {
+     "reason": "label differs by design (rtl-v1 vs model-v1)",
+     "status": "EXCLUDED"
+    },
+    "service_shares": {
+     "status": "EQUAL"
+    },
+    "status": {
+     "status": "EQUAL"
+    },
+    "trace_config": {
+     "status": "EQUAL"
+    },
+    "trace_sha256": {
+     "status": "EQUAL"
+    },
+    "wall_s": {
+     "reason": "nondeterministic wall time",
+     "status": "EXCLUDED"
+    }
+   },
+   "id": "20261029T182230Z_52853__cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2",
+   "reference": "artifacts/implementation/cgof-rtl-diagnosis/20261029T182230Z_52853/results/cocotb_finite-heavy-mixed-w5000000-d16-hw2-seed7291_seed7291__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-hw2.json",
+   "reference_sha256": "c81662205b9297061cec60f324c84e9821e2c8f2b87ac640fd288bb2174aa8d0",
+   "status": "PASS"
+  }
+ ],
+ "schema": "cxl-geq-compare-v1"
+}

@@ -1,0 +1,108 @@
+{
+  "claim_matrix": [
+    {
+      "artifact": "artifacts/implementation/cgof-rtl-diagnosis/aggregate-current-20261029.json",
+      "claim": "Trained N4 Sparse tail protection: CGOF (2:1) lowers Sparse G->F P99 from 10.00 to 1.10 cycles (Arm A) and 21.05 to 12.35 cycles (Arm B) vs. FAI-inspired; FAI-ImmBuf (Algorithm-2) reaches 10.00/21.35.",
+      "id": "C1",
+      "scope": "SCHEDULER_RTL (20 confirmation seeds 529-548; 30-run current-source replay)",
+      "sha256": "da0a2fd16a40f2eea871be967a6f7e93fa454544bdd19f015856199508904097",
+      "tier": "CONFIRMED"
+    },
+    {
+      "artifact": "artifacts/implementation/cgof-rtl-diagnosis/confirmation-finite-heavy-fixed-20261029/aggregate.json",
+      "claim": "Single-boundary near-load finite-Heavy quota contrast: CGOF (1:1) vs. (2:1) gives Sparse P99 3.00 vs. 4.00 cycles (+1.00 [1.00, 1.00]) and Heavy max wall gap 9.45 vs. 10.85 cycles (+1.40 [1.10, 1.75]), with 3.05/3.00 extra completion cycles.",
+      "id": "C2",
+      "scope": "SCHEDULER_RTL (20 held-out seeds 529-548, 80 jobs, 40 pairs, W5M)",
+      "sha256": "0f39a3c5e8342c44d6d05bcfd46cfd249f69f1e7ef5ef15615b63a95aa98226d",
+      "tier": "CONFIRMED"
+    },
+    {
+      "artifact": "artifacts/implementation/cgof-rtl-ordering-confirmation/acceptance-20261101T045246Z.json",
+      "claim": "W256 20-seed quota x ordering confirmation: Q1 RR-OF delta is 0 in 20/20 seeds; Q2 RR-OF delta and interaction I are -1 cycle in 7/20 seeds and 0 in 13/20 (mean -0.35), below the 15/20 gate (NOT_CONFIRMED).",
+      "id": "C3",
+      "scope": "SCHEDULER_RTL (20 fresh seeds 6501-6520, 160 jobs, 80 pairs, W256; negative/null confirmation)",
+      "sha256": "abdde975d65137f01620c3c32f5f901df55d242b691cb379a6e36b3cfb354989",
+      "tier": "CONFIRMED"
+    },
+    {
+      "artifact": "artifacts/implementation/cgof-rtl-ordering-w5m-production/acceptance-w5m-campaign-20261102T154205Z.json",
+      "claim": "W5M 5-seed production quota x ordering tradeoff: all 5 seeds give Sparse P99 S = 11/11/12/11 cycles (d1=0, d2=-1, I=-1); RR lowers Q2 Sparse P99 by 1 cycle but raises Q1 Heavy max gap by +1.6 cycles on average (+2/+2/+1/+2/+1), with zero completion-delay contrast (0 in 10/10).",
+      "id": "C4",
+      "scope": "SCHEDULER_RTL (5 fresh seeds 6601-6605, 40 jobs, 20 pairs, W5M production)",
+      "sha256": "9b3f8588f87b6fe980b6181bb61f1224907686242ec24e1e89e4dba8c455ffab",
+      "tier": "DESCRIPTIVE"
+    },
+    {
+      "artifact": "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/summary.json",
+      "claim": "Spare-capacity absorption and transient lag recovery: W5M 20-seed model confirmation gives 0 extra Heavy completion cycles [0, 0] under under-load (within 20-cycle margin) vs. +834.25 cycles [820.4, 849.3] under over-load; W256 common-horizon screen shows near-load transient lag (mean max 5.00/4.95 descriptors) recovers in 20/20 observations.",
+      "id": "C5",
+      "scope": "MODEL_ONLY (20 confirmation seeds 6201-6220 at W5M; 5 exploration seeds x 4 phases at W256)",
+      "sha256": "92afb0f1bd189942864eb853286195d398de2cefcf3503c8fae1d1f2c268c9ac",
+      "tier": "MODEL_ONLY"
+    },
+    {
+      "artifact": "artifacts/implementation/buffer-closed-loop/20261101T015630Z/acceptance.json",
+      "claim": "Credit-refill and Buffer mechanism separation: changing High credit from 1 to 2 shifts first selection divergence in 3/5 arrival phases via refill/eligibility; Main filters 1-window noise (0 flips vs. 2 for Main-1W/FAI-ImmBuf) while adding one window to persistent settle delay (448-704 vs. 192-448 cycles at W256); CGOF(1:1) passes 120/120 classifier-leakage negative controls; latency recovery is not claimed.",
+      "id": "C6",
+      "scope": "MODEL_ONLY (Refill trace; 156 Buffer transition replays; 720 closed-loop runs across seeds 6101-6105)",
+      "sha256": "242c8a15f85b495914d13e68e4bb574518faea6729dff9cb55b691c3e3eb7d54",
+      "tier": "MODEL_ONLY"
+    },
+    {
+      "artifact": "artifacts/implementation/cgof-dynamic-20261030/aggregate.json",
+      "claim": "Multi-window adaptation, readiness shape and admission boundary: across four W5M boundaries, role schedule [0,0,1,1] induces 3 effective-class transitions; bursty 90% readiness raises Sparse P99 and Heavy wall-gap P99 from 3 to 11 cycles while ready-opportunity gap P99 stays 2; D8 shifts Heavy P99 wait from A->F (18->16) to G->A (2->11) with total G->F P99 unchanged at 20.",
+      "id": "C7",
+      "scope": "SCHEDULER_RTL (1 seed 7291, 5 cases, 20 runs, 10 pairs, W5M; CI null)",
+      "sha256": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+      "tier": "SINGLE_SEED"
+    },
+    {
+      "artifact": "docs/final-report/update-20261102/ACCEPTANCE_20261102.md",
+      "claim": "End-to-end CXL.mem response latency, completed memory bandwidth, application IPC/slowdown, CGOF gate-level SAIF power, and multi-seed W5M dynamic/under-over RTL confirmation.",
+      "id": "C8",
+      "scope": "Explicitly unmeasured boundaries and deferred follow-up gates",
+      "sha256": "NOT_RUN",
+      "tier": "NOT_RUN"
+    }
+  ],
+  "claim_matrix_md": "docs/final-report/update-20261102/CLAIM_EVIDENCE_MATRIX_20261102.md",
+  "claim_matrix_md_sha256": "ccfb40fd547e222ada60022763d5d9dd19aca4a1af0a4c9c8bc6b1b496fd46d9",
+  "figure_exports": {
+    "followup-synthesis-20261102.pdf": "d33115e5dbad7ee72e2b7c2f41b2f4cd63ff23e56e26b7864ba0cb64cf81d349",
+    "followup-synthesis-20261102.png": "bb9f49dca7f468c18fd633dac06754d8faf731e8c0c0d1e83e7dfee6ad27a20c",
+    "followup-synthesis-20261102.svg": "993c9e38ef47fe8209030109c0a17f9f18c34a904ad092662ab9da4d25628b49"
+  },
+  "generator": "docs/final-report/generate_update_20261102.py",
+  "generator_sha256": "8c06f4b7496d6bebc26561d4d211d5f514ab23f4c4411c8a69872ca7df923d29",
+  "inputs": {
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/acceptance.json": "242c8a15f85b495914d13e68e4bb574518faea6729dff9cb55b691c3e3eb7d54",
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/exploration-6101-6105.json": "f9a769b87e77334c9e4b5e03e5f7e16d2d07807460153392bd9b5e60095f53b4",
+    "artifacts/implementation/buffer-closed-loop/20261101T015630Z/manifest.json": "d95bcdd4a38adddaa44a53be39fad3fc8d21007d63d0251d98d7c84bfd3a984a",
+    "artifacts/implementation/buffer-transition-screen/20261031T234344Z/manifest.json": "66bb7863873e584ddca31b9c2882c46a30b041c1a6759fe3e359f4399e86441d",
+    "artifacts/implementation/buffer-transition-screen/20261031T234344Z/screen-w256.json": "7cccbb640a972b04fabe5426373d2a50fc5fe43c03f34002fd1047caf2d909b2",
+    "artifacts/implementation/cgof-dynamic-20261030/aggregate.json": "e8a398b18348a99a3a20fc89e1d0086b5c75b31db093b9e1e9ebecbd76d649e8",
+    "artifacts/implementation/cgof-rtl-diagnosis/aggregate-current-20261029.json": "da0a2fd16a40f2eea871be967a6f7e93fa454544bdd19f015856199508904097",
+    "artifacts/implementation/cgof-rtl-diagnosis/confirmation-finite-heavy-fixed-20261029/aggregate.json": "0f39a3c5e8342c44d6d05bcfd46cfd249f69f1e7ef5ef15615b63a95aa98226d",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/acceptance-20261101T045246Z.json": "abdde975d65137f01620c3c32f5f901df55d242b691cb379a6e36b3cfb354989",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/analysis-20261101T045246Z.json": "101b1c1c8ee4327b99104af267761c98f17182205f4154e7e2f7825bf2e0c954",
+    "artifacts/implementation/cgof-rtl-ordering-confirmation/manifest-20261101T045246Z.json": "5d6e690d1844eeae66f4b3da9fc505fdfc34f0a7176b49352abf978ce5d49384",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/acceptance-w5m-campaign-20261102T154205Z.json": "9b3f8588f87b6fe980b6181bb61f1224907686242ec24e1e89e4dba8c455ffab",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/analysis-w5m-campaign-20261102T154205Z.json": "76c1ac380a594787531ba597cc71bf06267cad690bd3bdf51109a48724d50b3c",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6601-20261101T102548Z.json": "fb2b6658fa6a9fa5ca52dd6c5e057e0a2586a3bc2d495db192aaca0b737c2b53",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6602-20261102T101510Z.json": "67524ff90e3dc8e58d10194b219182b5e5c271dcec09f93eca96bde5c650ef4e",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6603-20261102T120102Z.json": "688d6ef898a1661b0bdfd2c1da3ce33d42b6256b0091d57657d1faff8a0593be",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6604-20261102T134650Z.json": "c353aa354145a6e27b3da6704a9a9cad0af8e37f93a2b2ce6ce7c2f517216818",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/gate-6605-20261102T153133Z.json": "e2068925fb52284534ada8fef326e1446824077d5e72cddecd42c633877b6afe",
+    "artifacts/implementation/cgof-rtl-ordering-w5m-production/manifest-w5m-campaign-20261102T154205Z.json": "de7f657240ed4dc24c46be3e2166893502dbd2b229aebedf6cc07739649edee5",
+    "artifacts/implementation/evidence-review-arrival-20261101T072532Z/manifest.json": "8a7443b449ea8e421ac555fe3a7f4be6abcfb599cc2785af0fe1b8a043614f9c",
+    "artifacts/implementation/evidence-review-arrival-20261101T072532Z/summary.json": "9f2d897545437ef16048d61c43d1161ae520e439898c2741c631aac5b1cfc788",
+    "artifacts/implementation/followup-20261030/A-credit-refill/decision-trace.json": "0c351647d5d27efe5a4d580053b3053e1facbbd8a4a9e8fbbbbc4a312026c704",
+    "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/manifest.json": "0906fdc5dddcb1fcb390e0069411e95dd90f599f5dfca9631e171bf73f486006",
+    "artifacts/implementation/followup-20261030/B-arrival-phase-confirmation-20261030/summary.json": "92afb0f1bd189942864eb853286195d398de2cefcf3503c8fae1d1f2c268c9ac"
+  },
+  "plot_data_path": "docs/final-report/generated/figures/update-20261102/plot-data.json",
+  "plot_data_sha256": "cfdc67d863b1951558153da6b2195444869ba32b621c7df9b676032e7bf2ddc2",
+  "schema": "cxl-update-20261102-manifest/1",
+  "tex_path": "docs/final-report/generated/update_20261102_results.tex",
+  "tex_sha256": "88d2f56c161c024b28ebb7855da8a71089384ea41223423aef45b79cfe188831"
+}

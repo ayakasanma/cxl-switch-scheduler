@@ -1,0 +1,604 @@
+{
+  "schema": "cxl-scheduler-ppa-results/v1",
+  "date": "2026-10-20",
+  "timezone": "Asia/Taipei",
+  "source_commit": "081f8a219911909bda8472ae4b257d3e6ed3122d",
+  "frozen_spec_commit": "1af80967bbc2fb83224f4725c4fb450889e69c62",
+  "accepted_functional_source": "cefbbb0bda8dab21c9dd962378041fc5e0c4a426",
+  "profile_canonical_sha256": "6baba481319955c0a0425e7fb50a20eed3c8c1a224f2a90ee86a60afd92783af",
+  "library_sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+  "source_hashes": {
+    "rtl/include/cxl_sched_pkg.sv": "05d2cb6af0c4055873b99bfa26e61fa899fdf1e227af34b42dec04080e3c5556",
+    "rtl/common/cxl_desc_fifo.sv": "65e2ed9e65e8ffc7cf0a85c8af5103ceff8a0775f4d93e24c95aebcd42f80e8f",
+    "rtl/common/cxl_out_hold.sv": "01eabf8123e61477975127883cf060817ddba57eebf117d200e90bf10c26a3c3",
+    "rtl/common/cxl_fcfs_sel.sv": "34746548027dd960d2c2ec242404f9512c4774f5b47a435ba1d28fe4b6aae82d",
+    "rtl/common/cxl_fai_main_sched.sv": "b40ce3083fc44a2804dd6da4d6cf16cf046d40a907dfb13c6866e07624b2a18d",
+    "rtl/common/cxl_rr_sched.sv": "84803ce5fafefcd2f58739c9768bd0e533cb10823c74203d9e039319f0714fdf",
+    "rtl/top/switch_top.sv": "82fdfccb4f5027c6e4ae3ea88335886226c4f5516d59a163a2ef95096671bd1d",
+    "rtl/filelist_switch.f": "8358645db33088c0963b8cf93f0feee629ed4bab3dd735c21589306e4f3e5cc5"
+  },
+  "independent_audit_sha256": "14f28f9c83126fbc376885c3077b8a445b6d4e44d1ff1ee826cb700a08dda23d",
+  "commands_completed": 9,
+  "signoff": "NOT_ACCEPTED_SETUP_NOT_MET_AND_ELECTRICAL_RULES_OPEN",
+  "setup_met_cases": 8,
+  "setup_not_met_cases": 1,
+  "hold_met_cases": 9,
+  "electrical_closure": "OPEN_ALL_NINE",
+  "methodology_review": "reviews/phase-5-verify/FastX-PPA-methodology-review.md",
+  "power": "NOT_RUN",
+  "cases": [
+    {
+      "cell_area": 103009.393996,
+      "comb_area": 44474.945998,
+      "sequential_area": 58534.447998,
+      "sequential_cells": 8856.0,
+      "leaf_cells": 26554,
+      "reported_cell_instances": 26600.0,
+      "area_report_minus_mapped_leaf_cells": 46.0,
+      "area_partition": {
+        "full_fifo_subtrees": 100974.4631,
+        "policy_subtree": 887.4708,
+        "common_hold_subtree": 809.4486,
+        "top_logic_and_arrival_helpers": 338.0115,
+        "fifo_instances": 4,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 426,
+        "all_output_min_max_and_load_ports_checked": 112,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 9.860374,
+      "hold_slack_ns": 0.049066,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_1__u_fifo/rd_ptr_q_reg_0_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "o_out_desc[76] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "rst_n (input port clocked by core_clk)",
+        "endpoint": "gen_arrival_ts_arrival_cnt_q_reg_31_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 31,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 1118,
+          "worst_slack": -1.801979
+        },
+        "max_transition": {
+          "reported_rows": 31,
+          "worst_slack": -0.001553
+        }
+      },
+      "coverage": {
+        "all_checks_total": 35776,
+        "met": 35712,
+        "violated": 0,
+        "untested": 64
+      },
+      "untested_reasons": {
+        "constant_disabled": 64
+      },
+      "download_manifest_sha256": "b26cc978e5478fc947b16acdf81173800400a84e819b9ded5dece6b5de2d44c5",
+      "policy": "fcfs",
+      "N": 4,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fcfs-n4",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 78521.602529,
+      "comb_area": 33706.864674,
+      "sequential_area": 44814.737855,
+      "sequential_cells": 6782.0,
+      "leaf_cells": 20275,
+      "reported_cell_instances": 20286.0,
+      "area_report_minus_mapped_leaf_cells": 11.0,
+      "area_partition": {
+        "full_fifo_subtrees": 77442.7613,
+        "policy_subtree": 261.7683,
+        "common_hold_subtree": 808.9404,
+        "top_logic_and_arrival_helpers": 8.1326,
+        "fifo_instances": 4,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 426,
+        "all_output_min_max_and_load_ports_checked": 112,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 20.52326,
+      "hold_slack_ns": 0.103864,
+      "worst_setup_path": {
+        "startpoint": "rst_n (input port clocked by core_clk)",
+        "endpoint": "o_in_ready[3] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "i_in_desc[2] (input port clocked by core_clk)",
+        "endpoint": "gen_fifo_0__u_fifo/desc_mem_q_reg_12__2_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 1067,
+          "worst_slack": -1.59334
+        }
+      },
+      "coverage": {
+        "all_checks_total": 27356,
+        "met": 27356,
+        "violated": 0,
+        "untested": 0
+      },
+      "untested_reasons": {},
+      "download_manifest_sha256": "57d7dc5f62dac44f17ee70a31344a24df5d6a9dc37f30c0f6c91fa163c433bd3",
+      "policy": "rr",
+      "N": 4,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-rr-n4",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 108913.413301,
+      "comb_area": 49353.748373,
+      "sequential_area": 59559.664927,
+      "sequential_cells": 9011.0,
+      "leaf_cells": 28579,
+      "reported_cell_instances": 28669.0,
+      "area_report_minus_mapped_leaf_cells": 90.0,
+      "area_partition": {
+        "full_fifo_subtrees": 100971.4132,
+        "policy_subtree": 6739.1365,
+        "common_hold_subtree": 856.7194,
+        "top_logic_and_arrival_helpers": 346.1442,
+        "fifo_instances": 4,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 426,
+        "all_output_min_max_and_load_ports_checked": 112,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 7.3183,
+      "hold_slack_ns": 0.050358,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_1__u_fifo/rd_ptr_q_reg_0_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "gen_policy_fai_main_u_fai_sched/cls_q_reg_3__1_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "rst_n (input port clocked by core_clk)",
+        "endpoint": "gen_arrival_ts_arrival_cnt_q_reg_31_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 32,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 1077,
+          "worst_slack": -1.475166
+        },
+        "max_transition": {
+          "reported_rows": 32,
+          "worst_slack": -0.001536
+        }
+      },
+      "coverage": {
+        "all_checks_total": 36404,
+        "met": 36336,
+        "violated": 0,
+        "untested": 68
+      },
+      "untested_reasons": {
+        "constant_disabled": 68
+      },
+      "download_manifest_sha256": "ac84bfaf1c55a58788b66ea4fde33c01d9a28612a09c5d922f584e249d74a8a8",
+      "policy": "fai-main",
+      "N": 4,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fai-main-n4",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 206479.551075,
+      "comb_area": 89672.423401,
+      "sequential_area": 116807.127674,
+      "sequential_cells": 17677.0,
+      "leaf_cells": 53405,
+      "reported_cell_instances": 53433.0,
+      "area_report_minus_mapped_leaf_cells": 28.0,
+      "area_partition": {
+        "full_fifo_subtrees": 202057.4453,
+        "policy_subtree": 2196.0583,
+        "common_hold_subtree": 1799.3395,
+        "top_logic_and_arrival_helpers": 426.7078,
+        "fifo_instances": 8,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 850,
+        "all_output_min_max_and_load_ports_checked": 117,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 3.763228,
+      "hold_slack_ns": 0.10386,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_1__u_fifo/rd_ptr_q_reg_1_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "o_out_desc[76] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "i_in_desc[172] (input port clocked by core_clk)",
+        "endpoint": "gen_fifo_1__u_fifo/desc_mem_q_reg_15__67_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 2069,
+          "worst_slack": -1.591057
+        }
+      },
+      "coverage": {
+        "all_checks_total": 70950,
+        "met": 70946,
+        "violated": 0,
+        "untested": 4
+      },
+      "untested_reasons": {
+        "constant_disabled": 4
+      },
+      "download_manifest_sha256": "9f46dd3774233d914193baa273eb980c2791fdbe0e7bf5e71a1c22aba5be7929",
+      "policy": "fcfs",
+      "N": 8,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fcfs-n8",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 157209.161099,
+      "comb_area": 67634.072207,
+      "sequential_area": 89575.088892,
+      "sequential_cells": 13556.0,
+      "leaf_cells": 40641,
+      "reported_cell_instances": 40660.0,
+      "area_report_minus_mapped_leaf_cells": 19.0,
+      "area_partition": {
+        "full_fifo_subtrees": 154886.7933,
+        "policy_subtree": 507.5256,
+        "common_hold_subtree": 1798.5771,
+        "top_logic_and_arrival_helpers": 16.2652,
+        "fifo_instances": 8,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 850,
+        "all_output_min_max_and_load_ports_checked": 117,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 19.612915,
+      "hold_slack_ns": 0.080139,
+      "worst_setup_path": {
+        "startpoint": "gen_policy_rr_u_rr_sched/ptr_q_reg_0_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "o_out_desc[76] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "rst_n (input port clocked by core_clk)",
+        "endpoint": "u_out_hold/held_q_reg (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 2119,
+          "worst_slack": -1.485523
+        }
+      },
+      "coverage": {
+        "all_checks_total": 54458,
+        "met": 54458,
+        "violated": 0,
+        "untested": 0
+      },
+      "untested_reasons": {},
+      "download_manifest_sha256": "ebe19aa83335a3cecfbcec08af000f35e08ada95f484723d44a3858802c64b3c",
+      "policy": "rr",
+      "N": 8,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-rr-n8",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 217096.925035,
+      "comb_area": 98604.314298,
+      "sequential_area": 118492.610737,
+      "sequential_cells": 17932.0,
+      "leaf_cells": 57042,
+      "reported_cell_instances": 57144.0,
+      "area_report_minus_mapped_leaf_cells": 102.0,
+      "area_partition": {
+        "full_fifo_subtrees": 202056.17489999998,
+        "policy_subtree": 12752.946,
+        "common_hold_subtree": 1844.8313,
+        "top_logic_and_arrival_helpers": 442.97299999999996,
+        "fifo_instances": 8,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 850,
+        "all_output_min_max_and_load_ports_checked": 117,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 0.930581,
+      "hold_slack_ns": 0.10386,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_5__u_fifo/rd_ptr_q_reg_1_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "gen_policy_fai_main_u_fai_sched/cls_q_reg_2__1_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "i_in_desc[175] (input port clocked by core_clk)",
+        "endpoint": "gen_fifo_1__u_fifo/desc_mem_q_reg_15__70_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 2058,
+          "worst_slack": -1.760084
+        }
+      },
+      "coverage": {
+        "all_checks_total": 71970,
+        "met": 71966,
+        "violated": 0,
+        "untested": 4
+      },
+      "untested_reasons": {
+        "constant_disabled": 4
+      },
+      "download_manifest_sha256": "3ed47c6d27a7599810ba0d8231b0a287b1d2fee5ad39c4e0407d142ee2da5ff1",
+      "policy": "fai-main",
+      "N": 8,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fai-main-n8",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 411575.287966,
+      "comb_area": 178200.944562,
+      "sequential_area": 233374.343405,
+      "sequential_cells": 35318.0,
+      "leaf_cells": 106075,
+      "reported_cell_instances": 106127.0,
+      "area_report_minus_mapped_leaf_cells": 52.0,
+      "area_partition": {
+        "full_fifo_subtrees": 402755.9829,
+        "policy_subtree": 4964.1947,
+        "common_hold_subtree": 3376.8114,
+        "top_logic_and_arrival_helpers": 478.299,
+        "fifo_instances": 16,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 1698,
+        "all_output_min_max_and_load_ports_checked": 126,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 0.000811,
+      "hold_slack_ns": 0.10386,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_5__u_fifo/rd_ptr_q_reg_0_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "o_out_desc[103] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "i_in_desc[72] (input port clocked by core_clk)",
+        "endpoint": "gen_fifo_0__u_fifo/desc_mem_q_reg_15__72_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 4423,
+          "worst_slack": -3.281708
+        }
+      },
+      "coverage": {
+        "all_checks_total": 141524,
+        "met": 141524,
+        "violated": 0,
+        "untested": 0
+      },
+      "untested_reasons": {},
+      "download_manifest_sha256": "f20b88569d3b0ea65fb57f5d57ad8b74da94e0735b29c75a8f3551481df1badf",
+      "policy": "fcfs",
+      "N": 16,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fcfs-n16",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 314506.001866,
+      "comb_area": 135421.901523,
+      "sequential_area": 179084.100343,
+      "sequential_cells": 27102.0,
+      "leaf_cells": 81264,
+      "reported_cell_instances": 81299.0,
+      "area_report_minus_mapped_leaf_cells": 35.0,
+      "area_partition": {
+        "full_fifo_subtrees": 309747.1554,
+        "policy_subtree": 1249.6261,
+        "common_hold_subtree": 3476.6899,
+        "top_logic_and_arrival_helpers": 32.5304,
+        "fifo_instances": 16,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 1698,
+        "all_output_min_max_and_load_ports_checked": 126,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": 18.758562,
+      "hold_slack_ns": 0.10386,
+      "worst_setup_path": {
+        "startpoint": "gen_policy_rr_u_rr_sched/ptr_q_reg_0_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "o_out_desc[79] (output port clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "i_in_desc[1576] (input port clocked by core_clk)",
+        "endpoint": "gen_fifo_15__u_fifo/desc_mem_q_reg_15__1_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 0,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_capacitance": {
+          "reported_rows": 4260,
+          "worst_slack": -2.416035
+        }
+      },
+      "coverage": {
+        "all_checks_total": 108660,
+        "met": 108660,
+        "violated": 0,
+        "untested": 0
+      },
+      "untested_reasons": {},
+      "download_manifest_sha256": "6051ac2ff012e8ac860c7185232eb2e7062466ec4f5f36675346f9ecda4abfa8",
+      "policy": "rr",
+      "N": 16,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-rr-n16",
+      "timing": "MET"
+    },
+    {
+      "cell_area": 436249.874914,
+      "comb_area": 199858.842132,
+      "sequential_area": 236391.032782,
+      "sequential_cells": 35773.0,
+      "leaf_cells": 113850,
+      "reported_cell_instances": 114038.0,
+      "area_report_minus_mapped_leaf_cells": 188.0,
+      "area_partition": {
+        "full_fifo_subtrees": 403749.1776,
+        "policy_subtree": 28682.692,
+        "common_hold_subtree": 3310.2256,
+        "top_logic_and_arrival_helpers": 507.77970000000005,
+        "fifo_instances": 16,
+        "precision": "hierarchical report rounded to4 decimals; no parent/child double count"
+      },
+      "emitted_sdc_check": {
+        "all_input_min_max_and_transition_ports_checked": 1698,
+        "all_output_min_max_and_load_ports_checked": 126,
+        "exceptions": "none",
+        "clock_period_ns": 25,
+        "uniform_constraints": "VERIFIED_EMITTED_SDC"
+      },
+      "setup_slack_ns": -0.870709,
+      "hold_slack_ns": 0.07966,
+      "worst_setup_path": {
+        "startpoint": "gen_fifo_9__u_fifo/rd_ptr_q_reg_1_ (rising edge-triggered flip-flop clocked by core_clk)",
+        "endpoint": "gen_policy_fai_main_u_fai_sched/cls_q_reg_13__1_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "worst_hold_path": {
+        "startpoint": "rst_n (input port clocked by core_clk)",
+        "endpoint": "gen_arrival_ts_arrival_cnt_q_reg_31_ (rising edge-triggered flip-flop clocked by core_clk)"
+      },
+      "dc_qor_rule_counts": {
+        "max_transition_nets": 4,
+        "max_capacitance_nets": 0
+      },
+      "pt_design_rules": {
+        "max_delay/setup": {
+          "reported_rows": 32,
+          "worst_slack": -0.87072
+        },
+        "max_capacitance": {
+          "reported_rows": 4200,
+          "worst_slack": -7.62471
+        },
+        "max_transition": {
+          "reported_rows": 4,
+          "worst_slack": -0.007179
+        }
+      },
+      "coverage": {
+        "all_checks_total": 143344,
+        "met": 143312,
+        "violated": 32,
+        "untested": 0
+      },
+      "untested_reasons": {},
+      "download_manifest_sha256": "d67b46570ff1863bfe6bfad9313dd819b8ab63f1c720a98c92149f233a732784",
+      "policy": "fai-main",
+      "N": 16,
+      "D": 16,
+      "M": 1,
+      "descriptor_bits": 105,
+      "rr_quantum": 10,
+      "fai_window": 5000000,
+      "raw_evidence": "artifacts/fastx/primary-20261020-v1-fai-main-n16",
+      "timing": "NOT_MET"
+    }
+  ]
+}

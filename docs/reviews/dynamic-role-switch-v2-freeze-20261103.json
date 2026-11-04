@@ -1,0 +1,205 @@
+{
+ "schema": "cxl-dynamic-role-switch-v2-freeze-v1",
+ "status": "FROZEN_V2_PROTOCOL_NOT_RUN",
+ "date": "2026-11-03",
+ "authorization": "This receipt freezes the v2 protocol text only. It does not authorize any execution beyond the v2 plan; each stage (E, G0, G1, P, C) still requires explicit Lead release. It does not supersede the frozen v1 plan and does not promote C7.",
+ "frozen_documents": {
+  "v2_plan": {
+   "path": "docs/reviews/dynamic-role-switch-plan-v2-lean-20261103.md",
+   "sha256": "3a5ff663c15d5b573dfcd847d7c059e471e0a3435e786382bc9efe144188b051",
+   "commit": "befe64427217e4279a10d8d6ce1cb0a7bab28102"
+  },
+  "v2_summary": {
+   "path": "docs/reviews/dynamic-role-switch-plan-v2-lean-20261103-summary.json",
+   "sha256": "ec8c25d2792e9e7fdaf04bcc9cb7181fe8a84dc93139319950bdce55a2d94249",
+   "commit": "befe64427217e4279a10d8d6ce1cb0a7bab28102",
+   "revision": 3
+  },
+  "v1": [
+   {
+    "path": "docs/reviews/dynamic-role-switch-rtl-plan-20261103.md",
+    "sha256": "d4f8d73ef6675da9bc7c81d1de164f9a1acdff47afa01681c41a76a575f4ad1c",
+    "commit": "54ca8aab3c63dac608dedd58efd8061114855493"
+   },
+   {
+    "path": "docs/reviews/dynamic-role-switch-rtl-plan-20261103.json",
+    "sha256": "f4f7429272e6d42cb3d550593f49b24894c40fa6e046135403651b6afefc4cd6",
+    "commit": "54ca8aab3c63dac608dedd58efd8061114855493"
+   },
+   {
+    "path": "docs/reviews/dynamic-role-switch-rtl-freeze-20261103.json",
+    "sha256": "2ab89003a1972745a1ddde6d90442d989bc7f188c6a0deaf2dc3391e6e4746d6",
+    "commit": "54ca8aab3c63dac608dedd58efd8061114855493"
+   }
+  ]
+ },
+ "matrix": {
+  "n_src": 4,
+  "descriptor_bits": 105,
+  "window": 5000000,
+  "windows": 4,
+  "heavy_work": 17500000,
+  "profile": "near",
+  "heavy_p": 0.8,
+  "sparse_p_per_nonheavy_source": 0.02,
+  "ready_p": 0.9,
+  "ordering": "oldest-first",
+  "policies": [
+   "Main",
+   "CGOF-1:1",
+   "CGOF-2:1"
+  ],
+  "lanes": [
+   "mixed",
+   "isolated"
+  ],
+  "jobs_per_seed": 30,
+  "pairs_per_seed": 15,
+  "active_cap_cycles": 24000000,
+  "total_cycles_exclusive_cap": 25000000,
+  "expected_close_cycles": [
+   4999999,
+   9999999,
+   14999999,
+   19999999
+  ],
+  "cases": [
+   {
+    "id": "multi-window",
+    "depth": 16,
+    "heavy_sources": [
+     0
+    ],
+    "ready_pattern": "bernoulli",
+    "ready_period": 100
+   },
+   {
+    "id": "role-switch",
+    "depth": 16,
+    "heavy_sources": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "ready_pattern": "bernoulli",
+    "ready_period": 100
+   },
+   {
+    "id": "ready-spread",
+    "depth": 16,
+    "heavy_sources": [
+     0
+    ],
+    "ready_pattern": "spread",
+    "ready_period": 100
+   },
+   {
+    "id": "ready-bursty",
+    "depth": 16,
+    "heavy_sources": [
+     0
+    ],
+    "ready_pattern": "bursty",
+    "ready_period": 100
+   },
+   {
+    "id": "depth8-bursty",
+    "depth": 8,
+    "heavy_sources": [
+     0
+    ],
+    "ready_pattern": "bursty",
+    "ready_period": 100
+   }
+  ]
+ },
+ "policies": {
+  "Main": "ExperimentalSwitchModel('FAI-inspired') (oracle FaiMainSwitchModel)",
+  "CGOF_1_1": "CGOF(1:1)",
+  "CGOF_2_1": "CGOF(2:1)"
+ },
+ "seeds": {
+  "engineering_pilot": [
+   7301
+  ],
+  "held_out_confirmation": [
+   7401,
+   7402,
+   7403,
+   7404,
+   7405,
+   7406,
+   7407,
+   7408,
+   7409,
+   7410,
+   7411,
+   7412,
+   7413,
+   7414,
+   7415,
+   7416,
+   7417,
+   7418,
+   7419,
+   7420
+  ],
+  "rtl_anchor_heldout": "7401 (A4 only)",
+  "excluded_from_confirmation": [
+   7291,
+   7301,
+   9901
+  ],
+  "note": "9901 exploration results are MODEL_ONLY description, never evidence"
+ },
+ "statistics": {
+  "primary_endpoint": "mixed generation-time Sparse whole-run G->F nearest-rank P99 (cycles)",
+  "contrasts": [
+   {
+    "id": "P1",
+    "case": "role-switch",
+    "delta": "Main minus CGOF-2:1"
+   },
+   {
+    "id": "P2",
+    "case": "role-switch",
+    "delta": "CGOF-2:1 minus CGOF-1:1"
+   },
+   {
+    "id": "P3",
+    "case": "multi-window",
+    "delta": "Main minus CGOF-2:1"
+   }
+  ],
+  "practical_delta_cycles": 1,
+  "test": "exact one-sided binomial sign test, K=sum(delta_s>=1), n=20 seed blocks, ties/below-margin=nonsuccess",
+  "multiplicity": "Holm step-down over P1-P3, FWER .05",
+  "support_rule": "Holm-adjusted p<=.05 AND mean(delta)>=1 -> SUPPORTED_WITHIN_PROTOCOL, else NOT_CONFIRMED",
+  "bootstrap": "descriptive only; B=10000, rng seed 20261103, paired seed blocks",
+  "holm_minimum_K_by_sorted_step": [
+   16,
+   15,
+   15
+  ],
+  "source": "v1 sec.5, unchanged"
+ },
+ "drain_policy": {
+  "ruling": "after cut: ready=1 cleanup, no reset; bound = 2*(producer_backlog + fifo_occupancy) + 128",
+  "scenario_ready_scope": "sim/experimental/cgof_diagnosis_traffic.py scenario.ready applies to the active phase only",
+  "gate": "drain is not a gate for any anchor A1-A4",
+  "evidence_status": "NOT_EXERCISED (whole plan)",
+  "future_change": "scenario-ready drain requires a new, separately named and separately frozen protocol; never mixed with this one"
+ },
+ "evidence_classification": {
+  "primary": "MODEL_ONLY",
+  "rtl_anchor_coverage": "separate metadata; not an evidence level",
+  "c7": "unchanged (SINGLE_SEED / SCHEDULER_RTL), not promoted"
+ },
+ "source_baseline": {
+  "v1_pins": "immutable baseline in v1 JSON frozen_source_index (not reused for changed code)",
+  "execution_freeze": "independent execution source freeze to be recorded per stage"
+ },
+ "base_commit": "befe64427217e4279a10d8d6ce1cb0a7bab28102",
+ "self_hash_note": "this receipt does not contain its own hash"
+}

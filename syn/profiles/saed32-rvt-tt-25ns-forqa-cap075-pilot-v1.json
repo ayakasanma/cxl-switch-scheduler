@@ -1,0 +1,53 @@
+{
+  "schema": "cxl-scheduler-ppa-profile/v1",
+  "profile_id": "saed32-rvt-tt-25ns-forqa-cap075-pilot-v1",
+  "status": "PILOT",
+  "review": {
+    "reviewed_by": "Codex full-load diagnostic and native DC constraint canary",
+    "reviewed_on": "2026-10-20",
+    "evidence": "FCFS N4 26731 output-pin ordinary/CCS load pairs reconcile all1118 PT cap violators. Observed minimum ordinary/max-CCS ratio0.7725474722 motivates candidate0.75, not a universal bound after remapping. Native set_attribute on an existing max_capacitance lib_pin changes DC required limits, then restores. Tighten DC optimization in memory only; restore before reporting/export; fresh PT checks original .db limits. No measured closure is implied; original frozen medium profile retained. Adopt only after common-method review and all-nine verification."
+  },
+  "library": {
+    "db_basename": "saed32rvt_tt0p78v25c.db",
+    "sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+    "name": "saed32rvt_tt0p78v25c",
+    "operating_conditions": "tt0p78v25c"
+  },
+  "units": {
+    "time": "1ns",
+    "capacitance": "1ff",
+    "evidence": "Same actual linked DC/PT1ns/1fF unit reports as frozen primary profile."
+  },
+  "clock": {
+    "port": "clk",
+    "name": "core_clk",
+    "period": 25.0,
+    "setup_uncertainty": 0.1,
+    "hold_uncertainty": 0.05,
+    "transition": 0.1
+  },
+  "io": {
+    "input_delay_min": 0.0,
+    "input_delay_max": 2.0,
+    "output_delay_min": 0.0,
+    "output_delay_max": 2.0,
+    "input_transition": 0.1,
+    "output_load": 2.656828
+  },
+  "wire_load": {
+    "method": "fixed_model",
+    "model": "ForQA",
+    "mode": "top",
+    "rationale": "Same fixed ForQA/top estimate and observed FO4 as original nine; DC automatic selection disabled. No extracted-parasitic claim."
+  },
+  "compile": {
+    "command": "compile",
+    "map_effort": "medium"
+  },
+  "optimization": {
+    "max_capacitance_scale": 0.75
+  },
+  "power": {
+    "status": "NOT_RUN"
+  }
+}

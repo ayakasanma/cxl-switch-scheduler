@@ -1,0 +1,53 @@
+{
+  "schema": "cxl-scheduler-ppa-profile/v1",
+  "profile_id": "saed32-rvt-tt-25ns-forqa-cap075-v2",
+  "status": "FROZEN",
+  "review": {
+    "reviewed_by": "Codex common-method review; native RTL Agent Team review recorded separately",
+    "reviewed_on": "2026-10-21",
+    "evidence": "Freeze identical numerical settings from the cap075 pilots for a new common nine-case measurement with the verified shared comparator d82f1b5. FCFS4 electrical and comparator Main16 setup/hold/electrical pilots passed; Main16 setup +1.158148ns. In-memory 0.75 DC library-pin tightening only, restore all original limits before reports/export; fresh PT uses original .db. No timing exception or library acceptance relaxation. FROZEN fixes the method; it does not assert that all nine configurations pass. Original v1 dataset and pilot profile remain unchanged. See docs/PPA_COMPARATOR_PILOT_2026-10-21.md and reviews/phase-5-verify/common-profile-v2-review.md."
+  },
+  "library": {
+    "db_basename": "saed32rvt_tt0p78v25c.db",
+    "sha256": "844d4474c02f771189fef1f57130f1fa9115760b1bb5cd235feedce86f434094",
+    "name": "saed32rvt_tt0p78v25c",
+    "operating_conditions": "tt0p78v25c"
+  },
+  "units": {
+    "time": "1ns",
+    "capacitance": "1ff",
+    "evidence": "Same actual linked DC/PT1ns/1fF unit reports as frozen primary profile."
+  },
+  "clock": {
+    "port": "clk",
+    "name": "core_clk",
+    "period": 25.0,
+    "setup_uncertainty": 0.1,
+    "hold_uncertainty": 0.05,
+    "transition": 0.1
+  },
+  "io": {
+    "input_delay_min": 0.0,
+    "input_delay_max": 2.0,
+    "output_delay_min": 0.0,
+    "output_delay_max": 2.0,
+    "input_transition": 0.1,
+    "output_load": 2.656828
+  },
+  "wire_load": {
+    "method": "fixed_model",
+    "model": "ForQA",
+    "mode": "top",
+    "rationale": "Same fixed ForQA/top estimate and observed FO4 as original nine; DC automatic selection disabled. No extracted-parasitic claim."
+  },
+  "compile": {
+    "command": "compile",
+    "map_effort": "medium"
+  },
+  "optimization": {
+    "max_capacitance_scale": 0.75
+  },
+  "power": {
+    "status": "NOT_RUN"
+  }
+}

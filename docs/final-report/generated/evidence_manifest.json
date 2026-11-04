@@ -1,0 +1,31 @@
+{
+  "report_base_commit": "9141dfe3303d60b2f00747811eee80cb16db7269",
+  "evidence_cutoff": "2026-10-21 Asia/Taipei",
+  "scope": "Report-only; no new RTL, scheduler tests or remote EDA executions",
+  "inputs": {
+    "docs/ppa/primary-20261021-v2.json": "168e4bd6f44c3e850948ff1f4942d571a46e91a9272c940170c99e988b892a1d",
+    "docs/ppa/algorithm2-n4-20261021.json": "0421ad3803d436c345cc4d6aa965c9f2e146dd9a427bb185587be32d1be47642",
+    "docs/ppa/power-20261021.json": "30b4621c0827daf5c210a6a6e7d65c4e6a049cef531cc433dd864ec540ed70db",
+    "docs/ppa/power-supplement-20261021.json": "b9facc797d4b280cc32b2186a1a063339b7ad42b4fee013b9c865aef5a84ad30",
+    "docs/ppa/formality-20261021.json": "3100ee92c9e6cad14aeaabc4275680c282e726e6e6adc5a676d14077a4863dbc",
+    "syn/profiles/saed32-rvt-tt-25ns-forqa-cap075-v2.json": "b6cc33219d1fe240a81d653e7dd3848e784586b5e4e885886e9f407d19619f8c"
+  },
+  "canonical_json_sha256": {
+    "docs/ppa/primary-20261021-v2.json": "ce4a5e579e7ee4ea95c709e50f5b202c5fe14294f3f51f3dfa82df7d5bca326c",
+    "docs/ppa/algorithm2-n4-20261021.json": "f2880c1a6108339ba90b1c4593eadc42bbf9034e31e05b1e93c87368cf1334ce",
+    "docs/ppa/power-20261021.json": "4cea4e7ed87d3989bebda6713e8425a397e6be8da3ef74d188facb9fa90dae9b",
+    "docs/ppa/power-supplement-20261021.json": "4fc27e1ecf33deeee29de8a05dc49effac33b36e325b02d0f2337d023859e9dd",
+    "docs/ppa/formality-20261021.json": "804038ab1a66795bd736a3299e6289a6fd395e6345951b3573c9ffe7e5b45e33",
+    "syn/profiles/saed32-rvt-tt-25ns-forqa-cap075-v2.json": "6f4777f001fba4e80c28ebda22bd071bc316d6ff3b2b267ff688145d8aa9774d"
+  },
+  "checks": {
+    "primary_cases": 9,
+    "cold_power_cases": 27,
+    "boundary_power_cases": 3,
+    "formality_pairs": 14,
+    "new_power_checked_cycles": 32098500,
+    "new_power_measured_cycles": 2100000,
+    "energy_formula": "reported_total_W * measured_duration_seconds / measured_fires; includes leakage"
+  },
+  "generated_results_sha256": "c1ae15bb7b7a2c5084b46a2eef043f2e0af1d46fe36fb712ecf489f2526a94db"
+}
