@@ -1,0 +1,22 @@
+{
+  "schema": "cxl-progress-reports-v1",
+  "reports": [
+    {
+      "id": "ece509-2nd-progress-20261106",
+      "file": "ECE509_2nd_Progress_Report_revised.pdf",
+      "title": "Hardware Implementation and PPA Evaluation of CXL-Inspired Switch Schedulers",
+      "course": "ECE 509",
+      "kind": "Second Progress Report",
+      "authors": [
+        "Jay Chiang",
+        "Yun-Chi Chou"
+      ],
+      "submitted": "2026-11-06",
+      "received": "2026-11-08",
+      "pages": 10,
+      "bytes": 269133,
+      "sha256": "1b194326fc2f24872bb6e463014078ff474b2a78a3dec522787b38e8f29ea372",
+      "scope": "Submitted snapshot covering the common RTL framework, FCFS/RR/FAI-inspired/BLISS-inspired schedulers and the first PPA measurements. Not a newer technical release than the v5 final report."
+    }
+  ]
+}
