@@ -1,0 +1,50 @@
+{
+  "schema": "cxl-owner-decisions-v1",
+  "date": "2026-11-06",
+  "decisions": "A/A/A",
+  "source": "owner decision relayed by Orca reviewer",
+  "capacity": {
+    "spec": "docs/reviews/capacity-absorption-freeze-20261106.json",
+    "status": "RUNNING",
+    "runner_commit": "b8b3127",
+    "runner_sha256": "89db76a5113f6dc4a058ab4a647bb9165e9f1d4526cdf0317d5e3dd6cc7705a7",
+    "heavy_work": {
+      "under": 4000000,
+      "over": 17500000
+    },
+    "seeds": [
+      8101,
+      8102,
+      8103,
+      8104,
+      8105
+    ],
+    "jobs": 60,
+    "label": "MODEL_ONLY independent multi-window check; not C5 reproduction or RTL upgrade",
+    "log": ".setup-logs/implementation/p1-under-over-20261106/frozen-under-over.log"
+  },
+  "drain": {
+    "decision": "no harness change; no directed long-backlog anchor",
+    "status": "NOT_RUN",
+    "retained_evidence": "A3 natural two-cycle drain only"
+  },
+  "latency_recovery": {
+    "decision": "no accounting change; no per-window recovery measurement",
+    "status": "NOT_DEFINED"
+  },
+  "report": {
+    "body": "docs/final-report/sections/hotnets-body-v4.tex",
+    "body_sha256": "e8d41c5581986b46a140bb674b073994e596a4e9b0a5790a907a38b6a46b32b6",
+    "pdf": "docs/final-report/main-v4.pdf",
+    "pdf_sha256": "c8008bd12e677231557d3ee45698960abff8f9581670bdf4d1ac56754ff81f84",
+    "build": "pdflatex -interaction=nonstopmode main-v4.tex twice, exit 0/0",
+    "pages": 15,
+    "undefined_references": 0,
+    "overfull_hboxes": 0,
+    "overfull_vboxes": "one, 1.5849pt; pre-existing layout pressure, disclosed",
+    "logs": [
+      "docs/final-report/build-v4-limits-pass1.txt",
+      "docs/final-report/build-v4-limits-pass2.txt"
+    ]
+  }
+}

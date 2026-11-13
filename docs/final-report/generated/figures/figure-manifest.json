@@ -1,0 +1,25 @@
+{
+  "generator_sha256": "90c3360fc2d726d077001ba059675c79c776ca86cb2f7299e2696d39f0b2cc7f",
+  "matplotlib": "3.10.0",
+  "outputs": {
+    "confirmation.pdf": "2e21c969a898c9380951666b23b87408ce37c23804714f3d64504e6f1c591237",
+    "confirmation.svg": "7854bdb637e0beba6b0fe5c24d823445dda7401d586fcc7edf5dd13ccb645c54",
+    "confirmation.png": "38011042de4393c3ee43a458bd50a33dd7ccc370ccdfec655ffcfcb8ae330ac4",
+    "paired-contrasts.pdf": "a28ee6138f48325a831f60f8fa26e267102c5a76f5e92fa85edcd4ee5fa67fe2",
+    "paired-contrasts.svg": "66c29a129b1a2d25cc3edf8a27e784f8fd03a9410b3b7a5ea545f3ef2ebbc164",
+    "paired-contrasts.png": "130d4567b5d211da130bdf2fc41c8e0d1ed20d992158bab66447d8cdbb9852e6",
+    "n-expansion.pdf": "a2ee202df377ad2c4714c8326ba977272f0617c26e4b409def35f7565f8a7210",
+    "n-expansion.svg": "6a2d44058ecec7f5acd9c753f1ad18aa3dcd606a1ba6dad069654904b45a527e",
+    "n-expansion.png": "2d8d8624aa0898243f454411e63d364fb43f72ad89b93a6aa7602a7191235dfe",
+    "robustness.pdf": "48bb9344219d4165edc4aa1bc6f66a5b3f533dd3a85f235ad7a74795de0b963c",
+    "robustness.svg": "24e6c35b172049a52a0bdbe48c7209fca6f1a6e5ec23f1c3a9c0074837f1f117",
+    "robustness.png": "0512c3078e676eb8778d01b53c293768ca90f07bd024acf7c911f8615821111d",
+    "sensitivity.pdf": "77772e3768382c201d7ccb5a73e9d182bd432e8c34557031d800c509b516dc03",
+    "sensitivity.svg": "c8d5ac3d8c2075e7ab50948657a2167bc825fe54f820a4f9c38e656362d68b91",
+    "sensitivity.png": "72893ff5e64654b0af55d1e96c8bd1ed797526a96c680ae3c5fb71182d89ec80",
+    "hardware.pdf": "e50ed0187cdb47ab639b34feb8ec908782156f0edf38b5f511174bc19224a98a",
+    "hardware.svg": "01ab8e651f4690949b7b4e3b2be0648f9038a34ec620c603c96afa5aa87e5232",
+    "hardware.png": "e055733bc0e4df5048a99907888eb857c4c47ca3915b81057284925376d7c103",
+    "plot-data.json": "eacbb284a36c8ca5f93af8d28a4b661a51d43465c4167fe38045af3cac98fc2d"
+  }
+}

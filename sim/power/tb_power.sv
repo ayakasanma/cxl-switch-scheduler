@@ -13,10 +13,18 @@ module tb;
   wire o_out_valid;
   wire [104:0] o_out_desc;
   wire [$clog2(N)-1:0] o_out_source;
+`ifdef POWER_CGOF_WEIGHT
+`ifdef POWER_RTL_FIXTURE
+  cgof_unit_top #(.N_SRC(N), .DEPTH(16), .FAI_W(256), .HIGH_WEIGHT(`POWER_CGOF_WEIGHT), .ELIGIBLE_RR(0)) dut (.*);
+`else
+  cgof_unit_top dut (.*);
+`endif
+`else
 `ifdef POWER_RTL_FIXTURE
   switch_top #(.N_SRC(N), .POLICY(`POWER_FIXTURE_POLICY), .FAI_W(256)) dut (.*);
 `else
   switch_top dut (.*);
+`endif
 `endif
   always #12.5 clk = ~clk;
 
@@ -45,6 +53,42 @@ module tb;
     if (rc == 0) $fatal(1, "missing power header");
     rc = $sscanf(line, "%h", magic);
     if (rc != 1) $fatal(1, "missing power magic");
+`ifdef POWER_CGOF_WEIGHT
+`ifdef POWER_FIXTURE_POLICY
+    $fatal(1, "baseline fixture policy define is invalid for CGOF");
+`endif
+    if (N != 4 || !((`POWER_CGOF_WEIGHT) == 1 || (`POWER_CGOF_WEIGHT) == 2))
+      $fatal(1, "unsupported CGOF N/weight configuration");
+    if (magic !== 'h43585032) $fatal(1, "CGOF requires the V2 power header");
+    rc = $sscanf(line, "%h %d %d %d %d %d %d %d %d %d", magic, mode_id, vector_n,
+                 cycles, warmup, measured, seed, policy, period_ps, resets);
+    if (rc != 10 || cycles != warmup + measured)
+      $fatal(1, "invalid CGOF power header fields=%0d total=%0d warmup=%0d measured=%0d", rc, cycles, warmup, measured);
+    if ($sscanf(line, "%h %d %d %d %d %d %d %d %d %d %s", magic, mode_id, vector_n,
+                 cycles, warmup, measured, seed, policy, period_ps, resets, extra) == 11)
+      $fatal(1, "extra CGOF header fields");
+    case (mode_id)
+      12: if (vector_n != 4 || seed < 509 || seed > 511 || warmup != 10000000 || measured != 100000)
+            $fatal(1, "invalid CGOF trained A header");
+      13: if (vector_n != 4 || seed < 509 || seed > 511 || warmup != 10101024 || measured != 102400)
+            $fatal(1, "invalid CGOF trained B header");
+`ifdef POWER_RTL_FIXTURE
+`ifdef POWER_NO_SAIF
+      9: if (vector_n != 4 || seed < 509 || seed > 511 || warmup < 0 || warmup > 102400 ||
+             measured <= 0 || measured > 102400)
+           $fatal(1, "invalid CGOF local fixture header");
+`endif
+`endif
+      default: $fatal(1, "unsupported CGOF power mode (fixture refused by production)");
+    endcase
+    if ((^{magic, vector_n, cycles, seed, policy, period_ps, resets, mode_id, warmup, measured} === 1'bx) ||
+        vector_n != N || policy != (`POWER_CGOF_WEIGHT) + 2 || period_ps != 25000 || resets != 3)
+      $fatal(1, "invalid CGOF power configuration");
+    extra = line;
+    if (extra != $sformatf("43585032 %0d %0d %0d %0d %0d %0d %0d %0d %0d\n",
+        mode_id, vector_n, cycles, warmup, measured, seed, policy, period_ps, resets))
+      $fatal(1, "noncanonical CGOF power header");
+`else
     if (magic === 'h43585031) begin
       rc = $sscanf(line, "%h %d %d %d %d %d %d", magic, vector_n, cycles, seed, policy, period_ps, resets);
       if (rc != 7 || cycles != 100000 || seed != 509) $fatal(1, "invalid primary power header");
@@ -88,6 +132,7 @@ module tb;
     end
 `ifdef POWER_RTL_FIXTURE
     if (policy != `POWER_FIXTURE_POLICY) $fatal(1, "fixture policy does not match compiled RTL");
+`endif
 `endif
     for (integer p = 0; p < 2; p++) begin
       accepted[p] = 0;

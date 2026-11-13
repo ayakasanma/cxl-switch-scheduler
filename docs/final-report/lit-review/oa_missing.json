@@ -1,0 +1,345 @@
+{
+ "10.1145/3669900": {
+  "title": "An Introduction to the Compute Express Link (CXL) Interconnect",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "hybrid",
+   "oa_url": "https://doi.org/10.1145/3669900",
+   "any_repository_has_fulltext": true
+  },
+  "best": {
+   "id": "doi:10.1145/3669900",
+   "doi": "https://doi.org/10.1145/3669900",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3669900",
+   "pdf_url": null,
+   "source": {
+    "id": "https://openalex.org/S157921468",
+    "display_name": "ACM Computing Surveys",
+    "issn_l": "0360-0300",
+    "issn": [
+     "0360-0300",
+     "1557-7341"
+    ],
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": true,
+    "listed_in": [
+     "cwts-core",
+     "dongbi-a",
+     "jufo-3",
+     "ki-jl-2",
+     "norway-2",
+     "poland-200",
+     "russia-white-list-1",
+     "vabb-shw"
+    ],
+    "host_organization": "https://openalex.org/P4310319798",
+    "host_organization_name": "Association for Computing Machinery",
+    "host_organization_lineage": [
+     "https://openalex.org/P4310319798"
+    ],
+    "host_organization_lineage_names": [
+     "Association for Computing Machinery"
+    ],
+    "type": "journal"
+   },
+   "license": "cc-by",
+   "license_id": "https://openalex.org/licenses/cc-by",
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "ACM Computing Surveys",
+   "raw_type": "journal-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://arxiv.org/pdf/2306.11227",
+    "landing": "http://arxiv.org/abs/2306.11227",
+    "source": "arXiv (Cornell University)"
+   }
+  ]
+ },
+ "10.1145/3582016.3582063": {
+  "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "bronze",
+   "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3582016.3582063",
+   "any_repository_has_fulltext": true
+  },
+  "best": {
+   "id": "doi:10.1145/3582016.3582063",
+   "doi": "https://doi.org/10.1145/3582016.3582063",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3582016.3582063",
+   "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3582016.3582063",
+   "source": {
+    "id": "https://openalex.org/S7407087580",
+    "display_name": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+    "issn_l": null,
+    "issn": null,
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": false,
+    "listed_in": [],
+    "host_organization": null,
+    "host_organization_name": null,
+    "host_organization_lineage": [],
+    "host_organization_lineage_names": [],
+    "type": "conference"
+   },
+   "license": null,
+   "license_id": null,
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3",
+   "raw_type": "proceedings-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3582016.3582063",
+    "landing": "https://doi.org/10.1145/3582016.3582063",
+    "source": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"
+   },
+   {
+    "pdf": "https://arxiv.org/pdf/2206.02878",
+    "landing": "http://arxiv.org/abs/2206.02878",
+    "source": "arXiv (Cornell University)"
+   }
+  ]
+ },
+ "10.1145/3575693.3578835": {
+  "title": "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "hybrid",
+   "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3575693.3578835",
+   "any_repository_has_fulltext": true
+  },
+  "best": {
+   "id": "doi:10.1145/3575693.3578835",
+   "doi": "https://doi.org/10.1145/3575693.3578835",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3575693.3578835",
+   "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3575693.3578835",
+   "source": {
+    "id": "https://openalex.org/S7407087580",
+    "display_name": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+    "issn_l": null,
+    "issn": null,
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": false,
+    "listed_in": [],
+    "host_organization": null,
+    "host_organization_name": null,
+    "host_organization_lineage": [],
+    "host_organization_lineage_names": [],
+    "type": "conference"
+   },
+   "license": "cc-by",
+   "license_id": "https://openalex.org/licenses/cc-by",
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
+   "raw_type": "proceedings-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3575693.3578835",
+    "landing": "https://doi.org/10.1145/3575693.3578835",
+    "source": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"
+   },
+   {
+    "pdf": "https://arxiv.org/pdf/2203.00241",
+    "landing": "http://arxiv.org/abs/2203.00241",
+    "source": "arXiv (Cornell University)"
+   }
+  ]
+ },
+ "10.1145/3626111.3628195": {
+  "title": "A Case Against CXL Memory Pooling",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "bronze",
+   "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3626111.3628195",
+   "any_repository_has_fulltext": false
+  },
+  "best": {
+   "id": "doi:10.1145/3626111.3628195",
+   "doi": "https://doi.org/10.1145/3626111.3628195",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3626111.3628195",
+   "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3626111.3628195",
+   "source": {
+    "id": "https://openalex.org/S7407088517",
+    "display_name": "ACM Workshop on Hot Topics in Networks (HotNets)",
+    "issn_l": null,
+    "issn": null,
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": false,
+    "listed_in": [],
+    "host_organization": null,
+    "host_organization_name": null,
+    "host_organization_lineage": [],
+    "host_organization_lineage_names": [],
+    "type": "conference"
+   },
+   "license": null,
+   "license_id": null,
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the 22nd ACM Workshop on Hot Topics in Networks",
+   "raw_type": "proceedings-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3626111.3628195",
+    "landing": "https://doi.org/10.1145/3626111.3628195",
+    "source": "ACM Workshop on Hot Topics in Networks (HotNets)"
+   }
+  ]
+ },
+ "10.1145/3695794.3695808": {
+  "title": "Contention aware DRAM caching for CXL-enabled pooled memory",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "hybrid",
+   "oa_url": "https://doi.org/10.1145/3695794.3695808",
+   "any_repository_has_fulltext": false
+  },
+  "best": {
+   "id": "doi:10.1145/3695794.3695808",
+   "doi": "https://doi.org/10.1145/3695794.3695808",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3695794.3695808",
+   "pdf_url": null,
+   "source": {
+    "id": "https://openalex.org/S4306524191",
+    "display_name": "International Symposium on Memory Systems (MEMSYS)",
+    "issn_l": null,
+    "issn": null,
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": true,
+    "listed_in": [
+     "cwts-core"
+    ],
+    "host_organization": null,
+    "host_organization_name": null,
+    "host_organization_lineage": [],
+    "host_organization_lineage_names": [],
+    "type": "conference"
+   },
+   "license": "cc-by",
+   "license_id": "https://openalex.org/licenses/cc-by",
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the International Symposium on Memory Systems",
+   "raw_type": "proceedings-article"
+  },
+  "locs": []
+ },
+ "10.1145/3695794.3695810": {
+  "title": "Synchronization for CXL Based Memory",
+  "oa": {
+   "is_oa": false,
+   "oa_status": "closed",
+   "oa_url": null,
+   "any_repository_has_fulltext": false
+  },
+  "best": null,
+  "locs": []
+ },
+ "10.1145/3723851.3723858": {
+  "title": "Rethinking Applications' Address Space with CXL Shared Memory Pools",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "gold",
+   "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3723851.3723858",
+   "any_repository_has_fulltext": true
+  },
+  "best": {
+   "id": "doi:10.1145/3723851.3723858",
+   "doi": "https://doi.org/10.1145/3723851.3723858",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/3723851.3723858",
+   "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3723851.3723858",
+   "source": null,
+   "license": "cc-by",
+   "license_id": "https://openalex.org/licenses/cc-by",
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems",
+   "raw_type": "proceedings-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3723851.3723858",
+    "landing": "https://doi.org/10.1145/3723851.3723858",
+    "source": null
+   },
+   {
+    "pdf": "https://www.research.ed.ac.uk/files/647579832/XingandBarbalaceHDCS2025RethinkingApplicationsAddressSpace.pdf",
+    "landing": "https://www.research.ed.ac.uk/en/publications/84414553-bc3c-4f4d-bfb2-922c283e130c",
+    "source": "Edinburgh Research Explorer (University of Edinburgh)"
+   }
+  ]
+ },
+ "10.1145/339647.339668": {
+  "title": "Memory access scheduling",
+  "oa": {
+   "is_oa": true,
+   "oa_status": "bronze",
+   "oa_url": "https://dl.acm.org/doi/pdf/10.1145/339647.339668",
+   "any_repository_has_fulltext": false
+  },
+  "best": {
+   "id": "doi:10.1145/339647.339668",
+   "doi": "https://doi.org/10.1145/339647.339668",
+   "is_oa": true,
+   "landing_page_url": "https://doi.org/10.1145/339647.339668",
+   "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/339647.339668",
+   "source": {
+    "id": "https://openalex.org/S4393916863",
+    "display_name": "Proceedings - International Symposium on Computer Architecture/Proceedings",
+    "issn_l": "1063-6897",
+    "issn": [
+     "1063-6897"
+    ],
+    "is_oa": false,
+    "is_in_doaj": false,
+    "is_core": false,
+    "listed_in": [
+     "norway-1"
+    ],
+    "host_organization": null,
+    "host_organization_name": null,
+    "host_organization_lineage": [],
+    "host_organization_lineage_names": [],
+    "type": "conference"
+   },
+   "license": null,
+   "license_id": null,
+   "version": "publishedVersion",
+   "is_accepted": true,
+   "is_published": true,
+   "raw_source_name": "Proceedings of the 27th annual international symposium on Computer architecture - ISCA '00",
+   "raw_type": "proceedings-article"
+  },
+  "locs": [
+   {
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/339647.339668",
+    "landing": "https://doi.org/10.1145/339647.339668",
+    "source": "Proceedings - International Symposium on Computer Architecture/Proceedings"
+   }
+  ]
+ }
+}

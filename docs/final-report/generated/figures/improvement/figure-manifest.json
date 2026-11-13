@@ -1,0 +1,109 @@
+{
+  "figure_table_trace": [
+    {
+      "artifact_id": "pooling-path",
+      "caption_claim": "Multiple hosts contend on a shared path; the modeled slice transports atomic descriptors.",
+      "limitations": [
+        "Conceptual system path; descriptor RTL boundary only."
+      ],
+      "source_data": {
+        "dataset_id": "inputs/specs/CXL_SPEC.md",
+        "file": "../../improvement_evidence_manifest.json"
+      },
+      "supported_manuscript_claims": [],
+      "transformation": {
+        "hash": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+        "script": "docs/final-report/generate_revision_figures.py"
+      }
+    },
+    {
+      "artifact_id": "buffer-transition",
+      "caption_claim": "Main Buffer preserves the previous effective class pending a second supporting window.",
+      "limitations": [
+        "Illustrative rule examples; not latency measurements or H1 evidence."
+      ],
+      "source_data": {
+        "dataset_id": "inputs/specs/CXL_SPEC.md",
+        "file": "../../improvement_evidence_manifest.json"
+      },
+      "supported_manuscript_claims": [],
+      "transformation": {
+        "hash": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+        "script": "docs/final-report/generate_revision_figures.py"
+      }
+    },
+    {
+      "artifact_id": "allocation-shares",
+      "caption_claim": "Class quotas and per-source credits yield different fixed-class shares.",
+      "limitations": [
+        "MODEL_ONLY continuous backlog, 20,000-cycle horizon; drain excluded; initial L/H/H/H; no W5M boundary."
+      ],
+      "source_data": {
+        "dataset_id": "fixed_class",
+        "file": "../../improvement_evidence_manifest.json"
+      },
+      "supported_manuscript_claims": [],
+      "transformation": {
+        "hash": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+        "script": "docs/final-report/generate_revision_figures.py"
+      }
+    },
+    {
+      "artifact_id": "heavy-sparse-tradeoff",
+      "caption_claim": "Lower Sparse mean run-P99 coexists with higher mean maximum Heavy gaps for CGOF.",
+      "limitations": [
+        "MODEL_ONLY overload, 20 seeds; class-aware policies initially all High; no W5M boundary; distinct from one-seed near-profile RTL."
+      ],
+      "source_data": {
+        "dataset_id": "finite_heavy",
+        "file": "../../improvement_evidence_manifest.json"
+      },
+      "supported_manuscript_claims": [],
+      "transformation": {
+        "hash": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+        "script": "docs/final-report/generate_revision_figures.py"
+      }
+    },
+    {
+      "artifact_id": "cgof-hardware",
+      "caption_claim": "Six CGOF configurations have positive reported setup slack at 25ns.",
+      "limitations": [
+        "Pre-layout STA; untested checks; no CGOF power result."
+      ],
+      "source_data": {
+        "dataset_id": "hardware",
+        "file": "../../improvement_evidence_manifest.json"
+      },
+      "supported_manuscript_claims": [],
+      "transformation": {
+        "hash": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+        "script": "docs/final-report/generate_revision_figures.py"
+      }
+    }
+  ],
+  "generator_sha256": "6070fb2cfd65be6d2e1640cfdf09d524015b69ad76865168008401e9f75ab403",
+  "matplotlib": "3.10.0",
+  "outputs": {
+    "allocation-shares.pdf": "878c373ba3bbdf32b25233eebe323d19161fd47af6dee599d677d17b7a734c35",
+    "allocation-shares.png": "2105ca8cb1bbd4a8877d1898ac254d01d86926a2a3ac4aab8db60e92010ad1a7",
+    "allocation-shares.svg": "d93a9d019f7b073fecbdcb310141937661e8554016283927a7f3ee0c4f28195f",
+    "buffer-transition.pdf": "cbdf2cdef013153678a705a8eb8fa17bff29ad46a2f0e1830edc05a27bf4fb14",
+    "buffer-transition.png": "37c19d2ddd484138a60db64d08ef2d156e35d555415b5577d6c10ef04bf76727",
+    "buffer-transition.svg": "9156d48ab2567af437f27e965e56b95eba36254f6a592874fb51189cf9f7b17f",
+    "cgof-hardware.pdf": "f67ad680f93d360ef309cc99c0c0ed7ac9fbf69ff76f2c08526a5562d1c66f1d",
+    "cgof-hardware.png": "859524f674761ed52e59f964d3dab49f4b4d7d02f51cab9010d69bef24e09a28",
+    "cgof-hardware.svg": "28afdf59177bbc623b88957aa374505e2eee7395a1b435ceaca7c1c0966756bf",
+    "heavy-sparse-tradeoff.pdf": "0a82a9ef0272657839e8230a0b45c6c388b32d371a51acb11ada383b54915882",
+    "heavy-sparse-tradeoff.png": "ec901f0250b2802904700201b28ebb282478da525b91893408655f01aeff35cb",
+    "heavy-sparse-tradeoff.svg": "dfae1b2b0ebcb4c7835b9db9c52f6b63466ed3b3ac746426041c7b0aae100047",
+    "plot-data.json": "f095eadd2f1b92b38d53a3cd2716c7b1b60cfcca42ada0dfc9d5d78e23ec099e",
+    "pooling-path.pdf": "246dd7c1e4a0d57b8ed862db24c93daad18db6ccdd154b32b8bde12683c683ef",
+    "pooling-path.png": "3586ad50cb82519c29d32565d6e77a3d4f7cc5f70d899af3d7497b3be50665e3",
+    "pooling-path.svg": "a873c9aa5ba5a6e9c2890a7199883b85f1981dc82b8b42826c04ee030aef58dd"
+  },
+  "placement": "full-width figure*; preserve at least 8pt annotation text",
+  "png_dpi": 300,
+  "schema": "cxl-improvement-figures-v1",
+  "table_manifest_sha256": "d2e424095f0bcb7719f1d5cba1d2b1a379dd5fcccddbf32635eccf188023121c",
+  "width_inches": 7.1
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "cxl-v2-a3-acceptance-v1",
+  "status": "A3_CLEAN_PASS",
+  "date": "2026-11-04",
+  "supersedes": "dynamic-role-switch-v2-a3-acceptance-20261104.json (source gate failed; kept as history)",
+  "run_id": "20261104T063359Z_1495",
+  "seed": 7301,
+  "window": 5000000,
+  "heavy_work": 17500000,
+  "active_cap": 24000000,
+  "rtl_jobs": 4,
+  "rtl_jobs_pass": 4,
+  "wall_s": 12149.15,
+  "lint": 5,
+  "unit_tests": 7,
+  "source_stable": true,
+  "source_hashes": 48,
+  "a3_scope_sha256": "29b25dd4480eca4594348d9b9b59cf4e4ec3cb1b015860b505bf86f4cfd5f86a",
+  "source_gate_note": "no file in the 48-file pin set changed while the run was in flight",
+  "g_eq": {
+    "anchors": 4,
+    "passed": 4,
+    "exclude": [
+      "evidence_kind",
+      "input_hold_checks",
+      "limitations",
+      "native_cgof",
+      "native_coverage",
+      "native_main",
+      "schema",
+      "wall_s"
+    ],
+    "drain_compared": "drain_cycles is EQUAL in all four pairs",
+    "model": "artifacts/implementation/dynamic-role-switch-v2-a3-model/20261104T031500Z_a3spec",
+    "report": ".setup-logs/implementation/dynamic-role-switch-v2-overnight-20261104/geq-a3-20261104T100818Z.json"
+  },
+  "drain": {
+    "per_anchor": [
+      0,
+      0,
+      0,
+      2
+    ],
+    "note": "the depth8-bursty mixed anchor cuts with work queued and drains in two cycles; fired == accepted == 18,815,149; the model replay of the same job also records 2",
+    "scope_field_defect": "a3_scope.json still carries drain=NOT_EXERCISED as a constant in scripts/run_dynamic_role_switch_a3.py; the per-anchor values are the evidence"
+  },
+  "results": [
+    {
+      "anchor": "cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261104T063359Z_1495/results/cocotb_a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "afab03bb8d0e07e81d14c53ac8f6f6fcde2394806051f157c1296271797daf71",
+      "drain_cycles": 0,
+      "active_cycles": 21873605,
+      "sparse_p99": 19,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261104T063359Z_1495/results/cocotb_a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "6598516953e6ee846ffadfae5dbfac609dbb6b925787e355655155339acfee18",
+      "drain_cycles": 0,
+      "active_cycles": 21873605,
+      "sparse_p99": null,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261104T063359Z_1495/results/cocotb_a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "e63f6bcb4684d53e374a390e6c1622276488e3fdb9497f452421d39146985a08",
+      "drain_cycles": 0,
+      "active_cycles": 21873605,
+      "sparse_p99": 18,
+      "physical_sources": "EQUAL"
+    },
+    {
+      "anchor": "cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "status": "PASS",
+      "rtl": "artifacts/implementation/dynamic-role-switch-v2-a3/20261104T063359Z_1495/results/cocotb_a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301__cgof_diagnosis_finite-heavy-mixed-w5000000-d8-main-rr0.json",
+      "rtl_sha256": "b2e4521f94ae0368adf6a247475aa4695d81ff3e4fcd9bd5b329227ed9d51bf2",
+      "drain_cycles": 2,
+      "active_cycles": 21873610,
+      "sparse_p99": 19,
+      "physical_sources": "EQUAL"
+    }
+  ],
+  "evidence_classification": "SCHEDULER_RTL anchors on one engineering seed + MODEL_ONLY statistics",
+  "claim_effect": "none; seed 7301 is an engineering seed and C7 stays SINGLE_SEED"
+}

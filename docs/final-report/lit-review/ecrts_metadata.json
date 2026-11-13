@@ -1,0 +1,73 @@
+{
+  "doi": "10.4230/LIPIcs.ECRTS.2021.2",
+  "datacite_status": 200,
+  "datacite_url": "https://api.datacite.org/dois/10.4230/LIPIcs.ECRTS.2021.2",
+  "title": "A Memory Scheduling Infrastructure for Multi-Core Systems with Re-Programmable Logic",
+  "creators": [
+    "Hoornaert, Denis",
+    "Roozkhosh, Shahin",
+    "Mancuso, Renato"
+  ],
+  "publisher": "Schloss Dagstuhl – Leibniz-Zentrum für Informatik",
+  "publication_year": 2021,
+  "types": {
+    "ris": "CPAPER",
+    "bibtex": "inproceedings",
+    "citeproc": "",
+    "schemaOrg": "Article",
+    "resourceTypeGeneral": "ConferencePaper"
+  },
+  "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECRTS.2021.2",
+  "container": {
+    "type": "Series",
+    "identifier": "10.4230/LIPIcs.ECRTS.2021",
+    "identifierType": "DOI",
+    "title": "LIPIcs, Volume 196, ECRTS 2021",
+    "volume": "196",
+    "number": "2",
+    "firstPage": "2:1",
+    "lastPage": "2:22"
+  },
+  "dates": [
+    {
+      "date": "2021",
+      "dateType": "Issued"
+    },
+    {
+      "date": "2021-06-30",
+      "dateType": "Available"
+    },
+    {
+      "date": "2021-06-30",
+      "dateType": "Created"
+    },
+    {
+      "date": "2021-06-30",
+      "dateType": "Copyrighted"
+    }
+  ],
+  "citation_title": [
+    "A Memory Scheduling Infrastructure for Multi-Core Systems with Re-Programmable Logic"
+  ],
+  "citation_author": [
+    "Hoornaert, Denis",
+    "Roozkhosh, Shahin",
+    "Mancuso, Renato"
+  ],
+  "citation_publication_date": [],
+  "citation_firstpage": [
+    "2:1"
+  ],
+  "citation_lastpage": [
+    "2:22"
+  ],
+  "citation_doi": [
+    "10.4230/LIPIcs.ECRTS.2021.2"
+  ],
+  "citation_journal_title": [],
+  "citation_volume": [],
+  "citation_pdf_url": [
+    "https://drops.dagstuhl.de/storage/00lipics/lipics-vol196-ecrts2021/LIPIcs.ECRTS.2021.2/LIPIcs.ECRTS.2021.2.pdf"
+  ],
+  "citation_abstract": []
+}

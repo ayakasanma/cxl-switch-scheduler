@@ -4202,3 +4202,533 @@ PASS，狀態A3_JOBS_PASS_GEQ_PASS_SOURCE_GATE_FAILED，差異存於
 a3-source-diff.json。RTL四個錨點的drain_cycles皆為0，RTL drain仍
 NOT_EXERCISED。pilot矩陣的active cap已由40M改回凍結的24M。
 驗收：docs/reviews/dynamic-role-switch-v2-a3-acceptance-20261104.json。
+
+## 2026-11-06 FastX CGOF power input audit and remote preflight
+
+Result: INCOMPLETE; CGOF power remains unmeasured. The detailed receipt and
+reproduction index are in `docs/reviews/fastx-power-readiness-20261106.md`.
+This task writes only the host-created sharp-bohr worktree at starting revision
+`a3f4d8b1865c9af24eb86776274cc8c98428adc3`; original-repository inputs are read-only.
+
+Cindy live runtime confirms Codex `group/gpt-6.1-sol-2`, provider
+`magpie-18cf0ecc`, high effort. Read-only agy Gemini3.8 Flash/high inventory and
+flow-review workers were assigned independently. The inventory worker was stopped
+by its verified task-owned PID after repeated provider errors and no final report
+(exit -1); its partial reads are not accepted as an independent review.
+Flow review failed with exit3,
+provider UNAVAILABLE/503. Preimplementation agy Gemini4 Argon/high review exited0,
+ADOPT WITH CONCRETE CORRECTIONS. CLI auto mode was unavailable for this account;
+actual init permission_mode was always-proceed/default. No model substitution or
+global configuration change was made. Prompts, init receipts, streams, errors and
+exits are preserved under `.setup-logs/implementation/fastx-power-20261106/`.
+
+Implemented `audit_fastx_power.py`, its eight synthetic contract tests, and
+`fastx_power_preflight.sh`. The audit observed twenty complete 30-job seed
+directories7401-7420 plus three interrupted attempts, without directory stitching
+or campaign reruns. It checked both N4 CGOF mapped bundles, current source hashes,
+Formality download receipts and the pinned eighteen-capture trained-power index.
+These observations do not reaccept the campaign or raw baseline power captures.
+The separate WSL capacity-absorption runner and its six workers remain untouched.
+
+Native terminal helper RemoteCommand succeeded; observed backends FastX-NN and
+FastX-NN, account chiang22. The Synopsys2024 module loaded; DC W-2024.09 -version
+returned1 and PT W-2024.09 -version returned0. Remote CGOF1/2 netlists/SDCs,
+SAED32 DB and standard cell-model hashes matched locally recorded inputs. A first
+preflight failed because native PowerShell treated remote module stderr as an
+error; v2 captures remote stderr in stdout while retaining each command's exit.
+No allocation ID or scheduler executable was observed, and permitted long-EDA
+compute placement remains unverified. No license checkout or power analysis was run.
+
+Validation: eight unittest cases pass with exit0 and no skips; WSL bash syntax
+check exit0; actual input audit exit2 (deliberate INCOMPLETE); remote v2 preflight
+and input/model hash checks exit0. Audit output is
+`artifacts/implementation/fastx-power-20261106/input-audit-final/audit.json`,
+with its SHA256SUMS. These are tooling checks, not new RTL lint/simulation/formal
+or PPA results.
+
+Remaining gates: freeze exact CGOF power seeds/arms/stimulus against either the
+historical509-511 A/B cohort or a fully matched new baseline; implement and verify
+cgof_unit_top/HIGH_WEIGHT adapters for the switch_top-only activity/PT flow;
+verify allowed compute placement before a bounded license/replay/SAIF/power pilot.
+No SAIF annotation coverage or leakage/internal/switching/total power exists from
+this task; no netlist pruning, paper-result upgrade or long-backlog drain claim.
+
+## 2026-11-07 FastX CGOF frozen cohort and offline activity adapter
+
+Result remains INCOMPLETE; CGOF power is unmeasured and long-backlog drain is
+unverified. Owner selected seeds509/510/511 with separate A/B arms and supplied
+the local fastx-ews references/eda-rules.md. That reference explicitly prohibits
+long EDA on shared login nodes but contains no approved compute node/allocation
+or launch command. No remote EDA, license checkout, uploads or new run directories.
+
+Implemented scripts/export_cgof_power_vectors.py and two new contract-test files;
+updated the audit's owner-cohort status and added a guarded CGOF configuration
+branch in sta/power_pt.tcl. No HDL or accepted netlist changes. Exact parameters,
+hashes, commands, exits, routes and acceptance limits are recorded in
+docs/reviews/fastx-power-readiness-20261107.md and the ignored artifact-index.json
+under artifacts/implementation/fastx-power-20261107. Only sharp-bohr is writable;
+the original repository remains read-only, with its existing README change intact.
+
+The freeze verified the eighteen pinned FCFS/RR10/Main baseline metadata/semantic/
+native/archive receipts and six per-seed/arm traffic identities, plus both accepted
+CGOF1/2 mapped netlist/SDC/config/profile/library/source contexts. It does not
+rehash historical giant vector payloads or reaccept historical power. One traffic
+source differs only in CRLF/LF bytes; exact normalized-content comparison and both
+raw hashes are retained, while substantive drift remains rejected. No proprietary
+cell library, PDK, executable or license was copied.
+
+Four actual W256 model-only fixtures cover both weights and A/B at seed509.
+A has512 warmup+64 measured rows; B retains101536 warmup+64 measured rows.
+All exports and serialized re-audits exit0; a repeated CGOF1/A fresh export has
+identical vector text/gzip/archive hashes. Independent passive FIFO/arrival/credit/
+classification bookkeeping checks every pin row and conservation beside the
+reference model. These are not hardware replay, SAIF or power evidence. Production
+10M training exports/captures remain unrun. The actual readonly inventory observes
+twenty complete7401-7420 seed directories and three excluded incomplete attempts,
+no complete-source drift/missing/duplicate; no confirmation campaign was started.
+
+Validation: CGOF vectors11, CGOF Tcl5, audit8 and unchanged revision vectors14
+tests pass. Unchanged power extension discovers22:14 pass and8 Linux simulator
+checks skip on Windows. Total52 passed/8 skipped; skips are not PASS. Tcl tests use
+a real interpreter and stop before the first EDA command. Existing revision tests
+first exited5 with zero tests because ignored mapped inputs were absent from the
+worktree; staging twelve project-generated baseline files read-only with SHA
+receipts restored those unchanged tests. Early freeze failures and repaired-test
+evidence are preserved. bash syntax and git diff --check exit0. No new scheduler
+RTL lint/simulation/formal/CDC result is claimed.
+
+Main runtime was rechecked via Cindy get_session_runtime: Codex
+group/gpt-6.1-sol-2/high, provider magpie-18cf0ecc. Independent preimplementation
+review: agy gemini-4-argon-high/requested high, exit0/SUCCESS. Adopted corrections
+include real B fixture warmup, receipt variants, paths, passive credit ledger and
+CGOF Tcl guards. --mode auto was unavailable; actual default/always-proceed mode
+is retained, and provider reasoning depth is not attested. Separate readonly
+Gemini3.8 Flash/high baseline and implementation checks timed out at240s/180s,
+exit3 without a final review; neither counts as independent acceptance. No silent
+route substitution, recursive workers or global routing/settings changes.
+
+Native Claude Code2.1.318/RTL Agent Team0.14.6 testbench preflight requested
+claude-opus-5-5/medium/rtl-agent-team:testbench-dev, but returned exit1/HTTP403
+subscription authentication api_error, no model inference. This is not established
+allowance exhaustion. AGENTS requires native Claude RTL delegation and permits
+Sol/high fallback specifically for exhausted allowance; the testbench remains
+unchanged pending restored Claude or explicit authorization for this403 fallback.
+The reviewed remaining scope is CGOF testbench adapter, SAIF/PT checker, bounded
+runner, actual RTL fixtures and a single permitted remote gate-level pilot.
+
+Own-terminal fastx-connect.ps1 -RemoteCommand refresh exits0, accountchiang22 on
+observed backendFastX-NN. No own EDA observed on that backend; other backends are
+not covered. No allocation IDs observed. Initial local WSL filter failed because
+rg was absent, exit127; corrected ps/filter exit0 found no matching project runners
+at that instant. Explicit native wsl.exe/Ubuntu host/process/tool receipt is retained.
+No other active job was stopped or taken over. Power components/SAIF coverage
+remain NOT_RUN; no claim is promoted to chip power or physical signoff.
+
+### 2026-11-07 continuation: owner-selected Claude retry, adapter and local integration
+
+The owner explicitly chose to retain Claude and retry the403 instead of accepting
+the proposed Sol substitution. Native Claude preflight and implementation both
+exited0. Claude Code2.1.318 / RTL Agent Team0.14.6 invoked
+claude-opus-5-5, requested medium, firstParty; init and modelUsage confirm actual
+inference. Provider reasoning depth is not attested. No global routing/authentication
+settings were changed. The prior403 failure is retained as history and is resolved.
+
+Claude alone wrote sim/power/tb_power.sv and scripts/test_cgof_power_tb.py. The TB
+adds45 lines and preserves baseline text byte-for-byte after removing its CGOF
+branches. W256 fixtures explicitly select weights1/2 and ELIGIBLE_RR0; production
+uses the unparameterized retained mapped top. Canonical CGOF V2 headers constrain
+N4, policy IDs3/4, seeds509-511 and exact A/B warmup/measured durations. Mode9
+requires both fixture and NO_SAIF defines. Existing baseline allowlists are unchanged.
+
+Parent Codex independently inspected the diff and reran the actual local suite:
+10/10, no skips, exit0. Four strict Verilator5.052 builds exercise both weights
+and fixture/production header guards. Actual W256 A/B RTL pin replays include
+B's101536-cycle warmup. Icarus12 pin-only stubs check four-state rejection; they
+implement no scheduler and supply no scheduler functional acceptance. Production
+header-only tests do not validate mapped weight1 topology. Commercial toggle
+tasks, mapped gate simulation, SAIF and power remain unrun. Claude's own separate
+10/10 run is retained but not double-counted in the integrated totals.
+
+Parent owns scripts/check_cgof_power_replay.py, scripts/run_cgof_power_pilot.sh
+and scripts/test_cgof_power_checker.py. The checker binds current source/archive/
+mapping/profile/library/model hashes, training closings, per-phase conservation,
+replay totals, all SAIF signal records, clock/residency/X/Z, PT components/units/
+coverage and FF clock provenance. Constant-X signals, annotation source tables,
+warnings and disabled arcs remain subject to semantic review. Synthetic parser
+fixtures never constitute measured power, and method acceptance is never automatic.
+The runner is single-directory/single-core with fixed stage timeouts and native
+command/log/exit receipts, source-before/after checks, compute/payload checks before
+tools and refusal to reuse an execution directory. A compute receipt records
+independently verified school permission; valid-looking JSON alone grants none.
+
+Independent integration found and repaired a duplicate-SAIF-path key mismatch,
+payload string/Path hashing bug and missing revision_matrix.py in the frozen
+import closure. Tests cover successful isolated synthetic payload binding and
+source/mapping/archive/vector/audit tampering, missing compute, fixture refusal,
+rerun refusal and mutated production training closings. Failed intermediate
+receipts remain alongside the passing ones. The first unchanged Linux legacy
+run failed with7 errors because its Windows worktree gitdir path could not be
+resolved by Linux Git. Invocation-local GIT_DIR/GIT_WORK_TREE targeting the same
+worktree repaired the environment, without changing Git config or tests.
+
+Integrated unique totals: CGOF vectors11, Tcl5, audit8, unchanged revision vectors14,
+CGOF checker/runner10, unchanged legacy power extension22, CGOF TB10:80 passed,
+0 skipped, all native exits0. Both shell syntax and git diff checks are separately
+recorded. This includes actual local RTL fixture replay, not a commercial gate
+replay or a new scheduler formal/CDC claim. Commands and complete stdout/stderr/
+exits are in .setup-logs/implementation/fastx-power-20261107/verify_integration.py
+and its receipts; exact CLI prompts/streams/receipts retain per-task provenance.
+
+Four new fixtures-current exports and serialized audits exit0 with current
+adapter/checker/runner/test hashes. Old fixtures and the pre-Claude artifact index
+are preserved as historical snapshots. Offline prepare_payload.py verifies the
+archive and extracts explicit safe manifest paths exclusively, with no overwrite,
+network or EDA. A separately unpacked fixture imports successfully under WSL and
+passes runner syntax, exit0. Production model export is completed below; mapped
+gate capture remains unrun.
+No proprietary assets were downloaded or packaged.
+
+Only Host-created sharp-bohr is writable. Original tracked status remains the
+owner's M README.md; no commits, branch switches or cleanup. This continuation
+performs no new SSH or remote write. Existing SSH connectivity is not license or
+allocation evidence. Current EDA rules require written instructor/EWS/EngrIT
+permission for a named FastX execution node, or a verified Campus Cluster
+allocation with actual Synopsys installation/license. FastX has no observed batch
+scheduler; Slurm is not a FastX prerequisite. Neither permitted route is currently
+established, so mapped replay/SAIF/power are BLOCKED. The next remote action is one bounded
+CGOF1/A/509 pilot on verified permitted compute, followed by semantic acceptance
+before any expansion. No jobs were stopped/taken over and no confirmation or
+7406-7420 campaign was released. CGOF power remains unmeasured, all four power
+components and annotation coverage NOT_RUN, long backlog drain UNVERIFIED.
+The updated readiness report and artifact index are the handoff entry points;
+all future estimates remain pre-layout zero-delay, not physical-chip measurement.
+
+### 2026-11-07 owner-provided FastX execution and power-method context
+
+Read the original repository's PPA_EXECUTION_2026-10-20.md, FASTX_HANDOFF.md and
+POWER_METHOD.md directly. Historical document and raw receipt bindings are in
+artifacts/implementation/fastx-power-20261107/historical-context/historical-context.json.
+capture_historical_context.py exits0 and records the original tracked status as
+the existing M README.md. No original file was modified.
+
+The October17 handoff is an unvalidated direct-Bash template. The October20
+execution record and actual nine-element independent audit establish historical
+DC/PT execution with v1 profile6baba481, setup8/9 and OPEN electrical closure;
+power was NOT_RUN at that checkpoint. These remain historical accepted records,
+not new runs. POWER_METHOD establishes the existing VCS plus PrimeTime power
+flow with the cap075 v2 profile6f4777f0, original SAED32 RVT TT0.78V25C DB,
+ForQA/top,25ns and zero-delay/noSDF. No new PrimePower flow is substituted.
+The frozen18 trained baseline captures and seeds509-511/A,B remain authoritative;
+the historical cold100K seed509 dataset is not a matched replacement.
+
+The actual old RR pilot raw exits are compile0,sim0,pt0,shell_exit1, with the
+complete100000-cycle replay marker. This proves historical tool execution and
+retains its shell audit rejection; it does not promote that raw pilot to PASS.
+Historical direct FastX execution does not satisfy the current Skill's written
+course/node permission gate or prove current CGOF license checkout. No mandatory
+Slurm route is invented and no Campus Cluster/account substitution is made.
+
+One local production CGOF1/A/509 model export was launched with W5000000,
+10000000 warmup and100000 measured cycles, followed by its serialized independent
+ledger audit. It uses frozen current runtime sources and a new worktree artifact
+directory. Exact command/stdout/stderr/native exit are retained under the ignored
+historical-context/production-export.* logs. This is input preparation, not EDA,
+SAIF or power. No accepted baseline or confirmation campaign is rerun.
+
+Production export completed2026-11-07 04:05:12-04:20:27 Asia/Taipei
+(2026-11-06 20:05:12-20:20:27 UTC), exporter and launcher native exits0.
+The local monitor budget was5400s; actual duration914.6s, no timeout or export
+restart. The ownership-bound monitor handoff and original wrapper status are
+preserved separately from the successful export's native status. Command:
+
+```powershell
+& ./.venv-fastx-power/Scripts/python.exe -B scripts/export_cgof_power_vectors.py --evidence-root $EvidenceRoot --weight 1 --seed 509 --arm A --window 5000000 --out artifacts/implementation/fastx-power-20261107/production-pilot-cgof1-A-s509
+```
+
+Exact argv and the read-only evidence root are in production-export.receipt.json.
+
+All10100000 serialized rows passed the independent FIFO/credit/class ledger
+audit. Actual production metadata also passes check_cgof_power_replay.check_metadata.
+Training closings4999999/9999999 include the closing fire before clearing B/S,
+with next classes B_H,H,H,H then L,H,H,H. The exogenous trace is the pinned509/A
+c49208b8ef08899cbf6557c14ab53c57d4429abf7651456abe07aa5d6851d8f9.
+Model accepted10100014, fires10099999 and cut/end outstanding15,0,0,0 satisfy
+conservation; no drain is inserted. Gzip205703129bytes has SHA256
+97bb724fd8727321b14b5f76e6a77e6ee7e7d5f45b91faf6aad82b877d0cf1a1;
+source archive SHA256a35aeb5f47b5727017c7b49b0ead735f9071fe4bb210bfe919a7caeba14e1b98.
+
+verify_production_payload.py runs prepare_production_payload.py, then an isolated
+WSL Ubuntu Python import and Bash syntax check inside production-payload-cgof1-A-s509.
+Both native exits0. Preparation reuses the completed serialized audit with exact
+receipt/audit/source/archive/vector and destination-byte bindings instead of
+replaying the settled10100000 rows again. All source manifest members are
+explicitly verified and exclusively extracted. No proprietary library/PDK/tool
+is included. Complete command/output/error/exit receipts are indexed.
+
+The80-test integration result remains applicable: runtime sources were not edited
+during or after the production export. This adds one real production model/input
+acceptance, not another counted unit test or a mapped hardware/power result.
+The other eleven CGOF inputs are not prepared or released. Remote replay/SAIF/PT
+power remain BLOCKED by the current written execution-location permission gate;
+annotation and all four power components remain unmeasured, long backlog drain
+UNVERIFIED. No new SSH, remote upload/write, commercial job or baseline rerun.
+
+### Owner-authorized direct CGOF1/A/509 pilot — 2026-11-07
+
+The owner explicitly requested removing the additional written-permission gate
+and executing directly. The local FastX Skill and its eda-rules/connection-pitfalls
+references now permit one direct bounded pilot with one core, existing stage
+timeouts, a fresh remote directory, and actual site/tool restrictions. No new
+instructor/EWS/EngrIT letter or Campus Cluster allocation is required by the agent.
+This records owner authorization without claiming institutional permission.
+The three prior rule files are backed up in ignored owner-direct-pilot logs.
+
+Native Windows OpenSSH key/agent preflight was rejected; the dedicated key was
+absent and the agent unavailable (outer command exit1). A visible native SSH
+console was opened on Jay_workshop using strict known-host checking. It requires
+manual owner password entry, consistent with the task's credential restriction.
+The helper's stored DPAPI credential was not accessed. Cindy ask_owner returned
+UNSUPPORTED because its input handoff is unavailable on Windows; the real SSH
+console remains the owner's remote-desktop input location.
+
+The launch script streams the existing production payload through the same SSH
+connection after backend/account/jobs/load/module/runtime and input inspection,
+then invokes the frozen runner once. It preserves command output, native exits,
+the actual backend-bound owner receipt, and allowed reports/SAIF for review.
+No scheduler or allocation is fabricated, no baseline is rerun, and no unrelated
+job is stopped. Current status is WAITING_INTERACTIVE_SSH; VCS/PT power checkout,
+gate replay, SAIF, annotation and power remain unrun/unmeasured. The current
+report is docs/reviews/fastx-power-direct-pilot-20261107.md.
+
+### FastX production pilot execution — 2026-11-07
+
+Authentication succeeded through the local FastX Skill helper and its existing
+DPAPI credential. The chat-provided value was not persisted or added to argv,
+logs or project files. The unauthenticated task-owned native prompt was closed;
+its exit -1 and zero-byte output are retained. No credential or manual sign-in
+request remains pending. Task-local AsyncSSH/SFTP support uses the helper's
+existing credential lifecycle and pinned known_hosts, without transferring the
+Skill directory. The exact helper command and transport argv are in ignored
+owner-direct-pilot logs.
+
+Two infrastructure attempts are preserved separately. Attempt01 returned
+payload=1/shell_exit=1 because download-manifest.json is a local download receipt
+absent from the accepted remote bundle. The runner now reads the fresh payload's
+mapped copy after cmp verifies all six actual remote inputs byte-for-byte against
+that copy; the accepted bundle remains unchanged. Attempt02 passed payload but
+returned compile=127/source_check=1/shell_exit=1: module loads inside the piped
+preflight group were confined to a subshell, leaving the parent without VCS/PT
+and using system Python3.9. Loading Synopsys2024 and Python3.12.10 in the parent
+bootstrap shell resolves that environment error. Neither attempt produced power
+and neither is accepted as a scheduler simulation. Their raw receipts and
+allowed reports are retained in attempt-01-input-metadata and attempt-02-environment.
+
+The current fresh run, cgof-power-owner-direct-20261106t204718z, began at
+2026-11-07 04:47 Asia/Taipei. Actual backend/account, full paths, exact package
+hash, compute receipt, modules, resources, commands and native exits are in
+transport.receipt.json and the remote bootstrap/evidence archive. The existing
+production payload was reused without repeating its completed 10.1M-row model
+audit. Both compile and compile-log-audit returned0; the actual VCS_Full64
+mapped gate replay is running with one core and a1200s stage limit. The standalone
+vcs -ID diagnostic returned1 because it selected a nonexistent32-bit compiler;
+the successful -full64 compile and runtime banners establish the actual version.
+The diagnostic remains a failed query, not a claimed tool check PASS.
+
+prepare_matched_baseline.py produced matched-baseline-509A.json, exit0. It uses
+the pinned accepted18 index, frozen metadata and semantic receipts for only
+509/A FCFS/RR10/Main. Existing total powers are3.356/2.559/3.466mW. It preserves
+policy-specific admissions, fires and cut/end outstanding work. Common trace,
+profile, depth and measurement/training durations match CGOF's prepared input.
+This is preparation for comparison, not a baseline rerun or new acceptance.
+
+No frozen runtime sources changed. Existing80 passed/0 skipped remains the
+applicable integration result. Claude Code2.1.318/rtl-agent-team:testbench-dev
+with claude-opus-5-5, medium effort, firstParty remains the RTL adapter author;
+the successful owner-selected retry resolved the earlier403. Codex retains
+orchestration, read-only independent review and report ownership. Remote EDA is
+serialized under the main coordinator; no new duplicate worker or campaign runs.
+Full mapped replay, SAIF, PT power and semantic acceptance remain pending at this
+checkpoint. CGOF power remains UNMEASURED; long backlog drain UNVERIFIED.
+
+At2026-11-07 05:08 Asia/Taipei the1200s simulation limit expired after the
+8M-cycle progress marker. Actual exits: payload0, compile0, compile-log-audit0,
+sim124, source_check0, shell_exit1. Archive/download exited0 and the full failure
+is preserved in remote-pilot/attempt-03-bounded-replay. No complete replay, SAIF
+or PT power exists for that attempt. No functional mismatch was reported before
+the timeout; this is incomplete verification, not an8M-cycle acceptance.
+
+Only after that process and evidence download completed, a fresh retry
+cgof-power-owner-direct-20261106t210852z was launched at05:08:49 Taipei. The
+same210204160-byte package and frozen runtime sources are retained. An external
+operational runner changes only the observed-insufficient sim budget1200s to
+3600s, with outer6400s/transport6650s bounds. Its SHA256 is
+b96d09a25e9269355a7c6d489fd1feaa01c0246352105735c4f226736bf76aa0;
+the original frozen runner remains8500583676df52ef6077cb272b70670453f93b15c6c206a262cd4ad07a9d4a40.
+The executed copy is retained in the evidence archive and its change is explicit
+in the bootstrap. No vector/model re-export, preload, cycle skip, stimulus change,
+baseline rerun or parallel EDA is used. Exact new backend and command are in
+owner-direct-pilot/replay-budget-retry/transport.receipt.json.
+
+inspect_mapped_topology.py observed27784 leaf cells,8998 clock pins and34
+literal-pin cells from the exact frozen CGOF1 netlist, exit0. The read-only
+FastX inspect_cell_interfaces.py review binds the original cell-model/netlist
+hashes, finds no missing input/inout or unknown ports, and records disconnected
+QN/carry/comparator/hold outputs as port-direction metadata only. The model and
+library source remain on FastX. Its helper exit0 and full command/output are
+retained in cell-interface-review.command.txt/cell-interface-review.json. These
+reports support later SAIF/annotation review and do not grant power acceptance.
+
+### 2026-11-07 — CGOF1/A/509 gate-level power evidence
+
+The owner-authorized FastX retry completed on backend `fastx4-NN.ews.illinois.edu` as run `cgof-power-owner-direct-20261106t210852z`. The frozen CGOF1/A/509 package, mapped netlist, SAED32 RVT model/DB, profile and vectors were reused without a source or stimulus change. Full64 VCS compile exited `0`; the 10,100,000-cycle replay exited `0` with 100,000 measured cycles, 2,500,000 ns SAIF duration, clock `TC=199999`, and no functional mismatch.
+
+The first remote replay audit stopped before PrimeTime because the checker classified the legal SAIF signal name `TC` as a duplicate activity field. The parser was corrected to distinguish field frames from signal frames, and the regression suite completed `11` discovered tests with `10` passed and `1` existing skip. A power-only PrimeTime continuation then reused the completed replay and SAIF in a new remote report directory; it exited `0`. No simulation or baseline rerun was performed after the parser correction.
+
+Final local semantic audit exited `0`: 39,912 SAIF records, no transient X/Z, 28,458/28,458 nets annotated, 27,750/27,784 leaf cells fully annotated, and 8,998/8,998 register clock pins sourced from the `clk` net with file activity. PrimeTime reported internal `0.001328 W`, switching `0.00001818 W`, leakage `0.002069 W`, total `0.003416 W`; `check_power` reported zero load/ramp range issues. Existing matched baseline rows were reused without rerun: FCFS `0.003356 W`, RR10 `0.002559 W`, Main `0.003466 W`.
+
+This result measures one CGOF1/A/509 case only. The remaining `509–511/A–B` cases, cohort-level claims, long backlog drain, and physical-chip power remain incomplete or unverified. Raw remote evidence, continuation reports, source hashes, commands and receipts are indexed under `artifacts/implementation/fastx-power-20261107/remote-pilot/attempt-04-budget-retry/`; the semantic summary is `power-semantic-review.json`.
+
+### 2026-11-07 — Remaining eleven CGOF captures and directed backlog drain
+
+Owner explicitly authorized finishing the eleven remaining frozen captures and adding long backlog drain. Codex started the existing production exporter for CGOF1/A/510, then added scripts/run_cgof_power_cohort.py to prepare the remaining exact matrix and coordinate one remote VCS/PrimeTime case at a time. Two focused orchestration tests passed; Bash syntax check exited 0. Initial remote preflight on FastX-NN showed no account EDA process and approximately 5.7 GB available home storage. Existing accepted CGOF1/A/509 and FCFS/RR10/Main captures are reused.
+
+The transport uses the existing FastX helper environment; local exports and audits use the project Python environment. Each fresh run preserves source/package/library/profile bindings, commands, native exits, SAIF, annotation and power reports. The existing 3,600-second simulation retry budget is used per case. Expanded vectors are disposable only after the source-before/after check passes; compressed original inputs and reports remain available.
+
+Native Claude Code claude-opus-5-5, requested medium effort, installed rtl-agent-team:testbench-dev, is the sole writer of new directed-drain verification files. Its stream confirms the requested model ID; provider-internal reasoning effort is not exposed. The additive Main/CGOF1/CGOF2 directed tests retain production W parameters and explicitly identify reset/all-High scope. They exercise finite producer/FIFO backlog, cutoff, drain greater than ten cycles, full105/hold/oracle checks and complete conservation. No existing frozen implementation source, historical A3 artifact, confirmation campaign or paper is modified.
+
+Current execution and acceptance are recorded in docs/reviews/fastx-power-cohort-extension-20261107.md and artifacts/implementation/fastx-power-20261107/cohort-extension/execution-index.json. Full cohort and new drain remain incomplete until actual results and independent review are available.
+
+### 2026-11-07 — Directed long-backlog drain accepted; power extension active
+
+Native Claude Code `claude-opus-5-5`, requested medium effort, implemented the additive testbench and runner in `sim/experimental/test_directed_backlog_drain.py`, `scripts/run_directed_backlog_drain.py` and `scripts/test_directed_backlog_drain.py`. No scheduler RTL or frozen power source changed. Run `20261106T230245Z_18888` passed all seven strict verification steps: three Verilator lint steps, nine pytest tests and three one-test cocotb runs. Total: twelve tests, zero failures, errors or skips; all commands exited zero. The source archive and all 51 before/after/current source hashes agree. Codex independently checked raw JUnit, native exit records and the per-configuration result JSON against a separate model replay, then wrote `parent-acceptance.json`, exit zero.
+
+Main, CGOF1 and CGOF2 each started from reset/all-High with N4/D16/full105/W5M. After 512 stalled generation cycles, the cutoff contained producer backlog `[359,229,167,104]` and FIFO occupancy `[16,16,16,16]`. Restoring ready and stopping generation drained 923 descriptors in 923 cycles; final generated/accepted/fired counts were `[375,245,183,120]` per source, with zero outstanding. The held grant remained stable for 511 cycles and fired first on release. Every edge retained native model/full105/hold checks, followed by two quiescent cycles. No classification window closed. This accepts directed long drain only; historical A3, trained-class claims, latency/fairness and paper results are unchanged.
+
+Reproduction: under WSL, `source scripts/wsl_env.sh && PYTHONDONTWRITEBYTECODE=1 timeout 2400 python scripts/run_directed_backlog_drain.py --execute --jobs 2`. Full build/lint/simulation commands, tool versions, JUnit and source archive are under `artifacts/implementation/fastx-power-20261107/directed-drain/20261106T230245Z_18888/`. Parent review command: `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_directed_drain.py`, exit zero.
+
+The existing power coordinator completed the CGOF1/A/510 vector export and serialized audit, then reached actual VCS compile and compile-log-audit exit zero on FastX; gate replay is active. The other ten additional captures remain queued in the same process. The eighteen existing accepted FCFS/RR10/Main rows were assembled with their original metadata, acceptance and exit bindings and matched trace/profile/windows in `cohort-extension/matched-baseline-509-511-AB.json`, exit zero; no baseline rerun or new acceptance campaign occurred. A Cindy continuation bound to this conversation checks every twenty minutes and only wakes the parent for a new completed case or error. Schedule `213559e5-1778-4839-b449-f9b37c1c4284` stops after full acceptance. The power cohort remains INCOMPLETE.
+
+### 2026-11-07 — CGOF1/A/510 matched gate-power accepted
+
+The original coordinator PID 40540 remains active with two local exporters and one serialized remote case. At 07:54 Asia/Taipei, CGOF1/B/509 had passed compile and reached 9,000,000 checked warmup cycles; coordinator stderr was empty and its exit file was absent. No accepted capture or directed drain was rerun. A read-only FastX helper invocation reached FastX-NN; that backend's process list does not describe the existing run on FastX-NN.
+
+Codex independently accepted CGOF1/A/510 in `cohort-extension/cgof1-A-s510/parent-acceptance.json`. Actual compile, replay, SAIF/PrimeTime, tool-log audits, source-before/after, shell and local-audit exits are zero. The VCS version probe's exit 1 remains separate. Source binding checks covered 39 current source files, the archive, all 54 remote before/after files, frozen mapping and library/model/profile hashes. All 28,458 nets have file activity; 27,750/27,784 leaf cells are fully annotated, with the 34 exceptions explained by literal D/SETB pins. All 8,998 FF clock pins resolve through hierarchy to clk and file activity at 0.0799996/ns. There are no transient X/Z records; twenty constant-X records correspond to omitted arithmetic/comparator outputs. The sole PTE-003 warning covers 68 propagated constant arcs; check_power reports no range issues.
+
+CGOF1/A/510 powers are internal 0.001328 W, switching 0.00001820 W, leakage 0.002070 W, total 0.003416 W. Existing matched seed-510/A totals are FCFS 0.003356 W, RR10 0.002560 W and Main 0.003467 W: CGOF1 deltas +1.79%, +33.44% and -1.47%. Trace/profile/PVT/window bindings and baseline receipt hashes agree. CGOF1/RR10/Main each accepted and fired [97654,809,772,765] during measurement; FCFS accepted [97655,809,772,765], fired [97655,809,771,765], and retained one additional source-2 descriptor at the end. The acceptance preserves these service differences.
+
+Parent-review command: `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof1_A510.py`, exit 0. Native remote command, stage exits, power components, hashes and warnings are in the acceptance receipt and original reports. The accepted scope is one pre-layout zero-delay/no-SDF averaged gate estimate; the full twelve-case cohort remains INCOMPLETE, and paper/physical-chip claims are unchanged. Directed long backlog drain retains its previously accepted twelve-test result.
+
+### 2026-11-07 — B/509 and B/510 accepted; interrupted coordinator recovered
+
+At 08:17–08:28 Asia/Taipei, original coordinator PID 40540 was absent with no native exit receipt, empty stderr and stdout last changed at 08:15:57. The machine had not rebooted. Shared remote logs showed B/510 progressing from eight to nine million checked warmup cycles on its original FastX-NN run. The alias preflight reached another backend, so that backend's process list was not treated as proof of original run failure. Cause of coordinator disappearance remains unproven. No unrelated process was stopped.
+
+Codex CLI independently accepted CGOF1/B/509 and CGOF1/B/510 with `accept_cgof1_power_case.py cgof1-B-s509` and `... cgof1-B-s510`, both exit 0. Their parent receipts retain all stage/source/package/library/profile/report bindings, original commands, matched seed/arm/window, actual admissions and outstanding work, annotation, FF clocks, unknown-state review, constant-arc warnings and all power components. B/509 internal/switching/leakage/total are 1.328/0.01794/2.069/3.415 mW; B/510 are 1.328/0.01794/2.070/3.416 mW. Against their respective FCFS/RR10/Main baselines the total deltas are +1.7884/+33.4506/-1.4430 percent and +1.7878/+33.4375/-1.4426 percent. Existing baseline captures were not rerun.
+
+After verifying absence of every task coordinator/exporter, the parent preserved the original index and resumed the same batch with ignored operational script `cohort-remaining/resume_cohort.py`, exclusive Windows file lock and a detached launcher. This script imports the existing orchestration helpers; it changes no frozen source or stimulus. The first two launcher attempts exited 1; the second recorded the actual missing-python PATH error. Using the already installed absolute Python executable repaired launch; no tool install or global setting change occurred. All attempt receipts are retained. Three focused recovery checks passed, exit 0: reuse complete exports and reject modified hashes, recover original remote completion without relaunch, and refuse to relaunch after an unproven completion timeout.
+
+Recovered coordinator PID 41940 collected B/510 only after its original remote exit and complete archive existed, checked the remote/local archive hash, then ran local replay/SAIF/PT audit and parent review, all exit 0. The original B/510 capture was not replayed. Only then did it launch the missing CGOF1/A/511 on observed backend FastX-NN, run `cgof-power-cgof1-a-s511-20261107t002827z`; compile and compile-log-audit exited 0 and replay is active. Fully completed exports are reused; interrupted CGOF2 exports remain intact and only missing cases receive fresh export-recovery subdirectories. Local concurrency remains two export tasks and remote concurrency one bounded single-core case. New remote wrappers detach from the SSH transport while preserving original stage limits and completion evidence.
+
+The active logs are now `recovery.stdout.txt`, `recovery.stderr.txt` and `recovery.exit.txt`; original coordinator logs and absent original exit are preserved. Continuation and the scheduler precheck use the active logs and detect coordinator disappearance so a stale local index cannot permanently silence recovery. The current accepted total is four of twelve including reused A/509; eight power cases remain incomplete. Directed drain retains its original twelve-test acceptance without rerun. No final cohort artifact-index/SHA completion, paper upgrade or silicon-power claim is made. Detailed records and new receipt links are in `docs/reviews/fastx-power-cohort-extension-20261107.md`.
+
+### 2026-11-07 — CGOF1/A/511 accepted; original B/511 replay active
+
+At 09:12–09:14 Asia/Taipei, the single recovery coordinator PID 41940 remained active with empty stderr and no exit receipt. Codex CLI performed the read-only parent review directly; no new agent, coordinator, campaign, accepted capture replay or drain rerun was started. CGOF1/A/511 completed on FastX-NN as `cgof-power-cgof1-a-s511-20261107t002827z`; all execution/audit stages and parent review exited zero, with informational VCS version exit 1 preserved. The command was `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof1_power_case.py cgof1-A-s511`.
+
+The new parent receipt verifies 39 current/archive sources, 54 before/after remote hashes, frozen mapping/library/model/profile, replay/SAIF/report bindings, all 8,998 FF clocks, full 28,458-net annotation, the same 34 literal-pin leaf exceptions and twenty disconnected constant-X outputs. No transient X/Z or check_power range issue was observed. The sole PTE-003 warning again covers 68 propagated constant arcs. The local package and original bootstrap payload checksum, plus evidence archive SHA256, were independently checked. Powers are internal 1.328, switching 0.01822, leakage 2.070 and total 3.416 mW. Matched seed-511/A baseline totals are FCFS 3.356, RR10 2.560 and Main 3.467 mW, giving +1.7878%, +33.4375% and -1.4710% respectively. All four policies accepted/fired [97595,777,815,813], retaining [15,0,0,0] outstanding across the measurement window.
+
+The same coordinator has advanced to B/511 run `cgof-power-cgof1-b-s511-20261107t005455z`; original shared logs showed seven million warmup cycles at 09:13, compile/audit exit zero. The read-only helper invocation reached FastX-NN, whose process list does not describe the original FastX-NN backend. The three missing/interrupted CGOF2 exports have finished their model/serialized-pin audits with native exit zero; that preparation does not constitute gate-power acceptance. Current power acceptance is five of twelve including the reused A/509. B/511 and all six CGOF2 captures still require completion and parent review. Directed drain retains its earlier twelve-test acceptance. The follow-up receipt, hashes, command/SSH logs and active-state marker are preserved under `cohort-remaining/followup-20261107T0112Z-*`; the overall cohort remains INCOMPLETE with no paper or physical-chip result upgrade.
+
+### 2026-11-07 — CGOF1/B/511 accepted; original CGOF2/A/509 replay active
+
+During the 09:37 Asia/Taipei continuation, Codex CLI independently accepted the original B/511 capture on FastX-NN with `accept_cgof1_power_case.py cgof1-B-s511`, exit 0. Compile, replay, SAIF/PrimeTime, log audits, source consistency, shell and local audit exits are zero; informational VCS version exit 1 is retained. The parent receipt binds 39 current/archive sources, 54 remote before/after files, the frozen mapping/library/model/profile, SAIF and reports. Net annotation is 28,458/28,458, leaf annotation 27,750/27,784, and all 8,998 FF clocks have clk/file activity. The 34 literal-pin exceptions, twenty disconnected constant-X outputs and sole 68-constant-arc PTE-003 warning are explained against the mapped topology; there is no transient X/Z or check_power range issue.
+
+Internal/switching/leakage/total are 1.328/0.01793/2.071/3.417 mW. Matched seed-511/B baseline totals are FCFS 3.357, RR10 2.561 and Main 3.467 mW, giving CGOF1 total deltas +1.7873%, +33.4244% and -1.4422%. All four policies accepted and fired [100000,800,800,800], retaining [15,0,0,0] outstanding across the original 102,400-cycle measurement window after 10,101,024 warmup cycles. Full commands, versions, hashes, power components and baseline bindings remain in `cohort-extension/cgof1-B-s511/parent-acceptance.json`.
+
+The single coordinator PID 41940 remains active with empty stderr and no native exit receipt, now running original CGOF2/A/509 `cgof-power-cgof2-a-s509-20261107t012153z`. Read-only FastX helper exit 0 observed five million checked warmup cycles in shared logs and compile/audit exit 0. Its alias backend was FastX-NN, so its local process list does not establish original FastX-NN job status. No coordinator, agent or campaign was added; accepted captures and directed drain were not rerun, and no frozen source changed. Operational recorder `record_followup_20261107T0137Z.py` exited 0, additionally checking all five extension packages, bootstrap payload checks and evidence archives, then preserving a continuation snapshot, review receipt, follow-up hashes and the precheck state marker. All six CGOF1 captures are now accepted, six of twelve total; six CGOF2 captures still require gate-power completion and topology-specific parent review. Directed drain retains its earlier twelve-test acceptance. The overall cohort remains INCOMPLETE, and no final global artifact closure, paper update or physical-chip claim is made.
+
+### 2026-11-07 — first CGOF2 capture A/509 accepted with structural unknown-state review
+
+At 10:00–10:05 Asia/Taipei, Codex CLI independently reviewed the original CGOF2/A/509 run `cgof-power-cgof2-a-s509-20261107t012153z` on FastX-NN. Command `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_power_case.py cgof2-A-s509` exited 0. Compile, replay, SAIF/PrimeTime, all log audits, source-before/after, shell and local audit exits are zero; informational VCS version exit 1 remains separate. Current/archive source checks cover 39 files and 54 remote before/after bindings, CGOF2 HIGH_WEIGHT=2 mapped netlist/SDC, library/model/profile, package/payload, compressed vectors, SAIF and evidence/report hashes. The reviewer resolves preparation inputs using the index export_directory, preserving canonical remote evidence and parent receipts. Frozen sources and capture inputs are unchanged.
+
+CGOF2 annotation is 30,022/30,022 nets, 29,221/29,255 leaf cells and 9,014 clk/file FF clocks. The 34 literal-pin leaf exceptions and sole PTE-003 for 68 propagated constant arcs are accounted for; check_power reports no range issue. All 42,138 SAIF records were audited with no transient X/Z. Unlike CGOF1, CGOF2 has 56 constant-X records. A scoped frozen-netlist review classifies every record: 24 omitted arithmetic/comparator outputs, 16 trimmed unused arithmetic output bits, and sixteen unconnected alias wires with no local consumers. The four multiplier PRODUCT[2:0] and FS_1/SUM[0] bits are absent from internal logic and terminate in parent SYNOPSYS_UNCONNECTED wires. No live output or consumed gate-input X was waived. The parent receipt retains all 56 structural explanations.
+
+New ignored operational checker review_cgof2_unknowns.py initially failed its self-check, exit 1, because scalar-output parsing did not handle a shared comparator output declaration. After correcting declaration parsing, check_cgof2_unknown_review.py attempt02 exited 0: original evidence passed and all three unsafe in-memory mutations were rejected (live X path, restored trimmed SUM[0], and a new consumer of an unconnected alias). The original failed logs and exit remain intact. This changes only parent-review tooling; no RTL/TB repair, delegation or replay occurred. The successful parent command then wrote a new receipt with reviewer source hashes.
+
+CGOF2/A/509 internal/switching/leakage/total are 1.331/0.01895/2.112/3.462 mW. Matched FCFS/RR10/Main totals are 3.356/2.559/3.466 mW, giving +3.1585%, +35.2872% and -0.1154%. CGOF2 accepted and fired [97716,788,745,751], retaining [15,0,0,0] outstanding across the 100,000-cycle window after ten million warmup cycles. Baseline admissions/fires and boundary-work differences are preserved; matched traffic is not claimed to be identical service. Differences describe reported pre-layout estimates, without statistical or silicon claims.
+
+PID 41940 remains the sole active coordinator with empty stderr and no completion exit. It has advanced to CGOF2/B/509 `cgof-power-cgof2-b-s509-20261107t015525z`; read-only helper exit 0 observed two million checked warmup cycles and compile/audit exit 0 through shared logs. The alias landed on FastX-NN, whose process list does not describe the original FastX-NN execution. Recorder record_followup_20261107T0200Z.py exited 0, verified all six completed extension packages/payload checks/evidence archives, and updated continuation, review receipt, follow-up hashes and the exact precheck state marker. Accepted power is now seven of twelve; five CGOF2 captures remain incomplete. The existing twelve-test directed-drain acceptance is retained without rerun. Final global artifact-index/SHA256SUMS closure awaits all twelve acceptances; the cohort remains INCOMPLETE.
+
+### 2026-11-07 — CGOF2/B/509 accepted; original A/510 replay active
+
+During the 10:47 Asia/Taipei continuation, Codex CLI independently reviewed CGOF2/B/509 and accepted it at 10:50. Command `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_power_case.py cgof2-B-s509` exited 0. The original run `cgof-power-cgof2-b-s509-20261107t015525z` completed on FastX-NN. Compile, replay, SAIF/PrimeTime, all log audits, source checks, shell, local audit and parent exits are zero; informational VCS version exit 1 is retained. Source revision a3f4d8b1865c9af24eb86776274cc8c98428adc3, 39 current/archive sources, 54 remote before/after bindings, frozen HIGH_WEIGHT=2 mapping/library/model/profile, package/payload, vectors, SAIF and report/evidence hashes match. The existing auditor uses the index export_directory; no frozen source, RTL or TB was changed, and no new review agent was used.
+
+This B window retains 10,101,024 warmup and 102,400 measured cycles, duration 2,560,000 ns. Annotation is 30,022/30,022 nets and 29,221/29,255 leaf cells, with all 9,014 clk/file FF clocks. The 34 literal D/SETB exceptions and 56 structurally unused constant-X records (24 omitted outputs, sixteen trimmed output bits, sixteen unconnected aliases) were reviewed against the frozen mapped netlist; no transient X/Z was observed. The sole PTE-003 covers 68 propagated constant arcs, and check_power reports no range issue. Internal/switching/leakage/total are 1.331/0.01858/2.112/3.461 mW. Matched seed-509/B FCFS/RR10/Main totals are 3.355/2.559/3.465 mW, giving +3.1595%, +35.2481%, -0.1154%. All four components and matching conditions are retained in the parent receipt; these are pre-layout zero-delay/no-SDF estimates, not physical-chip measurements or statistical comparisons.
+
+CGOF2 accepted/fired [100000,800,800,800], retaining [15,0,0,0] outstanding. FCFS accepted [100008,800,800,800], fired [100007,793,800,800], and ended [16,7,0,0]; RR10/Main accepted [100002,800,800,800], fired [100001,799,800,800], and ended [16,1,0,0]. Baselines all began [15,0,0,0] outstanding; conservation and original trace/profile/PVT/25 ns/window bindings were checked, without claiming identical service from matched traffic. Baselines and directed drain were not rerun.
+
+The sole coordinator PID 41940 remains alive, stderr empty and active exit absent. It advanced to original A/510 `cgof-power-cgof2-a-s510-20261107t022929z`; read-only FastX skill/helper exit 0 observed six million checked warmup cycles, compile/audit exit zero and remote exit pending. The alias reached FastX-NN while the original run hostname receipt remains FastX-NN; its process list is not used as evidence about the original backend. Operational recorder record_followup_20261107T0247Z.py binds all seven completed extension packages/payload checks/evidence archives, updates continuation, the follow-up review and SHA256SUMS, and writes the same state structure used by precheck. Eight of twelve captures are now accepted including the reused pilot; four CGOF2 captures remain incomplete. The existing twelve-test long-drain acceptance is preserved. Final global artifact closure and schedule shutdown await full parent acceptance; overall INCOMPLETE.
+
+The recorder's first attempt exited 1 before any continuation/state writes: Windows PowerShell redirected SSH stdout as UTF-16, while the reader assumed UTF-8 and raised UnicodeDecodeError. After adding BOM-based UTF-16/UTF-8 decoding in this ignored operational recorder only, attempt02 exited 0, recording accepted_total=8, RUNNING, stderr_bytes=0 and coordinator_exit=null. Both attempts retain separate stdout/stderr/exit evidence; no capture, RTL or TB rerun was needed.
+
+### 2026-11-07 — CGOF2/A/510 accepted; original B/510 replay active
+
+At the 11:14 Asia/Taipei continuation, Codex CLI independently accepted the original A/510 run `cgof-power-cgof2-a-s510-20261107t022929z` on FastX-NN. Command `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_power_case.py cgof2-A-s510` exited 0. Compile, replay, SAIF/PrimeTime, log audits, source check, shell, local audit and parent exits are zero; informational VCS version exit 1 remains separate. Revision a3f4d8b1865c9af24eb86776274cc8c98428adc3, 39 current/archive sources, 54 remote before/after bindings, package/payload, frozen CGOF2 mapping/library/model/profile, vectors, SAIF and reports/evidence hashes match. The reviewer uses the index export_directory. No frozen source, RTL or TB was changed, and no agent, coordinator or campaign was added.
+
+The A window is 10,000,000 warmup plus 100,000 measured cycles, SAIF duration 2,500,000 ns. Annotation is 30,022/30,022 nets and 29,221/29,255 leaf cells, with all 9,014 FF clocks on clk/file activity. All 34 literal D/SETB exceptions and 56 structurally unused constant-X records were accounted for (24 omitted outputs, sixteen trimmed output bits, sixteen unconnected aliases), without transient X/Z. The sole PTE-003 covers 68 propagated constant arcs; check_power reports no load/ramp range issue. Internal/switching/leakage/total are 1.331/0.01897/2.112/3.462 mW. Matched seed-510/A FCFS/RR10/Main totals are 3.356/2.560/3.467 mW, giving +3.1585%, +35.2344% and -0.1442%. These remain descriptive pre-layout zero-delay/no-SDF averaged gate estimates.
+
+CGOF2, RR10 and Main accepted/fired [97654,809,772,765], retaining [15,0,0,0] outstanding. FCFS accepted [97655,809,772,765], fired [97655,809,771,765], and outstanding changed from [15,0,0,0] to [15,0,1,0]. Matched trace/profile/PVT/25 ns/window and conservation were checked while retaining actual admission/service differences. The parent receipt contains all components, hashes, commands and matched bindings; accepted captures, baselines and directed drain were not rerun.
+
+PID 41940 remains the sole active coordinator, with empty stderr and no completion exit. Original B/510 `cgof-power-cgof2-b-s510-20261107t030331z` is active using index export_directory `export-recovery-cgof2-B-s510-20261107T002822Z`; the original partial is preserved. Read-only FastX skill/helper exit 0 observed three million checked warmup cycles, compile/audit exit 0 and remote exit pending through shared logs. The alias reached FastX-NN, while the original run hostname receipt is FastX-NN; alias processes do not establish original backend activity. Recorder record_followup_20261107T0314Z.py exited 0, additionally verifying all eight completed extension packages/payload checks/evidence archives and writing continuation, snapshot, follow-up review/SHA256SUMS and exact precheck state. Accepted captures are now nine of twelve including the reused pilot; B/510, A/511 and B/511 remain incomplete. Existing long-drain acceptance remains twelve tests, three configurations each 923 cycles and zero outstanding. Global artifact closure and existing schedule shutdown await all twelve parent acceptances; overall INCOMPLETE, without paper or silicon claim upgrades.
+
+### 2026-11-07 — recovery export B/510 accepted; original A/511 replay active
+
+During the 11:57 Asia/Taipei continuation, Codex CLI independently reviewed original B/510 `cgof-power-cgof2-b-s510-20261107t030331z`, completing acceptance at 11:58. The original reviewer first exited 1 with FileNotFoundError before creating a receipt: it assumed cgof2-B-s510.tar, but coordinator package(directory) names the preserved package from export_directory. The actual package is export-recovery-cgof2-B-s510-20261107T002822Z.tar. Initial logs/exit and the old reviewer remain unchanged. A separately saved ignored operational reviewer accept_cgof2_export_package.py resolves that basename from the index and additionally validates package_bytes. Command `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_export_package.py cgof2-B-s510` exited 0, recorded in accept-cgof2-B510.attempt02.*.txt. The original 212,418,560-byte package SHA256 is 2466efc23b241b98426acc6ecdc27812bb446e53f8726ffb2ef98b1a06473192, matching the index, remote command and original bootstrap payload check. No package or capture was regenerated. Use this reviewer for the remaining recovery A/511 and canonical B/511 exports.
+
+The original backend is FastX-NN. Compile, replay, SAIF/PrimeTime, all log audits, source consistency, shell, local audit and parent exits are zero; informational VCS version exit 1 is preserved separately. Revision a3f4d8b1865c9af24eb86776274cc8c98428adc3, 39 current/archive sources, 54 remote before/after bindings, frozen mapping/library/model/profile, vectors, SAIF/reports/evidence hashes match. The index recovery export supplies metadata/audit/source-freeze/vectors while canonical directories retain remote evidence and parent receipts. B retains 10,101,024 warmup and 102,400 measured cycles, duration 2,560,000 ns. All 30,022 nets, 29,221/29,255 leaf cells and 9,014 clk/file FF clocks were checked. The 34 literal-pin exceptions, 56 structurally unused constant-X records and sole PTE-003 for 68 propagated constant arcs are explained; no transient X/Z or check_power range issue was observed.
+
+Internal/switching/leakage/total are 1.331/0.01859/2.113/3.462 mW. Matched seed-510/B FCFS/RR10/Main totals are 3.356/2.560/3.466 mW, giving +3.1585%, +35.2344% and -0.1154%. All four policies accepted/fired [100000,800,800,800] and retained [15,0,0,0] outstanding; trace/profile/PVT/25 ns/window bindings and conservation match. These are descriptive pre-layout zero-delay/no-SDF averaged gate estimates, without physical-chip or paper claim upgrades.
+
+The sole coordinator PID 41940 remains alive, stderr empty and completion exit absent, advancing to A/511 cgof-power-cgof2-a-s511-20261107t033809z using the preserved recovery export. Read-only FastX skill/helper exit 0 observed five million checked warmup cycles, compile/audit exit zero and remote exit pending. Alias backend FastX-NN differs from original run hostname FastX-NN; its process list is not evidence about original backend activity. Recorder record_followup_20261107T0357Z.py exited 0, verified all nine completed extension packages by basename/bytes/SHA256 plus payload checks/evidence archives, and updated continuation, snapshot, review/SHA256SUMS, the remaining reviewer/package rule and exact precheck state. Accepted power is ten of twelve including the reused pilot; A/511 and B/511 remain incomplete. No frozen source changed, no new agent/coordinator/campaign was started, and no accepted capture, baseline or directed drain was rerun. The existing twelve-test directed drain remains accepted with 923 cycles and zero outstanding in each configuration. Overall INCOMPLETE; final global artifact closure and schedule shutdown await twelve parent acceptances.
+
+### 2026-11-07 — recovery export A/511 accepted; final original B/511 replay active
+
+At 12:21 Asia/Taipei, Codex CLI independently accepted original A/511 cgof-power-cgof2-a-s511-20261107t033809z on FastX-NN. Command `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_export_package.py cgof2-A-s511` exited 0. Preparation input comes from index export_directory export-recovery-cgof2-A-s511-20261107T002822Z, with canonical remote evidence/parent receipt and preserved original partial. The same original package basename, bytes and SHA256 d4f38678dea0a415800a1ed941fedd1e5543c89fe0f8b6e9e217e7948063ce8b match index, remote command and bootstrap payload check; no package or capture was regenerated.
+
+Compile, replay, SAIF/PrimeTime, all log audits, source consistency, shell, local audit and parent exits are zero; informational VCS version exit 1 is retained separately. Revision a3f4d8b1865c9af24eb86776274cc8c98428adc3, 39 current/archive sources, 54 remote before/after bindings, frozen mapping/library/model/profile, vectors and SAIF/reports/evidence hashes match. A retains ten million warmup and 100,000 measured cycles, duration 2,500,000 ns. Annotation is 30,022/30,022 nets and 29,221/29,255 leaf cells; all 9,014 FF clocks have clk/file activity. The 34 literal-pin exceptions, 56 structurally unused constant-X records and sole PTE-003 for 68 propagated constant arcs are accounted for. No transient X/Z or check_power range issue was observed.
+
+Internal/switching/leakage/total are 1.331/0.01898/2.112/3.462 mW. Matched seed-511/A FCFS/RR10/Main totals are 3.356/2.560/3.467 mW, giving +3.1585%, +35.2344% and -0.1442%. All four policies accepted/fired [97595,777,815,813], retaining [15,0,0,0] outstanding; original trace/profile/PVT/25 ns/window bindings and conservation match. Full components, commands, exits and hashes remain in the canonical parent receipt. Differences remain descriptive pre-layout zero-delay/no-SDF estimates at tool report precision, without statistical, paper or silicon upgrades.
+
+The sole coordinator PID 41940 remains alive with empty stderr and absent completion exit, running final B/511 cgof-power-cgof2-b-s511-20261107t041318z. Read-only FastX skill/helper exit 0 observed two million checked warmup cycles, compile/audit zero and remote exit pending in shared logs. The alias reached FastX-NN; original run hostname remains FastX-NN, so alias processes are not evidence about original backend activity. Recorder record_followup_20261107T0421Z.py exited 0, verified all ten completed extension package bytes/hashes, original bootstrap payload checks and evidence archives, then updated continuation, snapshot, review/SHA256SUMS and exact precheck state. Eleven of twelve captures are accepted including the reused pilot; only B/511 awaits completion and parent review. No agent/coordinator/campaign was added, no frozen source changed and no accepted capture, baseline or drain was rerun. The twelve-test directed drain retains 923 cycles and zero outstanding in each configuration. Overall remains INCOMPLETE; final global artifact closure and shutdown of the existing continuation schedule await the last original capture.
+
+### 2026-11-07 13:13 Asia/Taipei — authorized FastX cohort and directed drain accepted
+
+Final status: ACCEPTED_AUTHORIZED_SCOPE. All twelve CGOF power captures (HIGH_WEIGHT=1/2, seeds 509–511, separate A/B arms), eighteen reused accepted baseline captures and the directed long backlog drain are accepted. Final original CGOF2/B/511 completed on FastX-NN without relaunch; `.venv-fastx-power/Scripts/python.exe -B .setup-logs/implementation/fastx-power-20261107/cohort-remaining/accept_cgof2_export_package.py cgof2-B-s511` exited 0. Compile, sim/replay, SAIF/PT, source/log/shell/local audits are 0, retaining informational VCS version exit 1. Internal/switching/leakage/total are 1.331/0.01858/2.114/3.463 mW. Package SHA256 is 20083ed97ad011c2d57e715aba0702841dc59f6e2381a5589b23e9466fa01dfa; original remote evidence hash is 46dc74b8226ec82d54dce509484a61279bb8efb24f6964a3b702dd118b83eb0a. Recovery coordinator exit is genuinely 0 with empty stderr; original PID 40540 exit remains unknown.
+
+The ignored operational finalizer `cohort-remaining/finalize_cohort.py` exited 0 and checked 435 file bindings: all eleven extension package bytes/hashes, evidence/SAIF/reports, current/archive frozen sources, reused baseline receipts, and directed-drain sources/JUnit/results. It also performed final parent structural/hash review of the existing CGOF1/A/509 capture, preserving original replay-audit/shell exit 1, corrected local checker exit 0 and PT-only continuation exit 0. The retained preparation NOT_RUN and observation-time INCOMPLETE/semantic-review-required records are historical; final-acceptance.json supplies current aggregate scope. No accepted capture, baseline, drain, frozen RTL/TB/exporter/checker/STA source or failed partial directory was regenerated or changed. A console-only UTF-8 read initially encountered a UTF-16 audit; the BOM-aware reader used for final acceptance handled the original bytes without modifying evidence.
+
+Matched total power in mW (FCFS/RR10/Main/CGOF1/CGOF2): 509/A 3.356/2.559/3.466/3.416/3.462; 509/B 3.355/2.559/3.465/3.415/3.461; 510/A 3.356/2.560/3.467/3.416/3.462; 510/B 3.356/2.560/3.466/3.416/3.462; 511/A 3.356/2.560/3.467/3.416/3.462; 511/B 3.357/2.561/3.467/3.417/3.463. Twelve pairwise comparisons retain seed/arm, exact exogenous trace, profile/library/PVT, 25 ns and original windows. Actual admissions/fires/boundary outstanding remain policy-specific and conserved. CGOF1 vs Main ranges from -1.4710% to -1.4422%; CGOF2 from -0.1442% to -0.1154%, descriptive at report precision, without pooled statistics or significance claims.
+
+All net activity is annotated (CGOF1 28,458; CGOF2 30,022); leaf annotation is 27,750/27,784 and 29,221/29,255. The 34 literal D/SETB exceptions are explained, with 8,998/9,014 clk/file FF clocks. No transient X/Z; 20/56 constant-X records are structurally unused. Sole PTE-003 covers 68 propagated constant arcs; check_power has no load/ramp range issues. Directed drain reuses parent-acceptance.json under 20261106T230245Z_18888: twelve tests, no failure/error/skip, Main/CGOF1/CGOF2 each 923 drained cycles/descriptors, outstanding zero. Cutoff producer backlog 859 plus FIFO 64; reset/all-High seed7301, no window close.
+
+Current artifact-index.json v3 links final-acceptance.json, the full thirty-row four-component matched-comparison.json/MATCHED_COMPARISON.md, source freeze, twelve case bindings, directed-drain acceptance and the old immutable pre-cohort-closure index snapshot. SHA256SUMS seals current evidence and documentation. The existing follow-up schedule 213559e5-1778-4839-b449-f9b37c1c4284 is paused at closure, preserving its history; no other schedule or process is changed. Main route remains Codex CLI group/gpt-6.1-sol-2/high (live runtime checked); existing RTL/TB and directed drain provenance remains Claude Code claude-opus-5-5/requested medium/rtl-agent-team:testbench-dev. No new delegation. Full commands, exits and source/package/library/model/profile hashes are available through the index and per-case receipts.
+
+This closes the authorized measurement/evidence task only. Power remains pre-layout zero-delay/no-SDF averaged gate estimation without APR/SPEF/physical clock tree/glitch/silicon. Historical baseline vector bytes were not rehashed. Directed all-High drain does not validate trained-class evolution, general fairness or system latency. No manuscript, hypothesis integration, physical-chip result or unrelated expensive campaign is promoted.
+
+### 2026-11-07 — CGOF 功耗與本次實驗中文結果紀錄
+
+依主人要求，新增 [CGOF_POWER_RESULTS_2026-11-07.md](CGOF_POWER_RESULTS_2026-11-07.md)，集中保存十二組 CGOF internal/switching/leakage/total、六組 seed/arm 的五政策 matched total、各 baseline 的配對差異範圍、activity/FF clock/unknown-state/warning 驗收、保留的失敗歷史，以及定向長 backlog drain 的實際結果。這是既有完成實驗的文件整理；未重跑 accepted captures、十八組 baseline 或 drain，未新增代理或遠端 EDA 工作。
+
+文件整理前於 2026-11-07 15:35（Asia/Taipei）執行 ignored operational checker：node .setup-logs/implementation/fastx-power-20261107/result-record/audit_record.mjs，exit 0；重新只讀核對 448 項 final-receipt bindings 與 448 項現有 SHA256SUMS entries，零差異。最終實驗狀態維持 ACCEPTED_AUTHORIZED_SCOPE，十二組功耗與十二個 drain tests 通過。CGOF1 total 3.415–3.417 mW，配對 Main 約低 1.44–1.47%；CGOF2 total 3.461–3.463 mW，配對 Main 約低 0.12–0.14%，兩者均高於 FCFS/RR10。配對範圍僅作描述，沒有 pooled mean、統計顯著性或晶片結論。
+
+Main/CGOF1/CGOF2 的獨立 drain 皆從 859 producer + 64 FIFO backlog 排空，923 cycles、generated=accepted=fired=923、outstanding=0；工程 seed 7301、reset/all-High、無 window close，不擴張至 trained-class、多視窗適應或一般公平性。本頁與新增摘要沿用原 frozen sources、library/PVT/profile/window 與 Claude RTL/TB provenance；本次未重新證實新的模型路由。文件整理前 artifact-index/SHA256SUMS/開發報告另存 pre-result-record-20261107T073501Z snapshot，原 final-acceptance 及所有 capture 證據不變；目前索引與校驗清單另綁定新增摘要及更新後開發報告。
+
+
+### 2026-11-11 — v5 academic-humanizer language revision
+
+At the owner's request, the current Codex parent directly applied the already-loaded academic-humanizer v0.3.3 rules to the latest accepted v5 report. Original body/driver/PDF hashes matched report-v5-acceptance-20261108.json (internal date 2026-11-09). No extra native CLI or SKILL.md shell read, delegate, experiment, EDA invocation or scientific-status change was introduced.
+
+The edit makes 69 local changes across 43 paragraphs, improving sentence structure, reference clarity and applicability. The ordered 826 numeric literals, 123 inline math spans, three display-math environments, 17 body citation commands, 56 labels/references, 12 float blocks, section/command order and blank-line positions remain identical. Numeric-token counts include identifiers and are not experimental-unit counts. Original driver/bibliography, generated tables/figures, historical releases and accepted v5 PDF remain unchanged. Model/RTL, exploratory/confirmation, power-capture and negative-result qualifications are retained.
+
+Two sequential PDFLaTeX passes exited 0, producing output/pdf/cxl-scheduler-humanized-20261111.pdf (15 pages). Final log has zero undefined references, overfull boxes or rerun requests; underfull hbox spacing warnings remain. Host inspect_pdf read all 15 Letter pages with verdict ok and zero blank pages. Parent reviewed all-page thumbnails and the full results/conclusion page. git diff --check passed. Original title-page/bibliography dates remain; the editorial date is recorded separately.
+
+Deliverable, examples, full change log, preservation checks, PDF inspection and release hashes: docs/final-report/humanized-20261111/. Original snapshots, audit/patch and build logs: .setup-logs/academic-humanizer-20261111/. Acceptance is editorial/content-preservation/PDF acceptance only; no experiment evidence was re-run or upgraded.

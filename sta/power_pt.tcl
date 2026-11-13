@@ -27,11 +27,26 @@ proc power_main {} {
     if {$::PROFILE_SHA256 ne "6f4777f001fba4e80c28ebda22bd071bc316d6ff3b2b267ff688145d8aa9774d" ||
         $::PROFILE_STATUS ne "FROZEN" || $::CLOCK_PERIOD != 25.0 ||
         $::WIRE_LOAD_METHOD ne "fixed_model" || $::WIRE_LOAD_MODEL ne "ForQA" ||
-        $::WIRE_LOAD_MODE ne "top" || $::PARAM_RR_QUANTUM != 10 || $::PARAM_FAI_W != 5000000 ||
-        $::PARAM_N_SRC ni {4 8 16} || $::POLICY_NAME ni {fcfs rr fai-main} ||
+        $::WIRE_LOAD_MODE ne "top" || $::PARAM_FAI_W != 5000000 ||
         $::PARAM_N_SRC != $::env(POWER_N) || $::POLICY_NAME ne $::env(POWER_POLICY) ||
         $::TARGET_LIBRARY ne $::env(POWER_DB)} {
         error "unsupported/unfrozen power configuration"
+    }
+    if {$::TOP_MODULE eq "cgof_unit_top" && $::POLICY_NAME eq "CGOF"} {
+        if {![info exists ::env(POWER_HIGH_WEIGHT)] ||
+            $::PARAM_N_SRC != 4 || $::PARAM_DEPTH != 16 ||
+            $::PARAM_HIGH_WEIGHT ni {1 2} ||
+            $::PARAM_HIGH_WEIGHT != $::env(POWER_HIGH_WEIGHT) ||
+            $::ELAB_PARAMETERS ne "N_SRC=4,DEPTH=16,FAI_W=5000000,HIGH_WEIGHT=$::PARAM_HIGH_WEIGHT"} {
+            error "unsupported/unfrozen CGOF power configuration"
+        }
+    } elseif {$::TOP_MODULE eq "switch_top"} {
+        if {$::PARAM_RR_QUANTUM != 10 || $::PARAM_N_SRC ni {4 8 16} ||
+            $::POLICY_NAME ni {fcfs rr fai-main}} {
+            error "unsupported/unfrozen power configuration"
+        }
+    } else {
+        error "unsupported top module $::TOP_MODULE"
     }
     set ::POWER_NETLIST [file join $base $::NETLIST_FILE]
     set ::POWER_SDC [file join $base $::SDC_FILE]

@@ -1,0 +1,74 @@
+% Deterministic output of generate_hog_sparse_results.py; accepted five-seed RTL data.
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 16.3921250103 0.0221335354 0.0260335575\\
+2 23.2989166667 0.1305833333 0.1006666667\\
+}\HSMeanFCFS
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 18.2000000000 0.2000000000 0.8000000000\\
+2 33.8000000000 2.8000000000 2.2000000000\\
+}\HSPtailFCFS
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 0.9767280000 0.0007780000 0.0007120000\\
+2 0.9765761719 0.0000136719 0.0000546875\\
+}\HSHeavyFCFS
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 5.5979345050 0.0812970269 0.0879316890\\
+2 9.1693333333 0.2160000000 0.1040000000\\
+}\HSMeanRR
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 11.0000000000 0.0000000000 0.0000000000\\
+2 17.2000000000 0.2000000000 0.8000000000\\
+}\HSPtailRR
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 0.9767260000 0.0007760000 0.0007040000\\
+2 0.9765644531 0.0000019531 0.0000078125\\
+}\HSHeavyRR
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 5.5295627820 0.1048692619 0.0851004746\\
+2 9.3243333333 0.2976666667 0.1590000000\\
+}\HSMeanMain
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 10.0000000000 0.0000000000 0.0000000000\\
+2 20.8000000000 3.8000000000 3.2000000000\\
+}\HSPtailMain
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 0.9767240000 0.0007740000 0.0007060000\\
+2 0.9765644531 0.0000019531 0.0000078125\\
+}\HSHeavyMain
+\newcommand{\HSReductionAFCFS}{45.03}
+\newcommand{\HSReductionARR}{9.09}
+\newcommand{\HSReductionBFCFS}{38.64}
+\newcommand{\HSReductionBRR}{-20.78}
+\pgfplotstableread[row sep=\\]{
+x y lo hi\\
+1 45.0292397661 0.5847953216 2.3391812865\\
+2 9.0909090909 0.0000000000 0.0000000000\\
+3 38.6401012018 9.2283364959 6.5211891208\\
+4 -20.7843137255 20.3921568627 20.7843137255\\
+}\HSPaired
+\newcommand{\HSPairedSeeds}{(0.88,44.4444444444) (0.94,44.4444444444) (1.00,44.4444444444) (1.06,47.3684210526) (1.12,44.4444444444) (1.88,9.0909090909) (1.94,9.0909090909) (2.00,9.0909090909) (2.06,9.0909090909) (2.12,9.0909090909) (2.88,29.4117647059) (2.94,44.1176470588) (3.00,33.3333333333) (3.06,45.1612903226) (3.12,41.1764705882) (3.88,-41.1764705882) (3.94,-11.7647058824) (4.00,-33.3333333333) (4.06,0.0000000000) (4.12,-17.6470588235)}
+\newcommand{\HSMeanAFCFS}{16.3921}
+\newcommand{\HSPtailAFCFS}{18.2}
+\newcommand{\HSMeanARR}{5.5979}
+\newcommand{\HSPtailARR}{11.0}
+\newcommand{\HSMeanAMain}{5.5296}
+\newcommand{\HSPtailAMain}{10.0}
+\newcommand{\HSMeanBFCFS}{23.2989}
+\newcommand{\HSPtailBFCFS}{33.8}
+\newcommand{\HSMeanBRR}{9.1693}
+\newcommand{\HSPtailBRR}{17.2}
+\newcommand{\HSMeanBMain}{9.3243}
+\newcommand{\HSPtailBMain}{20.8}
+% Source SHA-256 hog-sparse-audit.json: 897daeef3e29895d70f1d2cd214bb1412c7c4ca6a2a03b1a57ec050b8f39af5c
+% Source SHA-256 hog-sparse-profiles.csv: 48587598a72c112024bac036cddf45903483da1db70ab6bae909352388d012f8
+% Source SHA-256 hog-sparse-paired.csv: 10c9981b6e64fb8c71b793eb183b12c96b882e54f6e608bef5e00496911a62c2
+% Source SHA-256 hog-sparse-runs.csv: 4c584c77c4e7f06a2f52f7a2d1994ca8eb9ed1b83fcb44b9518db15c4454c36d

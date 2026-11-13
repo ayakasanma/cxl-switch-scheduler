@@ -1,0 +1,485 @@
+[
+  {
+    "section": "Abstract",
+    "original_line": 2,
+    "before": "Memory pooling allows hosts to share remote memory capacity while concentrating requests on shared service paths.",
+    "after": "Memory pooling lets hosts share remote memory capacity, but also concentrates requests on shared service paths.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Abstract",
+    "original_line": 2,
+    "before": "A common descriptor, queue, and output contract supports comparisons of",
+    "after": "A common contract for descriptors, queues, and output transfers lets us compare",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Abstract",
+    "original_line": 2,
+    "before": "Equal relative weights can thus coexist with different short-term service patterns as absolute credit budgets change.",
+    "after": "Changing absolute credit budgets can therefore alter short-term service patterns even when relative weights remain equal.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 18,
+    "before": "Aggregate throughput alone consequently provides an incomplete account of interference.",
+    "after": "Aggregate throughput alone therefore gives an incomplete account of interference.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 18,
+    "before": "We call these workload roles",
+    "after": "We refer to these workload roles as",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 18,
+    "before": "reduce its tail without increasing total output throughput",
+    "after": "reduce the Sparse source's tail delay without increasing total output throughput",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 18,
+    "before": "The same decision can also change the intervals between Heavy services.",
+    "after": "That decision can also change the intervals between Heavy services.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 9,
+    "before": "Even when an output remains continuously busy, its arbitration policy determines whose requests advance and whose requests accumulate.",
+    "after": "Even at a continuously busy output, arbitration determines whose requests advance and whose requests accumulate.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 22,
+    "before": "The evaluation joins scheduler models, register-transfer-level (RTL) execution, and pre-layout implementation measurements, with each answering a different part of the design question.",
+    "after": "The evaluation combines scheduler models, register-transfer-level (RTL) execution, and pre-layout implementation measurements. Each addresses a different part of the design question.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 24,
+    "before": "The resulting argument is that classification, allocation, and request ordering must be examined together.",
+    "after": "Classification, allocation, and request ordering must therefore be examined together.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 24,
+    "before": "Tail improvements likewise acquire practical meaning when paired with service-gap and hardware-cost measurements.",
+    "after": "Tail improvements must likewise be assessed alongside service-gap and hardware-cost measurements.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Motivation",
+    "original_line": 24,
+    "before": "This study supplies those connections for the specified descriptor switch, beginning with the purpose of FAI's service-history mechanism.",
+    "after": "We examine these connections in the specified descriptor switch, beginning with FAI's service-history mechanism.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Buffer semantics",
+    "original_line": 38,
+    "before": "The transitional Buffer state provides a time interval between evidence for a change and commitment to an effective priority.",
+    "after": "The transitional Buffer state delays a change in effective priority after the first supporting observation.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Buffer semantics",
+    "original_line": 47,
+    "before": "This is a property of the transition rule; its effect on waiting depends on when workload changes occur and how the allocation mechanism uses the resulting classes.",
+    "after": "The transition rule determines this tradeoff. Its effect on waiting depends on when workloads change and how allocation uses the resulting classes.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Buffer semantics",
+    "original_line": 49,
+    "before": "The FAI-CXL paper contains two descriptions that lead to different executable rules.",
+    "after": "Two descriptions in the FAI-CXL paper lead to different executable rules.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Buffer semantics",
+    "original_line": 51,
+    "before": "This explicit separation makes the comparison interpretable.",
+    "after": "These distinctions are needed to interpret the comparison.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Buffer semantics",
+    "original_line": 51,
+    "before": "With these meanings fixed, the next step is to specify exactly when service, quota consumption, and classification updates occur in hardware.",
+    "after": "We next specify when service, quota consumption, and classification updates occur in hardware.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 66,
+    "before": "Each state element has a specific role: counters summarize service, classifications retain evidence, quotas distribute opportunities, and timestamps choose among eligible heads.",
+    "after": "Counters summarize service, classifications retain evidence, quotas distribute opportunities, and timestamps choose among eligible heads.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 70,
+    "before": "These distinctions let complete hardware cost reflect the state each policy actually uses.",
+    "after": "The complete hardware cost therefore reflects the state each policy actually uses.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 73,
+    "before": "The oldest eligible head wins. Refill overwrites unused credit, inactive sources cannot block it, and re-entry adds no extra credit.",
+    "after": "The oldest eligible head wins. Refill overwrites unused credit and cannot be blocked by inactive sources. Re-entry adds no extra credit.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 75,
+    "before": "Changing from class quota to source credit changes the allocation unit.",
+    "after": "Class quotas and source credits allocate service at different granularities.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 75,
+    "before": "CGOF's experimental top reuses the common FIFO, ordering, and hold blocks; its complete mapped cost includes the top-level logic needed to connect them.",
+    "after": "CGOF's experimental top reuses the common FIFO, ordering, and hold blocks. Its complete mapped cost includes the top-level logic that connects them.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "RTL contract",
+    "original_line": 77,
+    "before": "This makes the adaptation reproducible while retaining its distinct service-history timescale.",
+    "after": "These rules make the adaptation reproducible and retain its distinct service-history timescale.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 81,
+    "before": "The Buffer semantics above are part of the implementation contract, not a separate workload model.",
+    "after": "The Buffer semantics above define part of the implementation contract rather than a separate workload model.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 110,
+    "before": "It checks reproducibility on current sources using the same random inputs; the Main comparison remains anchored in the accepted earlier cohort.",
+    "after": "Using the same random inputs checks reproducibility on current sources. The Main comparison remains anchored in the accepted earlier cohort.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 114,
+    "before": "These controls isolate allocation and queueing, while the separate RTL runs exercise production boundaries.",
+    "after": "These controls isolate allocation and queueing; separate RTL runs exercise production boundaries.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 122,
+    "before": "Generation cohorts include completions in guard/drain; phase service counts select requests by when they fire.",
+    "after": "Generation cohorts retain requests that complete in guard/drain. Phase service counts instead select requests by when they fire.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 124,
+    "before": "Wall-cycle gaps include downstream stalls, so readiness and observation boundaries accompany the results.",
+    "after": "Because wall-cycle gaps include downstream stalls, we report readiness and observation boundaries with the results.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 126,
+    "before": "For heterogeneous arrivals we retain demand-share error and Sparse-only Jain alongside raw Jain.",
+    "after": "For heterogeneous arrivals, we report demand-share error and Sparse-only Jain alongside raw Jain.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 126,
+    "before": "Full-drain shares are also constrained by input totals, so allocation is examined during measurement and subwindows.",
+    "after": "Input totals also constrain full-drain shares. We therefore examine allocation during measurement and subwindows.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Measurement",
+    "original_line": 128,
+    "before": "Active-phase demand-share agreement in this nearly completed workload therefore reflects near-completion conservation and provides limited information about short-term allocation.",
+    "after": "In this nearly completed workload, active-phase demand-share agreement therefore reflects near-completion conservation. It provides limited information about short-term allocation.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware method",
+    "original_line": 219,
+    "before": "Power, performance, and area (PPA) refer respectively to activity-based power estimates, hardware timing, and library cell area.",
+    "after": "Power, performance, and area (PPA) denote activity-based power estimates, hardware timing, and library cell area, respectively.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware method",
+    "original_line": 219,
+    "before": "The controlled comparison holds the descriptor/FIFO interface, service capacity, output-hold boundary, library corner, clock period, and timing constraints fixed; only necessary policy metadata and control differ.",
+    "after": "The controlled comparison fixes the descriptor/FIFO interface, service capacity, output-hold boundary, library corner, clock period, and timing constraints. Only necessary policy metadata and control differ.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 226,
+    "before": "BLISS-inspired gives 1.15/33.00: excellent independent-arrival behavior can coexist with a substantially higher burst tail.",
+    "after": "BLISS-inspired gives 1.15/33.00. Low independent-arrival delay can thus coexist with a substantially higher burst tail.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 228,
+    "before": "The policy therefore changes the measured waiting distribution even though the output's service capacity is fixed.",
+    "after": "CGOF therefore changes the measured waiting distribution without changing the output's service capacity.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 228,
+    "before": "Fan-in changes aggregate Sparse demand and total queue storage together, so these are within-N policy comparisons.",
+    "after": "Because fan-in changes both aggregate Sparse demand and total queue storage, these comparisons apply to policies within each N.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 230,
+    "before": "These repeated inputs test reproducibility; they leave the independent seed count at twenty.",
+    "after": "These repeated inputs test reproducibility without increasing the independent seed count beyond twenty.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 232,
+    "before": "Their observed Sparse tails differ, supporting measurement of the readiness pattern alongside its average.",
+    "after": "Their different Sparse tails show why readiness should be described by its temporal pattern as well as its average.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Results",
+    "original_line": 234,
+    "before": "Together, these observations motivate examining the allocation unit rather than attributing the burst reversal solely to delayed classification.",
+    "after": "These observations motivate examining the allocation unit rather than treating delayed classification as the sole explanation for the burst reversal.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Allocation",
+    "original_line": 239,
+    "before": "These relations follow from fixed classes, sustained backlog, and complete quota rounds. The labels alone do not determine per-source share.",
+    "after": "These relations require fixed classes, sustained backlog, and complete quota rounds. Class labels alone do not determine per-source share.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Allocation",
+    "original_line": 241,
+    "before": "Both settings deliver nearly equal shares under this sustained backlog, with no mixed effective-class competition.",
+    "after": "Under this sustained backlog, both settings deliver nearly equal shares without mixed effective-class competition.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Allocation",
+    "original_line": 241,
+    "before": "Equal weights among active sources explain the share symmetry; intermittent activity can still distinguish one-credit and two-credit rounds.",
+    "after": "Equal weights among active sources explain the symmetric shares. Intermittent activity can still distinguish one-credit and two-credit rounds.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Allocation",
+    "original_line": 243,
+    "before": "Under continuous backlog, oldest-first and eligible round-robin have identical endpoints, whereas predecision quota-compliance accounting requires every source's local FIFO to remain nonempty on every cycle of an active window.",
+    "after": "Under continuous backlog, oldest-first and eligible round-robin have identical endpoints. Predecision quota-compliance accounting requires every source's local FIFO to remain nonempty on every cycle of an active window.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 249,
+    "before": "Finite-work experiments distinguish total completion from short-term service regularity.",
+    "after": "Finite-work experiments separate total completion time from short-term service regularity.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 251,
+    "before": "The completion ratios tell a different story:",
+    "after": "The completion ratios show a smaller change:",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 251,
+    "before": "The large Sparse-tail reduction is accompanied by a much smaller increase in total Heavy completion duration in this workload.",
+    "after": "In this workload, the large Sparse-tail reduction comes with a much smaller increase in total Heavy completion duration.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 257,
+    "before": "Thus the upper extreme changes while this percentile remains fixed.",
+    "after": "The maximum gap therefore changes while this percentile remains fixed.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 278,
+    "before": "The result therefore identifies a finer service round with better measured temporal regularity at this operating point.",
+    "after": "The finer service round therefore provides better measured temporal regularity at this operating point.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 278,
+    "before": "The Sparse benefit accompanied by a Heavy-gap cost appears in the separate model comparison of Main with CGOF under overload.",
+    "after": "The separate model comparison of Main with CGOF under overload shows a Sparse benefit accompanied by a Heavy-gap cost.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 282,
+    "before": "Their controls and loads establish complementary pieces of the service-regularity argument.",
+    "after": "Their different controls and loads provide complementary evidence about service regularity.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 282,
+    "before": "A lower extreme can coexist with more frequent moderate gaps.",
+    "after": "A lower maximum can coexist with more frequent moderate gaps.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 290,
+    "before": "This is an observed property of these endpoints, not evidence of seed independence or invariance across workloads.",
+    "after": "This endpoint pattern does not establish seed independence or invariance across workloads.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware results",
+    "original_line": 294,
+    "before": "Complete hardware cost makes the price of ordering visible.",
+    "after": "Complete hardware cost reveals the cost of request ordering.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware results",
+    "original_line": 294,
+    "before": "RR's lower cost reflects both simpler arbitration and the absence of ordering metadata.",
+    "after": "RR costs less because it uses simpler arbitration and omits ordering metadata.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware results",
+    "original_line": 296,
+    "before": "Thus the measured tail benefit is available at a complete cost close to Main under this mapping profile.",
+    "after": "Under this mapping profile, the measured tail benefit therefore comes at a complete cost close to Main's.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware results",
+    "original_line": 298,
+    "before": "The 1:1 configuration also illustrates the connection between semantics and synthesis:",
+    "after": "The 1:1 configuration also links semantics to synthesis:",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Hardware results",
+    "original_line": 298,
+    "before": "Its proof scope therefore follows observable behavior with the disclosed unread accounting and optimized-away reference state.",
+    "after": "The proof therefore covers observable behavior, with unread accounting and optimized-away reference state disclosed.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 304,
+    "before": "These results support selecting a policy according to the required service behavior and hardware budget.",
+    "after": "Policy choice depends on the required service behavior and hardware budget.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 304,
+    "before": "across the three specified objectives—Sparse tail protection, per-source fairness under asymmetric class cardinality, and complete pre-layout hardware cost—without claiming an unconditional Pareto-optimal or universal winner across every metric:",
+    "after": "across the three specified objectives: Sparse tail protection, per-source fairness under asymmetric class cardinality, and complete pre-layout hardware cost. This does not establish an unconditional Pareto-optimal or universal winner across every metric. Specifically,",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 304,
+    "before": "relative to Main, subject to four explicit boundaries:",
+    "after": "relative to Main. This assessment has four boundaries:",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 304,
+    "before": "cell area; and (iii)",
+    "after": "cell area; (iii)",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 306,
+    "before": "The completed follow-up evidence separates confirmed scheduler-boundary effects from descriptive and model-scoped mechanisms.",
+    "after": "The follow-up evidence distinguishes confirmed scheduler-boundary effects from descriptive and model-scoped findings.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 306,
+    "before": "The conclusions concern scheduler-side dispatch delay and implementation cost under prescribed arrival and readiness processes.",
+    "after": "These conclusions apply to scheduler-side dispatch delay and implementation cost under the prescribed arrival and readiness processes.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 306,
+    "before": "The cleanup path is exercised twice in hardware.",
+    "after": "Two hardware tests exercise the cleanup path.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Applicability",
+    "original_line": 306,
+    "before": "then drains 923 cycles with generated, accepted and fired equal and zero outstanding for Main and both CGOF settings.",
+    "after": "then drains in 923 cycles with generated, accepted and fired equal and zero outstanding for Main and both CGOF settings.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 276,
+    "before": "contract—which continues emitting declared Sparse work through horizon",
+    "after": "contract, which continues emitting declared Sparse work through horizon",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 276,
+    "before": "scenario's own readiness trace—near-load execution",
+    "after": "scenario's own readiness trace, near-load execution",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 280,
+    "before": "—two via refill timing and one via eligibility—while two shifts show no divergence, confirming that absolute credit budgets alter short-term service order through refill and eligibility phase.",
+    "after": ", two via refill timing and one via eligibility, while two shifts show no divergence. These traces confirm that absolute credit budgets alter short-term service order through refill and eligibility phase.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  },
+  {
+    "section": "Service regularity",
+    "original_line": 282,
+    "before": "scenario groups (negative control PASS), whereas CGOF (2:1) shows that classifier settle delay and generation-cohort waiting P99 vary in distinct directions.",
+    "after": "scenario groups (negative control PASS). CGOF (2:1), however, shows that classifier settle delay and generation-cohort waiting P99 vary in distinct directions.",
+    "reason": "Improve clarity or sentence structure; preserve claim scope and technical content."
+  }
+]

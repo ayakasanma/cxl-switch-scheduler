@@ -1,0 +1,73 @@
+{
+  "schema": "cxl-v2-a4-acceptance-v1",
+  "status": "A4_PASS_GEQ_PASS",
+  "date": "2026-11-05",
+  "run_id": "20261104T120647Z_900331",
+  "seed": 7401,
+  "spec": {
+    "policy": "FAI-inspired",
+    "case": "role-switch",
+    "depth": 16,
+    "window": 5000000,
+    "windows": 4,
+    "heavy_work": 17500000,
+    "heavy_sources": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "ready_pattern": "bernoulli",
+    "profile": "near",
+    "max_active_cycles": 24000000
+  },
+  "rtl_jobs": 2,
+  "rtl_jobs_pass": 2,
+  "wall_s": 7297.493,
+  "source_stable": true,
+  "lint": 1,
+  "unit_tests": 5,
+  "g_eq": {
+    "anchors": 2,
+    "passed": 2,
+    "exclude": [
+      "evidence_kind",
+      "input_hold_checks",
+      "limitations",
+      "native_cgof",
+      "native_coverage",
+      "native_main",
+      "schema",
+      "wall_s"
+    ],
+    "drain_compared": "drain_cycles is EQUAL in both pairs",
+    "report": ".setup-logs/implementation/dynamic-role-switch-v2-overnight-20261104/geq-a4-20261104T1800Z.json"
+  },
+  "results": [
+    {
+      "lane": "mixed",
+      "rtl": "artifacts/implementation/cgof-rtl-diagnosis/20261104T120647Z_900331/results/cocotb_finite-heavy-mixed-w5000000-d16-main-rr0-seed7401_seed7401__cgof_diagnosis_finite-heavy-mixed-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "cc491fc65bf41eb755e623fbd13ea756c62fb3d389d8c51a7cf496ccab3feb09",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T100818Z_seed7401/role-switch-mixed-FAI-inspired.json",
+      "model_sha256": "8509e9c0b24362776331fada3ed0ced8cee4f48578e8a33f642a3669da620b31",
+      "drain_cycles": 0,
+      "active_cycles": 21874605,
+      "sparse_p99": 19,
+      "g_eq": "EQUAL"
+    },
+    {
+      "lane": "isolated",
+      "rtl": "artifacts/implementation/cgof-rtl-diagnosis/20261104T120647Z_900331/results/cocotb_finite-heavy-isolated-w5000000-d16-main-rr0-seed7401_seed7401__cgof_diagnosis_finite-heavy-isolated-w5000000-d16-main-rr0.json",
+      "rtl_sha256": "23902ee613c8717bafdb005a3b1de3c2c64b04a761f9c222e914751d2230bf2e",
+      "model": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T100818Z_seed7401/role-switch-isolated-FAI-inspired.json",
+      "model_sha256": "25a53eef4b2eafb6980e323ba8be431329a53b2132a41a1f9c86eeba5b0cd4c4",
+      "drain_cycles": 0,
+      "active_cycles": 21874605,
+      "sparse_p99": null,
+      "g_eq": "EQUAL"
+    }
+  ],
+  "evidence_classification": "SCHEDULER_RTL anchor on the first held-out seed + MODEL_ONLY statistics",
+  "claim_effect": "confirms that the Main RTL path reproduces the model at a held-out seed; the cohort verdict is still pending",
+  "note": "the A4 gate is the Main implementation check, not a CGOF result; CGOF has no RTL anchor on 7401"
+}

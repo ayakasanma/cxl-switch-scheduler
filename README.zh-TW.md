@@ -2,7 +2,9 @@
 
 [English](README.md) · **繁體中文**
 
-**研究報告：**[閱讀完整 PDF（15 頁）](docs/final-report/cxl-scheduler-revised-20261102.pdf) · [原始碼與驗收紀錄](docs/final-report/README.md)｜2026 年 11 月 2 日修訂版。
+**最新研究報告：**[閱讀 v5 完整 PDF（15 頁）](output/pdf/cxl-scheduler-humanized-20261111.pdf) · [原始碼與驗收紀錄](docs/final-report/README.md)｜2026 年 11 月 11 日文字潤稿版。
+
+**多裝置工作：**[下載、更新與還原隨附研究資料](docs/sync/README.md) · [進度報告索引](docs/progress-reports/README.md)。
 
 **以逐源點數改善 CXL 記憶體池的排程公平性與尾端延遲。**
 

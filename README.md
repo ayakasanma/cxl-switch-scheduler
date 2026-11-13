@@ -2,9 +2,11 @@
 
 **English** · [繁體中文](README.zh-TW.md)
 
-**Report:** [Read the 15-page PDF](docs/final-report/cxl-scheduler-revised-20261102.pdf) · [Sources and acceptance record](docs/final-report/README.md) — November 2, 2026 revision.
+**Latest report:** [Read the 15-page v5 PDF](output/pdf/cxl-scheduler-humanized-20261111.pdf) · [Sources and acceptance record](docs/final-report/README.md) — November 11, 2026 language revision.
 
-**Progress report:** [ECE 509 Second Progress Report (2026-11-06)](docs/progress-reports/ECE509_2nd_Progress_Report_revised.pdf)
+**Progress report:** [ECE 509 Second Progress Report (2026-11-06)](docs/progress-reports/ECE509_2nd_Progress_Report_revised.pdf) · [Report index](docs/progress-reports/README.md)
+
+**Work on another device:** [Clone, pull and restore the included evidence](docs/sync/README.md).
 
 A cycle-accurate study of how a CXL memory-pooling switch should arbitrate between a
 bandwidth-hungry host and hosts that send requests only occasionally.

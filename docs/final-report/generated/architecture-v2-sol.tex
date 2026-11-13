@@ -1,0 +1,102 @@
+\begin{figure*}[t]
+\centering
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,>=Latex,
+  block/.style={draw=figgray,line width=.45pt,rounded corners=1pt,fill=white,align=center,inner sep=1.6pt},
+  data/.style={-{Latex[length=1.2mm,width=.8mm]},draw=figgray,line width=.5pt},
+  feedback/.style={-{Latex[length=1.2mm,width=.8mm]},draw=figred,line width=.65pt},
+  note/.style={font=\scriptsize,text=figgray,align=center}]
+  % Synthesized boundary
+  \draw[dashed,figgray,line width=.45pt,rounded corners=2pt] (-.25,1.22) rectangle (17.10,6.70);
+  \node[anchor=north west,fill=white,inner sep=1pt,font=\footnotesize\bfseries]
+    at (-.18,6.62) {Synthesized RTL boundary};
+
+  % Ingress lanes and per-source FIFOs
+  \node[block,minimum width=1.55cm,minimum height=.72cm] (s0) at (1.00,5.95)
+    {src 0\\[-1pt]R/V, 105b};
+  \node[note] at (1.00,5.10) {$\vdots$};
+  \node[block,minimum width=1.55cm,minimum height=.72cm] (sn) at (1.00,4.25)
+    {src $N{-}1$\\[-1pt]R/V, 105b};
+  \node[block,minimum width=1.70cm,minimum height=.72cm] (f0) at (3.20,5.95)
+    {FIFO$_0$\\[-1pt]depth 16};
+  \node[note] at (3.20,5.10) {$\vdots$};
+  \node[block,minimum width=1.70cm,minimum height=.72cm] (fn) at (3.20,4.25)
+    {FIFO$_{N-1}$\\[-1pt]depth 16};
+  \draw[data] (s0) -- (f0);
+  \draw[data] (sn) -- (fn);
+
+  % FIFO-head candidate bus
+  \draw[data] (f0.east) -- (4.55,5.95) -- (4.55,5.28);
+  \draw[data] (fn.east) -- (4.55,4.25) -- (4.55,5.28);
+  \draw[data] (4.55,5.28) -- (5.18,5.28);
+  \node[note,fill=white,inner sep=1pt,anchor=south] at (4.55,5.68) {heads};
+
+  % One elaboration-time policy slot plus its retained context
+  \draw[draw=figgray,line width=.55pt,rounded corners=1.5pt,fill=figblue!4]
+    (5.18,3.35) rectangle (8.85,6.45);
+  \node[font=\footnotesize\bfseries] at (7.015,6.20) {Policy slot};
+  \node[note] at (7.015,5.93) {one selected at elaboration};
+  \node[block,draw=figblue!75,fill=figblue!9,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (6.27,5.52) {FCFS};
+  \node[block,draw=figblue!75,fill=figblue!9,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (7.75,5.52) {RR};
+  \node[block,draw=figred!75,fill=figred!7,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (6.27,4.98) {Main};
+  \node[block,draw=figred!75,fill=figred!7,minimum width=1.25cm,minimum height=.44cm,inner sep=1pt]
+    at (7.75,4.98) {Alg-2};
+  \draw[figgray!55,dashed,line width=.4pt] (5.35,4.58) -- (8.68,4.58);
+  \node[block,draw=figgray!55,fill=white,minimum width=2.75cm,minimum height=.86cm,inner sep=1pt]
+    at (7.015,4.05) {candidate source\\+ policy context};
+
+  % Common datapath and output
+  \draw[data] (8.85,5.28) -- (9.23,5.28);
+  \draw[draw=figgray,line width=.5pt,fill=white]
+    (9.23,4.75) -- (9.23,5.81) -- (10.68,5.55) -- (10.68,5.01) -- cycle;
+  \node[font=\footnotesize\bfseries] at (9.90,5.28) {MUX};
+  \node[block,minimum width=1.85cm,minimum height=.74cm] (hold) at (11.75,5.28)
+    {source/context\\[-1pt]hold};
+  \draw[data] (10.68,5.28) -- (10.80,5.28);
+  \draw[data] (hold.east) -- (16.78,5.28);
+  \node[note,above] at (14.90,5.38) {105b R/V};
+  \node[note,anchor=east] at (16.68,5.10) {to CXL};
+
+  % Fire controls FIFO pop, quota use, and held context.
+  \draw[feedback] (16.78,5.28) -- (16.78,2.62) -- (3.20,2.62);
+  \draw[feedback] (3.20,2.62) -- (3.20,3.88);
+  \draw[feedback] (7.02,2.62) -- (7.02,3.33);
+  \node[note,fill=white,inner sep=2pt,anchor=south] at (11.35,2.77)
+    {\code{fire} = valid $\land$ ready};
+  \node[note,fill=white,inner sep=2pt,anchor=south] at (5.85,2.77)
+    {pop + quota};
+
+  % Descriptor layout is called out separately; it is not to scale.
+  \draw[draw=figgray!65,line width=.4pt,rounded corners=1pt,fill=white]
+    (0.18,1.35) rectangle (8.95,2.23);
+  \node[anchor=south west,font=\scriptsize,fill=white,inner sep=1pt]
+    at (.30,2.26) {FIFO entry (not to scale)};
+  \foreach \x/\w in {.33/1.26,1.59/1.26,2.85/.78,3.63/1.00,4.63/1.43,6.06/1.58}
+    \draw[figgray!55,line width=.35pt] (\x,1.43) rectangle ++(\w,.55);
+  \node[note] at (.96,1.705) {Tag\\[-1pt][104:73]};
+  \node[note] at (2.22,1.705) {Addr.\\[-1pt][72:41]};
+  \node[note] at (3.24,1.705) {Opcode\\[-1pt][40]};
+  \node[note] at (4.13,1.705) {Length\\[-1pt][39:32]};
+  \node[note] at (5.345,1.705) {Payload\\[-1pt][31:0]};
+  \draw[dashed,figred!75,line width=.45pt] (6.06,1.43) rectangle (7.64,1.98);
+  \node[note] at (6.85,1.705) {Arrival\\[-1pt][31:0]$^{*}$};
+  \node[note,anchor=west] at (9.18,1.70)
+    {$^{*}$Arrival metadata is present only for\\FCFS, Main, and Algorithm-2.};
+
+  % Non-synthesized testbench
+  \draw[dashed,figgray,line width=.45pt,rounded corners=2pt,fill=figgray!2]
+    (-.25,.08) rectangle (17.10,1.12);
+  \node[anchor=north west,fill=figgray!2,inner sep=1pt,font=\footnotesize\bfseries]
+    at (-.18,1.08) {Testbench only (not synthesized)};
+  \node[block,minimum width=2.55cm,minimum height=.50cm] at (1.45,.47) {Traffic producers};
+  \node[block,minimum width=2.65cm,minimum height=.50cm] at (5.00,.47) {Memory-ready trace};
+  \node[block,minimum width=2.55cm,minimum height=.50cm] at (8.80,.47) {Python oracle};
+  \node[block,minimum width=2.75cm,minimum height=.50cm] at (12.75,.47) {Response scoreboard};
+\end{tikzpicture}
+}
+\caption{Controlled synthesis boundary. The selected policy proposes a source independently of downstream readiness. The orange path denotes \code{fire}; it pops the selected FIFO, consumes service quota, and preserves the source/context hold through a stall. The testbench drives and observes DUT pins; its Python oracle is an independent reference model, and the scoreboard checks observed responses. These blocks are not synthesized.}
+\label{fig:architecture}
+\end{figure*}

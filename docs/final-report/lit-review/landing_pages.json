@@ -1,0 +1,119 @@
+{
+  "10.1109/isca66397.2026.00060": {
+    "doi": "10.1109/isca66397.2026.00060",
+    "requested_url": "https://doi.org/10.1109/isca66397.2026.00060",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/11617857/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1145/3713082.3730393": {
+    "doi": "10.1145/3713082.3730393",
+    "requested_url": "https://doi.org/10.1145/3713082.3730393",
+    "status": 403,
+    "final_url": "https://dl.acm.org/doi/10.1145/3713082.3730393",
+    "title_tag": "Just a moment...",
+    "meta": {
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "viewport": [
+        "width=device-width,initial-scale=1"
+      ]
+    }
+  },
+  "10.1109/tpds.2025.3598190": {
+    "doi": "10.1109/tpds.2025.3598190",
+    "requested_url": "https://doi.org/10.1109/tpds.2025.3598190",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/11131665/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1145/3695794.3695809": {
+    "doi": "10.1145/3695794.3695809",
+    "requested_url": "https://doi.org/10.1145/3695794.3695809",
+    "status": 403,
+    "final_url": "https://dl.acm.org/doi/10.1145/3695794.3695809",
+    "title_tag": "Just a moment...",
+    "meta": {
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "viewport": [
+        "width=device-width,initial-scale=1"
+      ]
+    }
+  },
+  "10.1109/fccm57271.2023.00017": {
+    "doi": "10.1109/fccm57271.2023.00017",
+    "requested_url": "https://doi.org/10.1109/fccm57271.2023.00017",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/10171573/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1109/pact65351.2025.00018": {
+    "doi": "10.1109/pact65351.2025.00018",
+    "requested_url": "https://doi.org/10.1109/pact65351.2025.00018",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/11282927/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1109/lca.2026.3673181": {
+    "doi": "10.1109/lca.2026.3673181",
+    "requested_url": "https://doi.org/10.1109/lca.2026.3673181",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/11433038/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1109/tcad.2025.3607145": {
+    "doi": "10.1109/tcad.2025.3607145",
+    "requested_url": "https://doi.org/10.1109/tcad.2025.3607145",
+    "status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/11153390/",
+    "title_tag": "",
+    "meta": {
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ]
+    }
+  },
+  "10.1016/j.future.2020.01.047": {
+    "doi": "10.1016/j.future.2020.01.047",
+    "requested_url": "https://doi.org/10.1016/j.future.2020.01.047",
+    "status": 200,
+    "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0167739X18332382",
+    "title_tag": "Redirecting",
+    "meta": {
+      "tdm-reservation": [
+        "1"
+      ],
+      "tdm-policy": [
+        "https://www.elsevier.com/tdm/tdmrep-policy.json"
+      ]
+    }
+  }
+}

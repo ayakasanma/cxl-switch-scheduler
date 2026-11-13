@@ -1,0 +1,482 @@
+[
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "REDIT: Redirection-Enabled Memory-Side Directory Architecture for CXL Memory Fabric",
+    "doi": "10.1109/lca.2025.3621612",
+    "year": 2025,
+    "venue": "IEEE Computer Architecture Letters",
+    "pages": "385-388",
+    "type": "journal-article",
+    "authors": "Minjae Kim; Jiwan Kim; Won Hur; Jiwon Lee; Mingu Jung; Cheolhwan Kim; Ipoom Jeong; Won Woo Ro"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "Evaluating Emerging CXL-enabled Memory Pooling for HPC Systems",
+    "doi": "10.1109/mchpc56545.2022.00007",
+    "year": 2022,
+    "venue": "2022 IEEE/ACM Workshop on Memory Centric High Performance Computing (MCHPC)",
+    "pages": "11-20",
+    "type": "proceedings-article",
+    "authors": "Jacob Wahlgren; Maya Gokhale; Ivy B. Peng"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "Memory Pooling With CXL",
+    "doi": "10.1109/mm.2023.3237491",
+    "year": 2023,
+    "venue": "IEEE Micro",
+    "pages": "48-57",
+    "type": "journal-article",
+    "authors": "Donghyun Gouk; Miryeong Kwon; Hanyeoreum Bae; Sangwon Lee; Myoungsoo Jung"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "A Case Against CXL Memory Pooling",
+    "doi": "10.1145/3626111.3628195",
+    "year": 2023,
+    "venue": "Proceedings of the 22nd ACM Workshop on Hot Topics in Networks",
+    "pages": "18-24",
+    "type": "proceedings-article",
+    "authors": "Philip Levis; Kun Lin; Amy Tai"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "doi": "10.1109/lca.2026.3673181",
+    "year": 2026,
+    "venue": "IEEE Computer Architecture Letters",
+    "pages": "114-117",
+    "type": "journal-article",
+    "authors": "Srikar Vanavasam; Austin Antony Cruz; Nam Sung Kim"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "COMPSYS 2023 Invited Speaker Efficient Resilience Training of Large-Scale Recommendation Models using CXL Persistent Memory Pooling",
+    "doi": "10.1109/ipdpsw59300.2023.00156",
+    "year": 2023,
+    "venue": "2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)",
+    "pages": "944-944",
+    "type": "proceedings-article",
+    "authors": "Junhyeok Jang"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "A Unified Computational Storage and Memory Architecture in the CXL Era",
+    "doi": "10.1109/nas63802.2024.10781354",
+    "year": 2024,
+    "venue": "2024 International Conference on Networking, Architecture and Storage (NAS)",
+    "pages": "1-4",
+    "type": "proceedings-article",
+    "authors": "Xiang Chen; Fei Wu; Tao Lu"
+  },
+  {
+    "query": "CXL fabric switching memory pooling architecture",
+    "title": "Combined Shared-Memory and Buffered-Crossbar Architecture for High-Bandwidth Onboard Switching Fabric",
+    "doi": "10.1145/3469393.3469672",
+    "year": 2021,
+    "venue": "5th Asia-Pacific Workshop on Networking (APNet 2021)",
+    "pages": "3-4",
+    "type": "proceedings-article",
+    "authors": "Ling Zheng; Chen Yi; Weitao Pan; Huan Liu"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL Memory Pool Management with Fine-Grained Cacheline-Level Interleaving",
+    "doi": "10.1109/icpads67057.2025.11322896",
+    "year": 2025,
+    "venue": "2025 IEEE 31th International Conference on Parallel and Distributed Systems (ICPADS)",
+    "pages": "1-8",
+    "type": "proceedings-article",
+    "authors": "Jiaxi Li; Yixuan Liu; Yunfei Gu; Chentao Wu"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "Rethinking Applications' Address Space with CXL Shared Memory Pools",
+    "doi": "10.1145/3723851.3723858",
+    "year": 2025,
+    "venue": "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems",
+    "pages": "52-59",
+    "type": "proceedings-article",
+    "authors": "Tong Xing; Antonio Barbalace"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "A simple BLOCK interleaving algorithm using reduced memory and address generator resources",
+    "doi": "10.1109/cae48787.2020.9046380",
+    "year": 2020,
+    "venue": "2020 Argentine Conference on Electronics (CAE)",
+    "pages": "53-56",
+    "type": "proceedings-article",
+    "authors": "Guillermo A. Jaquenod; Gerardo G. Acosta"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "Towards Application-Specific Address Mapping for Emerging Memory Devices",
+    "doi": "10.1145/3422575.3422785",
+    "year": 2020,
+    "venue": "The International Symposium on Memory Systems",
+    "pages": "105-113",
+    "type": "proceedings-article",
+    "authors": "Shashank Adavally; Krishna Kavi"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "Is CXL the Way Forward for Server Memory?",
+    "doi": "10.51793/os.2024.71.91.002",
+    "year": 2024,
+    "venue": "Открытые системы. СУБД",
+    "pages": null,
+    "type": "journal-article",
+    "authors": "М. Кузьминский"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "doi": "10.1109/lca.2026.3673181",
+    "year": 2026,
+    "venue": "IEEE Computer Architecture Letters",
+    "pages": "114-117",
+    "type": "journal-article",
+    "authors": "Srikar Vanavasam; Austin Antony Cruz; Nam Sung Kim"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "Synchronization for CXL Based Memory",
+    "doi": "10.1145/3695794.3695810",
+    "year": 2024,
+    "venue": "Proceedings of the International Symposium on Memory Systems",
+    "pages": "178-185",
+    "type": "proceedings-article",
+    "authors": "Joshua Suetterlein; Joseph Manzano; Andres Marquez"
+  },
+  {
+    "query": "CXL memory interleaving address mapping quality of service",
+    "title": "Interleaving-mapping: a novel data layout in scratchpad memory",
+    "doi": "10.1117/12.3004060",
+    "year": 2023,
+    "venue": "Sixth International Conference on Computer Information Science and Application Technology (CISAT 2023)",
+    "pages": "151",
+    "type": "proceedings-article",
+    "authors": "lingling zeng; dunbo zhang; li shen; qiang dou"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Performance improvement and hardware implementation of Open Flow switch using FPGA",
+    "doi": "10.1109/kbei.2019.8734914",
+    "year": 2019,
+    "venue": "2019 5th Conference on Knowledge Based Engineering and Innovation (KBEI)",
+    "pages": "515-520",
+    "type": "proceedings-article",
+    "authors": "Abbas Yazdinejad; Ali Bohlooli; Kamal Jamshidi"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Hardware Design and Implementation of FPGA Controlled Seven-Level Reduced Switch MLI",
+    "doi": "10.1080/03772063.2023.2181231",
+    "year": 2023,
+    "venue": "IETE Journal of Research",
+    "pages": "3150-3166",
+    "type": "journal-article",
+    "authors": "Aparna Arunkumar Gautam Lakhani; Vijaya Laxmi"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Efficient design and hardware implementation of the OpenFlow v1.3 Switch on the Virtex-6 FPGA ML605",
+    "doi": "10.1007/s11227-017-2175-7",
+    "year": 2017,
+    "venue": "The Journal of Supercomputing",
+    "pages": "1299-1320",
+    "type": "journal-article",
+    "authors": "Abbas Yazdinejad; Ali Bohlooli; Kamal Jamshidi"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Low-Cost FPGA Hardware Implementation of Matrix Converter Switch Control",
+    "doi": "10.1109/tcsii.2018.2875589",
+    "year": 2019,
+    "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+    "pages": "1177-1181",
+    "type": "journal-article",
+    "authors": "Remigiusz Wisniewski; Grzegorz Bazydlo; Pawel Szczesniak"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Peer Review #1 of \"A Viterbi decoder and its hardware Trojan models: an FPGA-based implementation study (v0.1)\"",
+    "doi": "10.7287/peerj-cs.250v0.1/reviews/1",
+    "year": 2020,
+    "venue": "",
+    "pages": null,
+    "type": "peer-review",
+    "authors": ""
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "FPGA Implementation of a Deep Convolutional Neural Network Hardware Accelerator",
+    "doi": "10.21203/rs.3.rs-6268406/v1",
+    "year": 2025,
+    "venue": "",
+    "pages": null,
+    "type": "posted-content",
+    "authors": "Ximei Huangfu; Yu jiang; Junfeng Dai"
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "Peer Review #4 of \"A Viterbi decoder and its hardware Trojan models: an FPGA-based implementation study (v0.2)\"",
+    "doi": "10.7287/peerj-cs.250v0.2/reviews/4",
+    "year": 2020,
+    "venue": "",
+    "pages": null,
+    "type": "peer-review",
+    "authors": ""
+  },
+  {
+    "query": "CXL switch hardware implementation FPGA",
+    "title": "The FPGA Hardware Implementation of the Gated Recurrent Unit Architecture",
+    "doi": "10.1109/southeastcon45413.2021.9401819",
+    "year": 2021,
+    "venue": "SoutheastCon 2021",
+    "pages": "1-5",
+    "type": "proceedings-article",
+    "authors": "Zaghloul Saad Zaghloul; Nelly Elsayed"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "The Effect of Queuing Mechanisms First in First out (FIFO), Priority  Queuing (PQ) and Weighted Fair Queuing (WFQ) on Network’s Routers and Applications",
+    "doi": "10.4236/wsn.2016.85008",
+    "year": 2016,
+    "venue": "Wireless Sensor Network",
+    "pages": "77-84",
+    "type": "journal-article",
+    "authors": "Mustafa El Gili Mustafa; Samani A. Talab"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "Optimizing Weighted Fair Queuing with Deep Reinforcement Learning for Dynamic Bandwidth Allocation",
+    "doi": "10.3390/telecom6030046",
+    "year": 2025,
+    "venue": "Telecom",
+    "pages": "46",
+    "type": "journal-article",
+    "authors": "Mays A. Mawlood; Dhari Ali Mahmood"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "defining FAIR for research hardware",
+    "doi": "10.59350/pfh6y-g4d72",
+    "year": 2021,
+    "venue": "",
+    "pages": null,
+    "type": "posted-content",
+    "authors": ""
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "defining FAIR for research hardware",
+    "doi": "10.59350/an7hr-y7790",
+    "year": 2021,
+    "venue": "",
+    "pages": null,
+    "type": "posted-content",
+    "authors": ""
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "Weighted Fair Queuing-based message scheduling enhanced with Z-Score Intrusion Detection in MQTTv5 Shared Subscription",
+    "doi": "10.1109/gcwkshps68340.2025.11590923",
+    "year": 2025,
+    "venue": "2025 IEEE Globecom Workshops (GC Wkshps)",
+    "pages": "484-489",
+    "type": "proceedings-article",
+    "authors": "Graziano Rizzo; Mattia Giovanni Spina; Floriano De Rango"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "Implementation and evaluation of dynamically weighted low complexity fair queuing (DWLC-FQ) algorithm for packet scheduling in WiMAX networks",
+    "doi": "10.1109/cc.2016.7489981",
+    "year": 2016,
+    "venue": "China Communications",
+    "pages": "128-140",
+    "type": "journal-article",
+    "authors": "Zuber Patel; Upena Dalal"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "Comparative Analysis of Round Robin Arbiter and Weighted Round Robin Arbiter",
+    "doi": "10.1109/apcit62007.2024.10673654",
+    "year": 2024,
+    "venue": "2024 Asia Pacific Conference on Innovation in Technology (APCIT)",
+    "pages": "1-4",
+    "type": "proceedings-article",
+    "authors": "Adrika Mohanty; Chiranjeevi G N"
+  },
+  {
+    "query": "weighted fair queuing arbiter hardware area critical path",
+    "title": "Federated Learning–enhanced Weighted Fair Queuing for Adaptive Resource Allocation in Wireless Sensor Networks",
+    "doi": "10.22266/ijies2026.0430.40",
+    "year": 2026,
+    "venue": "International Journal of Intelligent Engineering and Systems",
+    "pages": "701-716",
+    "type": "journal-article",
+    "authors": "Sravya Pallantla; Haritha Dasari; Shanti Chilukuri"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "Hardware-Aware Deep Reinforcement Learning for Anticipatory Sleep Scheduling in Multi-Hop IoT Networks: An FPGA-based RTL Implementation",
+    "doi": "10.31838/jvcs/08.01.16",
+    "year": 2026,
+    "venue": "Journal of VLSI circuits and systems",
+    "pages": null,
+    "type": "journal-article",
+    "authors": ""
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "RTL Design and Synthesis Guidelines",
+    "doi": "10.1007/978-981-15-4405-7_8",
+    "year": 2020,
+    "venue": "SystemVerilog for Hardware Description",
+    "pages": "105-127",
+    "type": "book-chapter",
+    "authors": "Vaibbhav Taraate"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "HDLViz: Faithful Visualization of RTL Hardware Descriptions",
+    "doi": "10.12792/iciae2026.017",
+    "year": 2026,
+    "venue": "The Proceedings of The 14th IIAE International Conference on Industrial Application Engineering 2026",
+    "pages": "97-104",
+    "type": "proceedings-article",
+    "authors": "Gauthier Lovic"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "Hardware/Software Partitioning Based on Area and Memory Metrics: Application to a Fuzzy Controller Algorithm for a DC Motor",
+    "doi": "10.3390/electronics14244908",
+    "year": 2025,
+    "venue": "Electronics",
+    "pages": "4908",
+    "type": "journal-article",
+    "authors": "Diego Hernán Gaytán Rivas; Jorge Rivera; Susana Ortega-Cisneros"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "From RTL Liveness Assertions to Cost-Effective Hardware Checkers",
+    "doi": "10.1109/dcis.2018.8681487",
+    "year": 2018,
+    "venue": "2018 Conference on Design of Circuits and Integrated Systems (DCIS)",
+    "pages": "1-6",
+    "type": "proceedings-article",
+    "authors": "Ranganathan Hariharan; Tara Ghasempouri; Behrad Niazmand; Jaan Raik"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "RTL Design and Strategies for Complex Designs",
+    "doi": "10.1007/978-981-15-4405-7_9",
+    "year": 2020,
+    "venue": "SystemVerilog for Hardware Description",
+    "pages": "129-148",
+    "type": "book-chapter",
+    "authors": "Vaibbhav Taraate"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "Khronos: Fusing Memory Access for Improved Hardware RTL Simulation",
+    "doi": "10.1145/3613424.3614301",
+    "year": 2023,
+    "venue": "56th Annual IEEE/ACM International Symposium on Microarchitecture",
+    "pages": "180-193",
+    "type": "proceedings-article",
+    "authors": "Kexing Zhou; Yun Liang; Yibo Lin; Runsheng Wang; Ru Huang"
+  },
+  {
+    "query": "memory controller scheduling hardware cost RTL area",
+    "title": "Hardware Description Using SystemVerilog",
+    "doi": "10.1007/978-981-15-4405-7_3",
+    "year": 2020,
+    "venue": "SystemVerilog for Hardware Description",
+    "pages": "25-43",
+    "type": "book-chapter",
+    "authors": "Vaibbhav Taraate"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "Evaluating Emerging CXL-enabled Memory Pooling for HPC Systems",
+    "doi": "10.1109/mchpc56545.2022.00007",
+    "year": 2022,
+    "venue": "2022 IEEE/ACM Workshop on Memory Centric High Performance Computing (MCHPC)",
+    "pages": "11-20",
+    "type": "proceedings-article",
+    "authors": "Jacob Wahlgren; Maya Gokhale; Ivy B. Peng"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "Memory Pooling With CXL",
+    "doi": "10.1109/mm.2023.3237491",
+    "year": 2023,
+    "venue": "IEEE Micro",
+    "pages": "48-57",
+    "type": "journal-article",
+    "authors": "Donghyun Gouk; Miryeong Kwon; Hanyeoreum Bae; Sangwon Lee; Myoungsoo Jung"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "A Case Against CXL Memory Pooling",
+    "doi": "10.1145/3626111.3628195",
+    "year": 2023,
+    "venue": "Proceedings of the 22nd ACM Workshop on Hot Topics in Networks",
+    "pages": "18-24",
+    "type": "proceedings-article",
+    "authors": "Philip Levis; Kun Lin; Amy Tai"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "COMPSYS 2023 Invited Speaker Efficient Resilience Training of Large-Scale Recommendation Models using CXL Persistent Memory Pooling",
+    "doi": "10.1109/ipdpsw59300.2023.00156",
+    "year": 2023,
+    "venue": "2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)",
+    "pages": "944-944",
+    "type": "proceedings-article",
+    "authors": "Junhyeok Jang"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "doi": "10.1109/lca.2026.3673181",
+    "year": 2026,
+    "venue": "IEEE Computer Architecture Letters",
+    "pages": "114-117",
+    "type": "journal-article",
+    "authors": "Srikar Vanavasam; Austin Antony Cruz; Nam Sung Kim"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "PAMM: Adaptive Memory Management for CXL-/UB-Based Heterogeneous Memory Pooling Systems",
+    "doi": "10.1007/978-981-95-1021-4_11",
+    "year": 2025,
+    "venue": "Lecture Notes in Computer Science Advanced Parallel Processing Technologies",
+    "pages": "145-159",
+    "type": "book-chapter",
+    "authors": "Jianqin Yan; Zhaoxiang Huang; Yue Yu; Zhenlong Song; Yiming Zhang"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "CHash: A High Cost-Performance Hash Design for CXL-based Disaggregated Memory System",
+    "doi": "10.1145/3744970.3727278",
+    "year": 2025,
+    "venue": "ACM SIGMETRICS Performance Evaluation Review",
+    "pages": "124-126",
+    "type": "journal-article",
+    "authors": "Mengting Lu; Gaocong Liu; Kun Wang; Feng Zhu; Shu Li"
+  },
+  {
+    "query": "CXL memory pooling system evaluation prototype",
+    "title": "Is CXL the Way Forward for Server Memory?",
+    "doi": "10.51793/os.2024.71.91.002",
+    "year": 2024,
+    "venue": "Открытые системы. СУБД",
+    "pages": null,
+    "type": "journal-article",
+    "authors": "М. Кузьминский"
+  }
+]

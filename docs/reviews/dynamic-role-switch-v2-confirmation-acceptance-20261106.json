@@ -1,0 +1,251 @@
+{
+  "schema": "cxl-v2-confirmation-acceptance-v1",
+  "status": "COHORT_COMPLETE_ALL_SUPPORTED",
+  "date": "2026-11-06",
+  "seeds": [
+    7401,
+    7402,
+    7403,
+    7404,
+    7405,
+    7406,
+    7407,
+    7408,
+    7409,
+    7410,
+    7411,
+    7412,
+    7413,
+    7414,
+    7415,
+    7416,
+    7417,
+    7418,
+    7419,
+    7420
+  ],
+  "seed_count": 20,
+  "model_jobs": 600,
+  "model_jobs_failed": 0,
+  "excluded_seeds": [
+    7291,
+    7301,
+    9901
+  ],
+  "analysis": {
+    "path": "docs/reviews/dynamic-role-switch-v2-confirmation-analysis-20261106.json",
+    "sha256": "2a42e0194f980063b0fc90f2c30e9979f9dd64b389a583008493799cf3d5d8ad"
+  },
+  "contrasts": {
+    "P1": {
+      "case": "role-switch",
+      "left": "FAI-inspired",
+      "right": "CGOF(2:1)",
+      "successes": 20,
+      "n": 20,
+      "mean_delta": 15,
+      "exact_p": 9.5367431640625e-07,
+      "holm_threshold": 0.016666666666666666,
+      "holm_rejected": true,
+      "verdict": "SUPPORTED_WITHIN_PROTOCOL",
+      "bootstrap_ci": [
+        15,
+        15
+      ],
+      "distinct_deltas": [
+        15
+      ]
+    },
+    "P2": {
+      "case": "role-switch",
+      "left": "CGOF(2:1)",
+      "right": "CGOF(1:1)",
+      "successes": 20,
+      "n": 20,
+      "mean_delta": 1,
+      "exact_p": 9.5367431640625e-07,
+      "holm_threshold": 0.025,
+      "holm_rejected": true,
+      "verdict": "SUPPORTED_WITHIN_PROTOCOL",
+      "bootstrap_ci": [
+        1,
+        1
+      ],
+      "distinct_deltas": [
+        1
+      ]
+    },
+    "P3": {
+      "case": "multi-window",
+      "left": "FAI-inspired",
+      "right": "CGOF(2:1)",
+      "successes": 20,
+      "n": 20,
+      "mean_delta": 13.9,
+      "exact_p": 9.5367431640625e-07,
+      "holm_threshold": 0.05,
+      "holm_rejected": true,
+      "verdict": "SUPPORTED_WITHIN_PROTOCOL",
+      "bootstrap_ci": [
+        13.75,
+        14
+      ],
+      "distinct_deltas": [
+        13,
+        14
+      ]
+    }
+  },
+  "wall": {
+    "sum_s": 128989.1,
+    "min_s": 6023.0,
+    "max_s": 8790.9,
+    "mean_s": 6449.5,
+    "job_wall_sum_s": 753529.4
+  },
+  "drain_cycles_observed": [
+    1,
+    2,
+    4,
+    1,
+    2,
+    3,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1
+  ],
+  "per_seed": {
+    "7401": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T100818Z_seed7401",
+      "wall_s": 7108.1,
+      "job_wall_max_s": 1290.1
+    },
+    "7402": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T120647Z_seed7402",
+      "wall_s": 6655.0,
+      "job_wall_max_s": 1450.4
+    },
+    "7403": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T135743Z_seed7403",
+      "wall_s": 6229.3,
+      "job_wall_max_s": 1462.0
+    },
+    "7404": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T154134Z_seed7404",
+      "wall_s": 6023.0,
+      "job_wall_max_s": 1299.3
+    },
+    "7405": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T190951Z_seed7405",
+      "wall_s": 6272.0,
+      "job_wall_max_s": 1414.1
+    },
+    "7406": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261104T205424Z_seed7406",
+      "wall_s": 6248.7,
+      "job_wall_max_s": 1400.9
+    },
+    "7407": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T003422Z_seed7407",
+      "wall_s": 6187.7,
+      "job_wall_max_s": 1434.6
+    },
+    "7408": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T021731Z_seed7408",
+      "wall_s": 6193.9,
+      "job_wall_max_s": 1361.4
+    },
+    "7409": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T040046Z_seed7409",
+      "wall_s": 8790.9,
+      "job_wall_max_s": 2499.6
+    },
+    "7410": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T062719Z_seed7410",
+      "wall_s": 6546.4,
+      "job_wall_max_s": 1749.8
+    },
+    "7411": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T081627Z_seed7411",
+      "wall_s": 7202.7,
+      "job_wall_max_s": 1662.2
+    },
+    "7412": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T101632Z_seed7412",
+      "wall_s": 6104.8,
+      "job_wall_max_s": 1339.0
+    },
+    "7413": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T115818Z_seed7413",
+      "wall_s": 6059.0,
+      "job_wall_max_s": 1319.5
+    },
+    "7414": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T133918Z_seed7414",
+      "wall_s": 6221.7,
+      "job_wall_max_s": 1406.8
+    },
+    "7415": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T152301Z_seed7415",
+      "wall_s": 6082.8,
+      "job_wall_max_s": 1321.6
+    },
+    "7416": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T170425Z_seed7416",
+      "wall_s": 6127.2,
+      "job_wall_max_s": 1346.4
+    },
+    "7417": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T184634Z_seed7417",
+      "wall_s": 6190.6,
+      "job_wall_max_s": 1361.8
+    },
+    "7418": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T202946Z_seed7418",
+      "wall_s": 6165.1,
+      "job_wall_max_s": 1361.6
+    },
+    "7419": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T221232Z_seed7419",
+      "wall_s": 6219.9,
+      "job_wall_max_s": 1353.5
+    },
+    "7420": {
+      "dir": "artifacts/implementation/dynamic-role-switch-v2-confirm/20261105T235613Z_seed7420",
+      "wall_s": 6360.3,
+      "job_wall_max_s": 1386.2
+    }
+  },
+  "interruptions": [
+    "2026-11-04 host restart at 18:04Z killed the first 7405 attempt after 12 jobs",
+    "2026-11-04 restart at 23:02Z killed the first 7407 attempt after 6 jobs",
+    "both seeds were rerun in fresh directories; the partial directories are kept and excluded"
+  ],
+  "evidence_classification": "MODEL_ONLY statistics with SCHEDULER_RTL anchors at A3 (seed 7301) and A4 (seed 7401)",
+  "limitations": [
+    "the endpoint is the mixed-lane Sparse whole-run G->F nearest-rank P99; no memory-system or application metric",
+    "P1 and P2 have identical deltas on every seed, so their bootstrap intervals are zero width; that is a property of the endpoint, not evidence of independence",
+    "P3 varies on two seeds (13 instead of 14)",
+    "C7 stays SINGLE_SEED; nothing here promotes a multi-window RTL claim"
+  ],
+  "caps": {
+    "elapsed_wall_h": 39.6,
+    "window": "2026-11-04T10:08:18Z to 2026-11-06T01:42:16Z",
+    "simulation_total_cap_h": 60.0,
+    "campaign_cap_h": 80.0,
+    "overall_cap_h": 95.0,
+    "per_seed_slowest_h": 2.44,
+    "seed_simulation_cap_h": 4.0,
+    "rtl": {
+      "a3_h": 3.37,
+      "a4_h": 2.03,
+      "rtl_job_cap_h": 3.0
+    },
+    "verdict": "within every cap; no cap was raised"
+  }
+}

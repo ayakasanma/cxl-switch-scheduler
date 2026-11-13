@@ -1,0 +1,180 @@
+{
+ "10.1145/3575693.3578835": {
+  "paperId": "bf2b5291361e009f7295338f61a0cafac6c54ba7",
+  "externalIds": {
+   "ArXiv": "2203.00241",
+   "DBLP": "conf/asplos/LiBHEZNSRLAHFB23",
+   "DOI": "10.1145/3575693.3578835",
+   "CorpusId": 252907213
+  },
+  "title": "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms",
+  "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+  "year": 2022,
+  "openAccessPdf": {
+   "url": "https://dl.acm.org/doi/pdf/10.1145/3575693.3578835",
+   "status": "HYBRID",
+   "license": "CCBY",
+   "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2203.00241, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "9751178",
+    "name": "Huaicheng Li"
+   },
+   {
+    "authorId": "1998879",
+    "name": "Daniel S. Berger"
+   },
+   {
+    "authorId": "2906577",
+    "name": "Lisa R. Hsu"
+   },
+   {
+    "authorId": "2064143070",
+    "name": "Dan Ernst"
+   },
+   {
+    "authorId": "3448074",
+    "name": "Pantea Zardoshti"
+   },
+   {
+    "authorId": "2342605",
+    "name": "Stanko Novakovic"
+   },
+   {
+    "authorId": "2157274751",
+    "name": "Monish Shah"
+   },
+   {
+    "authorId": "98767040",
+    "name": "S. Rajadnya"
+   },
+   {
+    "authorId": "2187875940",
+    "name": "Scott Lee"
+   },
+   {
+    "authorId": "1935223488",
+    "name": "Ishwar Agarwal"
+   },
+   {
+    "authorId": "144888943",
+    "name": "M. Hill"
+   },
+   {
+    "authorId": "1765528",
+    "name": "M. Fontoura"
+   },
+   {
+    "authorId": "2118138",
+    "name": "R. Bianchini"
+   }
+  ],
+  "abstract": "Public cloud providers seek to meet stringent performance requirements and low hardware cost. A key driver of performance and cost is main memory. Memory pooling promises to improve DRAM utilization and thereby reduce costs. However, pooling is challenging under cloud performance requirements. This paper proposes Pond, the first memory pooling system that both meets cloud performance goals and significantly reduces DRAM cost. Pond builds on the Compute Express Link (CXL) standard for load/store access to pool memory and two key insights. First, our analysis of cloud production traces shows that pooling across 8-16 sockets is enough to achieve most of the benefits. This enables a small-pool design with low access latency. Second, it is possible to create machine learning models that can accurately predict how much local and pool memory to allocate to a virtual machine (VM) to resemble same-NUMA-node memory performance. Our evaluation with 158 workloads shows that Pond reduces DRAM costs by 7% with performance within 1-5% of same-NUMA-node VM allocations."
+ },
+ "10.1145/3582016.3582063": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3613424.3614256": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3669900": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/mm.2023.3237491": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/iccd.2014.6974655": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/micro.2007.21": {
+  "paperId": "d57ebaf09305593b879c212afb3fea78e40c9107",
+  "externalIds": {
+   "MAG": "2132269953",
+   "DBLP": "conf/micro/ChoZL07",
+   "DOI": "10.1109/MICRO.2007.21",
+   "CorpusId": 13396967
+  },
+  "title": "Informed Microarchitecture Design Space Exploration Using Workload Dynamics",
+  "venue": "Micro",
+  "year": 2007,
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/MICRO.2007.21?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/MICRO.2007.21, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "2399876",
+    "name": "Chang-Burm Cho"
+   },
+   {
+    "authorId": "2601136",
+    "name": "Wangyuan Zhang"
+   },
+   {
+    "authorId": "2149199291",
+    "name": "Tao Li"
+   }
+  ],
+  "abstract": null
+ },
+ "10.1145/3626111.3628195": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/dac63849.2025.11132607": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3695794.3695808": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3695794.3695810": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/mchpc56545.2022.00007": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/isocc.2016.7799765": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3713082.3730393": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/339647.339668": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/40.748793": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1016/j.vlsi.2011.01.001": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/tvlsi.2008.2000323": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/hpca.2010.5416658": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/micro.2010.51": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/lca.2025.3621612": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3695794.3695809": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/tcad.2025.3607145": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3767110.3767113": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1145/3723851.3723858": {
+  "error": "HTTP Error 429: "
+ },
+ "10.1109/ICPADS67057.2025.11322896": {
+  "error": "HTTP Error 429: "
+ }
+}

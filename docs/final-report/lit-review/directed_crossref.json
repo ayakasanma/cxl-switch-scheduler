@@ -1,0 +1,5312 @@
+{
+  "CXL interleaving address mapping": [
+    {
+      "DOI": "10.1109/icpads67057.2025.11322896",
+      "title": [
+        "FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL Memory Pool Management with Fine-Grained Cacheline-Level Interleaving"
+      ],
+      "author": [
+        {
+          "given": "Jiaxi",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yixuan",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yunfei",
+          "family": "Gu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Chentao",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 IEEE 31th International Conference on Parallel and Distributed Systems (ICPADS)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            14
+          ]
+        ]
+      },
+      "page": "1-8",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1145/3723851.3723858",
+      "title": [
+        "Rethinking Applications' Address Space with CXL Shared Memory Pools"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-2099-6418",
+          "authenticated-orcid": false,
+          "given": "Tong",
+          "family": "Xing",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "The University of Edinburgh, Edinburgh, United Kingdom"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1641-0779",
+          "authenticated-orcid": false,
+          "given": "Antonio",
+          "family": "Barbalace",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The University of Edinburgh, Edinburgh, United Kingdom"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            3,
+            30
+          ]
+        ]
+      },
+      "page": "52-59",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/cae48787.2020.9046380",
+      "title": [
+        "A simple BLOCK interleaving algorithm using reduced memory and address generator resources"
+      ],
+      "author": [
+        {
+          "given": "Guillermo A.",
+          "family": "Jaquenod",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Gerardo G.",
+          "family": "Acosta",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2020 Argentine Conference on Electronics (CAE)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            2
+          ]
+        ]
+      },
+      "page": "53-56",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/access.2019.2940351",
+      "title": [
+        "Adaptive Linear Address Map for Bank Interleaving in DRAMs"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4151-908X",
+          "authenticated-orcid": false,
+          "given": "Jae Young",
+          "family": "Hur",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Sang Woo",
+          "family": "Rhim",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Beom Hak",
+          "family": "Lee",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7262-0028",
+          "authenticated-orcid": false,
+          "given": "Wooyoung",
+          "family": "Jang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Access"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2019
+          ]
+        ]
+      },
+      "page": "129604-129616",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.32614/cran.package.procmaps",
+      "title": [
+        "procmaps: Portable Address Space Mapping"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-1416-3412",
+          "authenticated-orcid": true,
+          "given": "Kirill",
+          "family": "Müller",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "CRAN: Contributed Packages"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            11
+          ]
+        ]
+      },
+      "type": "dataset"
+    },
+    {
+      "DOI": "10.4324/9781003565819-21",
+      "title": [
+        "Mapping as a Lens to Address Complex Problems"
+      ],
+      "author": [
+        {
+          "given": "Ed",
+          "family": "Parham",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Mapping"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            11
+          ]
+        ]
+      },
+      "page": "285-297",
+      "type": "book-chapter"
+    },
+    {
+      "DOI": "10.2139/ssrn.7390739",
+      "title": [
+        "From Address to Answerability: A Pilot Method for Mapping Divine Address, Human Response, and Moral Accountability in Qur'anic Discourse"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0001-7323-1577",
+          "authenticated-orcid": true,
+          "given": "Syed Raheel",
+          "family": "Shahzad",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.51793/os.2024.71.91.002",
+      "title": [
+        "Is CXL the Way Forward for Server Memory?"
+      ],
+      "author": [
+        {
+          "given": "М.",
+          "family": "Кузьминский",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Открытые системы. СУБД"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            24
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.7759/cureus.51565",
+      "title": [
+        "Advances in the Treatment of Keratoconus: Epithelial-On (EPI-On) Corneal-Collagen Cross-Linking (CXL) and CXL-Plus Procedures"
+      ],
+      "author": [
+        {
+          "given": "Maaz",
+          "family": "Khan",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ahmed",
+          "family": "Ageed",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Cureus"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            3
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.2139/ssrn.3280782",
+      "title": [
+        "ICSID Arbitration Reform: Mapping Concerns of Users and How to Address Them"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-6741-5217",
+          "authenticated-orcid": true,
+          "given": "Yarik",
+          "family": "Kryvoi",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.3390/ijerph19127505",
+      "title": [
+        "Applying Interleaving Strategy of Learning Materials and Perceptual Modality to Address Secondary Students’ Need to Restore Cognitive Capacity"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-7563-4495",
+          "authenticated-orcid": false,
+          "given": "Wen",
+          "family": "Chen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "College of Teacher Education, Ningbo University, Ningbo 315211, China"
+            },
+            {
+              "name": "Advanced Innovation Center for Future Education, Beijing Normal University, Beijing 100875, China"
+            },
+            {
+              "name": "School of Artificial Intelligence, Beijing Normal University, Beijing 100875, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chuansheng",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Psychological Science, University of California, Irvine, CA 92697, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Baoping",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Advanced Innovation Center for Future Education, Beijing Normal University, Beijing 100875, China"
+            },
+            {
+              "name": "Faculty of Education, Beijing Normal University, Beijing 100875, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jiacai",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Artificial Intelligence, Beijing Normal University, Beijing 100875, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Environmental Research and Public Health"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            6,
+            19
+          ]
+        ]
+      },
+      "page": "7505",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/access.2022.3157754",
+      "title": [
+        "Design a New Time-Diversity System Using Orthogonal Mapping Matrix and Symbols Interleaving for Rayleigh Flat-Fading Channels"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-3393-9068",
+          "authenticated-orcid": false,
+          "given": "Ashraf Yahia",
+          "family": "Hassan",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Benha Faculty of Engineering, Benha University, Banha, Egypt"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ahmed Sami",
+          "family": "Mohammed",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Benha Faculty of Engineering, Benha University, Banha, Egypt"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Access"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022
+          ]
+        ]
+      },
+      "page": "29698-29715",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1055/b-0038-149410",
+      "title": [
+        "14 Laser’s Place in CXL: Excimer Laser and Refractive Surgery Combined with Corneal Cross-Linking, Femto-LASIK Combined with CXL"
+      ],
+      "container-title": [
+        "Femtosecond Laser Surgery in Ophthalmology"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018
+          ]
+        ]
+      },
+      "type": "book-chapter"
+    },
+    {
+      "DOI": "10.1117/12.3004060",
+      "title": [
+        "Interleaving-mapping: a novel data layout in scratchpad memory"
+      ],
+      "author": [
+        {
+          "given": "lingling",
+          "family": "zeng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "dunbo",
+          "family": "zhang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "li",
+          "family": "shen",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "qiang",
+          "family": "dou",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Sixth International Conference on Computer Information Science and Application Technology (CISAT 2023)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            11
+          ]
+        ]
+      },
+      "page": "151",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1007/s10792-025-03867-x",
+      "title": [
+        "Comparison of t-PTK + CXL and CXL with mechanical debridement for keratoconus: fellow eye study"
+      ],
+      "author": [
+        {
+          "given": "Burcin",
+          "family": "Kepez Yildiz",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ozum",
+          "family": "Yucel",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yusuf Berk",
+          "family": "Akbas",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ali Safa",
+          "family": "Balci",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Fevziye",
+          "family": "Ondes Yilmaz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Ophthalmology"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            11,
+            15
+          ]
+        ]
+      },
+      "type": "journal-article"
+    }
+  ],
+  "CXL memory quality of service": [],
+  "CXL memory interference": [
+    {
+      "DOI": "10.51793/os.2024.71.91.002",
+      "title": [
+        "Is CXL the Way Forward for Server Memory?"
+      ],
+      "author": [
+        {
+          "given": "М.",
+          "family": "Кузьминский",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Открытые системы. СУБД"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            24
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/lca.2026.3673181",
+      "title": [
+        "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4224-2812",
+          "authenticated-orcid": false,
+          "given": "Srikar",
+          "family": "Vanavasam",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Austin Antony",
+          "family": "Cruz",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0442-5634",
+          "authenticated-orcid": false,
+          "given": "Nam Sung",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Computer Architecture Letters"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            1
+          ]
+        ]
+      },
+      "page": "114-117",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/dac63849.2025.11132607",
+      "title": [
+        "CXL-INTERPLAY: Unraveling and Characterizing CXL Interference in Modern Computer Systems"
+      ],
+      "author": [
+        {
+          "given": "Shunyu",
+          "family": "Mao",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Tsinghua University,Department of Electronic Engineering"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jiajun",
+          "family": "Luo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tsinghua University,Department of Electronic Engineering"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yixin",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tsinghua University,Department of Electronic Engineering"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jiapeng",
+          "family": "Zhou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Alibaba Group"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Weidong",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Computing Technology,Chinese Academy of Sciences"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zheng",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Computing Technology,Chinese Academy of Sciences"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Teng",
+          "family": "Ma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Computing Technology,Chinese Academy of Sciences"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shuwen",
+          "family": "Deng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tsinghua University,Department of Electronic Engineering"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 62nd ACM/IEEE Design Automation Conference (DAC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            22
+          ]
+        ]
+      },
+      "page": "1-7",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1145/3695794.3695810",
+      "title": [
+        "Synchronization for CXL Based Memory"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-0871-3307",
+          "authenticated-orcid": false,
+          "given": "Joshua",
+          "family": "Suetterlein",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-6616-0125",
+          "authenticated-orcid": false,
+          "given": "Joseph",
+          "family": "Manzano",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4313-1882",
+          "authenticated-orcid": false,
+          "given": "Andres",
+          "family": "Marquez",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the International Symposium on Memory Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            9,
+            30
+          ]
+        ]
+      },
+      "page": "178-185",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/iceic61013.2024.10457110",
+      "title": [
+        "Synergizing CXL with Unified Memory for Scalable GPU Memory Expansion"
+      ],
+      "author": [
+        {
+          "given": "Junseung",
+          "family": "Lee",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Sungkyunkwan University,Dept. of Electrical and Computer Engineering,Suwon,Republic of Korea"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jungrae",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Sungkyunkwan University,Dept. of Semiconductor Systems Engineering,Suwon,Republic of Korea"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2024 International Conference on Electronics, Information, and Communication (ICEIC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            28
+          ]
+        ]
+      },
+      "page": "1-4",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1007/s13222-026-00562-8",
+      "title": [
+        "Active CXL Memory for Database Engines"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4252-0648",
+          "authenticated-orcid": false,
+          "given": "Alberto",
+          "family": "Lerner",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gustavo",
+          "family": "Alonso",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Datenbank-Spektrum"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            12
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1145/3695794.3695808",
+      "title": [
+        "Contention aware DRAM caching for CXL-enabled pooled memory"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-8333-7896",
+          "authenticated-orcid": false,
+          "given": "Chandrahas",
+          "family": "Tirumalasetty",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Electrical &amp; Computer Engineering, Texas A&amp;M University, College Station, TX, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4625-8819",
+          "authenticated-orcid": false,
+          "given": "Narasimha Reddy",
+          "family": "Annapareddy",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electrical &amp; Computer Engineering, Texas A&amp;M University, College Station, TX, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the International Symposium on Memory Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            9,
+            30
+          ]
+        ]
+      },
+      "page": "157-171",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/icpads67057.2025.11322896",
+      "title": [
+        "FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL Memory Pool Management with Fine-Grained Cacheline-Level Interleaving"
+      ],
+      "author": [
+        {
+          "given": "Jiaxi",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yixuan",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yunfei",
+          "family": "Gu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Chentao",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shanghai Jiao Tong University,Shanghai,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 IEEE 31th International Conference on Parallel and Distributed Systems (ICPADS)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            14
+          ]
+        ]
+      },
+      "page": "1-8",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1145/3695794.3695809",
+      "title": [
+        "Performance Study of CXL Memory Topology"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0009-2283-806X",
+          "authenticated-orcid": false,
+          "given": "Jianbo",
+          "family": "Wu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of California, Merced, Merced, CA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6560-0427",
+          "authenticated-orcid": false,
+          "given": "Jie",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of California, Merced, Merced, CA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9105-5634",
+          "authenticated-orcid": false,
+          "given": "Gokcen",
+          "family": "Kestor",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9430-2656",
+          "authenticated-orcid": false,
+          "given": "Roberto",
+          "family": "Gioiosa",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9336-0694",
+          "authenticated-orcid": false,
+          "given": "Dong",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of California, Merced, Merced, CA, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4313-1882",
+          "authenticated-orcid": false,
+          "given": "Andres",
+          "family": "Marquez",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, Richland, WA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the International Symposium on Memory Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            9,
+            30
+          ]
+        ]
+      },
+      "page": "172-177",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/mchpc56545.2022.00007",
+      "title": [
+        "Evaluating Emerging CXL-enabled Memory Pooling for HPC Systems"
+      ],
+      "author": [
+        {
+          "given": "Jacob",
+          "family": "Wahlgren",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "KTH Royal Institute of Technology,Department of Computer Science,Stockholm,Sweden"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Maya",
+          "family": "Gokhale",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lawrence Livermore National Laboratory,CASC,Livermore,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ivy B.",
+          "family": "Peng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "KTH Royal Institute of Technology,Department of Computer Science,Stockholm,Sweden"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2022 IEEE/ACM Workshop on Memory Centric High Performance Computing (MCHPC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            11
+          ]
+        ]
+      },
+      "page": "11-20",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1145/3831664.3837788",
+      "title": [
+        "Shadix: A Distributed Message Broker Leveraging Shared Disaggregated CXL Memory"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0004-9132-2570",
+          "authenticated-orcid": false,
+          "given": "Julian",
+          "family": "Hackenberg",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Hasso Plattner Institute, University of Potsdam, Potsdam, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0000-4891-2322",
+          "authenticated-orcid": false,
+          "given": "Lukas",
+          "family": "Hagen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Hasso Plattner Institute, University of Potsdam, Potsdam, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0002-8973-6403",
+          "authenticated-orcid": false,
+          "given": "Marcel",
+          "family": "Weisgut",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Hasso Plattner Institute, University of Potsdam, Potsdam, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0004-7131-926X",
+          "authenticated-orcid": false,
+          "given": "Florian",
+          "family": "Schmeller",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Hasso Plattner Institute, University of Potsdam, Potsdam, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0009-3335-8045",
+          "authenticated-orcid": false,
+          "given": "Tilmann",
+          "family": "Rabl",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Hasso Plattner Institute, University of Potsdam, Potsdam, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the 4th Workshop on Disruptive Memory Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            28
+          ]
+        ]
+      },
+      "page": "64-72",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/mm.2022.3229627",
+      "title": [
+        "CXL-Enabled Enhanced Memory Functions"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-9722-3053",
+          "authenticated-orcid": false,
+          "given": "David",
+          "family": "Boles",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Micron Technology, Austin, TX, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8758-910X",
+          "authenticated-orcid": false,
+          "given": "Daniel",
+          "family": "Waddington",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "IBM, San Jose, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7793-6101",
+          "authenticated-orcid": false,
+          "given": "David A.",
+          "family": "Roberts",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Micron Technology, Boise, ID, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Micro"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            3,
+            1
+          ]
+        ]
+      },
+      "page": "58-65",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.34755/irok.2026.72.23.004",
+      "title": [
+        "Compute Express Link (CXL): a new high-speed interconnect standard for server memory expansion"
+      ],
+      "author": [
+        {
+          "given": "В.В.",
+          "family": "Красовский",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "КубГТУ"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Е.В.",
+          "family": "Дьяченко",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "КубГТУ"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "4 (I) Международная научно-практическая конференция «Современные тенденции развития науки и мирового сообщества в эпоху цифровизации»"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            17
+          ]
+        ]
+      },
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/iseda65950.2025.11100479",
+      "title": [
+        "Simulating CXL Shared Coherent Memory Using Shared Memory Among Virtual Machines"
+      ],
+      "author": [
+        {
+          "given": "Ting",
+          "family": "Wu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Chongqing University of Posts and Telecommunications,School of Software Engineering,Chongqing,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Linbo",
+          "family": "Long",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Chongqing University of Posts and Telecommunications,School of Computer Science,Chongqing,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Zhulin",
+          "family": "MA",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Chongqing University of Posts and Telecommunications,School of Software Engineering,Chongqing,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Qiushuang",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Chongqing University of Posts and Telecommunications,School of Software Engineering,Chongqing,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Hang",
+          "family": "Tian",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Chongqing University of Posts and Telecommunications,School of Software Engineering,Chongqing,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Weichen",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nanyang Technological University,College of Computing and Data Science,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 International Symposium of Electronics Design Automation (ISEDA)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            9
+          ]
+        ]
+      },
+      "page": "126-131",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/lca.2025.3628805",
+      "title": [
+        "Rethinking In-Memory Hash Table Design for CXL-Based Main Memory Compression"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0002-2863-8690",
+          "authenticated-orcid": false,
+          "given": "Teresa",
+          "family": "Zhang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Computer Architecture Letters"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            7
+          ]
+        ]
+      },
+      "page": "357-360",
+      "type": "journal-article"
+    }
+  ],
+  "CXL switch fabric architecture": [],
+  "CXL memory pooling arbitration": [],
+  "memory controller scheduling hardware implementation": [
+    {
+      "DOI": "10.1109/cipher70417.2026.11524022",
+      "title": [
+        "Design and Implementation of an FSM-Based DDR Memory Controller on FPGA"
+      ],
+      "author": [
+        {
+          "family": "Simran",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Dr. B. R. Ambedkar National Institute of Technology,Department of Electronics and Communication Engineering,Jalandhar,India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Khushi",
+          "family": "Gupta",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dr. B. R. Ambedkar National Institute of Technology,Department of Electronics and Communication Engineering,Jalandhar,India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kunal",
+          "family": "Gupta",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dr. B. R. Ambedkar National Institute of Technology,Department of Electronics and Communication Engineering,Jalandhar,India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nitesh",
+          "family": "Kashyap",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dr. B. R. Ambedkar National Institute of Technology,Department of Electronics and Communication Engineering,Jalandhar,India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2026 International Conference on Intelligent Processing, Hardware, Electronics, and Radio Systems (CIPHER)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            2,
+            13
+          ]
+        ]
+      },
+      "page": "1-3",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1201/9781420015454-12",
+      "title": [
+        "Neural Network Output Feedback Controller Design and Embedded Hardware Implementation"
+      ],
+      "container-title": [
+        "Neural Network Control of Nonlinear Discrete-Time Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            10,
+            3
+          ]
+        ]
+      },
+      "page": "531-614",
+      "type": "book-chapter"
+    },
+    {
+      "DOI": "10.3390/electronics12020440",
+      "title": [
+        "A Mixed Hardware-Software Implementation of a High-Performance PMSM Controller"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-1043-290X",
+          "authenticated-orcid": false,
+          "given": "Adam",
+          "family": "Milik",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Division of Digital Systems, Faculty of Automatic Control, Electronics and Computer Science, Silesian University of Technology, 44-100 Gliwice, Poland"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5110-6783",
+          "authenticated-orcid": false,
+          "given": "Tomasz",
+          "family": "Rudnicki",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Digital Systems, Faculty of Automatic Control, Electronics and Computer Science, Silesian University of Technology, 44-100 Gliwice, Poland"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Electronics"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            1,
+            14
+          ]
+        ]
+      },
+      "page": "440",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.2139/ssrn.7139663",
+      "title": [
+        "Multi-Controller Custom Serverless Scheduling: Formalisation and a Cloud-Edge Implementation"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-3016-0115",
+          "authenticated-orcid": true,
+          "given": "Giuseppe",
+          "family": "De Palma",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3658-6395",
+          "authenticated-orcid": true,
+          "given": "Saverio",
+          "family": "Giallorenzo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5285-2868",
+          "authenticated-orcid": true,
+          "given": "Jacopo",
+          "family": "Mauro",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3305-2758",
+          "authenticated-orcid": true,
+          "given": "Matteo",
+          "family": "Trentin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3313-6409",
+          "authenticated-orcid": true,
+          "given": "Gianluigi",
+          "family": "Zavattaro",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.1109/icmsp64464.2024.10866428",
+      "title": [
+        "Software and hardware design and implementation of vehicle controller"
+      ],
+      "author": [
+        {
+          "given": "Jianwei",
+          "family": "Ye",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "CSSC Haiwei Tech Co., LTD,Zhengzhou,China,450052"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jingwen",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "CSSC Haiwei Tech Co., LTD,Zhengzhou,China,450052"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2024 6th International Conference on Intelligent Control, Measurement and Signal Processing (ICMSP)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            29
+          ]
+        ]
+      },
+      "page": "421-424",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.15199/48.2023.07.19",
+      "title": [
+        "Design and Real Hardware Implementation of Fuzzy Logic Controller for DC-DC Boost Converter"
+      ],
+      "author": [
+        {
+          "given": "Dhaouadi",
+          "family": "GUIZA",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "PRZEGLĄD ELEKTROTECHNICZNY"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            7,
+            28
+          ]
+        ]
+      },
+      "page": "103-107",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.23919/ecc54610.2021.9655061",
+      "title": [
+        "Hardware Implementation of Low-complexity Deep Learning-based Model Predictive Controller"
+      ],
+      "author": [
+        {
+          "given": "Nirlipta Ranjan",
+          "family": "Mohanty",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Saket",
+          "family": "Adhau",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Deepak",
+          "family": "Ingole",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dayaram",
+          "family": "Sonawane",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2021 European Control Conference (ECC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            6,
+            29
+          ]
+        ]
+      },
+      "page": "1024-1029",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.47176/maj.2025.1527",
+      "title": [
+        "Hardware Implementation of Jet Engine Fuel Controller Using Python Language"
+      ],
+      "author": [
+        {
+          "given": "Abdollah",
+          "family": "Bordbar",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Morteza",
+          "family": "Montazeri-Gh",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ali",
+          "family": "Yousefi Dastjerdi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Aerospace Mechanics"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            11,
+            25
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.5220/0011698400003417",
+      "title": [
+        "Memory-Efficient Implementation of GMM-MRCoHOG for Human Recognition Hardware"
+      ],
+      "author": [
+        {
+          "given": "Ryogo",
+          "family": "Takemoto",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yuya",
+          "family": "Nagamine",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Kazuki",
+          "family": "Yoshihiro",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Masatoshi",
+          "family": "Shibata",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AISIN CORPORATION, 2-1 Asahi-machi, Kariya, Aichi, 448-8650, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Hideo",
+          "family": "Yamada",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AISIN CORPORATION, 2-1 Asahi-machi, Kariya, Aichi, 448-8650, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yuichiro",
+          "family": "Tanaka",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Research Center for Neuromorphic AI Hardware, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Shuichi",
+          "family": "Enokida",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Faculty of Computer Science and Systems Engineering, Kyushu Institute of Technology, 680-4 Kawazu, Iizuka, Fukuoka, 820-8502, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Hakaru",
+          "family": "Tamukoh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            },
+            {
+              "name": "Research Center for Neuromorphic AI Hardware, Kyushu Institute of Technology, 2-4 Hibikino, Wakamatsu-ku, Kitakyushu, Fukuoka, 808-0196, Japan, --- Select a Country ---"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Proceedings of the 18th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023
+          ]
+        ]
+      },
+      "page": "648-655",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/epec.2018.8598392",
+      "title": [
+        "Controller Implementation and Performance Evaluation of a High Power Three-Phase Active Power Filter using Controller Hardware-in-the-Loop Simulation"
+      ],
+      "author": [
+        {
+          "given": "Hang",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Aniruddha M.",
+          "family": "Gole",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Carl Ngai Man",
+          "family": "Ho",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2018 IEEE Electrical Power and Energy Conference (EPEC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            10
+          ]
+        ]
+      },
+      "page": "1-6",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.15199/48.2024.08.42",
+      "title": [
+        "Simulation and Hardware implementation of Novel Controller in electric vehicle applications to improve system efficiency"
+      ],
+      "author": [
+        {
+          "given": "Shaik",
+          "family": "Begam",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "PRZEGLĄD ELEKTROTECHNICZNY"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            1
+          ]
+        ]
+      },
+      "page": "203-211",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/iciccsp53532.2022.9862445",
+      "title": [
+        "A Smart Solar Charge Controller Based on IOT Technology with Hardware Implementation"
+      ],
+      "author": [
+        {
+          "given": "Sarita",
+          "family": "Samal",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Electrical Engineering, KIIT DU,Bhubaneswar,India,751024"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Roshan Kumar",
+          "family": "Soni",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Electrical Engineering, KIIT DU,Bhubaneswar,India,751024"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Sarthak",
+          "family": "Nayak",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Electrical Engineering, KIIT DU,Bhubaneswar,India,751024"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Prasanta Kumar",
+          "family": "Barik",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of MEE, CAET, OUAT,Bhubaneswar,India,751003"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Rudranarayan",
+          "family": "Dash",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Electrical Engineering, KIIT DU,Bhubaneswar,India,751024"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Geetanjali",
+          "family": "Dei",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Electrical Engineering, KIIT DU,Bhubaneswar,India,751024"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2022 International Conference on Intelligent Controller and Computing for Smart Power (ICICCSP)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            7,
+            21
+          ]
+        ]
+      },
+      "page": "1-6",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.31274/cc-20240624-1179",
+      "title": [
+        "Quadcopter Controller Hardware and Software Design"
+      ],
+      "author": [
+        {
+          "given": "Michael",
+          "family": "Neilson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            8,
+            1
+          ]
+        ]
+      },
+      "type": "report"
+    },
+    {
+      "DOI": "10.30684/etj.v39i7.1772",
+      "title": [
+        "FPGA Implementation of Modified Reconfigurable Adaptive Gain Scheduling Controller"
+      ],
+      "author": [
+        {
+          "given": "Ali",
+          "family": "Wheed",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Abbas",
+          "family": "Issa",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Mohammed",
+          "family": "Y.",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Engineering and Technology Journal"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            7,
+            25
+          ]
+        ]
+      },
+      "page": "1105-1116",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/irec52758.2021.9624902",
+      "title": [
+        "Hardware Implementation of a Novel Sliding Mode Controller for Photovoltaic Water Pumping Systems Without Energy Storage"
+      ],
+      "author": [
+        {
+          "given": "Saber",
+          "family": "Krim",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Monastir,Higher Institute of Applied Sciences and Technology of Kasserine,Department of Technologies University of Kairouan, Kairouan, Tunisia Laboratory of Automatic, Electrical Systems and Environment (LASEE) National Engineering School of Monastir,Tunisia"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Mohamed Faouzi",
+          "family": "Mimouni",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Monastir,National Engineering School of Monastir,Department of Electrical Engineering Laboratory of Automatic, Electrical Systems and Environment (LASEE), National Engineering School of Monastir,Tunisia"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2021 12th International Renewable Energy Congress (IREC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            26
+          ]
+        ]
+      },
+      "page": "1-7",
+      "type": "proceedings-article"
+    }
+  ],
+  "DRAM memory scheduler hardware cost": [],
+  "weighted fair queueing hardware implementation": [
+    {
+      "DOI": "10.1109/iccc59590.2023.10507624",
+      "title": [
+        "OWFQ: Reducing Packet Drops for Approximate Weighted Fair Queueing with Calendar Queues"
+      ],
+      "author": [
+        {
+          "given": "Xin",
+          "family": "Yu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China,School of Computer Science and Technology,Hefei,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Wei",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China,School of Computer Science and Technology,Hefei,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ye",
+          "family": "Tian",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China,School of Computer Science and Technology,Hefei,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2023 9th International Conference on Computer and Communications (ICCC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            8
+          ]
+        ]
+      },
+      "page": "540-544",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.59350/pfh6y-g4d72",
+      "title": [
+        "defining FAIR for research hardware"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            11,
+            10
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/an7hr-y7790",
+      "title": [
+        "defining FAIR for research hardware"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            11,
+            10
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.3837/tiis.2020.02.001",
+      "title": [
+        "Implementation of Class-Based Low Latency Fair Queueing (CBLLFQ) Packet Scheduling Algorithm for HSDPA Core Network"
+      ],
+      "container-title": [
+        "KSII Transactions on Internet and Information Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            2,
+            29
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/icece54449.2021.9674580",
+      "title": [
+        "Uncertainty-aware Weighted Fair Queueing for Routers Based on Deep Reinforcement Learning"
+      ],
+      "author": [
+        {
+          "given": "Pengyue",
+          "family": "Wang",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Zhaoyu",
+          "family": "Jiang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Meiyu",
+          "family": "Qi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Longfei",
+          "family": "Dai",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Huiying",
+          "family": "Xu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2021 IEEE 4th International Conference on Electronics and Communication Engineering (ICECE)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            12,
+            17
+          ]
+        ]
+      },
+      "page": "1-7",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.2139/ssrn.6864184",
+      "title": [
+        "A κ-Weighted Exponential Noise Gate for Real-Time Digital Signal Processing: Derivation, Hardware Implementation, and Falsifiability Protocol"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0005-3822-0724",
+          "authenticated-orcid": true,
+          "given": "Roland",
+          "family": "Gibson Jr.",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.30880/jscdm.2025.06.03.022",
+      "title": [
+        "Burst-Aware Weighted Fair Queueing for Serverless Inference: Mitigating Noisy Neighbor Effects in Multi-Tenant Systems"
+      ],
+      "author": [
+        {
+          "given": "Rajesh Kumar",
+          "family": "Pandey",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Amazon Web Services"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jubin Abhishek",
+          "family": "Soni",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Paypal Inc."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Amit",
+          "family": "Anand",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Yahoo Inc."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Soft Computing and Data Mining"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            28
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/tnet.2024.3399212",
+      "title": [
+        "Enhancing Fairness for Approximate Weighted Fair Queueing With a Single Queue"
+      ],
+      "author": [
+        {
+          "given": "Wei",
+          "family": "Chen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Anhui Key Laboratory on High-Performance Computing, School of Computer Science and Technology, University of Science and Technology of China, Anhui, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3428-1889",
+          "authenticated-orcid": false,
+          "given": "Ye",
+          "family": "Tian",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Anhui Key Laboratory on High-Performance Computing, School of Computer Science and Technology, University of Science and Technology of China, Anhui, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xin",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Anhui Key Laboratory on High-Performance Computing, School of Computer Science and Technology, University of Science and Technology of China, Anhui, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0005-1449-3218",
+          "authenticated-orcid": false,
+          "given": "Bowen",
+          "family": "Zheng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Anhui Key Laboratory on High-Performance Computing, School of Computer Science and Technology, University of Science and Technology of China, Anhui, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-8136-6834",
+          "authenticated-orcid": false,
+          "given": "Xinming",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Anhui Key Laboratory on High-Performance Computing, School of Computer Science and Technology, University of Science and Technology of China, Anhui, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE/ACM Transactions on Networking"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            10
+          ]
+        ]
+      },
+      "page": "3901-3915",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.59350/hbdr3-s7282",
+      "title": [
+        "Three months in Delft, two open hardware projects"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            7,
+            28
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/w3wde-44e83",
+      "title": [
+        "Three months in Delft, two open hardware projects"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            7,
+            28
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/277gr-pvr16",
+      "title": [
+        "Interview: Farmbot"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            24
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/tfmdv-cdr13",
+      "title": [
+        "Interview: craniobot"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            16
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/0xj12-nnb25",
+      "title": [
+        "Interview: craniobot"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            16
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/d2bn3-2xb82",
+      "title": [
+        "Interview: Farmbot"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            24
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.59350/4egty-38w49",
+      "title": [
+        "Interview: VentMon"
+      ],
+      "author": [
+        {
+          "name": "Open.Make Team",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            9,
+            28
+          ]
+        ]
+      },
+      "type": "posted-content"
+    }
+  ],
+  "fair arbiter network on chip area": [
+    {
+      "DOI": "10.3390/app122312458",
+      "title": [
+        "A Low-Latency Fair-Arbiter Architecture for Network-on-Chip Switches"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-5905-997X",
+          "authenticated-orcid": false,
+          "given": "Jifeng",
+          "family": "Luo",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "College of Biomedical Engineering and Instrument Science, Zhejiang University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6942-3042",
+          "authenticated-orcid": false,
+          "given": "Wenqi",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Biomedical Engineering and Instrument Science, Zhejiang University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qianjian",
+          "family": "Xing",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Biomedical Engineering and Instrument Science, Zhejiang University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Meiting",
+          "family": "Xue",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Cyberspace Security, Hangzhou Dianzi University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Feng",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Biomedical Engineering and Instrument Science, Zhejiang University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhenguo",
+          "family": "Ma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Biomedical Engineering and Instrument Science, Zhejiang University, Hangzhou 310027, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Applied Sciences"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            12,
+            6
+          ]
+        ]
+      },
+      "page": "12458",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1088/1742-6596/1871/1/012117",
+      "title": [
+        "Load-balanced routing algorithm for Network-on-Chip employing fair arbiter"
+      ],
+      "author": [
+        {
+          "given": "Lu",
+          "family": "Liu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yanfei",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Qianqian",
+          "family": "Lei",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Huhu",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Song",
+          "family": "Lixun",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Physics: Conference Series"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            4,
+            1
+          ]
+        ]
+      },
+      "page": "012117",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.32920/ryerson.14654766.v1",
+      "title": [
+        "Power and chip-area aware network-on-chip simulation"
+      ],
+      "author": [
+        {
+          "given": "Masoud Oveis",
+          "family": "Gharan",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            23
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.32920/ryerson.14654766",
+      "title": [
+        "Power and chip-area aware network-on-chip simulation"
+      ],
+      "author": [
+        {
+          "given": "Masoud Oveis",
+          "family": "Gharan",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            23
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.1504/ijcat.2021.122349",
+      "title": [
+        "Asynchronous dynamic arbiter for network on chip"
+      ],
+      "author": [
+        {
+          "given": "Abdelkrim",
+          "family": "Zitouni",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Bouraoui",
+          "family": "Chemli",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Computer Applications in Technology"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021
+          ]
+        ]
+      },
+      "page": "370",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1166/jctn.2018.7408",
+      "title": [
+        "Parallel Distributed Round Robin Arbiter for Network on Chip"
+      ],
+      "author": [
+        {
+          "given": "K. Ashok",
+          "family": "Kumar",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Research Scholar, Department of ECE, Pondicherry Engineering College, Puducherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "P",
+          "family": "Dananjayan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of ECE, Pondicherry Engineering College, Puducherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Computational and Theoretical Nanoscience"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            6,
+            1
+          ]
+        ]
+      },
+      "page": "2064-2068",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1016/j.micpro.2019.102885",
+      "title": [
+        "Investigation of turbo decoding techniques based on lottery arbiter in 3D network on chip"
+      ],
+      "author": [
+        {
+          "given": "M.",
+          "family": "Suganthy",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Karthikeyan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "P.G.",
+          "family": "Kuppusamy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Microprocessors and Microsystems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2019,
+            11
+          ]
+        ]
+      },
+      "page": "102885",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1016/j.rineng.2025.108148",
+      "title": [
+        "Energy-efficient network-on-chip routers using a power gated Round Robin arbiter ensuring minimal impact on latency"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0005-9164-2053",
+          "authenticated-orcid": false,
+          "given": "Jeetu",
+          "family": "Debbarma",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rita",
+          "family": "Banik",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0000-1577-0524",
+          "authenticated-orcid": false,
+          "given": "Dalia",
+          "family": "Debbarma",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Results in Engineering"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12
+          ]
+        ]
+      },
+      "page": "108148",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/newcas49341.2020.9159757",
+      "title": [
+        "Design and Comparison of Synthesizable Fair Asynchronous Arbiter"
+      ],
+      "author": [
+        {
+          "given": "Girish A.",
+          "family": "Subbarao",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Philipp D.",
+          "family": "Hafliger",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2020 18th IEEE International New Circuits and Systems Conference (NEWCAS)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      },
+      "page": "122-125",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1088/1674-4926/39/12/125006",
+      "title": [
+        "A congestion-aware OE router employing fair arbitration for network-on-chip"
+      ],
+      "author": [
+        {
+          "given": "Lu",
+          "family": "Liu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yadong",
+          "family": "Sun",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Zhangming",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yintang",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Semiconductors"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            12
+          ]
+        ]
+      },
+      "page": "125006",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.36948/ijfmr.2024.v06i06.32494",
+      "title": [
+        "Literature Review on Fair Chance Round Robin Arbiter"
+      ],
+      "author": [
+        {
+          "given": "Anuradha Shenoy",
+          "family": "-",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Adithya S Chakravarty",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Anika Kirana Venkat",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Smitha Gayathri D",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal For Multidisciplinary Research"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            12,
+            18
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.31289/arbiter.v6i2",
+      "container-title": [
+        "ARBITER: Jurnal Ilmiah Magister Hukum"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            18
+          ]
+        ]
+      },
+      "type": "journal-issue"
+    },
+    {
+      "DOI": "10.31289/arbiter.v1i2",
+      "container-title": [
+        "ARBITER: Jurnal Ilmiah Magister Hukum"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            2
+          ]
+        ]
+      },
+      "type": "journal-issue"
+    },
+    {
+      "DOI": "10.31289/arbiter.v5i1",
+      "container-title": [
+        "ARBITER: Jurnal Ilmiah Magister Hukum"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            17
+          ]
+        ]
+      },
+      "type": "journal-issue"
+    },
+    {
+      "DOI": "10.31289/arbiter.v4i1",
+      "container-title": [
+        "ARBITER: Jurnal Ilmiah Magister Hukum"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            6,
+            16
+          ]
+        ]
+      },
+      "type": "journal-issue"
+    }
+  ],
+  "round robin arbiter FPGA area": [
+    {
+      "DOI": "10.1109/apcit62007.2024.10673654",
+      "title": [
+        "Comparative Analysis of Round Robin Arbiter and Weighted Round Robin Arbiter"
+      ],
+      "author": [
+        {
+          "given": "Adrika",
+          "family": "Mohanty",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Pes University,Department of ECE,Bangalore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Chiranjeevi",
+          "family": "G N",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pes University,Department of ECE,Bangalore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2024 Asia Pacific Conference on Innovation in Technology (APCIT)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            26
+          ]
+        ]
+      },
+      "page": "1-4",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1166/jctn.2018.7408",
+      "title": [
+        "Parallel Distributed Round Robin Arbiter for Network on Chip"
+      ],
+      "author": [
+        {
+          "given": "K. Ashok",
+          "family": "Kumar",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Research Scholar, Department of ECE, Pondicherry Engineering College, Puducherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "P",
+          "family": "Dananjayan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of ECE, Pondicherry Engineering College, Puducherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Computational and Theoretical Nanoscience"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            6,
+            1
+          ]
+        ]
+      },
+      "page": "2064-2068",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.36948/ijfmr.2024.v06i06.32494",
+      "title": [
+        "Literature Review on Fair Chance Round Robin Arbiter"
+      ],
+      "author": [
+        {
+          "given": "Anuradha Shenoy",
+          "family": "-",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Adithya S Chakravarty",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Anika Kirana Venkat",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Smitha Gayathri D",
+          "family": "-",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal For Multidisciplinary Research"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            12,
+            18
+          ]
+        ]
+      },
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.12785/ijcds/080307",
+      "title": [
+        "Fault-Tolerant Buffer Aware Round Robin Arbiter Design for NoC Architectures"
+      ],
+      "author": [
+        {
+          "given": "Afshan",
+          "family": "Khan et. al.",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Computing and Digital Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            1
+          ]
+        ]
+      },
+      "page": "275-284",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1016/j.rineng.2025.108148",
+      "title": [
+        "Energy-efficient network-on-chip routers using a power gated Round Robin arbiter ensuring minimal impact on latency"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0005-9164-2053",
+          "authenticated-orcid": false,
+          "given": "Jeetu",
+          "family": "Debbarma",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rita",
+          "family": "Banik",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0000-1577-0524",
+          "authenticated-orcid": false,
+          "given": "Dalia",
+          "family": "Debbarma",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Results in Engineering"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12
+          ]
+        ]
+      },
+      "page": "108148",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.25103/jestr.143.09",
+      "title": [
+        "Low Latency NoC Switch using Modified Distributed Round Robin Arbiter"
+      ],
+      "author": [
+        {
+          "given": "Kumar. K,",
+          "family": "Ashok",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "P",
+          "family": "Dananjayan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Karunakar Reddy",
+          "family": "Vanga",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Engineering Science and Technology Review"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2021
+          ]
+        ]
+      },
+      "page": "76-84",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/icwite64848.2025.11307144",
+      "title": [
+        "Implementation of Fair Chance Round Robin Arbiter and its Comparative Analysis"
+      ],
+      "author": [
+        {
+          "given": "Anuradha",
+          "family": "Shenoy",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "BNM Institute of Technology,Dept. of Electronics and Communication Engineering,Bengaluru,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Anika Kirana",
+          "family": "Venkat",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "BNM Institute of Technology,Dept. of Electronics and Communication Engineering,Bengaluru,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Adithya S",
+          "family": "Chakravarty",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "BNM Institute of Technology,Dept. of Electronics and Communication Engineering,Bengaluru,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Smitha Gayathri",
+          "family": "D",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "BNM Institute of Technology,Dept. of Electronics and Communication Engineering,Bengaluru,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 IEEE International Conference for Women in Innovation, Technology &amp;amp; Entrepreneurship (ICWITE)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            9,
+            26
+          ]
+        ]
+      },
+      "page": "1-7",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.21275/sr24904185322",
+      "title": [
+        "Round Robin Rumble: A Comparative Analysis of Round Robin-based Hybrid Scheduling Algorithms"
+      ],
+      "author": [
+        {
+          "given": "Eigram",
+          "family": "Alexandria G Eclarin",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Science and Research (IJSR)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            9,
+            5
+          ]
+        ]
+      },
+      "page": "386-389",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1504/ijccbs.2018.096193",
+      "title": [
+        "A formal model for the analysis and verification of a pre-emptive round-robin arbiter"
+      ],
+      "author": [
+        {
+          "given": "Imene Ben",
+          "family": "Hafaiedh",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Maroua Ben",
+          "family": "Slimane",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Riadh",
+          "family": "Robbana",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Journal of Critical Computer-Based Systems"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018
+          ]
+        ]
+      },
+      "page": "169",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.1109/iciiet65921.2025.11378169",
+      "title": [
+        "Design and Optimization of a Priority-Based Weighted Round Robin Arbiter with Enhanced Aging and Skip-Ahead Mechanism"
+      ],
+      "author": [
+        {
+          "given": "Thomas Jefferson",
+          "family": "R",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Department of Electrical and Electronics Engineering,Coimbatore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Devamithra",
+          "family": "Bimal",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Department of Electrical and Electronics Engineering,Coimbatore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Saya Sai",
+          "family": "Kowshalya",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Department of Electrical and Electronics Engineering,Coimbatore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Saisuriyaa",
+          "family": "G",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Department of Electrical and Electronics Engineering,Coimbatore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "V.",
+          "family": "Velumani",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham,Department of Electrical and Electronics Engineering,Coimbatore,India"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 International Conference on Intelligent Innovations in Engineering and Technology (ICIIET)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            4
+          ]
+        ]
+      },
+      "page": "1-6",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.1109/iscc.2018.8538459",
+      "title": [
+        "A High-Performance Round-Robin Regular Expression Matching Architecture Based on FPGA"
+      ],
+      "author": [
+        {
+          "given": "Jiajia",
+          "family": "Yang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Institute of Information Engineering, Chinese Academy of Sciences School of Cyber Security, University of Chinese Academy of Sciences, Beijing, P.R. China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lei",
+          "family": "Jiang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Information Engineering, Chinese Academy of Sciences School of Cyber Security, University of Chinese Academy of Sciences, Beijing, P.R. China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xu",
+          "family": "Bai",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Information Engineering, Chinese Academy of Sciences School of Cyber Security, University of Chinese Academy of Sciences, Beijing, P.R. China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Huailiang",
+          "family": "Peng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Information Engineering, Chinese Academy of Sciences School of Cyber Security, University of Chinese Academy of Sciences, Beijing, P.R. China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qiong",
+          "family": "Dai",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Information Engineering, Chinese Academy of Sciences School of Cyber Security, University of Chinese Academy of Sciences, Beijing, P.R. China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2018 IEEE Symposium on Computers and Communications (ISCC)"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            6
+          ]
+        ]
+      },
+      "page": "1-7",
+      "type": "proceedings-article"
+    },
+    {
+      "DOI": "10.55041/isjem08184",
+      "title": [
+        "Design &amp; Verification of a Weighted Round-Robin Arbiter Using System Verilog"
+      ],
+      "author": [
+        {
+          "given": "Prof .Sadhana C",
+          "family": "Prof .Sadhana C",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Dept. of VLSI Design and Embedded system, M.Tech student, LAEC, Bidar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dr.Vinita Patil",
+          "family": "Dr.Vinita Patil",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept. of VLSI Design and Embedded system, M.Tech student, LAEC, Bidar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dr.Sharanbasappa Shetkar",
+          "family": "Dr.Sharanbasappa Shetkar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept. of VLSI Design and Embedded system, M.Tech student, LAEC, Bidar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dr.Basavalinga Swamy",
+          "family": "Dr.Basavalinga Swamy",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept. of VLSI Design and Embedded system, M.Tech student, LAEC, Bidar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nagamani",
+          "family": "Nagamani",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dept. of VLSI Design and Embedded system, M.Tech student, LAEC, Bidar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "International Scientific Journal of Engineering and Management"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            11
+          ]
+        ]
+      },
+      "page": "1-16",
+      "type": "journal-article"
+    },
+    {
+      "DOI": "10.5194/egusphere-egu24-17533",
+      "title": [
+        "A Round Robin Exercise for an intercomparison of Snow Cover Area maps retrieved from Earth Observation"
+      ],
+      "author": [
+        {
+          "given": "Federico",
+          "family": "Di Paolo",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Matteo",
+          "family": "Dall'Amico",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pietro",
+          "family": "Stradiotti",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-8449-4428",
+          "authenticated-orcid": false,
+          "given": "Luis",
+          "family": "Samaniego",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            20
+          ]
+        ]
+      },
+      "type": "posted-content"
+    },
+    {
+      "DOI": "10.1093/oed/4052024807",
+      "title": [
+        "round robin, n."
+      ],
+      "container-title": [
+        "Oxford English Dictionary"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            3,
+            2
+          ]
+        ]
+      },
+      "type": "book-chapter"
+    },
+    {
+      "DOI": "10.11591/ijeecs.v32.i3.pp1337-1345",
+      "title": [
+        "Design of matrix, distributive round robin, ping pong and enhanced ping lock arbiter for shared resources systems"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-9394-3774",
+          "authenticated-orcid": false,
+          "given": "Nagaiyanallur",
+          "family": "Lakshminarayanan Venkatara",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7506-1540",
+          "authenticated-orcid": false,
+          "given": "Subramanian",
+          "family": "Sumithra",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5947-6271",
+          "authenticated-orcid": false,
+          "given": "Ramaiah",
+          "family": "Purushothaman",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0005-8609-7855",
+          "authenticated-orcid": false,
+          "given": "Subramani",
+          "family": "Suresh Kumar",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9153-6403",
+          "authenticated-orcid": false,
+          "given": "Kathiresan",
+          "family": "Kokulavani",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4856-991X",
+          "authenticated-orcid": false,
+          "given": "Velankanni",
+          "family": "Gowri",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Indonesian Journal of Electrical Engineering and Computer Science"
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            1
+          ]
+        ]
+      },
+      "page": "1337",
+      "type": "journal-article"
+    }
+  ]
+}

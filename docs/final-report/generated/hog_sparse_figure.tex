@@ -1,0 +1,57 @@
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 2,horizontal sep=5.5em,vertical sep=4.8em},
+  width=.435\textwidth,height=3.65cm,
+  title style={font=\small},tick label style={font=\footnotesize,text=figgray},
+  label style={font=\footnotesize},
+  axis line style={figgray!70},tick style={figgray!70},
+  axis x line=bottom,axis y line=left,
+  ymajorgrids,grid style={figgray!18,line width=.25pt},
+  xmin=.55,xmax=2.45,xtick={1,2},xticklabels={A: single arrivals,B: eight-request bursts},
+  xlabel={Sparse arrival profile},
+  /pgfplots/error bars/y dir=both,/pgfplots/error bars/y explicit,
+  /pgfplots/error bars/error bar style={line width=.6pt},
+  /pgfplots/error bars/error mark options={mark size=2pt}]
+\nextgroupplot[title={(a) Sparse mean latency},ylabel={Generation-to-fire (cycles)},
+  ymin=0,ymax=28,ytick={0,5,10,15,20,25},ybar,bar width=10pt]
+\addplot[fill=figblue!65,draw=figblue,bar shift=-11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSMeanFCFS};
+\addplot[fill=figgray!25,draw=figgray,dashed,bar shift=0pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSMeanRR};
+\addplot[fill=figred!65,draw=figred,bar shift=11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSMeanMain};
+\nextgroupplot[title={(b) Sparse P99 latency},ylabel={Generation-to-fire P99 (cycles)},
+  ymin=0,ymax=40,ytick={0,10,20,30,40},ybar,bar width=10pt]
+\addplot[fill=figblue!65,draw=figblue,bar shift=-11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSPtailFCFS};
+\addplot[fill=figgray!25,draw=figgray,dashed,bar shift=0pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSPtailRR};
+\addplot[fill=figred!65,draw=figred,bar shift=11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSPtailMain};
+\nextgroupplot[title={(c) Main's paired P99 change},ylabel={P99 reduction (\%)},
+  xmin=.5,xmax=4.5,xtick={1,2,3,4},xticklabels={A/FCFS,A/RR10,B/FCFS,B/RR10},
+  xlabel={Profile / comparison baseline},ymin=-50,ymax=60,ytick={-40,-20,0,20,40,60}]
+\addplot[figgray,densely dashed,no marks,forget plot] coordinates {(.5,0)(4.5,0)};
+\addplot[only marks,figgray,mark=*,mark size=1.15pt,forget plot] coordinates {\HSPairedSeeds};
+\addplot[only marks,figred,mark=diamond*,mark size=3pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSPaired};
+\nextgroupplot[title={(d) Heavy service at full capacity},ylabel={Transfers / measured cycle},
+  ymin=0,ymax=1.12,ytick={0,.25,.5,.75,1},ybar,bar width=10pt]
+\addplot[fill=figblue!65,draw=figblue,bar shift=-11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSHeavyFCFS};
+\addplot[fill=figgray!25,draw=figgray,dashed,bar shift=0pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSHeavyRR};
+\addplot[fill=figred!65,draw=figred,bar shift=11pt] table[x=x,y=y,y error minus=lo,y error plus=hi]{\HSHeavyMain};
+\addplot[black,densely dashed,line width=.7pt,no marks,sharp plot,forget plot] coordinates {(.55,1)(2.45,1)};
+\end{groupplot}
+\node[anchor=south,font=\footnotesize,yshift=31pt] at
+  ($(group c1r1.north west)!.5!(group c2r1.north east)$)
+  {\tikz\draw[fill=figblue!65,draw=figblue] (0,0) rectangle (.22,.12);\ FCFS\qquad
+   \tikz\draw[fill=figgray!25,draw=figgray,dashed] (0,0) rectangle (.22,.12);\ RR10\qquad
+   \tikz\draw[fill=figred!65,draw=figred] (0,0) rectangle (.22,.12);\ Main};
+\end{tikzpicture}
+\caption{\textbf{Sparse-host protection with unchanged output capacity.}
+Fifteen production RTL runs, $N=4$, seeds 509--513, two real $W=5$M training windows per run.
+(a,b) Bars are equal-weight means of five run means and five run P99s, respectively;
+whiskers span the observed seed minimum and maximum, not confidence intervals.
+(c) Diamonds are mean paired percentage reductions; dots are the five matched seeds
+(horizontal jitter is for visibility). Positive values favor Main.
+(d) Bars show heavy-host service; the dashed line is total output service,
+exactly 1.000000 transfer/cycle in every measured interval. Heavy share remains
+97.66--97.67\%; its seed ranges are smaller than the plotting resolution.
+Profile A lasts 100,000 cycles; B lasts 102,400 cycles.}
+\label{fig:hog-sparse}
+\end{figure*}

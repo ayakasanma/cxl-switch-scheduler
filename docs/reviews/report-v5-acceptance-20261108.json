@@ -1,0 +1,65 @@
+{
+  "schema": "cxl-report-revision-acceptance-v1",
+  "status": "V5_REVIEW_FIXES_BUILT",
+  "date": "2026-11-09",
+  "revision": "v5 folds in the FastX power and directed-drain evidence, the corrected hardware figure, and the focused-review text corrections",
+  "build": {
+    "command": "pdflatex -interaction=nonstopmode main-v5.tex",
+    "passes": 2,
+    "exit": "0/0",
+    "pages": 15,
+    "undefined_references": 0,
+    "overfull_hbox": 0,
+    "overfull_vbox": "4.48248pt, disclosed; unchanged from the prior v5 build",
+    "logs": [
+      "docs/final-report/build-v5-reviewfix6-pass1.txt",
+      "docs/final-report/build-v5-reviewfix6-pass2.txt"
+    ]
+  },
+  "hashes": {
+    "main_v5_tex": "3fdc9880f4f68bd46fe45379674c8afcfeeaebe73841b260d7d87139354c6d91",
+    "body_v5_tex": "664081dce422d44296f6238e07c713494cbb9d7badf2fdd314b9001d83d5cdb3",
+    "main_v5_pdf": "b464d8469b6b20e260eac1380b3aa131ad8489bb8dcef3914dce7226a7996d4a",
+    "figure_pdf": "73de693611f1ff8008fce773ba78cb5a648a25c65c16711835e39ee721d06313",
+    "figure_svg": "6571074a9269ab565a0056e04528184251e33cf1c65cc1cc38aae0e1350d36c5",
+    "figure_pdf_previous": "f67ad680f93d360ef309cc99c0c0ed7ac9fbf69ff76f2c08526a5562d1c66f1d",
+    "main_v4_pdf": "c8008bd12e677231557d3ee45698960abff8f9581670bdf4d1ac56754ff81f84",
+    "main_v3_pdf": "27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf"
+  },
+  "preserved": [
+    "main-v3.pdf and main-v4.pdf are byte-identical to their accepted hashes",
+    "the 2026-10-28 cgof-hardware.pdf is byte-identical to its accepted hash",
+    "the v5 figure is a new file (cgof-hardware-v5.pdf); the old figure path is untouched"
+  ],
+  "changes": [
+    "P2 corrected: CGOF (2:1) trails CGOF (1:1) by one cycle on all twenty role-switch seeds",
+    "removed the stale sentence that CGOF's power comparison remained open",
+    "hardware power values marked as the representative seed 509/A pair",
+    "ordering effects described as quota-dependent rather than a universal Q2-benefit/Q1-cost tradeoff",
+    "primary-lever claim replaced by the narrower statement that the tested controls do not establish a universal ordering advantage",
+    "overload gap cost limited to the short finite-work overload model; boundary count corrected from three to four",
+    "seed-invariance sentence replaced with an observed-endpoint statement that does not claim seed independence",
+    "capacity result added as a compact sentence: five-seed long overload gives Sparse P99 27/4/4 at ratio 1.200002",
+    "scope fixed to scheduler-side dispatch delay and implementation cost; DRAM response and application performance are explicitly outside the study",
+    "hardware figure regenerated from the corrected SVG via headless Chrome; its footnote reads 'Power measured 2026-11-07'",
+    "v5 includes the new cgof-hardware-v5.pdf so the historical cgof-hardware.pdf remains unchanged",
+    "dynamic confirmation subsection tightened to hold the page count at 15"
+  ],
+  "evidence": {
+    "power": "12 captures, seeds 509-511 x A/B, ACCEPTED_AUTHORIZED_SCOPE",
+    "drain": "engineering seed 7301, no window close, PARENT_ACCEPTED_SCHEDULER_RTL_DIRECTED_BACKLOG_DRAIN",
+    "boundaries": "statistics stay MODEL_ONLY; RTL anchors remain A3 (7301) and A4 (7401); C7 stays SINGLE_SEED"
+  },
+  "known_limitation": "none for the embedded figure; the v5 figure is a vector Chrome print of the corrected SVG. Historical v3/v4 PDFs and the old figure PDF are unchanged. The capacity result is a compact sentence rather than a separate float to retain the 15-page limit. The pre-layout, zero-delay, no-SDF/APR/SPEF/clock-tree/glitch boundaries still apply.",
+  "previous_acceptance": {
+    "main_v5_pdf": "270f0d3215931f8341953a2897f6983050b8874287b87a8dc1b17c4d39f85f2c",
+    "body_v5_tex": "296cb596b0a6fb939d5eb3e1469275db388483226de0859a4869a47eadce6dec",
+    "note": "the prior v5 PDF and body are retained in git history"
+  },
+  "review_input": {
+    "file": "cxl-v4-focused-review.zip",
+    "sha256": "324131a638917672bebc208a6aafb62d015cfc83b4de2a9ad309d9e0fdaac21e",
+    "review": "CXL_V4_SCOPE_FOCUSED_REVIEW_ZH.md"
+  },
+  "v5_original_date": "2026-11-08"
+}

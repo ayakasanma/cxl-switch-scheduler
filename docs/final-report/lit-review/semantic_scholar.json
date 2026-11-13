@@ -1,0 +1,750 @@
+{
+  "10.1109/isca66397.2026.00060": {
+    "paperId": "0bf6e7663a956af62f0d9ae09601185212ad9dfd",
+    "externalIds": {
+      "DBLP": "conf/isca/KwonLGJRHMWKNBCCCJ26",
+      "DOI": "10.1109/ISCA66397.2026.00060",
+      "CorpusId": 290847103
+    },
+    "url": "https://www.semanticscholar.org/paper/0bf6e7663a956af62f0d9ae09601185212ad9dfd",
+    "title": "A Silicon-Proven Unified Low-Latency CXL Controller and Port-Based Routing Switch for Memory-Centric Fabrics",
+    "venue": "International Symposium on Computer Architecture",
+    "year": 2026,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ISCA66397.2026.00060?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ISCA66397.2026.00060, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "2026 ACM/IEEE 53rd Annual International Symposium on Computer Architecture (ISCA)",
+      "pages": "688-702"
+    },
+    "authors": [
+      {
+        "authorId": "7198431",
+        "name": "M. Kwon"
+      },
+      {
+        "authorId": "2187553113",
+        "name": "Seung-Jun Lee"
+      },
+      {
+        "authorId": "51204802",
+        "name": "Donghyun Gouk"
+      },
+      {
+        "authorId": "2363526006",
+        "name": "Hongjoo Jung"
+      },
+      {
+        "authorId": "2308280272",
+        "name": "Eojin Ryu"
+      },
+      {
+        "authorId": "2455613039",
+        "name": "Seyeong Huh"
+      },
+      {
+        "authorId": "2363689752",
+        "name": "Junseok Moon"
+      },
+      {
+        "authorId": "2364524870",
+        "name": "Hyein Woo"
+      },
+      {
+        "authorId": "2366146948",
+        "name": "Junhee Kim"
+      },
+      {
+        "authorId": "2367530585",
+        "name": "Kyungkuk Nam"
+      },
+      {
+        "authorId": "2364479173",
+        "name": "Jinwoo Baek"
+      },
+      {
+        "authorId": "2179112044",
+        "name": "Hyunkyu Choi"
+      },
+      {
+        "authorId": "50582293",
+        "name": "Woojin Choi"
+      },
+      {
+        "authorId": "2455658720",
+        "name": "Yongjin Cho"
+      },
+      {
+        "authorId": "2280341194",
+        "name": "Myoungsoo Jung"
+      }
+    ],
+    "abstract": "Compute Express Link (CXL) enables composable and memory-centric fabrics, but existing controllers inherit PCIederived hierarchy, boundary buffering, and deep pipelines, which constrain scalability and increase latency. This work presents a unified low-latency CXL controller and a port-based routing (PBR) switch. The controller integrates the physical, link, and transaction layers into a single pipeline operating under a unified timing reference, removing high-overhead layer-level synchronization. A hardware-driven conversion and routing path is integrated into each port of the switch. All steps, including HBR to PBR translation, header reconstruction, routing lookup, and arbitration, are issued through fixed-cycle hardware pipelines without firmware involvement. An internal non-blocking on-chip network supports parallel forwarding and maintains constant per-hop delay regardless of port count or topology depth. A silicon prototype fabricated in a 4 nm process achieves roughly $\\mathbf{2. 1} \\times$ latency reduction and preserves deterministic behavior under congestion and multi-hop operation. Systemlevel evaluation with database and microservice workloads shows up to $2 \\times$ higher throughput than HBR-based designs. These results indicate that a unified controller and hardware-automated PBR switch provide a deterministic and scalable CXL fabric for multi-host memory pooling and sharing."
+  },
+  "10.1145/3713082.3730393": {
+    "paperId": "bc6270841d569657f6ed9ae724fb43b3b5267b01",
+    "externalIds": {
+      "ArXiv": "2503.23611",
+      "DBLP": "conf/hotos/ZhongBZS0PFC25",
+      "DOI": "10.1145/3713082.3730393",
+      "CorpusId": 277452221
+    },
+    "url": "https://www.semanticscholar.org/paper/bc6270841d569657f6ed9ae724fb43b3b5267b01",
+    "title": "My CXL Pool Obviates Your PCIe Switch",
+    "venue": "USENIX Workshop on Hot Topics in Operating Systems",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3713082.3730393",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2503.23611, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle",
+      "Book",
+      "Conference"
+    ],
+    "journal": {
+      "name": "Proceedings of the 2025 Workshop on Hot Topics in Operating Systems"
+    },
+    "authors": [
+      {
+        "authorId": "14004717",
+        "name": "Yuhong Zhong"
+      },
+      {
+        "authorId": "2311498008",
+        "name": "Daniel S. Berger"
+      },
+      {
+        "authorId": "3448074",
+        "name": "Pantea Zardoshti"
+      },
+      {
+        "authorId": "2290076533",
+        "name": "Enrique Saurez"
+      },
+      {
+        "authorId": "2353773724",
+        "name": "Jacob Nelson"
+      },
+      {
+        "authorId": "2266138797",
+        "name": "Antonis Psistakis"
+      },
+      {
+        "authorId": "2290074062",
+        "name": "Joshua Fried"
+      },
+      {
+        "authorId": "2717484",
+        "name": "Asaf Cidon"
+      }
+    ],
+    "abstract": "Pooling PCIe devices across multiple hosts offers a promising solution to mitigate stranded I/O resources, enhance device utilization, address device failures, and reduce total cost of ownership. The only viable option today are PCIe switches, which decouple PCIe devices from hosts by connecting them through a hardware switch. However, the high cost and limited flexibility of PCIe switches hinder their widespread adoption beyond specialized datacenter use cases. This paper argues that PCIe device pooling can be effectively implemented in software using CXL memory pools. CXL memory pools improve memory utilization and already have positive return on investment. We find that, once CXL pools are in place, they can serve as a building block for pooling any kind of PCIe device. We demonstrate that PCIe devices can directly use CXL memory as I/O buffers without device modifications, which enables routing PCIe traffic through CXL pool memory. This software-based approach is deployable on today's hardware and is more flexible than hardware PCIe switches. In particular, we explore how disaggregating devices such as NICs can transform datacenter infrastructure."
+  },
+  "10.1109/tpds.2025.3598190": {
+    "paperId": "55c2583521faca87b5c96d4627e8e52e67e5819e",
+    "externalIds": {
+      "DBLP": "journals/tpds/GuanGDMTWMLKXGSZN25",
+      "DOI": "10.1109/TPDS.2025.3598190",
+      "CorpusId": 280867528
+    },
+    "url": "https://www.semanticscholar.org/paper/55c2583521faca87b5c96d4627e8e52e67e5819e",
+    "title": "MemTunnel: A CXL-Based Rack-Scale Host Memory Pooling Architecture for Cloud Service",
+    "venue": "IEEE Transactions on Parallel and Distributed Systems",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TPDS.2025.3598190?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TPDS.2025.3598190, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "IEEE Transactions on Parallel and Distributed Systems",
+      "pages": "2182-2197",
+      "volume": "36"
+    },
+    "authors": [
+      {
+        "authorId": "7811373",
+        "name": "Tianchan Guan"
+      },
+      {
+        "authorId": "2311999289",
+        "name": "Yijin Guan"
+      },
+      {
+        "authorId": "2346895430",
+        "name": "Zhaoyang Du"
+      },
+      {
+        "authorId": "144152953",
+        "name": "Jia-Cheng Ma"
+      },
+      {
+        "authorId": "2286878918",
+        "name": "Boyu Tian"
+      },
+      {
+        "authorId": "2345915272",
+        "name": "Zhao Wang"
+      },
+      {
+        "authorId": "2249439666",
+        "name": "Teng Ma"
+      },
+      {
+        "authorId": "2373444169",
+        "name": "Zheng Liu"
+      },
+      {
+        "authorId": "2377525884",
+        "name": "Yang Kong"
+      },
+      {
+        "authorId": "2268912497",
+        "name": "Yuan Xie"
+      },
+      {
+        "authorId": "2147418019",
+        "name": "Ming-Yu Gao"
+      },
+      {
+        "authorId": "2274612367",
+        "name": "Guang-Yu Sun"
+      },
+      {
+        "authorId": "2269028639",
+        "name": "Hong-Zhong Zheng"
+      },
+      {
+        "authorId": "2241615350",
+        "name": "Di-Min Niu"
+      }
+    ],
+    "abstract": "Memory underutilization poses a significant challenge in cloud services, leading to performance inefficiencies and resource wastage. The tightly coupled computing and memory resources in cloud servers are identified as the root cause of this problem. To address this issue, memory pooling has been the subject of extensive research for decades, providing centralized or distributed shared memory pools as flexible memory resources for various applications running on different servers. However, existing memory disaggregation solutions sacrifice memory resources, add extra hardware (such as memory boxes/blades/drives), and degrade memory performance to achieve flexibility. To overcome these limitations, this paper proposes MemTunnel, a rack-scale host memory pooling architecture that provides a low-cost memory pooling solution based on Compute Express Link (CXL). MemTunnel is the first hardware and software architecture to offer symmetric, memory-semantic memory pooling over CXL, with an FPGA-based platform to demonstrate its feasibility in a real implementation. MemTunnel is orthogonal to the existing CXL-based memory pool and provides an additional layer of abstraction for memory disaggregation. Evaluation results show that MemTunnel achieves comparable performance to the existing CXL-based memory pool for a single machine and provides better rack-scale performance with minor hardware overheads."
+  },
+  "10.1145/3695794.3695809": {
+    "paperId": "fa6b3cf1bcecc343326a2a81b69817e3f52d65cf",
+    "externalIds": {
+      "DBLP": "conf/memsys/WuLKG0M24",
+      "DOI": "10.1145/3695794.3695809",
+      "CorpusId": 273795592
+    },
+    "url": "https://www.semanticscholar.org/paper/fa6b3cf1bcecc343326a2a81b69817e3f52d65cf",
+    "title": "Performance Study of CXL Memory Topology",
+    "venue": "International Symposium on Memory Systems",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://doi.org/10.1145/3695794.3695809",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3695794.3695809?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3695794.3695809, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "Book",
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "Proceedings of the International Symposium on Memory Systems"
+    },
+    "authors": [
+      {
+        "authorId": "2302781884",
+        "name": "Jianbo Wu"
+      },
+      {
+        "authorId": "2302841066",
+        "name": "Jie Liu"
+      },
+      {
+        "authorId": "1746771",
+        "name": "Gokcen Kestor"
+      },
+      {
+        "authorId": "2262316066",
+        "name": "Roberto Gioiosa"
+      },
+      {
+        "authorId": "2151453152",
+        "name": "Dong Li"
+      },
+      {
+        "authorId": "2278423357",
+        "name": "Andrés Márquez"
+      }
+    ],
+    "abstract": "This paper presents a comprehensive evaluation of the performance impact of various Compute Express Link (CXL) memory topologies, with a particular emphasis on CXL switches, in the context of High-Performance Computing (HPC) and Large Language Model (LLM) inference workloads. Our study unveils significant performance variations across different topologies, demonstrating that certain configurations yield superior performance for specific workloads. These findings underscore the critical importance of tailored topology selection in optimizing system performance. Additionally, we address the inherent challenges associated with integrating CXL switches, including overhead considerations and routing complexities. Our research highlights the necessity for thorough evaluation methodologies to fully leverage CXL technology’s potential in contemporary computing environments. These insights provide valuable guidance for system architects and data center operators in designing and optimizing CXL-based infrastructures for diverse workload requirements."
+  },
+  "10.1109/fccm57271.2023.00017": {
+    "paperId": "5e18278a6889d745e2b1ab45465053203bcf9967",
+    "externalIds": {
+      "ArXiv": "2302.08055",
+      "DBLP": "conf/fccm/WangHFWWH23",
+      "DOI": "10.1109/FCCM57271.2023.00017",
+      "CorpusId": 256901106
+    },
+    "url": "https://www.semanticscholar.org/paper/5e18278a6889d745e2b1ab45465053203bcf9967",
+    "title": "CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers",
+    "venue": "IEEE Symposium on Field-Programmable Custom Computing Machines",
+    "year": 2023,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2302.08055",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2302.08055, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "2023 IEEE 31st Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)",
+      "pages": "75-82"
+    },
+    "authors": [
+      {
+        "authorId": "2375081230",
+        "name": "Chen-Ji Wang"
+      },
+      {
+        "authorId": "2058349093",
+        "name": "Ke He"
+      },
+      {
+        "authorId": "144452053",
+        "name": "Rui Fan"
+      },
+      {
+        "authorId": "2108009952",
+        "name": "Xiaonan Wang"
+      },
+      {
+        "authorId": "2053780698",
+        "name": "Yang Kong"
+      },
+      {
+        "authorId": "49337119",
+        "name": "W. Wang"
+      },
+      {
+        "authorId": "36851883",
+        "name": "Qinfen Hao"
+      }
+    ],
+    "abstract": "Memory resources in data centers generally suffer from low utilization and lack of dynamics. Memory disaggregation solves these problems by decoupling CPU and memory, which currently includes approaches based on RDMA or interconnection protocols such as Compute Express Link (CXL). However, the RDMA-based approach involves code refactoring and higher latency. The CXL-based approach supports native memory semantics and overcomes the shortcomings of RDMA, but is limited within rack level. In addition, memory pooling and sharing based on CXL products are currently in the process of early exploration and still take time to be available in the future. In this paper, we propose the CXL over Ethernet approach that the host processor can access the remote memory with memory semantics through Ethernet. Our approach can support native memory load/store access and extends the physical range to cross server and rack levels by taking advantage of CXL and RDMA technologies. We prototype our approach with one server and two FPGA boards with 100 Gbps network and measure the memory access latency. Furthermore, we optimize the memory access path by using data cache and congestion control algorithm in the critical path to further lower access latency. The evaluation results show that the average latency for the server to access remote memory is $1.97\\ \\mu\\mathrm{s}$, which is about 37% lower than the baseline latency in the industry. The latency can be reduced to 415 ns when memory accesses hit cache on FPGA."
+  },
+  "10.1109/pact65351.2025.00018": {
+    "paperId": "1292b3d687803eafd49cabae6e3dbddf1e3a10f3",
+    "externalIds": {
+      "DBLP": "conf/IEEEpact/ChenDZWZS25",
+      "DOI": "10.1109/PACT65351.2025.00018",
+      "CorpusId": 283966612
+    },
+    "url": "https://www.semanticscholar.org/paper/1292b3d687803eafd49cabae6e3dbddf1e3a10f3",
+    "title": "Exploring Memory Tiering Systems in the CXL Era via FPGA-based Emulation and Device-Side Management",
+    "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/PACT65351.2025.00018?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/PACT65351.2025.00018, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "journal": {
+      "name": "2025 34th International Conference on Parallel Architectures and Compilation Techniques (PACT)",
+      "pages": "71-83"
+    },
+    "authors": [
+      {
+        "authorId": "2266810860",
+        "name": "Yi-Qi Chen"
+      },
+      {
+        "authorId": "2347612778",
+        "name": "Xi-Ping Dong"
+      },
+      {
+        "authorId": "2267012246",
+        "name": "Zhe Zhou"
+      },
+      {
+        "authorId": "2345915272",
+        "name": "Zhao Wang"
+      },
+      {
+        "authorId": "2329698352",
+        "name": "Jie Zhang"
+      },
+      {
+        "authorId": "2267008633",
+        "name": "Guangyu Sun"
+      }
+    ],
+    "abstract": "The Compute Express Link (CXL) technology facilitates the extension of CPU memory through byte-addressable SerDes links and cascaded switches, creating complex heterogeneous memory systems where CPU access to various endpoints differs in latency and bandwidth. Effective tiered memory management is essential for optimizing system performance in such systems. However, designing an effective memory tiering system for CXL-extended heterogeneous memory faces challenges: 1) Existing evaluation methods, such as NUMA-based emulation and full-system simulations like GEM5, are limited in assessing hardware-based tiered memory management solutions and handling real-world workloads at scale. 2) Previous memory tiering systems struggle to simultaneously achieve high resolution, low overhead, and high flexibility and compatibility. In this study, we first introduce HeteroBox, a configurable emulation platform that leverages real CXL-enabled FPGAs to emulate the performance of various CXL memory architectures. HeteroBox allows one to configure a memory space with multiple regions, each exhibiting distinct CPU-access latency and bandwidth. HeteroBox helps assess the performance of both software-managed and hardware-managed memory tiering systems with high efficiency and fidelity. Based on HeteroBox, we further propose HeteroMem, a hardware-managed memory tiering system that operates on the device side. HeteroMem creates an abstraction layer between the CPU and device memory, effectively monitoring data usage and migrating data to faster memory tiers, thus hiding device-side heterogeneity from the CPU. Evaluations with real-world applications show that HeteroMem delivers high performance while keeping heterogeneous memory management fully transparent to the CPU, achieving a $\\mathbf{5. 1}$ % to $\\mathbf{1 6. 2}$ % performance improvement over existing memory tiering solutions."
+  },
+  "10.1109/lca.2026.3673181": {
+    "paperId": "fca442d4f17ff6d10b1707576b2a12fef20ba662",
+    "externalIds": {
+      "DBLP": "journals/cal/VanavasamCK26",
+      "DOI": "10.1109/LCA.2026.3673181",
+      "CorpusId": 286538994
+    },
+    "url": "https://www.semanticscholar.org/paper/fca442d4f17ff6d10b1707576b2a12fef20ba662",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "venue": "IEEE computer architecture letters",
+    "year": 2026,
+    "openAccessPdf": {
+      "url": "https://doi.org/10.1109/lca.2026.3673181",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/LCA.2026.3673181?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/LCA.2026.3673181, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "IEEE Computer Architecture Letters",
+      "pages": "114-117",
+      "volume": "25"
+    },
+    "authors": [
+      {
+        "authorId": "2212617387",
+        "name": "Srikar Vanavasam"
+      },
+      {
+        "authorId": "2421968515",
+        "name": "Austin Antony Cruz"
+      },
+      {
+        "authorId": "2220629681",
+        "name": "Nam Sung Kim"
+      }
+    ],
+    "abstract": "Accurate, full-system physical memory traces are critical for computer architecture research, but existing collection methods based on software instrumentation or simulation suffer from a lack of fidelity, while prior hardware-based solutions are often intrusive or proprietary. We introduce CXL-Tracer, a non-intrusive tracing framework that uses a commodity FPGA as a CXL Type-3 memory device to capture complete, high-fidelity memory traces from a real system. Traces are offloaded over a dedicated PCIe link to a separate collection server, ensuring no performance interference with the system under test. Our evaluation demonstrates that CXL-Tracer captures the full spectrum of system activity, recording up to 70x more memory traffic than binary instrumentation for I/O-heavy workloads. Furthermore, we show that replaying these real-system traces in a cycle-accurate DRAM simulator yields significantly more realistic memory latency results compared to traces generated by a full-system simulator such as gem5. CXL-Tracer provides an accessible and accurate platform for designing and evaluating future memory subsystems."
+  },
+  "10.1016/j.future.2020.01.047": {
+    "paperId": "b13ba8cf209b917c59d9c0c66817e60521a9b141",
+    "externalIds": {
+      "MAG": "3003404146",
+      "DBLP": "journals/fgcs/XueHW20",
+      "DOI": "10.1016/j.future.2020.01.047",
+      "CorpusId": 213337397
+    },
+    "url": "https://www.semanticscholar.org/paper/b13ba8cf209b917c59d9c0c66817e60521a9b141",
+    "title": "A pure hardware-driven scheduler for enhancing bank-level parallelism in a persistent memory controller",
+    "venue": "Future generations computer systems",
+    "year": 2020,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.future.2020.01.047?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.future.2020.01.047, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "Future Gener. Comput. Syst.",
+      "pages": "383-393",
+      "volume": "107"
+    },
+    "authors": [
+      {
+        "authorId": "1813180",
+        "name": "Dong-Liang Xue"
+      },
+      {
+        "authorId": "1754542",
+        "name": "Linpeng Huang"
+      },
+      {
+        "authorId": "3070171",
+        "name": "Chentao Wu"
+      }
+    ],
+    "abstract": "Abstract Researchers are attempting to exploit the non-volatile nature of Persistent Memory (PM) in various applications. To utilize persistence, many solutions enforce strict, sequential write orderings that are propagated through the cache hierarchy, inevitably resulting in extra write requests. Other solutions introduce persistence logging operations to ensure transactional consistency, which also introduces extra writes. To rationally schedule these write requests, current work classifies the sources of write requests into subtypes at the software level based on the characteristics of the application, subsequently transferring the classified requests as hint messages to the memory controller level for guiding scheduling. However, categorizing diverse applications requires incompatible modifications to software and can degrade both the performance and fairness of the results with respect to low bank-level parallelism and low row-buffer locality. To address these problems, we bypass software intervention and propose PHD-scheduler, a P ure H ardware- D riven scheduler for enhancing bank-level parallelism in PM controller. PHD-scheduler is composed of three main ideas: (1) PHD-scheduler moves the classification into the PM’s controller level rather than intervening in the compatibility of the software, (2) it introduces a dynamic computing mechanism to ensure bank access from centralization to distribution, and (3) it maximizes row buffer locality by reshuffling memory requests with three novel criteria to achieve an appropriate batch scheduling. The experimental results show that PHD-scheduler achieves an average bank-level parallelism improvement of 11.8%. Moreover, performance and fairness are improved by 4.2% and 3.3%, respectively."
+  },
+  "10.1145/3605181.3626287": {
+    "paperId": "45d863c535057cfa05593e41ead7450bb31e5364",
+    "externalIds": {
+      "DBLP": "conf/words2/WangW23",
+      "DOI": "10.1145/3605181.3626287",
+      "CorpusId": 263802917
+    },
+    "url": "https://www.semanticscholar.org/paper/45d863c535057cfa05593e41ead7450bb31e5364",
+    "title": "Aurelia: CXL Fabric with Tentacle",
+    "venue": "WORDS@SOSP",
+    "year": 2023,
+    "openAccessPdf": {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3605181.3626287",
+      "status": "GOLD",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3605181.3626287?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3605181.3626287, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "Book",
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "Proceedings of the 4th Workshop on Resource Disaggregation and Serverless"
+    },
+    "authors": [
+      {
+        "authorId": "1890367",
+        "name": "Shu-Ting Wang"
+      },
+      {
+        "authorId": "2256937994",
+        "name": "Weitao Wang"
+      }
+    ],
+    "abstract": "Compute Express Link (CXL) has emerged as a frontier for disaggregation by providing a fabric supporting memory accessing, caching, and peer-to-peer memory access between devices. CXL externalizes the internal memory fabric of a server and blurs the notion of server for realistic disaggregation. The key feature of enabling of CXL as a memory fabric is its support of multi-level switching up to 4096 endpoints. However, CXL's current multi-level switching poses challenges on scalability and latency. To cope with the expected scale of CXL fabric and take full advantage of disaggregation, we propose Aurelia. Aurelia architects addressing, routing, and transport as networking layers, which are typical on host networking, for CXL fabric. Aurelia uses existing CXL mechanism to realize the much-needed functionalities for a scalable fabric. With these networking layers, Aurelia will be able to support future disaggregation workloads at scale."
+  },
+  "10.1145/3764862.3768173": {
+    "paperId": "9715fcec57ff111b48e5eb0c6025d5772b25ba6e",
+    "externalIds": {
+      "DBLP": "conf/dimes/WooKKNCJJ25",
+      "ArXiv": "2510.14580",
+      "DOI": "10.1145/3764862.3768173",
+      "CorpusId": 281769570
+    },
+    "url": "https://www.semanticscholar.org/paper/9715fcec57ff111b48e5eb0c6025d5772b25ba6e",
+    "title": "ScalePool: Hybrid XLink-CXL Fabric for Composable Resource Disaggregation in Unified Scale-up Domains",
+    "venue": "DIMES@SOSP",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2510.14580, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle",
+      "Book"
+    ],
+    "journal": {
+      "name": "Proceedings of the 3rd Workshop on Disruptive Memory Systems"
+    },
+    "authors": [
+      {
+        "authorId": "2364524870",
+        "name": "Hyein Woo"
+      },
+      {
+        "authorId": "7198431",
+        "name": "M. Kwon"
+      },
+      {
+        "authorId": "2363505214",
+        "name": "Jiseon Kim"
+      },
+      {
+        "authorId": "2363496807",
+        "name": "Eunjee Na"
+      },
+      {
+        "authorId": "2157833395",
+        "name": "Han-Jin Choi"
+      },
+      {
+        "authorId": "2364983644",
+        "name": "Seonghyeon Jang"
+      },
+      {
+        "authorId": "2311664811",
+        "name": "Myoungsoo Jung"
+      }
+    ],
+    "abstract": "This paper proposes ScalePool, a novel cluster architecture designed to interconnect numerous accelerators using unified hardware interconnects rather than traditional long-distance networking. ScalePool integrates Accelerator-Centric Links (XLink) and Compute Express Link (CXL) into a unified XLink-CXL hybrid fabric. Specifically, ScalePool employs XLink for intra-cluster, low-latency accelerator communication, while using hierarchical CXL-based switching fabrics for scalable and coherent inter-cluster memory sharing. By abstracting interfaces through CXL, ScalePool structurally resolves interoperability constraints, enabling heterogeneous cluster operation and composable resource disaggregation. In addition, ScalePool introduces explicit memory tiering: the latency-critical tier-1 combines accelerator-local memory with coherence-centric CXL and XLink, whereas the high-capacity tier-2 employs dedicated memory nodes interconnected by a CXL-based fabric, achieving scalable and efficient memory pooling. Evaluation results show that ScalePool accelerates LLM training by 1.22× on average and up to 1.84× compared to conventional RDMA-based environments. Furthermore, the proposed tier-2 memory disaggregation strategy reduces latency by up to 4.5× for memory-intensive workloads."
+  },
+  "10.1109/lca.2025.3621612": {
+    "paperId": "436061a5e0ab6a40ef9dd6b80e3794760d11f9d8",
+    "externalIds": {
+      "DBLP": "journals/cal/KimKHLJKJR25",
+      "DOI": "10.1109/LCA.2025.3621612",
+      "CorpusId": 282111554
+    },
+    "url": "https://www.semanticscholar.org/paper/436061a5e0ab6a40ef9dd6b80e3794760d11f9d8",
+    "title": "REDIT: Redirection-Enabled Memory-Side Directory Architecture for CXL Memory Fabric",
+    "venue": "IEEE computer architecture letters",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/LCA.2025.3621612?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/LCA.2025.3621612, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "IEEE Computer Architecture Letters",
+      "pages": "385-388",
+      "volume": "24"
+    },
+    "authors": [
+      {
+        "authorId": "2272245970",
+        "name": "Minjae Kim"
+      },
+      {
+        "authorId": "2367622215",
+        "name": "Jiwan Kim"
+      },
+      {
+        "authorId": "2334761592",
+        "name": "Won Hur"
+      },
+      {
+        "authorId": "2329758994",
+        "name": "Jiwon Lee"
+      },
+      {
+        "authorId": "2314879456",
+        "name": "Mingu Jung"
+      },
+      {
+        "authorId": "2338533573",
+        "name": "Cheolhwan Kim"
+      },
+      {
+        "authorId": "50814337",
+        "name": "Ipoom Jeong"
+      },
+      {
+        "authorId": "2265423534",
+        "name": "Won Woo Ro"
+      }
+    ],
+    "abstract": "The emergence of CXL memory fabrics enables composable, shared memory across multiple server hosts. While this significantly expands memory capacity, it also introduces cache coherence challenges between hosts sharing memory nodes. To address these, prior work explored three coherence control flow (CF) designs: host-side (HSD), switch-side (SWSD), and memory-side (MSD). Our analysis shows that MSD-CF is most effective, as it avoids the round-trip latency of HSD-CF and overcomes the scalability limits of SWSD-CF by distributing directories across memory devices. Using MSD-CF as our baseline, we observe that it still experiences performance degradation when the directory reaches capacity, forcing fallback to host-side invalidation. To overcome this, we propose REDIT (Redirection-Enabled memory-side DIrecTory architecture), which redirects overflow entries to underutilized directories and reclaims unused entries with minimal runtime cost. Evaluation shows that REDIT improves performance by 3.3 × over HSD-CF, 2.0 × over SWSD-CF, and 1.6 × over MSD-CF with only 1.5 KB of area overhead."
+  },
+  "10.1145/3723851.3723858": {
+    "paperId": "d92def443fd87058c586e1a27eab229ad34a9be5",
+    "externalIds": {
+      "DBLP": "conf/hcds/XingB25",
+      "DOI": "10.1145/3723851.3723858",
+      "CorpusId": 278050052
+    },
+    "url": "https://www.semanticscholar.org/paper/d92def443fd87058c586e1a27eab229ad34a9be5",
+    "title": "Rethinking Applications' Address Space with CXL Shared Memory Pools",
+    "venue": "HCDS",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3723851.3723858",
+      "status": "GOLD",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3723851.3723858?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3723851.3723858, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "Book",
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems"
+    },
+    "authors": [
+      {
+        "authorId": "2066216921",
+        "name": "Tong Xing"
+      },
+      {
+        "authorId": "2264904511",
+        "name": "Antonio Barbalace"
+      }
+    ],
+    "abstract": "Compute Express Link (CXL) is an emerging cache coherence interconnects standard that enables new forms of memory pooling and sharing in data centers. Today’s data centers are built with many network-interconnected machines. While memory sharing could be implemented by software-managed coherence – like distributed shared memory (DSM), data centers prefer distributed computing as an alternative. Will the upcoming CXL 3.0 with hardware-managed coherence change the game? To start answering this question, in this paper we compare the strengths and weaknesses of hardware-managed coherence and software-managed coherence in the context of CXL 3.0, showing that neither is generally optimal. We propose an Adaptive Coherence Management strategy at the Operating System (OS) level that dynamically selects the most suitable coherence management mechanism at runtime, based on an application memory access pattern, and CXL memory access latency. The proposed Adaptive Coherence Management rethinks today’s application’s address spaces, introducing variable coherence management mechanisms for different parts of an address space, at runtime. We envision such parts of the address space being larger than a page but likely smaller than a Virtual Memory Area – this paper discusses our initial design."
+  },
+  "10.1109/tcad.2025.3607145": {
+    "paperId": "f8e04555c9dbb4bab7ab20f432f60ecda8c8c790",
+    "externalIds": {
+      "ArXiv": "2411.02282",
+      "DBLP": "journals/tcad/WangWHOWGZMDQLX26",
+      "DOI": "10.1109/TCAD.2025.3607145",
+      "CorpusId": 273821798
+    },
+    "url": "https://www.semanticscholar.org/paper/f8e04555c9dbb4bab7ab20f432f60ecda8c8c790",
+    "title": "CXL-DMSim: A Full-System CXL Disaggregated Memory Simulator With Comprehensive Silicon Validation",
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2411.02282",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2411.02282, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "publicationTypes": [
+      "JournalArticle"
+    ],
+    "journal": {
+      "name": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "pages": "1787-1801",
+      "volume": "45"
+    },
+    "authors": [
+      {
+        "authorId": "2331869604",
+        "name": "Yan-Jing Wang"
+      },
+      {
+        "authorId": "2313878603",
+        "name": "Li-Zhou Wu"
+      },
+      {
+        "authorId": "2314237757",
+        "name": "Wentao Hong"
+      },
+      {
+        "authorId": "2329193145",
+        "name": "Yang Ou"
+      },
+      {
+        "authorId": "2325557366",
+        "name": "Zi-Cong Wang"
+      },
+      {
+        "authorId": "2331876434",
+        "name": "Sun-Feng Gao"
+      },
+      {
+        "authorId": "2329698352",
+        "name": "Jie Zhang"
+      },
+      {
+        "authorId": "2267032679",
+        "name": "Sheng Ma"
+      },
+      {
+        "authorId": "2329191385",
+        "name": "Dezun Dong"
+      },
+      {
+        "authorId": "2330091217",
+        "name": "Xingyun Qi"
+      },
+      {
+        "authorId": "2067844063",
+        "name": "Ming-Shiang Lai"
+      },
+      {
+        "authorId": "2313736228",
+        "name": "Nong Xiao"
+      }
+    ],
+    "abstract": "Compute Express Link (CXL) has emerged as a key enabler of memory disaggregation for future heterogeneous computing systems to expand memory on demand and improve resource utilization. However, CXL is still in its infancy stage and lacks commodity products on the market, thus necessitating a reliable system-level simulation tool for research and development. In this article, we propose CXL-DMSim (open-sourced at <uri>https://github.com/ferry-hhh/CXL-DMSim</uri>), an open-source full-system (FS) simulator to simulate CXL disaggregated memory systems with high fidelity at a gem5-comparable simulation speed. CXL-DMSim incorporates a flexible CXL memory expander model along with its associated device driver, and CXL protocol support with CXL.io and CXL.mem. It can operate in both the app-managed (AM) mode and the kernel-managed (KM) mode, with the latter using a dedicated NUMA-compatible mechanism. The simulator has been rigorously verified against a real hardware testbed with both FPGA- and ASIC-based CXL memory devices, which demonstrates the qualification of CXL-DMSim in simulating the characteristics of various CXL memory devices at an average simulation error of 3.4%. The experimental results using LMbench and STREAM benchmarks suggest that the CXL-FPGA memory exhibits a <inline-formula> <tex-math notation=\"LaTeX\">$\\sim 2.88\\times $ </tex-math></inline-formula> higher latency than local DDR, while the CXL-ASIC latency is <inline-formula> <tex-math notation=\"LaTeX\">$\\sim 2.18\\times $ </tex-math></inline-formula>; CXL-FPGA achieves 45%–69% of local DDR memory bandwidth, whereas the number for CXL-ASIC is 82%–83%. The study also reveals that CXL memory can significantly enhance the performance of memory-intensive applications, improving by <inline-formula> <tex-math notation=\"LaTeX\">$23\\times $ </tex-math></inline-formula> at most with limited local memory for Viper key–value database and approximately 60% in memory-bandwidth-sensitive scenarios such as MERCI. Moreover, the simulator’s observability and expandability are showcased with detailed case studies, highlighting its great potential for research on future CXL-interconnected hybrid memory pools."
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "10.1109/isca66397.2026.00060": {
+    "doi": "10.1109/isca66397.2026.00060",
+    "title": "A Silicon-Proven Unified Low-Latency CXL Controller and Port-Based Routing Switch for Memory-Centric Fabrics",
+    "authors": [
+      "Miryeong Kwon",
+      "Seungjun Lee",
+      "Donghyun Gouk",
+      "Hongjoo Jung",
+      "Eojin Ryu",
+      "Seyeong Huh",
+      "Junseok Moon",
+      "Hyein Woo",
+      "Junhee Kim",
+      "Kyungkuk Nam",
+      "Jinwoo Baek",
+      "Hyunkyu Choi",
+      "Woojin Choi",
+      "Yongjin Cho",
+      "Myoungsoo Jung"
+    ],
+    "container": "2026 ACM/IEEE 53rd Annual International Symposium on Computer Architecture (ISCA)",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "688-702",
+    "published": [
+      [
+        2026,
+        6
+      ]
+    ],
+    "issued": [
+      [
+        2026,
+        6
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/isca66397.2026.00060",
+    "abstract": null,
+    "event": {
+      "name": "2026 ACM/IEEE 53rd Annual International Symposium on Computer Architecture (ISCA)",
+      "location": "Raleigh, NC, USA",
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            27
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  "10.1145/3713082.3730393": {
+    "doi": "10.1145/3713082.3730393",
+    "title": "My CXL Pool Obviates Your PCIe Switch",
+    "authors": [
+      "Yuhong Zhong",
+      "Daniel S. Berger",
+      "Pantea Zardoshti",
+      "Enrique Saurez",
+      "Jacob Nelson",
+      "Antonis Psistakis",
+      "Joshua Fried",
+      "Asaf Cidon"
+    ],
+    "container": "Proceedings of the Workshop on Hot Topics in Operating Systems",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "58-66",
+    "published": [
+      [
+        2025,
+        5,
+        14
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        5,
+        14
+      ]
+    ],
+    "URL": "https://doi.org/10.1145/3713082.3730393",
+    "abstract": null,
+    "event": {
+      "name": "HOTOS '25: Workshop on Hot Topics in Operating Systems",
+      "location": "Banff AB Canada",
+      "acronym": "HOTOS '25",
+      "sponsor": [
+        "SIGOPS ACM Special Interest Group on Operating Systems"
+      ]
+    }
+  },
+  "10.1109/tpds.2025.3598190": {
+    "doi": "10.1109/tpds.2025.3598190",
+    "title": "MemTunnel: A CXL-Based Rack-Scale Host Memory Pooling Architecture for Cloud Service",
+    "authors": [
+      "Tianchan Guan",
+      "Yijin Guan",
+      "Zhaoyang Du",
+      "Jiacheng Ma",
+      "Boyu Tian",
+      "Zhao Wang",
+      "Teng Ma",
+      "Zheng Liu",
+      "Yang Kong",
+      "Yuan Xie",
+      "Mingyu Gao",
+      "Guangyu Sun",
+      "Hongzhong Zheng",
+      "Dimin Niu"
+    ],
+    "container": "IEEE Transactions on Parallel and Distributed Systems",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "36",
+    "issue": "11",
+    "page": "2182-2197",
+    "published": [
+      [
+        2025,
+        11
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        11
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/tpds.2025.3598190",
+    "abstract": null,
+    "event": null
+  },
+  "10.1145/3695794.3695809": {
+    "doi": "10.1145/3695794.3695809",
+    "title": "Performance Study of CXL Memory Topology",
+    "authors": [
+      "Jianbo Wu",
+      "Jie Liu",
+      "Gokcen Kestor",
+      "Roberto Gioiosa",
+      "Dong Li",
+      "Andres Marquez"
+    ],
+    "container": "Proceedings of the International Symposium on Memory Systems",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "172-177",
+    "published": [
+      [
+        2024,
+        9,
+        30
+      ]
+    ],
+    "issued": [
+      [
+        2024,
+        9,
+        30
+      ]
+    ],
+    "URL": "https://doi.org/10.1145/3695794.3695809",
+    "abstract": null,
+    "event": {
+      "name": "MEMSYS '24: The International Symposium on Memory Systems",
+      "location": "Washington DC USA",
+      "acronym": "MEMSYS '24"
+    }
+  },
+  "10.1109/fccm57271.2023.00017": {
+    "doi": "10.1109/fccm57271.2023.00017",
+    "title": "CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers",
+    "authors": [
+      "Chenjiu Wang",
+      "Ke He",
+      "Ruiqi Fan",
+      "Xiaonan Wang",
+      "Wei Wang",
+      "Qinfen Hao"
+    ],
+    "container": "2023 IEEE 31st Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "75-82",
+    "published": [
+      [
+        2023,
+        5
+      ]
+    ],
+    "issued": [
+      [
+        2023,
+        5
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/fccm57271.2023.00017",
+    "abstract": null,
+    "event": {
+      "name": "2023 IEEE 31st Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)",
+      "location": "Marina Del Rey, CA, USA",
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            8
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            11
+          ]
+        ]
+      }
+    }
+  },
+  "10.1109/pact65351.2025.00018": {
+    "doi": "10.1109/pact65351.2025.00018",
+    "title": "Exploring Memory Tiering Systems in the CXL Era via FPGA-based Emulation and Device-Side Management",
+    "authors": [
+      "Yiqi Chen",
+      "Xiping Dong",
+      "Zhe Zhou",
+      "Zhao Wang",
+      "Jie Zhang",
+      "Guangyu Sun"
+    ],
+    "container": "2025 34th International Conference on Parallel Architectures and Compilation Techniques (PACT)",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "71-83",
+    "published": [
+      [
+        2025,
+        11,
+        3
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        11,
+        3
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/pact65351.2025.00018",
+    "abstract": null,
+    "event": {
+      "name": "2025 34th International Conference on Parallel Architectures and Compilation Techniques (PACT)",
+      "location": "Irvine, CA, USA",
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            11,
+            3
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2025,
+            11,
+            6
+          ]
+        ]
+      }
+    }
+  },
+  "10.1109/lca.2026.3673181": {
+    "doi": "10.1109/lca.2026.3673181",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "authors": [
+      "Srikar Vanavasam",
+      "Austin Antony Cruz",
+      "Nam Sung Kim"
+    ],
+    "container": "IEEE Computer Architecture Letters",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "25",
+    "issue": "1",
+    "page": "114-117",
+    "published": [
+      [
+        2026,
+        1
+      ]
+    ],
+    "issued": [
+      [
+        2026,
+        1
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/lca.2026.3673181",
+    "abstract": null,
+    "event": null
+  },
+  "10.1016/j.future.2020.01.047": {
+    "doi": "10.1016/j.future.2020.01.047",
+    "title": "A pure hardware-driven scheduler for enhancing bank-level parallelism in a persistent memory controller",
+    "authors": [
+      "Dongliang Xue",
+      "Linpeng Huang",
+      "Chentao Wu"
+    ],
+    "container": "Future Generation Computer Systems",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "volume": "107",
+    "issue": null,
+    "page": "383-393",
+    "published": [
+      [
+        2020,
+        6
+      ]
+    ],
+    "issued": [
+      [
+        2020,
+        6
+      ]
+    ],
+    "URL": "https://doi.org/10.1016/j.future.2020.01.047",
+    "abstract": null,
+    "event": null
+  },
+  "10.1145/3605181.3626287": {
+    "doi": "10.1145/3605181.3626287",
+    "title": "Aurelia: CXL Fabric with Tentacle",
+    "authors": [
+      "Shu-Ting Wang",
+      "Weitao Wang"
+    ],
+    "container": "Proceedings of the 4th Workshop on Resource Disaggregation and Serverless",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "29-36",
+    "published": [
+      [
+        2023,
+        10,
+        23
+      ]
+    ],
+    "issued": [
+      [
+        2023,
+        10,
+        23
+      ]
+    ],
+    "URL": "https://doi.org/10.1145/3605181.3626287",
+    "abstract": null,
+    "event": {
+      "name": "WORDS '23: 4th Workshop on Resource Disaggregation and Serverless",
+      "location": "Koblenz Germany",
+      "acronym": "WORDS '23",
+      "sponsor": [
+        "SIGOPS ACM Special Interest Group on Operating Systems",
+        "USENIX"
+      ]
+    }
+  },
+  "10.1145/3764862.3768173": {
+    "doi": "10.1145/3764862.3768173",
+    "title": "ScalePool: Hybrid XLink-CXL Fabric for Composable Resource Disaggregation in Unified Scale-up Domains",
+    "authors": [
+      "Hyein Woo",
+      "Miryeong Kwon",
+      "Jiseon Kim",
+      "Eunjee Na",
+      "Hanjin Choi",
+      "Seonghyeon Jang",
+      "Myoungsoo Jung"
+    ],
+    "container": "Proceedings of the 3rd Workshop on Disruptive Memory Systems",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "10-18",
+    "published": [
+      [
+        2025,
+        10,
+        13
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        10,
+        13
+      ]
+    ],
+    "URL": "https://doi.org/10.1145/3764862.3768173",
+    "abstract": null,
+    "event": {
+      "name": "SOSP '25: ACM SIGOPS 31st Symposium on Operating Systems Principles",
+      "sponsor": [
+        "SIGOPS ACM Special Interest Group on Operating Systems"
+      ],
+      "location": "Seoul Republic of Korea",
+      "acronym": "SOSP '25"
+    }
+  },
+  "10.1109/lca.2025.3621612": {
+    "doi": "10.1109/lca.2025.3621612",
+    "title": "REDIT: Redirection-Enabled Memory-Side Directory Architecture for CXL Memory Fabric",
+    "authors": [
+      "Minjae Kim",
+      "Jiwan Kim",
+      "Won Hur",
+      "Jiwon Lee",
+      "Mingu Jung",
+      "Cheolhwan Kim",
+      "Ipoom Jeong",
+      "Won Woo Ro"
+    ],
+    "container": "IEEE Computer Architecture Letters",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "24",
+    "issue": "2",
+    "page": "385-388",
+    "published": [
+      [
+        2025,
+        7
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        7
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/lca.2025.3621612",
+    "abstract": null,
+    "event": null
+  },
+  "10.1145/3723851.3723858": {
+    "doi": "10.1145/3723851.3723858",
+    "title": "Rethinking Applications' Address Space with CXL Shared Memory Pools",
+    "authors": [
+      "Tong Xing",
+      "Antonio Barbalace"
+    ],
+    "container": "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "52-59",
+    "published": [
+      [
+        2025,
+        3,
+        30
+      ]
+    ],
+    "issued": [
+      [
+        2025,
+        3,
+        30
+      ]
+    ],
+    "URL": "https://doi.org/10.1145/3723851.3723858",
+    "abstract": null,
+    "event": {
+      "name": "HCDS '25: 4th Workshop on Heterogeneous Composable and Disaggregated Systems",
+      "location": "Rotterdam Netherlands",
+      "acronym": "HCDS '25"
+    }
+  },
+  "10.1109/tcad.2025.3607145": {
+    "doi": "10.1109/tcad.2025.3607145",
+    "title": "CXL-DMSim: A Full-System CXL Disaggregated Memory Simulator With Comprehensive Silicon Validation",
+    "authors": [
+      "Yanjing Wang",
+      "Lizhou Wu",
+      "Wentao Hong",
+      "Yang Ou",
+      "Zicong Wang",
+      "Sunfeng Gao",
+      "Jie Zhang",
+      "Sheng Ma",
+      "Dezun Dong",
+      "Xingyun Qi",
+      "Mingche Lai",
+      "Nong Xiao"
+    ],
+    "container": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "45",
+    "issue": "4",
+    "page": "1787-1801",
+    "published": [
+      [
+        2026,
+        4
+      ]
+    ],
+    "issued": [
+      [
+        2026,
+        4
+      ]
+    ],
+    "URL": "https://doi.org/10.1109/tcad.2025.3607145",
+    "abstract": null,
+    "event": null
+  }
+}

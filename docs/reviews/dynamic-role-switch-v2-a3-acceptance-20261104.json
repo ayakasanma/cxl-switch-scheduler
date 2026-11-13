@@ -96,7 +96,35 @@
       "physical_sources": "EQUAL"
     }
   ],
-  "drain": "RTL drain_cycles=0 in all four anchors; NOT_EXERCISED on RTL",
+  "drain": "RTL drain_cycles per anchor: 0, 0, 0, 2. The depth8-bursty mixed anchor cut with work still queued, drained it in two cycles, and closed with fired == accepted == 18,815,149; the model replay of the same job also records 2. The cleanup path is therefore exercised once, naturally. A directed cut placed inside a long backlog is still unrun and stays NOT_EXERCISED.",
   "confirmation_seeds_used": [],
-  "evidence_classification": "SCHEDULER_RTL anchors + MODEL_ONLY statistics"
+  "evidence_classification": "SCHEDULER_RTL anchors + MODEL_ONLY statistics",
+  "drain_per_anchor": [
+    {
+      "anchor": "a3-role-switch-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "drain_cycles": 0,
+      "active_cycles": 21873605
+    },
+    {
+      "anchor": "a3-role-switch-finite-heavy-isolated-w5000000-d16-main-rr0-seed7301_seed7301",
+      "drain_cycles": 0,
+      "active_cycles": 21873605
+    },
+    {
+      "anchor": "a3-multi-window-finite-heavy-mixed-w5000000-d16-main-rr0-seed7301_seed7301",
+      "drain_cycles": 0,
+      "active_cycles": 21873605
+    },
+    {
+      "anchor": "a3-depth8-bursty-finite-heavy-mixed-w5000000-d8-main-rr0-seed7301_seed7301",
+      "drain_cycles": 2,
+      "active_cycles": 21873610
+    }
+  ],
+  "drain_correction": {
+    "date": "2026-11-04",
+    "reason": "the previous value said all four anchors had drain_cycles=0, which contradicts results[3]",
+    "frozen_source_defect": "scripts/run_dynamic_role_switch_a3.py writes drain=NOT_EXERCISED into a3_scope.json as a constant; the per-anchor numbers in the results are the evidence and the constant is wrong for this run",
+    "fix_scope": "derived record only; the frozen runner is left unchanged while the campaign source freeze is active"
+  }
 }

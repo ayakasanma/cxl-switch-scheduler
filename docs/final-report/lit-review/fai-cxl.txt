@@ -1,0 +1,696 @@
+                                                                                                                                                                              FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL
+                                                                                                                                                                                Memory Pool Management with Fine-Grained Cacheline-Level
+                                                                                                                                                                                                       Interleaving
+                                                                                                                                                                                                                       Jiaxi Li, Yixuan Liu, Yunfei Gu* , Chentao Wu
+                                                                                                                                                                                                                                   Shanghai Jiao Tong University
+                                                                                                                                                                                                                                        Shanghai, China
+2025 IEEE 31th International Conference on Parallel and Distributed Systems (ICPADS) | 979-8-3315-4901-5/25/$31.00 ©2025 IEEE | DOI: 10.1109/ICPADS67057.2025.11322896
+
+
+
+
+                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                            Corresponding Author: gu.yunfei@sjtu.edu.cn
+
+
+                                                                                                                                                                            Abstract—Compute Express Link (CXL) enables scalable                          prone, particularly in complex multi-host environments. (2)
+                                                                                                                                                                         memory disaggregation, allowing multiple hosts to share a global                 Bandwidth stranding emerges as a fundamental performance
+                                                                                                                                                                         memory pool. However, existing CXL pooling designs require                       bottleneck. Bandwidth stranding is the phenomenon where
+                                                                                                                                                                         manual static configuration, underutilize link bandwidth, and
+                                                                                                                                                                         suffer from performance unfairness among hosts with diverse                      unallocated memory resources remain idle and can not be
+                                                                                                                                                                         memory intensities. This paper presents FAI-CXL, a hardware-                     utilized by other hosts. Static Allocation leads to bandwidth
+                                                                                                                                                                         accelerated CXL memory pool unified management architecture                      stranding across CXL memory pool where low-intensity hosts
+                                                                                                                                                                         that integrates fine-grained, weighted interleaving and adaptive                 may occupy high-bandwidth connections, while high-intensity
+                                                                                                                                                                         fairness-aware scheduling into the CXL switch. The proposed                      hosts experience bottlenecks. (3) Fairness degradation under
+                                                                                                                                                                         interleaving mechanism operates at cacheline granularity, im-
+                                                                                                                                                                         proving both link and device bandwidth utilization, while the                    contention presents a critical challenge. When hosts with
+                                                                                                                                                                         scheduling policy dynamically adjusts priorities to mitigate un-                 heterogeneous memory intensities share pooled CXL devices,
+                                                                                                                                                                         fairness under imbalanced workloads. We implement FAI-CXL in                     high-intensity workloads can potentially monopolize CXL link
+                                                                                                                                                                         a cycle-accurate ChampSim + Ramulator simulation framework                       and device bandwidth. Consequently, this leads to substantial
+                                                                                                                                                                         with realistic CXL protocol modeling. Across diverse workload                    performance degradation for low-intensity hosts, compromis-
+                                                                                                                                                                         sets, FAI-CXL achieves up to 21% IPC improvement and 17%
+                                                                                                                                                                         throughput gain compared to conventional pooling approaches,                     ing the fundamental promise of resource sharing in CXL
+                                                                                                                                                                         while ensuring fair performance across heterogeneous hosts.                      memory pooling architectures.
+                                                                                                                                                                            Index Terms—Compute Express Link, memory pool, inter-                            Existing research partially addresses these issues, but re-
+                                                                                                                                                                         leaved memory, scheduling strategy                                               mains limited in scope. For instance, software-based mem-
+                                                                                                                                                                                                                                                          ory interleaving (e.g., via Linux numactl) [10] operates
+                                                                                                                                                                                                  I. I NTRODUCTION                                        at coarse page granularity and lacks dynamic adaptation to
+                                                                                                                                                                            As modern computing systems increasingly adopt memory-                        workload changes and it cannot be utilized across physically
+                                                                                                                                                                         intensive applications, such as large-scale graph analytics [1],                 isolated nodes because of software limited scope. While fixed
+                                                                                                                                                                         in-memory databases [2, 3], and machine learning work-                           scheduling policies (e.g., First-Come-First-Serve and static
+                                                                                                                                                                         loads [4], the demand for scalable and flexible memory                           Round-Robin) cannot simultaneously optimize throughput and
+                                                                                                                                                                         architectures has grown dramatically [5]. Conventional server                    fairness under dynamic load variations.
+                                                                                                                                                                         designs bind DRAM capacity to individual compute nodes,                             In this work, we propose FAI-CXL, a hardware-accelerated,
+                                                                                                                                                                         inevitably causing memory fragmentation and resource un-                         Fairness-Aware Interleaved CXL memory pooling architecture
+                                                                                                                                                                         derutilization, while scaling capacity requires expensive and                    integrated into the CXL switch. The proposed interleaving
+                                                                                                                                                                         disruptive node upgrades. To address these issues, memory                        mechanism in FAI-CXL operates at cacheline granularity,
+                                                                                                                                                                         disaggregation [6] has emerged as a promising paradigm to                        improving both link and device bandwidth utilization, while
+                                                                                                                                                                         decouple compute from memory resources, enabling multiple                        the scheduling policy dynamically adjusts priorities to mitigate
+                                                                                                                                                                         hosts to dynamically share a global pooled memory. Among                         unfairness under imbalanced workloads. We implement FAI-
+                                                                                                                                                                         the enabling technologies, Compute Express Link (CXL) [7]                        CXL in a cycle-accurate ChampSim [11] + Ramulator [12]
+                                                                                                                                                                         offers low-latency, cache-coherent communication between                         simulation framework with detailed CXL protocol modeling.
+                                                                                                                                                                         processors and external memory devices, providing an attrac-                     Our key contributions are summarized as follows,
+                                                                                                                                                                         tive foundation for building high-performance memory pools.                         • We introduce a hardware-integrated pooled memory ab-
+                                                                                                                                                                            Despite the promising potential of CXL memory pooling,                              straction with unified address mapping and block-based
+                                                                                                                                                                         its practical deployment confronts three critical challenges. (1)                      management, enabling transparent allocation across mul-
+                                                                                                                                                                         Manual static allocation complexity poses a significant bar-                           tiple CXL devices without host topology awareness.
+                                                                                                                                                                         rier. Existing CXL pooling approaches (e.g., DirectCXL [8],                         • We propose a cacheline-level weighted interleaving
+                                                                                                                                                                         Pond [9]) predominantly rely on host or operating system-                              mechanism that maximizes both CXL link and device
+                                                                                                                                                                         level explicit memory allocation. This method necessitates                             bandwidth utilization, achieving up to ×1.65 lower la-
+                                                                                                                                                                         intricate knowledge of device topology, rendering the allo-                            tency and ×1.63 higher IPC in heavy workload scenarios.
+                                                                                                                                                                         cation process not only cumbersome but also highly error-                           • We implement a adaptive fairness-aware scheduler that
+
+
+
+
+                                                                                                                                                                                 Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+    adaptively adjusts host priorities based on real-time band-                  and throughput. In practice, most Type-3 CXL devices are
+    width usage, improving fairness while delivering up to                       configured as CPU-less NUMA nodes, exposing their internal
+    ×1.21 system IPC and ×1.17 system throughput gains                           memory as expansion space [19], allowing host applications
+    under heterogeneous workloads.                                               to access CXL memory transparently as normal main memory.
+  • We conduct a comprehensive evaluation, demonstrating                         Interleaving across NUMA nodes can be configured using the
+    significant improvements of FAI-CXL in performance,                          Linux numactl utility [10] with page granularity.
+    fairness, and energy efficiency with minimal hardware
+    overhead.                                                                                                 III. M OTIVATION
+                                                                                   CXL memory pooling offers a promising paradigm for
+                         II. BACKGROUND                                          scalable and flexible memory sharing across hosts. However,
+A. Compute Express Link Interconnect                                             practical deployment reveals critical performance and fairness
+   The Compute Express Link (CXL) [7] is an open high-                           bottlenecks that fundamentally challenge its effective imple-
+speed industry-standard interconnect designed to address crit-                   mentation.
+ical bottlenecks in heterogeneous computing architectures,
+                                                                                 A. Manual Allocation Comes with Complexity and Inefficiency
+which connects processors and devices such as accelerators
+and memory expanding devices. Built on the physical and                             As shown in Fig. 1, current CXL memory pooling ar-
+electrical interface of PCI Express (PCIE) [13], CXL ex-                         chitectures rely on a complex allocation mechanism where
+tends its capabilities by providing hardware-coherent memory                     multiple CXL memory expansion devices connect through a
+semantics, cache consistency and support for resource polling                    CXL switch. Hosts access these devices by manually config-
+across CPUs, GPUs, accelerators and memory devices.                              uring PCI Base Address Registers (BARs) to allocate Host
+                                                                                 Device Memory (HDM). While this approach exposes mem-
+B. CXL Memory Pool & CXL Memory Interleaving                                     ory as namespaces (e.g., /dev/cxl_memory_x_ns_y) and
+   Memory disaggregation [6] decouples memory resources                          mapped into the host address space via mmap, effectively
+from compute nodes into network-accessible pools, enabling                       presenting them as standard DRAM to applications. However,
+dynamic allocation across servers to overcome memory strand-                     it introduces significant operational challenges. The manual,
+ing (the phenomenon where unallocated memory resources                           per-device allocation process demands intricate knowledge
+remain idle and can not be utilized by other hosts). As                          of device topology, rendering the system both cumbersome
+an implementation of disaggregated memory for highly ef-                         and inherently error-prone. Moreover, this static allocation
+ficient memory utilization, featuring hardware coherence via                     approach inevitably leads to memory fragmentation, critically
+CXL.mem and CXL.io, CXL memory pool’s latency outper-                            undermining the efficiency of CXL memory pool utilization.
+forms the prior works [8] on memory pool research such as
+                                                                                            Host 0                                 ...
+RDMA-based memory pool implementation [14–16]. Pond [9]                                                           Host 1                       Host N
+                                                                                            Kernel
+proposes an efficient software-hardware co-designed CXL-
+                                                                                         mmap dev/namepsace
+based memory pool for cloud platforms, creating a machine
+learning model to determine the proportion of VM’s local                                                      Crossbar
+                                                                                        CXL Switch                            User Configured Routing
+memory and CXL memory size, and a software runtime pool
+manager is responsible for exposing the pooled memory to                               /dev/cxl_device0                  /dev/cxl_device1
+host driver and manages the allocation and release of pooled
+memory. DirectCXL [8] implements a practical design for                                        HDM                      HDM              HDM              ...
+directly accessible CXL memory disaggregation. Based on the                          dev/cxl_memory_0_ns_0 && dev/cxl_memory_1_ns_0
+CXL switch with multiple downstream ports and upstream                                    CXL Device 0                     CXL Device 1
+ports, hosts can access type 3 CXL device via CXL.mem                                 Fig. 1: Existing architecture of CXL memory pooling
+protocol. DirectCXL also offers software runtime for CXL
+memory, and users can use ioctl (a systemcall for users to inter-                B. Bandwidth Stranding Leads to Performance Degradation
+act with devices in Linux) to create a cxl-namespace which is                       In multi-host environments, such static allocation in existing
+a physically contiguous address space on host managed device                     architecture often mismatches workload demands: a low-
+memory (HDM).                                                                    intensity host may occupy links to several devices, while a
+   Traditional interleaved memory [17] improves bandwidth                        high-intensity host is limited to one link, and such mismatch
+and throughput by exploiting DDR memory parallelism. In                          causes bandwidth stranding. To illustrate that CXL link band-
+CXL-based systems, existing interleaving schemes are typi-                       width is such a critical bottleneck that bandwidth stranding
+cally application-specific or managed by the operating system                    directly inflates CXL memory latency and throughput, we eval-
+at the NUMA level. For example, COSMOS [18] partitions                           uate performance with the configuration in Section V under
+vector dimensions in approximate nearest neighbor search                         memory-intensive and compute-intensive workloads with basic
+(ANNS) tasks across a CXL device’s internal DRAM ranks                           single host monopolizing single CXL device configuration, as
+and integrates a rank-level processing unit to parallelize dis-                  well as the average latency and throughput under different
+tance computation, thereby maximizing bandwidth utilization                      CXL link bandwidth configuration. As shown in Fig. 2, we
+
+
+
+
+        Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+evaluate both memory-intensive and compute-intensive work-                                                          contention for limited CXL link and device bandwidth, partic-
+loads mentioned in Section V. The results demonstrate that                                                          ularly when workloads with varying memory access intensities
+due to the limited bandwidth of the physical CXL link, both                                                         are involved. As shown in Fig. 4, Host 0, running a memory-
+downstream and upstream latencies ( we define downstream                                                            intensive workload, continuously issues load/store requests to
+latency as the latency from the host to the device and vice                                                         Device 1, quickly filling the downstream buffer queue in the
+versa ) are significantly higher than the latency of internal                                                       CXL switch. Meanwhile, Host 1, running a compute-intensive
+memory access of the CXL device. Moreover, the gap widens                                                           workload, issues fewer memory requests, but these occasional
+as memory access intensity increases, indicating that CXL                                                           accesses are still critical for performance. Due to the lack
+link bandwidth saturation dominates end-to-end latency. To                                                          of detailed information about the internal scheduling policies
+further validate the impact of CXL link bandwidth on overall                                                        of commercial CXL switches, we use the First-Come-First-
+system performance, we run workload M1 with varying link                                                            Serve (FCFS) scheduling policy by default. This approach,
+bandwidths (4 GB/s to 32 GB/s). As illustrated in Fig. 3, in-                                                       while simple, leads to Head-of-Line blocking, where Host 1’s
+creasing link bandwidth reduces average latency from over 300                                                       requests are delayed behind the larger requests from Host 0.
+ns to below 150 ns, while throughput increases proportionally,                                                         This imbalance results in significant performance degrada-
+reinforcing the conclusion that link bandwidth is the primary                                                       tion for light workloads, as demonstrated in Section V. In
+performance bottleneck in CXL memory expansion.                                                                     our experiments, compute-intensive hosts in mixed scenarios
+                                                                                                                    can suffer more than 10% IPC loss compared to a non-
+                        200               CXL Downstream Link Latency                                               contended baseline. This is particularly detrimental because
+Latency (ns)
+
+
+
+
+                                          CXL Upstream Link Latency                                                 these workloads could otherwise progress rapidly if not hin-
+                        150               Memory Access Latency
+                                                                                                                    dered by excessive memory stalls. These findings underscore
+                        100                                                                                         the necessity for a dynamic, hardware-integrated scheduling
+                         50                                                                                         mechanism capable of monitoring per-host bandwidth usage
+                                                                                                                    in real-time and adjusting priorities accordingly. Such a policy
+                          0                                                                                         would protect latency-sensitive, light workloads from starva-
+                                     C1       C2      C3      C4        C5   M1 M2 M3                               tion while maintaining overall throughput.
+                              Fig. 2: Latency breakdown of CXL memory
+                                                                                                                        Host 0    memory intensive          Host 1   compute intensive
+ Average Latency (ns)
+
+
+
+
+                                                                                                Throughput (GB/s)
+
+
+
+
+                                                                                                                                  Load/Store to Device1
+                        400                                                               4.5
+                                                                    Average Latency                                                                          Limited CXL Link
+                                                                                                                                                                                  CXL
+                        300                                                               3.0                                Downstream Buffer Queue            Bandwidth
+                                                                    Throughput                                                                                                  Device 0
+                        200                                                                                                  Upstream Buffer Queue        CXL Switch
+                        100                                                               1.5
+                                                                                                                    Fig. 4: Competition and unfairness of different hosts on CXL
+                                 4        8              16                         32                              device sharing
+                                          CXL Link Bandwidth (GB/s)
+                                                                                                                                               IV. D ESIGN
+     Fig. 3: Performance of M1 under different link bandwidth
+                                                                                                                       FAI-CXL is a hardware-accelerated, fairness-aware inter-
+    As CXL link bandwidth is such a critical resource in
+                                                                                                                    leaved CXL memory pooling architecture implemented within
+CXL memory pool, bandwidth stranding caused by manual
+                                                                                                                    the CXL switch. It addresses three key limitations of exist-
+static allocation severely deteriorates system performance. As
+                                                                                                                    ing pooling solutions: the manual allocation complexity of
+illustrated in Fig. 1, Host 0 running a light workload allocates
+                                                                                                                    CXL memory dependent on host-side topology awareness,
+HDM space from both Device 0 and Device 1 but generates
+                                                                                                                    the underutilization of bandwidth due to coarse-grained al-
+little memory traffic, leaving the link to Device 0 underutilized.
+                                                                                                                    location, and the lack of fairness when devices are shared
+Meanwhile, Host 1 running a heavy workload is restricted
+                                                                                                                    among heterogeneous workloads. The architecture of FAI-
+to Device 1, saturating its link and experiencing significant
+                                                                                                                    CXL consists of three closely integrated components: (1)
+congestion. This imbalance increases end-to-end memory la-
+                                                                                                                    a hardware-embedded unified CXL memory pool manager,
+tency and reduces throughput as we show in Section V. These
+                                                                                                                    (2) a cacheline-level weighted interleaving address mapper,
+observations indicate the need for a hardware-level unified
+                                                                                                                    and (3) an adaptive fairness-aware CXL memory scheduler.
+address space with fine-grained allocation across devices to
+                                                                                                                    Fig. 5 illustrates the high-level architecture and the interaction
+aggregate bandwidth and eliminate stranding.
+                                                                                                                    between these modules.
+C. CXL Deivce Sharing Causes Unfairness Between Hosts                                                               A. Hardware-Embedded Unified CXL Memory Pool Manager
+with Contention                                                                                                        The unified address manager in FAI-CXL aggregates the
+  Since CXL 2.0, the CXL protocol allows a single Type 3                                                            memory of all CXL devices into a single pooled address space
+device to be partitioned into multiple logical devices (MLDs),                                                      visible to all hosts. In conventional pooling systems, each
+enabling multiple hosts to share the same physical memory.                                                          host explicitly allocates Host Device Memory (HDM) from
+While this enhances resource utilization, it also introduces                                                        specific devices by configuring PCI Base Address Registers
+
+
+
+
+                              Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+    Host 0              Unified
+                                     Unified CXL Memory Pool Manager                                    Fairness-Aware Scheduler                             CXL
+                                                                                    Fine-grained
+                        FAI-CXL       Segment Table                                  Interleaved        3-Level Priority Queue     Dynamically             Device 0
+                                                                                   Address Mapper                                  Adjustment
+    Host 1             Interface      Host_ID VAddr_Start   Size   P_Block_Table                         Bandwidth Perceptor
+                                      Block Table of this segment                      interleaved to                                            send &
+                                                                                      mutiple devices                         Adaptively         receive
+                                                                                                                                                             CXL
+                                       Block_ID                                                                ...
+    Host 2
+                                                                                                                              Scheduling                   Device 1
+                                        0      7     9       ...     ...    ...       Cross Bar
+                                                                                                                                                             ...
+                       LD/ST Queue                                                                         Buffer Queues to CXL devices
+      ...                                                                              Router
+
+
+                                                                     Fig. 5: Overview of Design
+
+(BARs), which requires detailed knowledge of device topology                        weighted interleaving mechanism that distributes memory
+and link configuration. In contrast, FAI-CXL handles address                        requests proportionally to the capacity and load of each
+resolution entirely within the switch. Our design employs a hy-                     device. The interleaving process, described in lines 9-15 of
+brid memory allocation strategy that combines coarse-grained                        Algorithm 1, starts by computing a stripe index from the
+segments with blocks. When a host requests memory from the                          request’s global physical address, which is translated by the
+CXL memory pool, the memory pool manager first checks if                            unified memory pool manager using the segment and block
+the requested size is available within the pooled memory. If                        tables. The stripe index is derived by dividing the address by
+sufficient space is found, it locates free blocks and records their                 the interleaving granularity and then get the lower bits of the
+identifiers in the block table associated with the segment. At                      size of a precomputed lookup table (LUT). The interleaving
+the same time, the CXL memory segment table is updated with                         granularity is fixed at 64 bytes to match the typical last-level
+metadata, including the host ID, the segment’s virtual starting                     cache (LLC) miss size, which yields the best performance in
+address, its length, and the corresponding block table. To                          our evaluation for modern processors. The stripe index is then
+avoid frequent allocations and deallocations in CXL memory                          used to access LUT stored in on-chip SRAM. Each LUT entry
+expansion scenarios, we set the block size to 1 GB, which                           maps a stripe to a specific device ID, which decides the routing
+is suitable for large-scale memory expansion. Additionally,                         of a CXL flit. The distribution of LUT entries reflects the
+SRAM-based caching is used to speed up table lookups in this                        interleaving weight assigned to each device. These weights
+segment-block-based unified memory management scheme.                               are derived from device characteristics such as link bandwidth
+                                                                                    and internal memory bandwidth and can be configured when
+ Algorithm 1: Cacheline-Level Weighted Interleaving                                 initialized to adapt to heterogeneous system configurations.
+  Input: g addr: global physical address of the request                             As shown in line 1-8 of Algorithm 1, the LUT is computed
+  Input: granularity: interleaving unit size (fixed at 64B)                         with configured device weights. The LUT lookup requires a
+  Input: weights[0..n − 1]: device weights                                          single SRAM cycle, introducing nearly no additional delay in
+  Result: device id, device local addr                                              the CXL.mem path. Even with 16 devices and a LUT size of
+1 Function BuildLUT(weights):
+     total weight ← n−1
+                       P                                                            1024, the total storage requirement is less than 2 KB, which is
+2                        i=0 weights[i];
+3    size ← next power of two ≥ total weight;                                       negligible compared to typical CXL switch buffer resources.
+4    LU T ← empty list;                                                             By enabling hardware-managed, cacheline-level interleaved
+5    for i ← 0 to n − 1 do                                                          memory distribution, this mechanism eliminates the latency
+6         entries ← round(size × weights[i]/total weight);                          overhead and minimizes bandwidth stranding.
+7         append device ID i to LU T , repeated entries times;
+8     return LU T ;                                                                 C. The hardware-integrated adaptive fairness-aware CXL
+                                                                                    memory scheduler
+9  Function MapAddress(g addr):
+      // Compute stripe index from global                                              In conventional CXL memory expansion scenarios, a single
+          address                                                                   memory expanding device is often partitioned into multiple
+10    stripe id ← (g addr ≫                                                         logical devices (MLDs) for sharing among multiple hosts.
+       log2 (granularity)) & (LU T SIZE − 1);                                       While our interleaving design maximizes bandwidth utiliza-
+11    device id ← LU T [stripe id];                                                 tion by distributing the unified address space across multiple
+      // Compute device-local address
+12    high ← g addr ≫                                                               devices, it also exacerbates contention when hosts with im-
+       (log2 (granularity) + LU T BIT S);                                           balanced memory access intensities share pooled resources.
+13    low ← g addr & (granularity − 1);                                             High-intensity hosts can monopolize the limited CXL link
+14    device local addr ← (high ≪                                                   and internal device bandwidth, causing low-intensity hosts to
+       log2 (granularity)) | low;                                                   experience excessive queuing delays and severe performance
+15    return (device id, device local addr);
+                                                                                    degradation. The key challenge is to improve overall system
+                                                                                    performance while preventing starvation of latency-sensitive,
+                                                                                    low-intensity workloads. FAI-CXL addresses this challenge by
+B. Cacheline-Level Weighted Interleaved Address Mapper                              integrating an adaptive, priority-based scheduling mechanism
+  To eliminate link-level bandwidth stranding and maximize                          directly into the CXL switch. The scheduler monitors per-host
+aggregate throughput, FAI-CXL employs a cacheline-level                             bandwidth consumption with a bandwidth perceptor within a
+
+
+
+
+        Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+fixed time window and dynamically adjusts priorities to ensure                      • To investigate the performance benefits of interleaved
+fairness without sacrificing throughput.                                              memory allocation mechanism in FAI-CXL, along with
+                                                                                      the impact of interleaving granularity;
+ Algorithm 2: Adaptive Fairness-Aware Priority                                      • To validate the presence of performance unfairness in
+ Scheduling with Transitional Buffer                                                  pooled CXL memory usage and how much our proposed
+   Input: Window size W , threshold θ, quotas Nhigh , Nlow                            dynamic scheduling strategy improves such scenario.
+   Data: Qhigh , Qbuffer , Qlow ; previous priority Plast [h]                       • To evaluate that FAI-CXL outcompetes the existing ar-
+   Result: Adaptive priority adjustment based on bandwidth                            chitecture on overall system performance while ensuring
+           usage
+                                                                                      fairness.
+ 1 while system is running do
+ 2     B[h] ← 0 for all h;                                                       A. Experiment Setup
+ 3     for each cycle in W do
+           // Dispatch CXL flits and record                                         Due to the limited availability of commercial CXL memory
+                 bandwidth usage within time                                     expansion devices, we build our evaluation platform on top of
+                 window                                                          ChampSim [11] and Ramulator [12] with cycle-accurate mod-
+ 4         Dispatch up to Nhigh from Qhigh and buffer hosts
+             with Plast [h] = high (FCFS);                                       eling of CXL protocols. ChampSim models host-side instruc-
+ 5         Dispatch up to Nlow from Qlow and buffer hosts with                   tion execution and memory access patterns, while Ramulator
+             Plast [h] = low (FCFS);                                             captures the timing behavior of CXL memory devices. The key
+ 6         Update B[h];                                                          configuration parameters are summarized in Table I, and the
+                 1                                                               configuration parameters about CXL are set according to the
+                     P
+ 7     avg ← |H|        h B[h];
+ 8     foreach host h do                                                         actual behavior evaluated in related work [20]. Our workload
+           // Adjust host priority based on                                      suite includes benchmarks from SPEC CPU2006 [21], SPEC
+                 bandwidth usage                                                 CPU2017 [22], Redis [2] with YCSB [23], Memcached [3]
+ 9         if B[h] < θ · avg then
+10              if h ∈ Qbuffer then                                              with YCSB, and Ligra [1]. Based on single-core profiling
+11                    move to Qhigh                                              results, we categorize workloads into memory-intensive and
+12             else if h ̸= Qhigh then                                           compute-intensive types (Table III). Each workload contains
+13                 move to Qbuffer ; Plast [h] ← high                            1 billion instructions, and the numeric suffix in its identifier
+14        else if B[h] > avg then                                                denotes the starting offset for trace collection.
+15            if h ∈ Qbuffer then
+                                                                                              TABLE I: Simulator Configuration Parameters
+16                 move to Qlow
+17             else if h ̸= Qlow then                                              Component                Configuration
+18                 move to Qbuffer ; Plast [h] ← low
+                                                                                   CPU                      4 GHz, 1 or 4 individual cores; 3-level pri-
+                                                                                                            vate cache hierarchy
+                                                                                   DRAM (1C)                Single channel, 1 rank/channel
+   In our proposed scheduling policy, we employ a three-tier                       DRAM (4C)                4 channels, 1 rank/channel
+                                                                                   DRAM per rank            DDR5 32Gb x8, 3.2 GHz
+priority queue ( high, buffer, and low ) where high-priority
+hosts are scheduled first, subject to configurable dispatch                                                 Link Bandwidth: 4 GB/s
+quotas for bandwidth distribution. As shown in line 8-18, at                                                CPU Endpoint Latency: 6.25 ns
+                                                                                   CXL Config
+                                                                                                            CXL Switch Latency: 32.5 ns
+the end of each window, hosts with sustained low bandwidth                                                  Memory Endpoint Latency: 10 ns
+usage (below a configurable threshold) are promoted in pri-                                                 CXL Switch: 4 upstream ports and 4 down-
+ority, while hosts with excessive usage are demoted by the                                                  stream ports
+bandwidth perceptor in FAI-CXL which records the bandwidth
+usage of each host in the time window. The buffer tier serves                      TABLE II: Classification of Workloads Used in Evaluation
+as a transitional state, preserving the previous priority for one
+window to prevent oscillations and premature priority changes.                      ID    Memory-Intensive Workloads        ID    Compute-Intensive Workloads
+
+As shown in line 1-6, within each priority level, requests                         M1     gcc_16                           C1     gromacs_228
+                                                                                   M2     mcf_192                          C2     gcc_48
+are scheduled in a First-Come-First-Serve (FCFS) manner to                         M3     libquantum_1343                  C3     perlbench_s_210
+preserve DRAM row-buffer locality in CXL devices. This                             M4     lbm_1274                         C4     namd_166
+                                                                                   M5     hmmer_191                        C5     calculix_104
+ensures that performance gains are achieved at both individual                     M6     milc_127                         C6     namd_33
+and system levels. The scheduling policy adaptively responds                       M7     bwaves_1963                      C7     gobmk_2
+                                                                                   M8     soplex_92                        C8     dealII_3
+to runtime fluctuations in memory intensity, allowing compute-                     M9     Redis_YCSB-A_17                  C9     perlbench_50
+intensive workloads to progress without being blocked by                           M10    Memcached_YCSB-A_31              C10    x264_12
+                                                                                   M11    Ligra_PageRank_12                C11    exchange2_72
+memory-intensive ones.                                                             M12    Ligra_BFS_21                     C12    leslie3d_134
+
+                     V. E VALUATION
+  In this Section, we evaluate FAI-CXL with the following                        B. Performance Analysis
+objectives:                                                                         We evaluate the performance of our design in the section.
+
+
+
+
+        Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+                               TABLE III: Workload Sets Used in Evaluation
+                                                                                                                              link buffer queue holds packets waiting to be transmitted, its
+                                       Set ID     Type     Trace ID List                                                      maximum length reflects the worst-case congestion along the
+                                         S1       Light    C1, C2, C3, C4                                                     link. As is shown in Fig. 8, our fine-granularity interleaving
+                                         S2       Light    C5, C6, C7, C8
+                                         S3       Heavy    M1, M2, M3, M4
+                                                                                                                              design significantly reduce the maximum buffer occupancy in
+                                         S4       Heavy    M5, M6, M7, M8                                                     both downstream and upstream directions, demonstrating more
+                                         S5       Heavy    M9, M10, M11, M12                                                  effective load dispersion across CXL links and devices.
+                                         S6       Mixed    C1, M5, M6, M7
+                                                                                                                                                                       Average Latency                                                          P99 Latency
+
+
+
+
+                                                                                                                              Latency (ns)
+
+
+
+
+                                                                                                                                                                                                  Latency (ns)
+                                         S7       Mixed    C2, M8, M9, M10                                                                      400
+                                                                                                                                                                                                                        900
+                                         S8       Mixed    C5, M2, M11, M12
+                                                                                                                                                350                                                                     800
+   1) Evaluation into our fine-grained interleaving mecha-                                                                                                 26 27 28 29 210 211 212                                             26 27 28 29 210 211 212
+nism: We evaluate our cacheline-level weighted interleaving                                                                                                 Interleaving Granularity (Bytes)                                    Interleaving Granularity (Bytes)
+
+
+
+
+                                                                                                                                                                                               Instructions per Cycle
+                                                                                                                                  Throughput (GB/s)
+across-CXL device mechanism in a memory pool with four                                                                                                12
+                                                                                                                                                                              Throughput                                0.85                               IPC
+CXL memory expansion devices. Under low system load (only                                                                                             11                                                                0.80
+a host utilizing the CXL memory pool), we compare our
+                                                                                                                                                      10                                                                0.75
+design (a single host can utilize all devices in CXL memory                                                                                                26 27 28 29 210 211 212                                             26 27 28 29 210 211 212
+pool by interleaving) against the baseline where a single host                                                                                              Interleaving Granularity (Bytes)                                    Interleaving Granularity (Bytes)
+is bound to a single CXL device. Fig. 6 shows that interleaving                                                               Fig. 7: Performance of S4 under various interleaving granu-
+achieves lower latency and higher throughput by utilizing both                                                                larity
+the CXL link bandwidth and internal device bandwidth more
+
+
+
+                                                                                                                              Queue Max Length
+effectively for low system load.                                                                                                                                      Downstream Link Buffer
+                                                                                                                                                      40
+                                                                       Latency (No Interleaving)        2.0                                                           Upstream Link Buffer
+                       400
+Average Latency (ns)
+
+
+
+
+                                                                       Latency (With Interleaving)
+                                                                                                          Throughput (GB/s)
+
+                                                                       Throughput (No Interleaving)     1.5
+                       300                                             Throughput (With Interleaving)                                                 20
+                       200                                                                              1.0
+                                                                                                                                                            26           27           28                        29                210          211          212
+                       100                                                                              0.5                                                                     Interleaving Granularity (Bytes)
+                        0                                                                               0.0                   Fig. 8: Max link buffer queue size of S4 under various
+                                M1    M4     M7     M8     M9    M10     C7       C10       C12
+                             Fig. 6: Performance of single host w/o interleaving                                              interleaving granularity
+                                                                                                                                 2) Performance improvement of multi-hosts sharing inter-
+   In the following evaluation, we examine the system per-
+                                                                                                                              leaved CXL memory pool and unfairness under imbalanced
+formance under the scenario where multiple hosts share a
+                                                                                                                              memory access intensity workloads: In this part, we first
+our proposed CXL-interleaved memory pool composed of
+                                                                                                                              define three metrics to quantify the performance benefits
+multiple CXL memory expanding devices which we give to
+                                                                                                                              brought by interleaving across CXL devices:
+same weight in our proposed weighted interleaved address
+mapping mechanism. To this end, as Table III shows, we                                                                                                        Throughputinterleaved
+                                                                                                                                       Throughput Benefit =                            (1)
+construct several evaluation groups by combining different                                                                                                   Throughputnon-interleaved
+types of workloads into distinct workload sets, each of which                                                                                           Average Latencynon-interleaved
+                                                                                                                                      Latency Benefit =                                (2)
+is composed of four different workload running on four                                                                                                    Average Latencyinterleaved
+individual CXL hosts.                                                                                                                                     Average IPCinterleaved
+   In FAI-CXL, the interleaving granularity across CXL mem-                                                                               IPC Benefit =                                (3)
+                                                                                                                                                        Average IPCnon-interleaved
+ory expanding devices is a critical parameter, determining the
+minimum unit size over which CXL memory is distributed                                                                           The metric exceeding 1 indicates a performance gain from
+alternately among memory expanding devices. Unlike OS-                                                                        interleaving memory accesses across CXL devices.
+level page-granularity interleaving, our hardware-embedded                                                                       To further quantify the benefits of interleaving under rel-
+CXL memory interleaving mechanism enables fine-grained                                                                        atively balanced load conditions, we evaluate four workload
+interleaving at the cacheline level with low cost. We evaluate                                                                sets: two consisting entirely of compute-intensive workloads
+the average performance of four independent hosts sharing the                                                                 (S1 and S2) and two consisting entirely of memory-intensive
+CXL memory pool under different interleaving granularities                                                                    workloads (S3 and S4). Each set contains four distinct ap-
+by running workload set S4, which consists of four memory-                                                                    plications, each running on a separate host connected to the
+intensive applications. Fig. 7 shows all evaluated metrics reach                                                              CXL memory pool. As shown in Fig. 9, all hosts benefit
+their optimal values at a 64B granularity, which matches the                                                                  from interleaving regardless of workload type. In the heavy
+LLC miss size used in modern processors. Larger granularities                                                                 memory-intensive sets (S3 and S4), the improvements are most
+degrade performance, as coarser allocation increases the like-                                                                pronounced: the average latency benefit, average throughput
+lihood of concentrated access hotspots. We use the maximum                                                                    benefit, and average IPC benefit of 4 hosts reach up to ×1.65,
+queue length observed in the CXL link buffer as a metric to                                                                   ×1.30, and ×1.63. These results confirm that the cacheline-
+evaluate the system’s ability to handle congestion. Since the                                                                 level weighted interleaving scheme effectively aggregates CXL
+
+
+
+
+                               Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+ link bandwidth and device bandwidth across multiple devices,                                                                                                               adjustment, enabling responsiveness to workload intensity
+ significantly enhancing system performance when workload                                                                                                                   changes without the rigid allocation constraints of RR.
+ memory intensities are relatively balanced.                                                                                                                                                                  FCFS            RR                            Our Scheduling Policy                            Baseline: Without Interleaving (y=1)
+                                                  Throughput Benefit                Latency Benefit         IPC Benefit       Baseline: Without Interleaving (y=1)                                                                                       1.25                                                                         1.5
+                                                                                                                                                                                                1.5
+                                                     Light Trace Set S1                                         Light Trace Set S2
+
+
+
+
+                                                                                                                                                                          Performance Metrics
+
+
+
+
+                                                                                                                                                                                                                                   Performance Metrics
+
+
+
+
+                                                                                                                                                                                                                                                                                                                Performance Metrics
+                                                                                                                                                                                                                                                         1.00
+                                            1.06
+                      Performance Metrics
+
+
+
+
+                                                                                                            1.04                                                                                                                                                                                                                      1.0
+                                                                                                                                                                                                1.0                                                      0.75
+                                            1.04
+                                                                                                            1.02                                                                                                                                         0.50
+                                            1.02                                                                                                                                                0.5                                                                                                                                   0.5
+                                                                                                                                                                                                                                                         0.25
+                                            1.00
+                                                                                                            1.00
+                                                                  C1         C2      C3          C4                     C5      C6         C7         C8                                        0.0                                                      0.00                                                                         0.0
+                                                                                                                                                                                                        C1     M5     M6      M7                                C1      M5                       M6     M7                                  C1    M5       M6      M7
+                                                               Heavy Trace Set S3                                  Heavy Trace Set S4                                                                    (a) Throughput Benefit                                      (b) Latency Benefit                                                         (c) IPC Benefit
+                                     Performance Metrics
+
+
+
+
+                                                           3                                                1.15                                                            Fig. 11: Performance evaluation of different scheduling strate-
+                                                                                                            1.10                                                            gies under imbalanced workloads set S6
+                                                           2
+                                                                                                            1.05
+                                                           1                                                1.00                                                               4) Evaluation of FAI-CXL across multiple workload sets:
+                                                                  M1        M2       M3          M4                   M5        M6         M7         M8
+                                                                                                                                                                            To evaluate the overall performance improvement of our
+ Fig. 9: Performance improvement with interleaving of 4 rela-                                                                                                               design, we define the following two metrics where N is the
+ tively balanced trace sets                                                                                                                                                 size of a trace set:
+                                                               Throughput Benefit    Latency Benefit        IPC Benefit      Baseline: Without Interleaving (y=1)
+                                                Mixed Trace Set S6                           Mixed Trace Set S7                      Mixed Trace Set S8                                                                                                                                            N
+Performance Metrics
+
+
+
+
+                                                                                                                                                                                                                                                                                                         IPCinterleaved
+                                                                                                                                                                                                                                                                                                   P
+                      1.50
+                                                                                                                                                                                                                                                                                                            i
+                      1.25                                                                                                                                                                                                                                                                       i=1
+                                                                                                                                                                                                                     System IPC Benefit =                                                        N
+                                                                                                                                                                                                                                                                                                                                                                   (4)
+                      1.00
+                                                                                                                                                                                                                                                                                                       IPCnon-interleaved
+                                                                                                                                                                                                                                                                                                 P
+                                                                                                                                                                                                                                                                                                          i
+                      0.75                                                                                                                                                                                                                                                                  i=1
+                                              C1                    M5        M6      M7    C2         M8          M9        M10 C5             M2       M11        M12                                                                                                                       N
+                                                                                                                                                                                                                                                                                                         Throughputinterleaved
+                                                                                                                                                                                                                                                                                              P
+                                                                                                                                                                                                                                                                                                                   i
+        Fig. 10: Unfairness under imbalanced workload sets                                                                                                                                                                                                                                       i=1
+                                                                                                                                                                                                        System Throughput Benefit =                                                              N
+                                                                                                                                                                                                                                                                                                                                                                   (5)
+     However, without an efficient scheduling strategy, perfor-
+                                                                                                                                                                                                                                                                                                       Throughputnon-interleaved
+                                                                                                                                                                                                                                                                                                 P
+                                                                                                                                                                                                                                                                                                                 i
+ mance degradation can occur when hosts running memory-                                                                                                                                                                                                                                     i=1
+ intensive workloads coexist with those running compute-                                                                                                                      If the the value of metric exceeds 1, it indicates the system
+ intensive workloads. We evaluate mixed and unbalanced work-                                                                                                                overall performance outcompetes the non-interleaved baseline.
+ load sets S6–S8, where memory-intensive applications con-
+ tend with compute-intensive ones. As shown in Fig.10, the                                                                                                                                                      Interleaving with FCFS                                                            FAI-CXL
+                                                                                                                                                                                                                Interleaving with RR                                                              Baseline: without interleaving (y=1)
+ compute-intensive hosts suffer from reduced throughput bene-
+ fit, latency benefit, and IPC benefit of only ×0.84, ×0.90, and                                                                                                                                                                                                                                 1.6
+                                                                                                                                                                          Performance Metrics
+
+
+
+
+                                                                                                                                                                                                                                                                           Performance Metrics
+ ×0.93 compared to the non-interleaved baseline, respectively.                                                                                                                                    1.6
+                                                                                                                                                                                                                                                                                                 1.4
+     3) Resolution of unfairness with proposed adaptive schedul-                                                                                                                                  1.4
+ ing policy: We compare three scheduling strategies applied in                                                                                                                                                                                                                                   1.2
+                                                                                                                                                                                                  1.2
+ CXL switch. (1) First-Come-First-Serve (FCFS): CXL flits
+                                                                                                                                                                                                  1.0                                                                                            1.0
+ from different hosts to each device are dispatched strictly in the
+                                                                                                                                                                                                             S1 S2 S3 S4 S5 S6 S7 S8                                                                    S1 S2 S3 S4 S5 S6 S7 S8
+ order of arrival. (2) Round-Robin (RR): The link bandwidth
+ is evenly divided among hosts, with each host permitted to                                                                                                                                                   (a) System IPC Benefit                                                                   (b) System Throughput Benefit
+ send up to 10 packets per turn. (3) Fairness-aware adaptive                                                                                                                   Fig. 12: Overall system performance across 8 trace sets
+ scheduler (proposed): Dynamically adjusts host priorities                                                                                                                     As shown in Fig. 12, FCFS improves performance for
+ based on real-time bandwidth usage. In our implementation,                                                                                                                 balanced memory-intensity host groups (S1–S5) sharing the
+ both high and low priority quotas are set to Nhigh = 10 and                                                                                                                interleaved CXL memory pool, but in unbalanced scenarios
+ Nlow = 10 packets, the monitoring window size is W = 5                                                                                                                     (S6–S8) it causes unfairness. In these cases, the disadvan-
+ million cycles with bandwidth threshold as θ = 0.3.                                                                                                                        taged compute-intensive workloads experience reduced perfor-
+     Fig. 11 presents the performance comparison of the three                                                                                                               mance, resulting in a negative System IPC Benefit relative to
+ scheduling strategies using the mixed workload set S6. Under                                                                                                               the baseline. RR handles unbalanced scenarios (S6–S8) more
+ FCFS, the compute-intensive workload C1 suffers severe per-                                                                                                                effectively by statically dividing CXL link bandwidth among
+ formance degradation due to bandwidth starvation, resulting                                                                                                                hosts; however, its inflexible allocation compromises row-
+ in throughput, latency, and IPC benefits below the baseline                                                                                                                buffer locality within the CXL device and cannot dynamically
+ (non-interleaved) configuration. RR alleviates this unfairness                                                                                                             prioritize hosts when memory intensity fluctuates. Our design
+ by equally allocating link bandwidth among hosts, improving                                                                                                                combines the strengths of both FCFS and RR: it eliminates
+ C1’s throughput, latency, and IPC benefits to 1.13×, 1.14×,                                                                                                                unfairness while adapting to runtime variations in memory
+ and 1.07×, respectively. The proposed fairness-aware adaptive                                                                                                              intensity, even within a single workload phase. By monitoring
+ scheduling algorithm further improves these metrics to 1.21×,                                                                                                              per-host bandwidth usage and dynamically adjusting priorities,
+ 1.15×, and 1.07×, respectively, while maintaining the per-                                                                                                                 it enables adaptive scheduling of CXL flits. As a result, the
+ formance of memory-intensive hosts. These gains stem from                                                                                                                  proposed method achieves average improvements of 1.21× in
+ real-time per-host bandwidth monitoring and dynamic priority                                                                                                               System IPC Benefit and 1.17× in System Throughput Benefit
+
+
+
+
+                                                                 Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+across all eight trace sets compared to the baseline, while                      [11] N. Gober et al., “The championship simulator: Architectural
+maintaining positive gains for every set.                                             simulation for education and competition,” arXiv preprint
+                                                                                      arXiv:2210.14324, 2022.
+      VI. H ARDWARE C OST AND E NERGY E FFICIENCY                                [12] H. Luo et al., “Ramulator 2.0: A modern, modular, and ex-
+                                                                                      tensible dram simulator,” IEEE Computer Architecture Letters,
+                            A NALYSIS
+                                                                                      vol. 23, no. 1, pp. 112–116, 2023.
+   FAI-CXL adds three main modules to the CXL switch: (1)                        [13] J. Ajanovic, “Pci express,” in Encyclopedia of Parallel Com-
+a unified memory manager with SRAM-cached segment/block                               puting. Springer, 2011, pp. 1487–1498.
+tables, (2) a lookup table (LUT) for weighted interleaving, and                  [14] J. Gu et al., “Efficient memory disaggregation with infiniswap,”
+                                                                                      in USENIX NSDI 17, 2017, pp. 649–667.
+(3) a three-level priority scheduler with bandwidth counters.
+                                                                                 [15] M. K. Aguilera et al., “Remote regions: a simple abstraction
+   Assuming 4 TB pooled memory, 1 GB block size, and                                  for remote memory,” in USENIX ATC 18, 2018, pp. 775–787.
+16 hosts, the block/segment metadata requires under 50 KB,                       [16] Z. Guo et al., “Clio: A hardware-software co-designed disag-
+the LUT under 2 KB, and the scheduling queues/buffers                                 gregated memory system,” in Proc. 28th ACM Int. Conf. Archi-
+about 100 KB. In total, the extra storage is below 200 KB                             tectural Support for Programming Languages and Operating
+                                                                                      Systems, 2022, pp. 417–433.
+(< 0.5% of typical switch SRAM[24]). The LUT lookup and                          [17] C. Kim et al., “Memory interfaces: past, present, and future,”
+priority arbitration add < 2 ns to data-path latency, negligible                      IEEE Solid-State Circuits Magazine, vol. 8, no. 2, pp. 23–34,
+compared to the 30–40 ns baseline switch delay.                                       2016.
+   Energy overhead mainly comes from SRAM accesses (pJ                           [18] S. Ko et al., “Cosmos: A cxl-based full in-memory system for
+cost per 64 B) and is marginal relative to the µJ cost of DRAM                        approximate nearest neighbor search,” IEEE Computer Archi-
+                                                                                      tecture Letters, 2025.
+accesses[25]. By improving link utilization and reducing con-                    [19] H. A. Maruf et al., “Tpp: Transparent page placement for cxl-
+gestion, FAI-CXL lowers energy per useful byte transferred                            enabled tiered-memory,” in Proc. 28th ACM Int. Conf. Archi-
+by an estimated 8–12% compared to the baseline.                                       tectural Support for Programming Languages and Operating
+   Overall, our design incurs minimal area and timing cost,                           Systems, vol. 3, 2023, pp. 742–755.
+while improving both performance and energy efficiency in                        [20] J. Liu et al., “Systematic cxl memory characterization and
+                                                                                      performance analysis at scale,” in Proc. 30th ACM Int. Conf. Ar-
+multi-host CXL memory pooling.                                                        chitectural Support Programming Lang. Operating Syst., 2025,
+                                                                                      pp. 1203–1217.
+                      VII. C ONCLUSION                                           [21] “SPEC CPU 2006.” [Online]. Available: https://www.spec.org/
+   We proposed FAI-CXL, a hardware-accelerated CXL mem-                               cpu2006/.
+ory pool management system that enables transparent memory                       [22] “SPEC CPU 2017.” [Online]. Available: https://www.spec.org/
+allocation, fine-grained interleaving, and dynamic scheduling                         cpu2017/.
+                                                                                 [23] B. F. Cooper et al., “Benchmarking cloud serving systems with
+integrated within CXL switch. Our design improves bandwidth
+                                                                                      ycsb,” in Proceedings of the 1st ACM symposium on Cloud
+utilization and fairness in multi-host environments. Simulation                       computing, 2010, pp. 143–154.
+results confirm significant gains in system performance and                      [24] D. Kim et al., “Tea: Enabling state-intensive network functions
+support for scalable disaggregated memory deployment.                                 on programmable switches,” in Proc. ACM SIGCOMM, 2020,
+                                                                                      pp. 90–106.
+                            R EFERENCES                                          [25] R. J. Evans et al., “Energy consumption modeling and optimiza-
+ [1] J. Shun et al., “Ligra: a lightweight graph processing framework                 tion for sram’s,” IEEE Journal of Solid-State Circuits, vol. 30,
+     for shared memory,” in Proceedings of the 18th ACM SIGPLAN,                      no. 5, pp. 571–579, 1995.
+     2013, pp. 135–146.
+ [2] “Redis.” [Online]. Available: https://redis.io
+ [3] B. Fitzpatrick, “Distributed caching with memcached,” Linux
+     journal, vol. 2004, no. 124, p. 5, 2004.
+ [4] P. P. Shinde et al., “A review of machine learning and deep
+     learning applications,” in 2018 ICCUBEA. IEEE, 2018, pp.
+     1–6.
+ [5] S.-P. Yang et al., “Overcoming the memory wall with {CXL-
+     Enabled}{SSDs},” in USENIX ATC 23, 2023, pp. 601–617.
+ [6] M. K. Aguilera et al., “Memory disaggregation: Why now and
+     what are the challenges,” ACM SIGOPS Operating Systems
+     Review, vol. 57, no. 1, pp. 38–46, 2023.
+ [7] D. Das Sharma et al., “An introduction to the compute express
+     link (cxl) interconnect,” ACM Computing Surveys, vol. 56,
+     no. 11, pp. 1–37, 2024.
+ [8] D. Gouk et al., “Direct access,{High-Performance} memory
+     disaggregation with {DirectCXL},” in USENIX ATC 22, 2022,
+     pp. 287–294.
+ [9] H. Li et al., “Pond: Cxl-based memory pooling systems for
+     cloud platforms,” in Proc. 28th ACM Int. Conf. Architectural
+     Support Programming Lang. Operating Syst., vol. 2, 2023, pp.
+     574–587.
+[10] The linux kernel community, What is NUMA? [Online]. Avail-
+     able: https://www.kernel.org/doc/html/v4.18/vm/numa.html
+
+
+
+
+        Authorized licensed use limited to: University of Illinois. Downloaded on October 12,2026 at 23:42:56 UTC from IEEE Xplore. Restrictions apply.
+

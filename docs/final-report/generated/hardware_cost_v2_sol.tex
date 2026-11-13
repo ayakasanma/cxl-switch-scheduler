@@ -1,0 +1,43 @@
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=3 by 1,horizontal sep=3.5em},
+  width=.285\textwidth,height=3.45cm,
+  title style={font=\footnotesize},tick label style={font=\scriptsize,text=figgray},
+  label style={font=\footnotesize},axis line style={figgray!70},tick style={figgray!70},
+  grid=major,grid style={figgray!15,line width=.25pt},
+  axis x line=bottom,axis y line=left,
+  xmin=2.5,xmax=17.5,xtick={4,8,16},xlabel={Sources $N$}]
+\nextgroupplot[title={(a) Complete-switch area},ylabel={Area ($10^3$ library units)},
+  ymin=0,ymax=480,ytick={0,100,200,300,400}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\AreaFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\AreaRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\AreaMain};
+\nextgroupplot[title={(b) Timing margin},ylabel={Setup slack (ns)},
+  ymin=0,ymax=23,ytick={0,5,10,15,20}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\SetupFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\SetupRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\SetupMain};
+\nextgroupplot[title={(c) Cold-start power},ylabel={Power (mW)},
+  ymin=0,ymax=16,ytick={0,4,8,12,16}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\ColdMeanFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\ColdMeanRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\ColdMeanMain};
+\end{groupplot}
+\node[anchor=south,font=\footnotesize,yshift=22pt] at
+  ($(group c1r1.north west)!.5!(group c3r1.north east)$)
+  {\tikz\fill[figblue] (0,0) rectangle (.09,.09);\ FCFS\qquad
+   \tikz\draw[figgray] (0,0)--(.045,.08)--(.09,0)--cycle;\ RR10\qquad
+   \tikz\fill[figred] (0,0) circle (.045);\ Main};
+\end{tikzpicture}
+\caption{\textbf{The hardware price of service differentiation.}
+Accepted SAED32 RVT mappings at TT, 0.78\,V, $25\,{}^\circ$C and a common 25\,ns clock.
+(a,b) One mapped observation per policy and $N$; lines connect measured points.
+(c) Means of three accepted cold-start seed estimates; seed variation is below
+the marker size at this scale. At $N=16$, the tool prints power to 0.1\,mW.
+Power is a separate zero-delay mapped-netlist activity experiment; the
+HOG-SPARSE latency experiment contributes no new power estimate.
+Each panel has its own labeled axes and units.}
+\label{fig:hardware-cost}
+\end{figure*}

@@ -1,0 +1,541 @@
+{
+  "confirmation": {
+    "A": [
+      18.1,
+      2,
+      11,
+      10,
+      10,
+      1.15,
+      1.1
+    ],
+    "B": [
+      33.45,
+      16.65,
+      17.7,
+      21.05,
+      21.35,
+      33,
+      12.35
+    ]
+  },
+  "contrasts": [
+    {
+      "arm": "A",
+      "baseline": "FCFS",
+      "candidate": "MAIN",
+      "high": -8.0,
+      "low": -8.25,
+      "value": -8.1
+    },
+    {
+      "arm": "B",
+      "baseline": "FCFS",
+      "candidate": "MAIN",
+      "high": -11.55,
+      "low": -13.25,
+      "value": -12.4
+    },
+    {
+      "arm": "A",
+      "baseline": "RR10",
+      "candidate": "MAIN",
+      "high": -1.0,
+      "low": -1.0,
+      "value": -1
+    },
+    {
+      "arm": "B",
+      "baseline": "RR10",
+      "candidate": "MAIN",
+      "high": 4.45,
+      "low": 2.25,
+      "value": 3.35
+    },
+    {
+      "arm": "A",
+      "baseline": "MAIN",
+      "candidate": "DAC2",
+      "high": -8.75,
+      "low": -9.0,
+      "value": -8.9
+    },
+    {
+      "arm": "B",
+      "baseline": "MAIN",
+      "candidate": "DAC2",
+      "high": -7.9,
+      "low": -9.5,
+      "value": -8.7
+    }
+  ],
+  "dac_area": 109794.784709,
+  "dac_backpressure": [
+    {
+      "arm": "A",
+      "dac": 5,
+      "main": 17.2,
+      "ready": "bernoulli-0.75"
+    },
+    {
+      "arm": "B",
+      "dac": 20.4,
+      "main": 32.6,
+      "ready": "bernoulli-0.75"
+    },
+    {
+      "arm": "A",
+      "dac": 17,
+      "main": 26,
+      "ready": "periodic-48/64"
+    },
+    {
+      "arm": "B",
+      "dac": 27,
+      "main": 34,
+      "ready": "periodic-48/64"
+    }
+  ],
+  "inputs": {
+    ".setup-logs/implementation/manuscript-revision-20261027/data/domain-repair/existing-records.json": "674e9b1f9780de87a1c4347aa167771131bbfa710b54a6e402aac16c0e8c5fa9",
+    ".setup-logs/implementation/revision-20261024/n-expansion-analysis-20261027/full60-output/analysis.json": "c196865abf056e552a380bcfd461bd8acec421f8e177c8c6644e7d5718639786",
+    ".setup-logs/implementation/revision-20261024/n-expansion-analysis-20261027/full60-release.json": "c6255e142c21750d2ed6c4c19ad3b561ff342116f38666772c260c984a5689e7",
+    ".setup-logs/implementation/revision-20261024/parent-continuation-20261026T0906/index-final18-adoption.json": "78aaef88589fd9ee785740de3d11441a389f0a7ba317d8b0190f417517a3db53",
+    ".setup-logs/implementation/revision-20261024/parent-continuation-20261026T1518/robustness-index-adoption.json": "7ebbb680a326901c4bff09f8409f71ecefd73ba660c154137b5d560104c608f2",
+    ".setup-logs/implementation/revision-20261024/parent-continuation-20261027T0325/final498-adoption.json": "16445cbcbcc10be603e619405fd7c170605c3c0694398a88bb30b2b387f430c4",
+    ".setup-logs/implementation/revision-20261024/parent-continuation-20261027T0325/n60-report-adoption.json": "54ab9d38df70a6efdb22cccfc5c14781c8e4751f46109af31130e40e1d05a33f",
+    ".setup-logs/implementation/revision-20261024/power-index/final498-20261027/release.json": "75399940a90fa0973552e78ee1c64341b47b6b0873fa96dc3e29ac4bfa113771",
+    ".setup-logs/implementation/revision-20261024/power-index/final498-20261027/snapshot/analysis/analysis.json": "89170cfbe0bb449c25ebbe782203b1695550b7b6bb9e467bae8d6bb00b483061",
+    ".setup-logs/implementation/revision-20261024/power-index/final498-20261027/snapshot/index/matrix-coverage.json": "1defb1bbebe31948b5a2834e3510bfcda660190a8630732593bb2169c462f668",
+    ".setup-logs/implementation/revision-20261024/power-index/robustness-sealed-20261026t1518/release.json": "1fea76a9c574f2b47a3c6b94299f62748db0ad3d19cf80d341af13f082397af2",
+    ".setup-logs/implementation/revision-20261024/power-parent-review-20261024T0904/sources.json": "d29d645b6a67d9f3f146447f0f6c29cbbbe0e50d3925c9da2b4e251b25ff061a",
+    ".setup-logs/implementation/revision-20261024/trained-power-results-20261026/analysis-output/analysis.json": "8c3fac19a7c59e44da32d059f44f7e4418efe6ea689e3c05a549200f587709df",
+    ".setup-logs/implementation/revision-20261024/trained-power-results-20261026/release.json": "de013ee77aad3ede0fa2505c32d554d38cd6b158249c401c7525cfe635913b0e",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/DOWNLOAD_SHA256.json": "1775de8637b0153c951a10ffd507975ad2afdd9838e873b8475d566bd0fe49f4",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/formal/reports/verify.rpt": "6a8ddbc84c0908f116243e5d8ab739ad9e7ad5b362b0348a9ede212dc8cbc305",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/reports/area_summary.rpt": "4812d5be69c4155e9205a8ae1dde2ba94b71f2677aa6a12766e9dfd7b2e43c0d",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/reports/pt_coverage_summary.rpt": "47b4aadb8df25a5cb8c8941492b16c38a4086e0c72a4b47b0557f945d8d40796",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/reports/pt_timing_max.rpt": "d52f6c16a30b4f075a5d6c47715449cb2c663063947074fefc6025986ba82de7",
+    "artifacts/fastx/revision-dac-ppa-20261023T190649Z/reports/pt_timing_min.rpt": "89a59c4b59af422352d5c9fbfb61735a7654826e829d539ceccc8897d51ec2f7",
+    "docs/experiments/revision-20261023/ADAPTATION_RESULTS.md": "13e4b7a0235b21b26101f719fe05f99ed2e8056fa749cd743882e3e2640dacb3",
+    "docs/experiments/revision-20261023/BASELINES.md": "214104ea52ec3b60f12ab2892f3e2cccbaf5fcd7cdb0fb937b6a83854974245b",
+    "docs/experiments/revision-20261023/CONFIRMATION_RESULTS.md": "9d30335e303110c44c52363d974c183c21ba1a97b945cc4fe9ba1dc09655fd5b",
+    "docs/experiments/revision-20261023/DAC_PPA_RESULTS.md": "a5128c7e7cbbd00a3f3a732452f0fd070d1e11573746dde6dcffc6b66c260980",
+    "docs/experiments/revision-20261023/DEPTH_RESULTS.md": "9cdc1c35c8fa51a1485029e40d489daf1cc9999ab20e3edc30602a1e21ae21f0",
+    "docs/experiments/revision-20261023/METHOD_DIFFERENCES.md": "167915c983da04d628c6485b8fad8864b547abefbb11e800851a93fa5f554c62",
+    "docs/experiments/revision-20261023/N_EXPANSION_RESULTS.md": "e64149b686c8b326f6baa4881108c2d9abff59ddc8e8c07bf74f03c383dc0e7c",
+    "docs/experiments/revision-20261023/ROBUSTNESS_RESULTS.md": "9493e7c765f94fb078ce1a1013077f4c93a3c669ea45189f2b53d7982c0d8a48",
+    "docs/experiments/revision-20261023/SENSITIVITY_RESULTS.md": "8913bbdf268d12a356435508a71057c0f0446fca9423f32d239600345dd5d6ed",
+    "docs/experiments/revision-20261023/TRAINED_POWER_RESULTS.md": "d1fa1aa3f624b22cc5d04f32c09988e29129cb8ac1c38575bfaf9c4de0311aad",
+    "docs/final-report/generate_results.py": "e6a7fcd2add1597bc2cca0952fe1719a03c798d20584cbe59664557e4bf2d9fb",
+    "docs/final-report/generated/evidence_manifest.json": "723bdbec5a6803e6322fcd886822b961e0929ec41479bc4aa5b35b076c1fb184",
+    "docs/final-report/generated/results.tex": "c1ae15bb7b7a2c5084b46a2eef043f2e0af1d46fe36fb712ecf489f2526a94db",
+    "docs/ppa/algorithm2-n4-20261021.json": "0421ad3803d436c345cc4d6aa965c9f2e146dd9a427bb185587be32d1be47642",
+    "docs/ppa/formality-20261021.json": "3100ee92c9e6cad14aeaabc4275680c282e726e6e6adc5a676d14077a4863dbc",
+    "docs/ppa/power-20261021.json": "30b4621c0827daf5c210a6a6e7d65c4e6a049cef531cc433dd864ec540ed70db",
+    "docs/ppa/power-supplement-20261021.json": "b9facc797d4b280cc32b2186a1a063339b7ad42b4fee013b9c865aef5a84ad30",
+    "docs/ppa/primary-20261021-v2.json": "168e4bd6f44c3e850948ff1f4942d571a46e91a9272c940170c99e988b892a1d",
+    "syn/profiles/saed32-rvt-tt-25ns-forqa-cap075-v2.json": "b6cc33219d1fe240a81d653e7dd3848e784586b5e4e885886e9f407d19619f8c"
+  },
+  "n_expansion": {
+    "A": {
+      "16": [
+        22,
+        3,
+        13,
+        10,
+        10,
+        2
+      ],
+      "8": [
+        20,
+        2,
+        12,
+        10,
+        10,
+        2
+      ]
+    },
+    "B": {
+      "16": [
+        41.8,
+        23.4,
+        24.4,
+        34.8,
+        35.2,
+        41.6
+      ],
+      "8": [
+        37.6,
+        20.2,
+        21,
+        27.6,
+        28.2,
+        37
+      ]
+    }
+  },
+  "power_mW": {
+    "A": [
+      3.356,
+      2.5596666666666668,
+      3.466666666666667
+    ],
+    "B": [
+      3.356,
+      2.56,
+      3.466
+    ]
+  },
+  "primary_area": [
+    {
+      "case_id": "n4-fcfs",
+      "categories": {
+        "common": "44901.399654275162",
+        "descriptor_storage": "44404.041136761600",
+        "policy": "1131.957369999992",
+        "timestamp_storage": "13532.660155965440",
+        "unresolved": "0.000000000000"
+      },
+      "policy": "fcfs",
+      "summary_minus_leaf_area": "-0.000001002194",
+      "whole_cell_area": "103970.058316000000"
+    },
+    {
+      "case_id": "n4-rr",
+      "categories": {
+        "common": "34380.092136268623",
+        "descriptor_storage": "44404.041136728000",
+        "policy": "263.039040999996",
+        "timestamp_storage": "0.000000000000",
+        "unresolved": "0.000000000000"
+      },
+      "policy": "rr",
+      "summary_minus_leaf_area": "0.000002003381",
+      "whole_cell_area": "79047.172316000000"
+    },
+    {
+      "case_id": "n4-fai-main",
+      "categories": {
+        "common": "45009.156710685543",
+        "descriptor_storage": "44404.041138744000",
+        "policy": "7143.987888999947",
+        "timestamp_storage": "13532.660156569600",
+        "unresolved": "0.000000000000"
+      },
+      "policy": "fai-main",
+      "summary_minus_leaf_area": "-0.000002999090",
+      "whole_cell_area": "110089.845892000000"
+    }
+  ],
+  "robustness": [
+    {
+      "configuration": {
+        "burst_period": 1024,
+        "burst_size": 8,
+        "heavy_rate": 0.5,
+        "heavy_source": 0,
+        "ready": "always"
+      },
+      "values": {
+        "ALG2": 21,
+        "BLISS": 33,
+        "FCFS": 33.8,
+        "MAIN": 20.8,
+        "RR1": 16.4,
+        "RR10": 17.2
+      }
+    },
+    {
+      "configuration": {
+        "burst_period": 1024,
+        "burst_size": 8,
+        "heavy_rate": 0.9,
+        "heavy_source": 0,
+        "ready": "always"
+      },
+      "values": {
+        "ALG2": 21,
+        "BLISS": 33,
+        "FCFS": 33.8,
+        "MAIN": 20.8,
+        "RR1": 16.4,
+        "RR10": 17.2
+      }
+    },
+    {
+      "configuration": {
+        "burst_period": 4096,
+        "burst_size": 32,
+        "heavy_rate": 1,
+        "heavy_source": 0,
+        "ready": "always"
+      },
+      "values": {
+        "ALG2": 87.6,
+        "BLISS": 86.4,
+        "FCFS": 87,
+        "MAIN": 88.8,
+        "RR1": 70.6,
+        "RR10": 74.4
+      }
+    },
+    {
+      "configuration": {
+        "burst_period": 1024,
+        "burst_size": 8,
+        "heavy_rate": 1,
+        "heavy_source": 3,
+        "ready": "always"
+      },
+      "values": {
+        "ALG2": 20.8,
+        "BLISS": 32.2,
+        "FCFS": 32.8,
+        "MAIN": 20.8,
+        "RR1": 16.4,
+        "RR10": 17.2
+      }
+    },
+    {
+      "configuration": {
+        "burst_period": 1024,
+        "burst_size": 8,
+        "heavy_rate": 1,
+        "heavy_source": 0,
+        "ready": "bernoulli-0.75"
+      },
+      "values": {
+        "ALG2": 31.6,
+        "BLISS": 46.6,
+        "FCFS": 46.8,
+        "MAIN": 32.6,
+        "RR1": 26.4,
+        "RR10": 28
+      }
+    },
+    {
+      "configuration": {
+        "burst_period": 1024,
+        "burst_size": 8,
+        "heavy_rate": 1,
+        "heavy_source": 0,
+        "ready": "periodic-48/64"
+      },
+      "values": {
+        "ALG2": 33.8,
+        "BLISS": 46.6,
+        "FCFS": 47,
+        "MAIN": 34,
+        "RR1": 31.2,
+        "RR10": 32.2
+      }
+    }
+  ],
+  "scope": "Confirmation: 20 seeds, paired pointwise 95% CIs only. Exploration: 5 seeds, power: 3 seeds, no CIs. N8/16 and power exclude CGOF.",
+  "sensitivity": {
+    "depth": [
+      {
+        "arm": "A",
+        "points": [
+          [
+            8,
+            10
+          ],
+          [
+            16,
+            18.2
+          ],
+          [
+            32,
+            35.2
+          ]
+        ],
+        "policy": "FCFS"
+      },
+      {
+        "arm": "B",
+        "points": [
+          [
+            8,
+            23.4
+          ],
+          [
+            16,
+            33.8
+          ],
+          [
+            32,
+            51.6
+          ]
+        ],
+        "policy": "FCFS"
+      },
+      {
+        "arm": "A",
+        "points": [
+          [
+            8,
+            10
+          ],
+          [
+            16,
+            10
+          ],
+          [
+            32,
+            10
+          ]
+        ],
+        "policy": "MAIN"
+      },
+      {
+        "arm": "B",
+        "points": [
+          [
+            8,
+            20.6
+          ],
+          [
+            16,
+            20.8
+          ],
+          [
+            32,
+            20.8
+          ]
+        ],
+        "policy": "MAIN"
+      },
+      {
+        "arm": "A",
+        "points": [
+          [
+            8,
+            11
+          ],
+          [
+            16,
+            11
+          ],
+          [
+            32,
+            11
+          ]
+        ],
+        "policy": "RR10"
+      },
+      {
+        "arm": "B",
+        "points": [
+          [
+            8,
+            17.2
+          ],
+          [
+            16,
+            17.2
+          ],
+          [
+            32,
+            17.2
+          ]
+        ],
+        "policy": "RR10"
+      }
+    ],
+    "high-quota": [
+      {
+        "arm": "A",
+        "points": [
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            20,
+            10
+          ]
+        ],
+        "policy": "MAIN"
+      },
+      {
+        "arm": "B",
+        "points": [
+          [
+            5,
+            32.2
+          ],
+          [
+            10,
+            20.8
+          ],
+          [
+            20,
+            17
+          ]
+        ],
+        "policy": "MAIN"
+      }
+    ],
+    "rr-quantum": [
+      {
+        "arm": "A",
+        "points": [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "policy": "RR"
+      },
+      {
+        "arm": "B",
+        "points": [
+          [
+            1,
+            16.4
+          ],
+          [
+            4,
+            16.4
+          ],
+          [
+            8,
+            15.8
+          ],
+          [
+            10,
+            17.2
+          ],
+          [
+            16,
+            23.8
+          ]
+        ],
+        "policy": "RR"
+      }
+    ]
+  },
+  "table_tex_sha256": "8e8675907d91d9739a27db6d1319b1f403ca032a13b81ee4f154eaabf40b2b26"
+}

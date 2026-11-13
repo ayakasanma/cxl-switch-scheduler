@@ -4,8 +4,26 @@ What is still unrun, why it matters, and what it costs. Ordered so that each ste
 either unlocks the next one or closes a gap a reviewer already raised.
 
 Measured basis for every estimate below: one W5M model job with full accounting takes
-2.27 h alone and about 0.45 h per job at seven parallel processes; one Main W5M RTL job
-takes 1.76–2.1 h and two run concurrently. Both were measured on 2026-11-03/04.
+0.362 h alone (16,785 cycles/s) and 0.449 h per job at seven processes; one Main W5M RTL
+job takes about 2.13 h and two run concurrently (A3: four jobs, two batches, 15,328 s).
+The 2.27 h single-job figure in earlier notes came from the thread-parallel pilot, where
+the GIL serialised the workers, and does not describe one process.
+
+## Status (2026-11-04)
+
+| # | Item | State | Next step |
+| --- | --- | --- | --- |
+| 1 | Cost re-freeze | done, `FROZEN_V2_COST_REV2` | none |
+| 2 | Clean A3 re-run | done: `20261104T063359Z_1495`, source stable, 4/4 jobs, G-EQ 4/4, 12,149 s | none |
+| 3 | Confirmation campaign | done: 20 seeds, 600 jobs, 0 failed, analysis complete (P1, P2 and P3 all SUPPORTED_WITHIN_PROTOCOL) | fold the verdicts into the report text |
+| 4 | Under/over pairs | not started | six hours of model time at seven processes, no source change |
+| 5 | CGOF gate-level power | not started | needs the FastX SAIF flow and a PrimePower slot |
+| 6 | Latency recovery and N8/N16 | not started | define `latency_recovery` before measuring it |
+| 7 | RTL drain anchor | one A3 anchor drained two cycles with conservation intact | add a directed cut inside a long backlog |
+| 8 | System level | out of scope | keep as a stated limitation |
+
+The campaign release record is
+[dynamic-role-switch-v2-confirmation-release-20261104](reviews/dynamic-role-switch-v2-confirmation-release-20261104.md).
 
 ## P0 — required before any confirmation claim
 
@@ -76,12 +94,16 @@ For N8/N16, run the multi-window case at five seeds. Cost: about 8 h model plus 
 
 ### 7. RTL drain evidence
 
-Every RTL anchor so far ends with an empty queue at the cut, so the cleanup path has
-never been exercised in hardware. Two pilot model jobs did show a two-cycle cleanup.
+The cleanup path has been exercised once in hardware. In the first A3 run, the
+`depth8-bursty` mixed anchor cut with work still queued, drained it in two cycles, and
+finished with `fired == accepted == 18,815,149`; the model replay of the same job also
+records `drain_cycles = 2`, so the two agree. The other three anchors and all twenty
+legacy anchors cut with empty queues.
 
-Design: one W5M anchor per policy configured so requests remain queued at the cut, then
-assert the cleanup drains them and that the accounting still balances. Cost: 3 jobs,
-about 6 h. Acceptance: `drain_cycles > 0` with conservation intact.
+What is still missing is a directed test: a cut placed deliberately inside a heavy
+backlog, at a depth and policy where the drain is long enough to check ordering rather
+than length one. Cost: 3 jobs, about 6 h. Acceptance: `drain_cycles > 0`, every drained
+request fired in arrival order, and conservation intact.
 
 ## P2 — system level, keep as a stated limitation
 

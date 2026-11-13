@@ -1,0 +1,42 @@
+{
+  "numeric_literals": {
+    "unchanged": true,
+    "count": 826
+  },
+  "inline_math": {
+    "unchanged": true,
+    "count": 123
+  },
+  "display_math": {
+    "unchanged": true,
+    "count": 3
+  },
+  "citations": {
+    "unchanged": true,
+    "count": 17
+  },
+  "labels_and_references": {
+    "unchanged": true,
+    "count": 56
+  },
+  "section_structure": {
+    "unchanged": true,
+    "count": 18
+  },
+  "commands": {
+    "unchanged": true,
+    "count": 305
+  },
+  "floats": {
+    "unchanged": true,
+    "count": 12
+  },
+  "evidence_status": {
+    "unchanged": true,
+    "count": 12
+  },
+  "paragraph_breaks": {
+    "unchanged": true,
+    "count": 78
+  }
+}

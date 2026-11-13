@@ -1,0 +1,145 @@
+{
+  "schema": "cxl-capacity-absorption-acceptance-v1",
+  "status": "COMPLETED_AND_ACCEPTED",
+  "date": "2026-11-07",
+  "freeze_receipt": {
+    "path": "docs/reviews/capacity-absorption-freeze-20261106.json",
+    "sha256": "ff7868359a59aeeb24978e682591b1e8bc05af40cd4443bc1fdd15ae713a164e"
+  },
+  "artifact": {
+    "dir": "artifacts/implementation/capacity-absorption/20261106T094757Z_w5m-frozen",
+    "manifest": "artifacts/implementation/capacity-absorption/20261106T094757Z_w5m-frozen/manifest.json",
+    "manifest_sha256": "8bd053247e72fb12eaf8793e5991ef3341e149456ff4e205ebad10c01d4714b5",
+    "log": ".setup-logs/implementation/p1-under-over-20261106/frozen-under-over.log",
+    "log_sha256": "b1db5901a8dba5bfdad145cb432c60f00dbf64f0b36cb1f9bdabdb8e1075911c",
+    "raw_json_files": 60,
+    "pairs": 30,
+    "failed": []
+  },
+  "runtime": {
+    "start_utc": "2026-11-06T09:47:57Z",
+    "end_utc": "2026-11-06T13:01:35Z",
+    "elapsed_wall_s": 11618,
+    "elapsed_wall_h": 3.2272,
+    "wave_wall_s_sum": 11517.1,
+    "wave_wall_s_max": 1592.5,
+    "wave_wall_h_max": 0.4424,
+    "model_job_cap_h": 1.5,
+    "simulation_cap_h": 60.0
+  },
+  "gates_verified": {
+    "all_60_jobs_pass": true,
+    "conservation_30_of_30_pairs": true,
+    "heavy_completed_both_lanes_30_of_30": true,
+    "manifest_written_with_source_hashes": true,
+    "source_hash_drift_49_files": [],
+    "within_runtime_caps": true
+  },
+  "evidence_classification": {
+    "label": "MODEL_ONLY",
+    "statement": "independent same-direction capacity absorption check under the 4-window W5M workload (seeds 8101-8105)",
+    "not_a": "reproduction of the C5 arrival-phase protocol (heavy_work=20000, phase_horizon=5000) and not an RTL upgrade"
+  },
+  "summary": {
+    "under": {
+      "heavy_work": 4000000,
+      "heavy_p": 0.25,
+      "sparse_p": 0.02,
+      "ready_p": 0.9,
+      "seeds": [8101, 8102, 8103, 8104, 8105],
+      "policies": {
+        "FAI-inspired": {
+          "gap_cycles_mean": 0.0,
+          "gap_cycles_sd": 0.0,
+          "gap_cycles_ci95_t": [0.0, 0.0],
+          "ratio_mean": 1.0,
+          "ratio_ci95_t": [1.0, 1.0],
+          "mixed_sparse_gf_p99": [4, 4, 4, 4, 4],
+          "mixed_sparse_gf_mean_across_seeds": 1.4536,
+          "mixed_sparse_gf_max_range": [15, 18],
+          "heavy_wall_gap_p99": [3, 3, 3, 3, 3],
+          "heavy_max_wall_gap_range": [7, 8]
+        },
+        "CGOF(1:1)": {
+          "gap_cycles_mean": 0.0,
+          "gap_cycles_sd": 0.0,
+          "gap_cycles_ci95_t": [0.0, 0.0],
+          "ratio_mean": 1.0,
+          "ratio_ci95_t": [1.0, 1.0],
+          "mixed_sparse_gf_p99": [3, 3, 3, 3, 3],
+          "mixed_sparse_gf_mean_across_seeds": 1.2055,
+          "mixed_sparse_gf_max_range": [8, 9],
+          "heavy_wall_gap_p99": [3, 3, 3, 3, 3],
+          "heavy_max_wall_gap_range": [8, 10]
+        },
+        "CGOF(2:1)": {
+          "gap_cycles_mean": 0.0,
+          "gap_cycles_sd": 0.0,
+          "gap_cycles_ci95_t": [0.0, 0.0],
+          "ratio_mean": 1.0,
+          "ratio_ci95_t": [1.0, 1.0],
+          "mixed_sparse_gf_p99": [3, 3, 3, 3, 3],
+          "mixed_sparse_gf_mean_across_seeds": 1.2759,
+          "mixed_sparse_gf_max_range": [8, 9],
+          "heavy_wall_gap_p99": [3, 3, 3, 3, 3],
+          "heavy_max_wall_gap_range": [9, 11]
+        }
+      }
+    },
+    "over": {
+      "heavy_work": 17500000,
+      "heavy_p": 1.0,
+      "sparse_p": 0.05,
+      "ready_p": 0.9,
+      "seeds": [8101, 8102, 8103, 8104, 8105],
+      "policies": {
+        "FAI-inspired": {
+          "gap_cycles_mean": 3889105.4,
+          "gap_cycles_sd": 1096.05,
+          "gap_cycles_ci95_t": [3887744.50, 3890466.30],
+          "gap_cycles_range": [3887682, 3890379],
+          "ratio_mean": 1.20000215,
+          "ratio_sd": 0.00005210,
+          "ratio_ci95_t": [1.19993746, 1.20006684],
+          "mixed_sparse_gf_p99": [27, 27, 27, 27, 27],
+          "mixed_sparse_gf_mean_across_seeds": 12.8376,
+          "mixed_sparse_gf_max_range": [38, 40],
+          "heavy_wall_gap_p99": [5, 5, 5, 5, 5],
+          "heavy_max_wall_gap_range": [18, 19]
+        },
+        "CGOF(1:1)": {
+          "gap_cycles_mean": 3889105.8,
+          "gap_cycles_sd": 1096.40,
+          "gap_cycles_ci95_t": [3887744.47, 3890467.13],
+          "gap_cycles_range": [3887682, 3890380],
+          "ratio_mean": 1.20000217,
+          "ratio_sd": 0.00005212,
+          "ratio_ci95_t": [1.19993746, 1.20006688],
+          "completion_delta_vs_main_cycles": [0, 0, 1, 1, 0],
+          "completion_delta_vs_main_mean": 0.4,
+          "mixed_sparse_gf_p99": [4, 4, 4, 4, 4],
+          "mixed_sparse_gf_mean_across_seeds": 1.4185,
+          "mixed_sparse_gf_max_range": [14, 15],
+          "heavy_wall_gap_p99": [4, 4, 4, 4, 4],
+          "heavy_max_wall_gap_range": [11, 11]
+        },
+        "CGOF(2:1)": {
+          "gap_cycles_mean": 3889105.8,
+          "gap_cycles_sd": 1096.40,
+          "gap_cycles_ci95_t": [3887744.47, 3890467.13],
+          "gap_cycles_range": [3887682, 3890380],
+          "ratio_mean": 1.20000217,
+          "ratio_sd": 0.00005212,
+          "ratio_ci95_t": [1.19993746, 1.20006688],
+          "completion_delta_vs_main_cycles": [0, 0, 1, 1, 0],
+          "completion_delta_vs_main_mean": 0.4,
+          "mixed_sparse_gf_p99": [4, 4, 4, 4, 4],
+          "mixed_sparse_gf_mean_across_seeds": 1.5655,
+          "mixed_sparse_gf_max_range": [14, 17],
+          "heavy_wall_gap_p99": [4, 4, 4, 4, 4],
+          "heavy_max_wall_gap_range": [13, 14]
+        }
+      }
+    }
+  }
+}

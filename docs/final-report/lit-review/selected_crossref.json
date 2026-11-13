@@ -1,0 +1,279 @@
+{
+  "10.1109/isca66397.2026.00060": {
+    "doi": "10.1109/isca66397.2026.00060",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1109/isca66397.2026.00060",
+    "title": "A Silicon-Proven Unified Low-Latency CXL Controller and Port-Based Routing Switch for Memory-Centric Fabrics",
+    "authors": [
+      "Miryeong Kwon",
+      "Seungjun Lee",
+      "Donghyun Gouk",
+      "Hongjoo Jung",
+      "Eojin Ryu",
+      "Seyeong Huh",
+      "Junseok Moon",
+      "Hyein Woo",
+      "Junhee Kim",
+      "Kyungkuk Nam",
+      "Jinwoo Baek",
+      "Hyunkyu Choi",
+      "Woojin Choi",
+      "Yongjin Cho",
+      "Myoungsoo Jung"
+    ],
+    "container": "2026 ACM/IEEE 53rd Annual International Symposium on Computer Architecture (ISCA)",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "688-702",
+    "issued": [
+      [
+        2026,
+        6
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1109/isca66397.2026.00060",
+    "publisher_url": "https://ieeexplore.ieee.org/document/11617857/",
+    "abstract": ""
+  },
+  "10.1145/3605181.3626287": {
+    "doi": "10.1145/3605181.3626287",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1145/3605181.3626287",
+    "title": "Aurelia: CXL Fabric with Tentacle",
+    "authors": [
+      "Shu-Ting Wang",
+      "Weitao Wang"
+    ],
+    "container": "Proceedings of the 4th Workshop on Resource Disaggregation and Serverless",
+    "publisher": "ACM",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "29-36",
+    "issued": [
+      [
+        2023,
+        10,
+        23
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1145/3605181.3626287",
+    "publisher_url": "https://dl.acm.org/doi/10.1145/3605181.3626287",
+    "abstract": ""
+  },
+  "10.1109/ipdps64566.2025.00097": {
+    "doi": "10.1109/ipdps64566.2025.00097",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1109/ipdps64566.2025.00097",
+    "title": "Performance Characterization of CXL Memory and Its Use Cases",
+    "authors": [
+      "Xi Wang",
+      "Jie Liu",
+      "Jianbo Wu",
+      "Shuangyan Yang",
+      "Jie Ren",
+      "Bhanu Shankar",
+      "Dong Li"
+    ],
+    "container": "2025 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "volume": null,
+    "issue": null,
+    "page": "1048-1061",
+    "issued": [
+      [
+        2025,
+        6,
+        3
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1109/ipdps64566.2025.00097",
+    "publisher_url": "https://ieeexplore.ieee.org/document/11078540/",
+    "abstract": ""
+  },
+  "10.14778/3746405.3746432": {
+    "doi": "10.14778/3746405.3746432",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.14778/3746405.3746432",
+    "title": "CXL Memory Performance for In-Memory Data Processing",
+    "authors": [
+      "Marcel Weisgut",
+      "Daniel Ritter",
+      "Pinar Tözün",
+      "Lawrence Benson",
+      "Tilmann Rabl"
+    ],
+    "container": "Proceedings of the VLDB Endowment",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "type": "journal-article",
+    "volume": "18",
+    "issue": "9",
+    "page": "3119-3133",
+    "issued": [
+      [
+        2025,
+        5
+      ]
+    ],
+    "doi_url": "https://doi.org/10.14778/3746405.3746432",
+    "publisher_url": "https://dl.acm.org/doi/10.14778/3746405.3746432",
+    "abstract": "The Compute Express Link (CXL) standard enables new forms of memory management and access across devices and servers. Based on PCIe, it enables cache-coherent access to remote memory. This widens the design space for database systems by expanding the available memory beyond memory local to the CPU. Efficiently utilizing CXL-attached memory requires conscious decisions by data systems about data placement and management. In this paper, we provide an in-depth analysis of database operation performance with data interleaved across multiple CXL memory devices. We experimentally evaluate the memory access performance for basic access patterns, the performance impact of placing data across multiple CXL memory devices for in-memory column scans and in-memory B+tree operations, and the performance impact of placing data in CXL memory for an in-memory database system when running the analytical TPC-H workload. Our experiments show that access to CXL-attached memory does not have to penalize performance over local access, but careful workload-aware data management is required. Our TPC-H evaluation shows that placing table columns based on access frequencies allows storing over 80% of the table data in CXL memory with a performance of 85% of a local-memory-only solution."
+  },
+  "10.3390/mi14112100": {
+    "doi": "10.3390/mi14112100",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.3390/mi14112100",
+    "title": "QGWFQS: A Queue-Group-Based Weight Fair Queueing Scheduler on FPGA",
+    "authors": [
+      "Yunfei Guo",
+      "Zhichuan Guo",
+      "Xiaoyong Song",
+      "Mangu Song"
+    ],
+    "container": "Micromachines",
+    "publisher": "MDPI AG",
+    "type": "journal-article",
+    "volume": "14",
+    "issue": "11",
+    "page": "2100",
+    "issued": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "doi_url": "https://doi.org/10.3390/mi14112100",
+    "publisher_url": "https://www.mdpi.com/2072-666X/14/11/2100",
+    "abstract": "Weight Fair Queuing is an ideal scheduling algorithm to guarantee the bandwidth of different queues according to their configured Weights when the switching nodes of the network are congested. Many of the switching nodes based on FPGA in the current network support four physical ports or hundreds of virtual ports. Massive logic and storage resources would be consumed if each port implemented a WFQ scheduler. This paper proposes a Queue-Group-Based WFQ Scheduler (QGWFQS), which can support WFQ scheduling across multiple ports through the reuse of tag calculation and encoding circuits. We also propose a novel finish tag calculation algorithm to accommodate the variation in the link rate of each port. The remainder of integer division is also taken into account, which makes the bandwidth allocation fairer. Experimental results show that the proposed scheduler supports up to 512 ports, with 32 queues allocated on each individual port. The scheduler has the capability to operate at 200 MHz and the total scheduling capacity reaches 200 Mpps."
+  },
+  "10.3390/app122312458": {
+    "doi": "10.3390/app122312458",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.3390/app122312458",
+    "title": "A Low-Latency Fair-Arbiter Architecture for Network-on-Chip Switches",
+    "authors": [
+      "Jifeng Luo",
+      "Wenqi Wu",
+      "Qianjian Xing",
+      "Meiting Xue",
+      "Feng Yu",
+      "Zhenguo Ma"
+    ],
+    "container": "Applied Sciences",
+    "publisher": "MDPI AG",
+    "type": "journal-article",
+    "volume": "12",
+    "issue": "23",
+    "page": "12458",
+    "issued": [
+      [
+        2022,
+        12,
+        6
+      ]
+    ],
+    "doi_url": "https://doi.org/10.3390/app122312458",
+    "publisher_url": "https://www.mdpi.com/2076-3417/12/23/12458",
+    "abstract": "As semiconductor technology evolves, computing platforms attempt to integrate hundreds of processing cores and associated interconnects into a single chip. Network-on-chip (NoC) technology has been widely used for data exchange centers in recent years. As the core element of the NoC, the round-robin arbiter provides fair and fast arbitration, which is essential to ensure the high performance of each module on the chip. In this paper, we propose a low-latency fair switch arbiter (FSA) architecture based on the tree structure search algorithm. The FSA uses a feedback-based parallel priority update mechanism to complete the arbitration within the leaf nodes and a lock-based round-robin search algorithm to guarantee global fairness. To reduce latency, the FSA keeps the lock structure only at the leaf node so that the complexity of the critical path does not increase. Meanwhile, the FSA achieves a critical path with only O(log4N) delay by using four input nodes in parallel. The latency of the proposed circuit is on average 22.2% better than the existing fair structures and 8.1% better than the fastest arbiter, according to the synthesis results. The proposed architecture is well suited for high-speed network-on-chip switches and has better scalability for switches with large numbers of ports."
+  },
+  "10.1145/3772724": {
+    "doi": "10.1145/3772724",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1145/3772724",
+    "title": "OpenDRAM: A Modular, High-performance Soft Memory Controller for DDR4 DRAM",
+    "authors": [
+      "Ali Abbasi",
+      "Danesh Germchi",
+      "Amin Katani",
+      "Mohamed Hassan",
+      "Rodolfo Pellizzoni"
+    ],
+    "container": "ACM Transactions on Reconfigurable Technology and Systems",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "type": "journal-article",
+    "volume": "18",
+    "issue": "4",
+    "page": "1-27",
+    "issued": [
+      [
+        2025,
+        12,
+        4
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1145/3772724",
+    "publisher_url": "https://dl.acm.org/doi/10.1145/3772724",
+    "abstract": "We propose OpenDRAM , a synthesizable high-performance DDR4 DRAM soft Memory Controller (MC) for FPGAs. Since DRAMs usually operate at a higher frequency compared to MCs (usually \\(4\\times\\) ), to fully utilize DRAM’s bandwidth, the hardened DDR4 physical interface expects the controller to issue four DRAM commands in a single clock cycle. OpenDRAM is a modular, extensible MC, implementing high-performance bank-parallel schedulers. We detail the design of OpenDRAM ’s logic blocks in RTL and their integration with existing AMD’s Memory Interface Generator (MIG) modules for initialization, maintenance, and interfacing. The integrated project was comprehensively validated on an AMD Virtex UltraScale+ FPGA. We evaluate and compare the performance of OpenDRAM with AMD’s MIG controller and another open source controller, OPRECOMP, using synthetic and accelerator kernels. Results show that OpenDRAM surpasses both commercial and open source counterparts, offering performance improvements of up to 157% over AMD’s MIG and 267% over OPRECOMP, primarily owing to its reordering and scheduling mechanisms. To demonstrate its research use case, we prototype five distinct command schedulers, exploring tradeoffs between scheduling aggressiveness and maximum frequency, and show how FPGA-aware design can enhance timing closure. Finally, we release OpenDRAM as the first high-performance, extensible, open source MC for researchers to utilize, extend, and build upon."
+  },
+  "10.4230/LIPIcs.ECRTS.2021.2": {
+    "doi": "10.4230/LIPIcs.ECRTS.2021.2",
+    "crossref_status": 404,
+    "crossref_url": "https://api.crossref.org/works/10.4230/LIPIcs.ECRTS.2021.2",
+    "error": "Resource not found."
+  },
+  "10.1109/tcad.2025.3607145": {
+    "doi": "10.1109/tcad.2025.3607145",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1109/tcad.2025.3607145",
+    "title": "CXL-DMSim: A Full-System CXL Disaggregated Memory Simulator With Comprehensive Silicon Validation",
+    "authors": [
+      "Yanjing Wang",
+      "Lizhou Wu",
+      "Wentao Hong",
+      "Yang Ou",
+      "Zicong Wang",
+      "Sunfeng Gao",
+      "Jie Zhang",
+      "Sheng Ma",
+      "Dezun Dong",
+      "Xingyun Qi",
+      "Mingche Lai",
+      "Nong Xiao"
+    ],
+    "container": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "45",
+    "issue": "4",
+    "page": "1787-1801",
+    "issued": [
+      [
+        2026,
+        4
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1109/tcad.2025.3607145",
+    "publisher_url": "https://ieeexplore.ieee.org/document/11153390/",
+    "abstract": ""
+  },
+  "10.1109/lca.2026.3673181": {
+    "doi": "10.1109/lca.2026.3673181",
+    "crossref_status": 200,
+    "crossref_url": "https://api.crossref.org/works/10.1109/lca.2026.3673181",
+    "title": "CXL-Tracer: Accurate, Full-System Memory Tracing on Commercial Hardware via CXL Memory",
+    "authors": [
+      "Srikar Vanavasam",
+      "Austin Antony Cruz",
+      "Nam Sung Kim"
+    ],
+    "container": "IEEE Computer Architecture Letters",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "volume": "25",
+    "issue": "1",
+    "page": "114-117",
+    "issued": [
+      [
+        2026,
+        1
+      ]
+    ],
+    "doi_url": "https://doi.org/10.1109/lca.2026.3673181",
+    "publisher_url": "https://ieeexplore.ieee.org/document/11433038/",
+    "abstract": ""
+  }
+}

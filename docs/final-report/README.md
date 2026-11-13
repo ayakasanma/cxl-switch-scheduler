@@ -1,6 +1,18 @@
 # ECE 509 final report
 
-## Current accepted revision — November 2, 2026
+## Latest v5 language revision — November 11, 2026
+
+**[Read the polished v5 report (PDF, 15 pages)](../../output/pdf/cxl-scheduler-humanized-20261111.pdf)**
+
+This academic-humanizer language revision uses the accepted v5 manuscript, including its dynamic-workload, measured-power and directed-drain results. It improves sentence structure and clarity while preserving numerical values, equations, citations, figure/table content and evidence qualifications.
+
+- [Editable body](sections/hotnets-body-v5.tex) and [LaTeX driver](main-v5.tex)
+- [Editorial changes and validation](humanized-20261111/潤稿與驗證紀錄.md)
+- [Machine-readable release](humanized-20261111/revision-release.json)
+
+The cover and bibliography dates are retained from the source. November 11 identifies the language revision, not a new experiment cohort. Rebuild instructions are in the validation record.
+
+## Historical published revision — November 2, 2026
 
 **[Read the full report (PDF, 15 pages)](cxl-scheduler-revised-20261102.pdf)**
 

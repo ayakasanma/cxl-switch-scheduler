@@ -1,0 +1,30 @@
+{
+  "schema": "cxl-v2-report-revision-acceptance-v1",
+  "status": "V4_BUILT_V3_UNCHANGED",
+  "date": "2026-11-06",
+  "revision": "v4 adds the twenty-seed dynamic confirmation subsection",
+  "pages": 15,
+  "build": {
+    "command": "pdflatex -interaction=nonstopmode main-v4.tex",
+    "passes": 2,
+    "undefined_references": 0,
+    "overfull_hboxes": 0,
+    "logs": [
+      "docs/final-report/build-v4-pass1.txt",
+      "docs/final-report/build-v4-pass2.txt"
+    ]
+  },
+  "hashes": {
+    "main-v4.tex": "b817e87e3d47f57bf7b8e540faf04af50bdadcab27e8bcf6698b895cb2b13c5b",
+    "sections/hotnets-body-v4.tex": "da649de3a71dfc68e7c389122cbcd215c70a373996963e515b787c24cc68dae1",
+    "main-v4.pdf": "5db23f55cc945116c6f21415a3b84ffdddb12545b8faf32c8d2ad0c881e30217",
+    "main-v3.pdf": "27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf"
+  },
+  "preserved": "main-v3.pdf still hashes to 27c51bb686faf4da0238e70af6a555f4027be0048238423c2a5e3e37f1b487cf",
+  "evidence_boundary": {
+    "statistics": "MODEL_ONLY, 600 jobs, seeds 7401-7420",
+    "rtl_anchors": "A3 seed 7301 (4/4) and A4 seed 7401 (2/2) only",
+    "c7": "SINGLE_SEED, unchanged",
+    "added_limitation": "P1 and P2 return identical deltas on every seed, so their intervals are zero width; stated in the text"
+  }
+}

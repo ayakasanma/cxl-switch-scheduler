@@ -115,3 +115,10 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Accepted report deliverable; other PDF build products remain local.
+!/output/
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/cxl-scheduler-humanized-20261111.pdf

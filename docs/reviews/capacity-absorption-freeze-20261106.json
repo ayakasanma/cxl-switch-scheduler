@@ -1,0 +1,99 @@
+{
+  "schema": "cxl-capacity-absorption-freeze-v1",
+  "status": "FROZEN",
+  "date": "2026-11-06",
+  "decision": "owner selected option A on 2026-11-06: accept a new multi-window capacity workload and keep the frozen 24M active cap and shared modules untouched",
+  "claim_shape": {
+    "label": "MODEL_ONLY",
+    "statement": "independent same-direction capacity absorption check under the multi-window workload",
+    "not_a": "reproduction of the C5 arrival-phase protocol (that manifest records heavy_work 20000) and not an RTL upgrade"
+  },
+  "spec": {
+    "window": 5000000,
+    "windows": 4,
+    "n_src": 4,
+    "depth": 16,
+    "ready_pattern": "bernoulli",
+    "active_cap": 24000000,
+    "heavy_work": {
+      "under": 4000000,
+      "over": 17500000
+    },
+    "heavy_sources": [
+      0
+    ],
+    "profile_parameters": {
+      "under": {
+        "heavy_p": 0.25,
+        "sparse_p": 0.02,
+        "ready_p": 0.9
+      },
+      "over": {
+        "heavy_p": 1.0,
+        "sparse_p": 0.05,
+        "ready_p": 0.9
+      }
+    },
+    "seeds": [
+      8101,
+      8102,
+      8103,
+      8104,
+      8105
+    ],
+    "profiles": [
+      "under",
+      "over"
+    ],
+    "policies": [
+      "FAI-inspired",
+      "CGOF(1:1)",
+      "CGOF(2:1)"
+    ],
+    "lanes": [
+      "mixed",
+      "isolated"
+    ],
+    "jobs": 60,
+    "workers": 6
+  },
+  "runner": {
+    "path": "scripts/run_capacity_absorption.py",
+    "sha256": "89db76a5113f6dc4a058ab4a647bb9165e9f1d4526cdf0317d5e3dd6cc7705a7",
+    "schema": "cxl-capacity-absorption-v2",
+    "commit": "b8b3127"
+  },
+  "endpoint": {
+    "primary": "heavy completion cycle difference, mixed minus isolated, per (profile, seed, policy)",
+    "secondary": [
+      "completion ratio",
+      "mixed and isolated Sparse G->F nearest-rank P99"
+    ],
+    "aggregation": "mean and 95% t-interval across the five seeds, reported per profile and policy"
+  },
+  "gates": [
+    "all 60 jobs PASS",
+    "per pair fired == accepted == sum(generated)",
+    "heavy completed in both lanes",
+    "manifest written with source hashes and no recorded source drift",
+    "no job over the 1.5 h model-job cap; total under the 60 h simulation cap"
+  ],
+  "stop_conditions": [
+    "any job FAIL",
+    "source hash drift",
+    "timeout",
+    "heavy not completed",
+    "manifest missing"
+  ],
+  "cost": {
+    "jobs": 60,
+    "workers": 6,
+    "expected_wall_h": "about 4",
+    "cap_simulation_h": 60,
+    "cap_campaign_h": 80
+  },
+  "provenance": {
+    "output_pattern": "artifacts/implementation/capacity-absorption/<utc>_w5m-frozen",
+    "log": ".setup-logs/implementation/p1-under-over-20261106/frozen-under-over.log"
+  }
+}

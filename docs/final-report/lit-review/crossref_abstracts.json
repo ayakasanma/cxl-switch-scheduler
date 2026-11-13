@@ -1,0 +1,501 @@
+[
+  {
+    "doi": "10.1145/3713082.3730393",
+    "title": "My CXL Pool Obviates Your PCIe Switch",
+    "authors": [
+      "Yuhong Zhong",
+      "Daniel S. Berger",
+      "Pantea Zardoshti",
+      "Enrique Saurez",
+      "Jacob Nelson",
+      "Antonis Psistakis",
+      "Joshua Fried",
+      "Asaf Cidon"
+    ],
+    "year": 2025,
+    "venue": "Proceedings of the Workshop on Hot Topics in Operating Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "58-66",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/339647.339668",
+    "title": "Memory access scheduling",
+    "authors": [
+      "Scott Rixner",
+      "William J. Dally",
+      "Ujval J. Kapasi",
+      "Peter Mattson",
+      "John D. Owens"
+    ],
+    "year": 2000,
+    "venue": "Proceedings of the 27th annual international symposium on Computer architecture  - ISCA '00",
+    "volume": null,
+    "issue": null,
+    "pages": "128-138",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/40.748793",
+    "title": "Designing and implementing a fast crossbar scheduler",
+    "authors": [
+      "P. Gupta",
+      "N. McKeown"
+    ],
+    "year": 1999,
+    "venue": "IEEE Micro",
+    "volume": "19",
+    "issue": "1",
+    "pages": "20-28",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1016/j.vlsi.2011.01.001",
+    "title": "Fully hardware based WFQ architecture for high-speed QoS packet scheduling",
+    "authors": [
+      "Kieran McLaughlin",
+      "Dwayne Burns",
+      "Ciaran Toal",
+      "Colm McKillen",
+      "Sakir Sezer"
+    ],
+    "year": 2012,
+    "venue": "Integration",
+    "volume": "45",
+    "issue": "1",
+    "pages": "99-109",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1109/tvlsi.2008.2000323",
+    "title": "A Scalable Packet Sorting Circuit for High-Speed WFQ Packet Scheduling",
+    "authors": [
+      "K. McLaughlin",
+      "S. Sezer",
+      "H. Blume",
+      "X. Yang",
+      "F. Kupzog",
+      "T. Noll"
+    ],
+    "year": 2008,
+    "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+    "volume": "16",
+    "issue": "7",
+    "pages": "781-791",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1109/hpca.2010.5416658",
+    "title": "ATLAS: A scalable and high-performance scheduling algorithm for multiple memory controllers",
+    "authors": [
+      "Yoongu Kim",
+      "Dongsu Han",
+      "Onur Mutlu",
+      "Mor Harchol-Balter"
+    ],
+    "year": 2010,
+    "venue": "HPCA - 16 2010 The Sixteenth International Symposium on High-Performance Computer Architecture",
+    "volume": null,
+    "issue": null,
+    "pages": "1-12",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/micro.2010.51",
+    "title": "Thread Cluster Memory Scheduling: Exploiting Differences in Memory Access Behavior",
+    "authors": [
+      "Yoongu Kim",
+      "Michael Papamichael",
+      "Onur Mutlu",
+      "Mor Harchol-Balter"
+    ],
+    "year": 2010,
+    "venue": "2010 43rd Annual IEEE/ACM International Symposium on Microarchitecture",
+    "volume": null,
+    "issue": null,
+    "pages": "65-76",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/lca.2025.3621612",
+    "title": "REDIT: Redirection-Enabled Memory-Side Directory Architecture for CXL Memory Fabric",
+    "authors": [
+      "Minjae Kim",
+      "Jiwan Kim",
+      "Won Hur",
+      "Jiwon Lee",
+      "Mingu Jung",
+      "Cheolhwan Kim",
+      "Ipoom Jeong",
+      "Won Woo Ro"
+    ],
+    "year": 2025,
+    "venue": "IEEE Computer Architecture Letters",
+    "volume": "24",
+    "issue": "2",
+    "pages": "385-388",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1145/3695794.3695809",
+    "title": "Performance Study of CXL Memory Topology",
+    "authors": [
+      "Jianbo Wu",
+      "Jie Liu",
+      "Gokcen Kestor",
+      "Roberto Gioiosa",
+      "Dong Li",
+      "Andres Marquez"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the International Symposium on Memory Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "172-177",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/tcad.2025.3607145",
+    "title": "CXL-DMSim: A Full-System CXL Disaggregated Memory Simulator With Comprehensive Silicon Validation",
+    "authors": [
+      "Yanjing Wang",
+      "Lizhou Wu",
+      "Wentao Hong",
+      "Yang Ou",
+      "Zicong Wang",
+      "Sunfeng Gao",
+      "Jie Zhang",
+      "Sheng Ma",
+      "Dezun Dong",
+      "Xingyun Qi",
+      "Mingche Lai",
+      "Nong Xiao"
+    ],
+    "year": 2026,
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    "volume": "45",
+    "issue": "4",
+    "pages": "1787-1801",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1145/3767110.3767113",
+    "title": "Hardware-Software Co-Development for Emerging CXL Architectures",
+    "authors": [
+      "Roberto Gioiosa",
+      "Bo Fang",
+      "Lenny Guo",
+      "Andres Marquez"
+    ],
+    "year": 2025,
+    "venue": "Proceedings of the International Symposium on Memory Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "1-7",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3723851.3723858",
+    "title": "Rethinking Applications' Address Space with CXL Shared Memory Pools",
+    "authors": [
+      "Tong Xing",
+      "Antonio Barbalace"
+    ],
+    "year": 2025,
+    "venue": "Proceedings of the 4th Workshop on Heterogeneous Composable and Disaggregated Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "52-59",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/micro.2006.24",
+    "title": "Fair Queuing Memory Systems",
+    "authors": [
+      "Kyle J. Nesbit",
+      "Nidhi Aggarwal",
+      "James Laudon",
+      "James E. Smith"
+    ],
+    "year": 2006,
+    "venue": "2006 39th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO'06)",
+    "volume": null,
+    "issue": null,
+    "pages": "208-222",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/iccd.2014.6974655",
+    "title": "The Blacklisting Memory Scheduler: Achieving high performance and fairness at low cost",
+    "authors": [
+      "Lavanya Subramanian",
+      "Donghyuk Lee",
+      "Vivek Seshadri",
+      "Harsha Rastogi",
+      "Onur Mutlu"
+    ],
+    "year": 2014,
+    "venue": "2014 IEEE 32nd International Conference on Computer Design (ICCD)",
+    "volume": null,
+    "issue": null,
+    "pages": "8-15",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/ICPADS67057.2025.11322896",
+    "title": "FAI-CXL: An Efficient Hardware-Accelerated Fairness-Aware CXL Memory Pool Management with Fine-Grained Cacheline-Level Interleaving",
+    "authors": [
+      "Jiaxi Li",
+      "Yixuan Liu",
+      "Yunfei Gu",
+      "Chentao Wu"
+    ],
+    "year": 2025,
+    "venue": "2025 IEEE 31th International Conference on Parallel and Distributed Systems (ICPADS)",
+    "volume": null,
+    "issue": null,
+    "pages": "1-8",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3575693.3578835",
+    "title": "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms",
+    "authors": [
+      "Huaicheng Li",
+      "Daniel S. Berger",
+      "Lisa Hsu",
+      "Daniel Ernst",
+      "Pantea Zardoshti",
+      "Stanko Novakovic",
+      "Monish Shah",
+      "Samir Rajadnya",
+      "Scott Lee",
+      "Ishwar Agarwal",
+      "Mark D. Hill",
+      "Marcus Fontoura",
+      "Ricardo Bianchini"
+    ],
+    "year": 2023,
+    "venue": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
+    "volume": null,
+    "issue": null,
+    "pages": "574-587",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3582016.3582063",
+    "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory",
+    "authors": [
+      "Hasan Al Maruf",
+      "Hao Wang",
+      "Abhishek Dhanotia",
+      "Johannes Weiner",
+      "Niket Agarwal",
+      "Pallab Bhattacharya",
+      "Chris Petersen",
+      "Mosharaf Chowdhury",
+      "Shobhit Kanaujia",
+      "Prakash Chauhan"
+    ],
+    "year": 2023,
+    "venue": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3",
+    "volume": null,
+    "issue": null,
+    "pages": "742-755",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3613424.3614256",
+    "title": "Demystifying CXL Memory with Genuine CXL-Ready Systems and Devices",
+    "authors": [
+      "Yan Sun",
+      "Yifan Yuan",
+      "Zeduo Yu",
+      "Reese Kuper",
+      "Chihun Song",
+      "Jinghan Huang",
+      "Houxiang Ji",
+      "Siddharth Agarwal",
+      "Jiaqi Lou",
+      "Ipoom Jeong",
+      "Ren Wang",
+      "Jung Ho Ahn",
+      "Tianyin Xu",
+      "Nam Sung Kim"
+    ],
+    "year": 2023,
+    "venue": "56th Annual IEEE/ACM International Symposium on Microarchitecture",
+    "volume": null,
+    "issue": null,
+    "pages": "105-121",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3669900",
+    "title": "An Introduction to the Compute Express Link (CXL) Interconnect",
+    "authors": [
+      "Debendra Das Sharma",
+      "Robert Blankenship",
+      "Daniel Berger"
+    ],
+    "year": 2024,
+    "venue": "ACM Computing Surveys",
+    "volume": "56",
+    "issue": "11",
+    "pages": "1-37",
+    "abstract": "<jats:p>The Compute Express Link (CXL) is an open industry-standard interconnect between processors and devices such as accelerators, memory buffers, smart network interfaces, persistent memory, and solid-state drives. CXL offers coherency and memory semantics with bandwidth that scales with PCIe bandwidth while achieving significantly lower latency than PCIe. All major CPU vendors, device vendors, and datacenter operators have adopted CXL as a common standard. This enables an inter-operable ecosystem that supports key computing use cases including highly efficient accelerators, server memory bandwidth and capacity expansion, multi-server resource pooling and sharing, and efficient peer-to-p",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1109/mm.2023.3237491",
+    "title": "Memory Pooling With CXL",
+    "authors": [
+      "Donghyun Gouk",
+      "Miryeong Kwon",
+      "Hanyeoreum Bae",
+      "Sangwon Lee",
+      "Myoungsoo Jung"
+    ],
+    "year": 2023,
+    "venue": "IEEE Micro",
+    "volume": "43",
+    "issue": "2",
+    "pages": "48-57",
+    "abstract": "",
+    "type": "journal-article"
+  },
+  {
+    "doi": "10.1145/3626111.3628195",
+    "title": "A Case Against CXL Memory Pooling",
+    "authors": [
+      "Philip Levis",
+      "Kun Lin",
+      "Amy Tai"
+    ],
+    "year": 2023,
+    "venue": "Proceedings of the 22nd ACM Workshop on Hot Topics in Networks",
+    "volume": null,
+    "issue": null,
+    "pages": "18-24",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/dac63849.2025.11132607",
+    "title": "CXL-INTERPLAY: Unraveling and Characterizing CXL Interference in Modern Computer Systems",
+    "authors": [
+      "Shunyu Mao",
+      "Jiajun Luo",
+      "Yixin Li",
+      "Jiapeng Zhou",
+      "Weidong Zhang",
+      "Zheng Liu",
+      "Teng Ma",
+      "Shuwen Deng"
+    ],
+    "year": 2025,
+    "venue": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
+    "volume": null,
+    "issue": null,
+    "pages": "1-7",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3695794.3695808",
+    "title": "Contention aware DRAM caching for CXL-enabled pooled memory",
+    "authors": [
+      "Chandrahas Tirumalasetty",
+      "Narasimha Reddy Annapareddy"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the International Symposium on Memory Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "157-171",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1145/3695794.3695810",
+    "title": "Synchronization for CXL Based Memory",
+    "authors": [
+      "Joshua Suetterlein",
+      "Joseph Manzano",
+      "Andres Marquez"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the International Symposium on Memory Systems",
+    "volume": null,
+    "issue": null,
+    "pages": "178-185",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/mchpc56545.2022.00007",
+    "title": "Evaluating Emerging CXL-enabled Memory Pooling for HPC Systems",
+    "authors": [
+      "Jacob Wahlgren",
+      "Maya Gokhale",
+      "Ivy B. Peng"
+    ],
+    "year": 2022,
+    "venue": "2022 IEEE/ACM Workshop on Memory Centric High Performance Computing (MCHPC)",
+    "volume": null,
+    "issue": null,
+    "pages": "11-20",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/isocc.2016.7799765",
+    "title": "Power and area calibration of switch arbiter for high speed switch control and scheduling in network-on-chip",
+    "authors": [
+      "Sangeeta Singh",
+      "Jvr Ravindra",
+      "B Rajendra Naik"
+    ],
+    "year": 2016,
+    "venue": "2016 International SoC Design Conference (ISOCC)",
+    "volume": null,
+    "issue": null,
+    "pages": "5-6",
+    "abstract": "",
+    "type": "proceedings-article"
+  },
+  {
+    "doi": "10.1109/micro.2007.21",
+    "title": "Stall-Time Fair Memory Access Scheduling for Chip Multiprocessors",
+    "authors": [
+      "Onur Mutlu",
+      "Thomas Moscibroda"
+    ],
+    "year": 2007,
+    "venue": "40th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO 2007)",
+    "volume": null,
+    "issue": null,
+    "pages": "146-160",
+    "abstract": "",
+    "type": "proceedings-article"
+  }
+]

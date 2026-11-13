@@ -1,0 +1,66 @@
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=1 by 4,vertical sep=4.5em},
+  width=.86\columnwidth,height=2.3cm,
+  title style={font=\scriptsize},tick label style={font=\tiny,text=figgray},
+  label style={font=\scriptsize},axis line style={figgray!70},tick style={figgray!70},
+  grid=major,grid style={figgray!15,line width=.25pt},
+  axis x line=bottom,axis y line=left,
+  xmin=2.5,xmax=17.5,xtick={4,8,16},xlabel={Sources $N$}]
+\nextgroupplot[title={(a) Complete-switch area},ylabel={Area ($10^3$ library units)},
+  ymin=0,ymax=480,ytick={0,100,200,300,400}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\AreaFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\AreaRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\AreaMain};
+\nextgroupplot[title={(b) Timing margin},ylabel={Setup slack (ns)},
+  ymin=0,ymax=23,ytick={0,5,10,15,20}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\SetupFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\SetupRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\SetupMain};
+\nextgroupplot[title={(c) Cold-start power},ylabel={Power (mW)},
+  ymin=0,ymax=16,ytick={0,4,8,12,16}]
+\addplot[figblue,line width=.8pt,mark=square*,mark size=1.8pt] coordinates {\ColdMeanFCFS};
+\addplot[figgray,line width=.8pt,dashed,mark=triangle*,mark options={fill=white},mark size=2pt] coordinates {\ColdMeanRR};
+\addplot[figred,line width=.8pt,mark=*,mark size=1.8pt] coordinates {\ColdMeanMain};
+\nextgroupplot[title={(d) Service-cost frontier},
+  ylabel={P99 (cycles)},
+  xmin=73,xmax=115,xtick={80,90,100,110},
+  xlabel={Mapped area ($10^3$ units)},
+  ymin=0,ymax=40,ytick={0,10,20,30,40}]
+\addplot[figblue,line width=.7pt,dotted,forget plot] coordinates
+  {(103.970058,18.2)(103.970058,33.8)};
+\addplot[figgray,line width=.7pt,dotted,forget plot] coordinates
+  {(79.047172,11.0)(79.047172,17.2)};
+\addplot[figred,line width=.7pt,dotted,forget plot] coordinates
+  {(110.089846,10.0)(110.089846,20.8)};
+\addplot[only marks,figblue,mark=square*,mark size=2.1pt] coordinates {(103.970058,33.8)};
+\addplot[only marks,figblue,mark=square,mark options={fill=white},mark size=2.1pt]
+  coordinates {(103.970058,18.2)};
+\addplot[only marks,figgray,mark=triangle*,mark size=2.3pt] coordinates {(79.047172,17.2)};
+\addplot[only marks,figgray,mark=triangle,mark options={fill=white},mark size=2.3pt]
+  coordinates {(79.047172,11.0)};
+\addplot[only marks,figred,mark=*,mark size=2.1pt] coordinates {(110.089846,20.8)};
+\addplot[only marks,figred,mark=o,mark options={fill=white},mark size=2.1pt]
+  coordinates {(110.089846,10.0)};
+\node[font=\tiny,anchor=north,text=figblue] at (axis cs:103.970058,17.2) {FCFS};
+\node[font=\tiny,anchor=north,text=figgray] at (axis cs:79.047172,10.0) {RR10};
+\node[font=\tiny,anchor=north,text=figred] at (axis cs:110.089846,9.0) {Main};
+\end{groupplot}
+\node[anchor=south,font=\scriptsize,yshift=15pt] at
+  ($(group c1r1.north west)!.5!(group c1r1.north east)$)
+  {\tikz\fill[figblue] (0,0) rectangle (.09,.09);\ FCFS\qquad
+   \tikz\draw[figgray] (0,0)--(.045,.08)--(.09,0)--cycle;\ RR10\qquad
+   \tikz\fill[figred] (0,0) circle (.045);\ Main\qquad
+   open: A; filled: B};
+\end{tikzpicture}
+\caption{\textbf{The hardware price of service differentiation.}
+Accepted SAED32 RVT mappings at TT, 0.78\,V, $25\,{}^\circ$C and a common
+25\,ns clock. (a,b) One mapped observation per policy and $N$.
+(c) Means of three cold-start seed estimates.
+(d) $N=4$ P99 versus complete mapped area; open/filled markers denote
+single arrivals (A) and eight-request bursts (B). Lower-left is better.
+Power uses a separate zero-delay mapped-netlist activity experiment.}
+\label{fig:hardware-cost}
+\end{figure}

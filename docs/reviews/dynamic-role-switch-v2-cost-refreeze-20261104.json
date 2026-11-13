@@ -1,0 +1,73 @@
+{
+  "schema": "cxl-v2-cost-refreeze-v1",
+  "status": "FROZEN_V2_COST_REV2",
+  "date": "2026-11-04",
+  "supersedes": "plan sec.3 cost table only; matrix, seeds and statistics unchanged",
+  "frozen_plan": {
+    "path": "docs/reviews/dynamic-role-switch-plan-v2-lean-20261103.md",
+    "sha256": "3a5ff663c15d5b573dfcd847d7c059e471e0a3435e786382bc9efe144188b051"
+  },
+  "frozen_summary": {
+    "path": "docs/reviews/dynamic-role-switch-plan-v2-lean-20261103-summary.json",
+    "sha256": "ec8c25d2792e9e7fdaf04bcc9cb7181fe8a84dc93139319950bdce55a2d94249"
+  },
+  "measured": {
+    "single_process_cycles_per_s": 16785,
+    "parallel": {
+      "7": 13547,
+      "10": 11728,
+      "15": 9272
+    },
+    "pilot": {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-pilot/20261103T230208Z_w5m_process/manifest.json",
+      "sha256": "03bbcd23767c2ba0c946150bb33609f1d87c9e46ffb9ff615f02ba54c9f3aba6",
+      "jobs": 30,
+      "workers": 6,
+      "wall_s": 8249.308681726456,
+      "job_wall_sum_s": 48508.787539463985,
+      "job_wall_max_s": 2183.2046776949974
+    },
+    "a3": {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a3/20261103T224623Z_714733/summary.json",
+      "sha256": "521b85544515a41872a98fb9b99da0f23e179c18911de940ff2dac61ce5615e4",
+      "wall_s": 15328.372,
+      "jobs": 4,
+      "jobs_parallel": 2
+    },
+    "a2": {
+      "path": "artifacts/implementation/dynamic-role-switch-v2-a2/20261103T181252Z_20159/summary.json",
+      "sha256": "2810d5ccc2231de69d7cb589f44e288297a6b3005ce1dd4d80a12e9ee8e53925"
+    }
+  },
+  "budget": {
+    "model_job_h": {
+      "7": 0.449,
+      "15": 0.656
+    },
+    "confirmation_model_jobs": 600,
+    "model_wall_h": {
+      "7": 38.6,
+      "15": 26.2
+    },
+    "reserve_factor": 1.2,
+    "with_reserve_h": {
+      "7": 46.3,
+      "15": 31.5
+    },
+    "a4_rtl_h": 4.2,
+    "machine_total_h": {
+      "7": 50.5,
+      "15": 35.7
+    },
+    "audit_person_h": 18
+  },
+  "hard_caps_h": {
+    "model_job": 1.5,
+    "rtl_job": 3.0,
+    "seed_simulation": 4.0,
+    "simulation_total": 60.0,
+    "campaign": 80.0,
+    "overall": 95.0
+  },
+  "note": "exceeding any cap stops the campaign for a new revision; no raising parallelism to catch up"
+}
