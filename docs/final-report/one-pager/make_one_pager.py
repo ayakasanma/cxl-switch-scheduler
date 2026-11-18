@@ -382,7 +382,7 @@ body {{
   display: grid; grid-template-rows: 82px 1fr 34px; gap: 12px;
 }}
 header {{ display: flex; justify-content: space-between; align-items: flex-start; }}
-.eyebrow {{ font-size: 14px; letter-spacing: .14em; color: #65717D; font-weight: 700; }}
+.eyebrow {{ font-size: 14px; letter-spacing: .14em; color: #53606C; font-weight: 700; }}
 h1 {{ margin: 4px 0 0; font-size: 29px; line-height: 1.12; letter-spacing: -.02em; }}
 .subtitle {{ margin-top: 5px; font-size: 14px; color: #53606C; }}
 .headline {{
@@ -390,7 +390,7 @@ h1 {{ margin: 4px 0 0; font-size: 29px; line-height: 1.12; letter-spacing: -.02e
   border-radius: 3px; box-shadow: 6px 6px 0 #D9D2C5;
 }}
 .headline b {{ display: block; font-size: 19px; line-height: 1.18; color: #FFD59E; }}
-.headline span {{ display: block; margin-top: 3px; font-size: 11px; line-height: 1.3; color: #E8EDF1; }}
+.headline span {{ display: block; margin-top: 3px; font-size: 12px; line-height: 1.3; color: #E8EDF1; }}
 .grid {{
   display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);
   gap: 14px; min-height: 0;
@@ -403,21 +403,23 @@ h1 {{ margin: 4px 0 0; font-size: 29px; line-height: 1.12; letter-spacing: -.02e
   gap: 6px 12px; min-height: 0; overflow: hidden;
 }}
 .panel.wide {{ grid-column: span 2; grid-template-columns: 1.18fr .82fr; }}
+.panel.wide:has(.chartwrap > div[style*="grid-template-columns:repeat(3,1fr)"]) {{ grid-template-rows: auto minmax(0, 1fr); align-content: start; }}
 .panel-head {{ grid-column: 1 / -1; display: flex; align-items: baseline; gap: 9px; }}
 .tag {{
   font: 700 11px/1 "Consolas", monospace; color: white; background: #1E2A35;
   padding: 5px 7px; border-radius: 2px; letter-spacing: .04em;
 }}
 h2 {{ margin: 0; font-size: 16px; line-height: 1.2; }}
-.unit {{ margin-left: auto; color: #7A858F; font-size: 10.5px; }}
+.unit {{ margin-left: auto; color: #53606C; font-size: 11px; }}
 .chartwrap {{ min-width: 0; display: flex; align-items: center; overflow: hidden; }}
+.panel.wide:has(.chartwrap > div[style*="grid-template-columns:repeat(3,1fr)"]) .chartwrap {{ align-items: start; }}
 .chart {{ width: 100%; height: auto; overflow: visible; }}
 .grid-line, .grid {{ stroke: #E4E0D8; stroke-width: 1; }}
 .zero {{ stroke: #9AA3AA; stroke-width: 1.2; stroke-dasharray: 4 3; }}
-.tick {{ font-size: 11.5px; fill: #5C6873; font-family: "Microsoft JhengHei", sans-serif; }}
+.tick {{ font-size: 12px; fill: #5C6873; font-family: "Microsoft JhengHei", sans-serif; }}
 .tick.strong {{ fill: #25313B; font-weight: 700; }}
-.axis-label {{ font-size: 11px; fill: #55616B; font-weight: 600; }}
-.point {{ font-size: 10.5px; font-weight: 700; }}
+.axis-label {{ font-size: 12px; fill: #55616B; font-weight: 600; }}
+.point {{ font-size: 11px; font-weight: 700; }}
 .point.FCFS {{ fill: #315C85; }}
 .point.RR10 {{ fill: #5E5E5E; }}
 .point.Main {{ fill: #A74701; }}
@@ -427,16 +429,16 @@ h2 {{ margin: 0; font-size: 16px; line-height: 1.2; }}
   overflow: hidden;
 }}
 .note strong {{ font-size: 13.5px; line-height: 1.25; margin-bottom: 4px; color: #1E2A35; }}
-.note p {{ margin: 0; font-size: 11.5px; line-height: 1.4; color: #4D5964; }}
+.note p {{ margin: 0; font-size: 12px; line-height: 1.4; color: #4D5964; }}
 .note .metric {{ font: 700 17px/1.1 "Consolas", monospace; color: #A74701; margin-bottom: 4px; }}
-.legend {{ display: flex; gap: 14px; font-size: 11px; color: #59656F; align-items: center; }}
+.legend {{ display: flex; gap: 14px; font-size: 12px; color: #59656F; align-items: center; }}
 .legend i {{ display: inline-block; width: 12px; height: 12px; margin-right: 4px; vertical-align: -2px; }}
 .legend .sq {{ background: #4C78A8; }}
 .legend .tr {{ width: 0; height: 0; background: none; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid #7A7A7A; }}
 .legend .ci {{ background: #D95F02; border-radius: 50%; }}
 .footer {{
   display: flex; justify-content: space-between; align-items: flex-end;
-  border-top: 1px solid #CFC8BC; padding-top: 9px; font-size: 10.5px; color: #65717D;
+  border-top: 1px solid #CFC8BC; padding-top: 9px; font-size: 11px; color: #53606C;
 }}
 .footer b {{ color: #2A3742; }}
 .checks {{ display: flex; gap: 12px; }}
@@ -521,32 +523,32 @@ h2 {{ margin: 0; font-size: 16px; line-height: 1.2; }}
     <article class="panel wide">
       <div class="panel-head"><span class="tag">07</span><h2>硬體成本光譜與研究結論</h2><span class="unit">same RTL boundary · SAED32 RVT · TT / 0.78 V / 25 °C</span></div>
       <div class="chartwrap" style="display:block">
-        <div style="display:flex;gap:8px;align-items:center;margin:5px 0 12px">
+        <div style="display:flex;gap:8px;align-items:center;margin:2px 0 6px">
           <span class="legend"><i class="sq"></i>FCFS</span>
           <span class="legend"><i class="tr"></i>RR10</span>
           <span class="legend"><i class="ci"></i>Main</span>
-          <span style="margin-left:auto;font-size:10.5px;color:#65717D">逐項比較；不畫內插曲線</span>
+          <span style="margin-left:auto;font-size:11px;color:#53606C">逐項比較；不畫內插曲線</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-          <div style="background:#EAF0F6;padding:12px 14px;border-top:3px solid #4C78A8">
-            <div style="font-size:11px;color:#65717D;letter-spacing:.08em">FCFS</div>
-            <div style="font-size:22px;font-weight:700;margin:4px 0">公平性基準</div>
-            <div style="font-size:12px;line-height:1.45;color:#4D5964">面積小於 Main、邏輯最簡單；但 sparse 必須等待 heavy 的前方隊列，P99 最差。</div>
+          <div style="background:#EAF0F6;padding:8px 10px;border-top:3px solid #4C78A8">
+            <div style="font-size:12px;color:#53606C;letter-spacing:.08em">FCFS</div>
+            <div style="font-size:18px;line-height:1.2;font-weight:700;margin:3px 0">公平性基準</div>
+            <div style="font-size:11px;line-height:1.35;color:#4D5964">面積小於 Main、邏輯最簡單；但 sparse 必須等待 heavy 的前方隊列，P99 最差。</div>
           </div>
-          <div style="background:#EFEFEF;padding:12px 14px;border-top:3px solid #7A7A7A">
-            <div style="font-size:11px;color:#65717D;letter-spacing:.08em">RR10</div>
-            <div style="font-size:22px;font-weight:700;margin:4px 0">面積與突發尾端贏家</div>
-            <div style="font-size:12px;line-height:1.45;color:#4D5964">per-source quantum 避免 aggregation；面積少 38%、burst P99 低 3.6 cycles，是此 boundary 的整體贏家。</div>
+          <div style="background:#EFEFEF;padding:8px 10px;border-top:3px solid #7A7A7A">
+            <div style="font-size:12px;color:#53606C;letter-spacing:.08em">RR10</div>
+            <div style="font-size:18px;line-height:1.2;font-weight:700;margin:3px 0">面積與突發尾端贏家</div>
+            <div style="font-size:11px;line-height:1.35;color:#4D5964">per-source quantum 避免 aggregation；面積少 38%、burst P99 低 3.6 cycles，是此 boundary 的整體贏家。</div>
           </div>
-          <div style="background:#FBEEE4;padding:12px 14px;border-top:3px solid #D95F02">
-            <div style="font-size:11px;color:#65717D;letter-spacing:.08em">Main</div>
-            <div style="font-size:22px;font-weight:700;margin:4px 0">單筆保護與可解釋性</div>
-            <div style="font-size:12px;line-height:1.45;color:#4D5964">以 4.97–5.89% 面積換取 45.03% sparse P99 降幅；Main-SQ 針對 burst aggregation。</div>
+          <div style="background:#FBEEE4;padding:8px 10px;border-top:3px solid #D95F02">
+            <div style="font-size:12px;color:#53606C;letter-spacing:.08em">Main</div>
+            <div style="font-size:18px;line-height:1.2;font-weight:700;margin:3px 0">單筆保護與可解釋性</div>
+            <div style="font-size:11px;line-height:1.35;color:#4D5964">以 4.97–5.89% 面積換取 45.03% sparse P99 降幅；Main-SQ 針對 burst aggregation。</div>
           </div>
         </div>
       </div>
       <div class="note" style="border-left-color:#2E8B57">
-        <div class="metric" style="color:#2E8B57">14 / 14 PASS</div>
+        <div class="metric" style="color:#24724A">14 / 14 PASS</div>
         <strong>結果不是只有平均值：設計也通過實作驗證</strong>
         <p>九個 mapping 全在 25 ns 收斂；14/14 equivalence、180/180 primary、42/42 follow-up、15/15 HOG-SPARSE、42/42 placement 全通過。</p>
       </div>
@@ -557,17 +559,17 @@ h2 {{ margin: 0; font-size: 16px; line-height: 1.2; }}
       <div style="grid-column:1/-1;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:2px 4px">
         <div style="display:flex;align-items:baseline;gap:10px">
           <span style="font:700 31px/1 Consolas,monospace;color:#D95F02">45%</span>
-          <span style="font-size:13px;line-height:1.35"><b>sparse P99 降幅</b><br><span style="color:#65717D">相對 FCFS，單筆；突發為 38.64%</span></span>
+          <span style="font-size:14px;line-height:1.35"><b>sparse P99 降幅</b><br><span style="color:#53606C">相對 FCFS，單筆；突發為 38.64%</span></span>
         </div>
         <div style="display:flex;align-items:baseline;gap:10px">
           <span style="font:700 31px/1 Consolas,monospace;color:#7A7A7A">−3.6</span>
-          <span style="font-size:13px;line-height:1.35"><b>burst P99 差距</b><br><span style="color:#65717D">Main 相對 RR10，單位 cycles</span></span>
+          <span style="font-size:14px;line-height:1.35"><b>burst P99 差距</b><br><span style="color:#53606C">Main 相對 RR10，單位 cycles</span></span>
         </div>
         <div style="display:flex;align-items:baseline;gap:10px">
           <span style="font:700 31px/1 Consolas,monospace;color:#355E42">1.000000</span>
-          <span style="font-size:13px;line-height:1.35"><b>transfer / cycle</b><br><span style="color:#65717D">30/30 measured intervals</span></span>
+          <span style="font-size:14px;line-height:1.35"><b>transfer / cycle</b><br><span style="color:#53606C">30/30 measured intervals</span></span>
         </div>
-        <p style="margin:1px 0 0;font-size:10.5px;line-height:1.3;color:#65717D">下一步：Main-SQ 切分 per-source sub-quota；Main-PW 加速分類；Main-BQ 保留 unused visit。均為待量測 hypothesis。</p>
+        <p style="margin:1px 0 0;font-size:11px;line-height:1.3;color:#53606C">下一步：Main-SQ 切分 per-source sub-quota；Main-PW 加速分類；Main-BQ 保留 unused visit。均為待量測 hypothesis。</p>
       </div>
     </article>
   </section>

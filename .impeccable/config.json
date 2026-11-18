@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "docs/final-report/one-pager/one-pager.html"
+        ],
+        "createdAt": "2026-11-18T09:28:58.758Z",
+        "reason": "Agent: fixed 1600x900 print one-pager; functional labels are capped at 11px to fit the single sheet without clipping"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "docs/final-report/one-pager/one-pager.html"
+        ],
+        "createdAt": "2026-11-18T09:28:59.927Z",
+        "reason": "Agent: fixed 1600x900 print one-pager; unit labels must stay 11px to preserve the single-sheet layout"
+      },
+      {
+        "rule": "hard-offset-shadow",
+        "value": "*",
+        "files": [
+          "docs/final-report/one-pager/one-pager.html"
+        ],
+        "createdAt": "2026-11-18T09:29:00.943Z",
+        "reason": "Agent: intentional fixed-sheet headline block uses a hard offset shadow as its existing visual direction"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "docs/final-report/one-pager/one-pager.html"
+        ],
+        "createdAt": "2026-11-18T09:29:02.121Z",
+        "reason": "Agent: cream background is the established report visual language for this fixed print artifact"
+      }
+    ]
+  }
+}
