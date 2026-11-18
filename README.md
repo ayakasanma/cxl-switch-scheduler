@@ -2,7 +2,7 @@
 
 **English** · [繁體中文](README.zh-TW.md)
 
-**Latest report:** [Read the 15-page v5 PDF](output/pdf/cxl-scheduler-humanized-20261111.pdf) · [Sources and acceptance record](docs/final-report/README.md) — November 11, 2026 language revision.
+**Latest report:** [Read the 14-page v6 PDF](output/pdf/cxl-scheduler-v6-20261114.pdf) · [Sources and build record](docs/final-report/README.md) — November 14, 2026 structural revision.
 
 **Progress report:** [ECE 509 Second Progress Report (2026-11-06)](docs/progress-reports/ECE509_2nd_Progress_Report_revised.pdf) · [Report index](docs/progress-reports/README.md)
 

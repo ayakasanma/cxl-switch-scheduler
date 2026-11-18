@@ -1,8 +1,20 @@
 # ECE 509 final report
 
-## Latest v5 language revision — November 11, 2026
+## Latest v6 structural revision — November 14, 2026
 
-**[Read the polished v5 report (PDF, 15 pages)](../../output/pdf/cxl-scheduler-humanized-20261111.pdf)**
+**[Read the v6 report (PDF, 14 pages)](../../output/pdf/cxl-scheduler-v6-20261114.pdf)**
+
+This revision restructures the accepted v5 evidence into a causal narrative and adds three v6 figures. It uses completed evidence through November 7, 2026; it is not a new experiment cohort.
+
+- [Editable body](sections/hotnets-body-v6.tex) and [LaTeX driver](main-v6.tex)
+- [v6 figure generator](generate_v6_figures.py) and [figure outputs](generated/figures/v6/)
+- PDF SHA-256: `5330196EFCB451F7A9D55A048C31D75C4C0CEFDE3ABEB20A3D8627EBECA8FE2D`
+
+The PDF was compiled twice with PDFLaTeX and reports 14 Letter pages, zero unresolved references and no emergency-stop errors. Only underfull-hbox warnings remain. No v6 release manifest otherwise exists; this entry records the actual compiled artifact rather than a fresh evidence acceptance.
+
+## Historical v5 language revision — November 11, 2026
+
+**[Read the v5 report (PDF, 15 pages)](../../output/pdf/cxl-scheduler-humanized-20261111.pdf)**
 
 This academic-humanizer language revision uses the accepted v5 manuscript, including its dynamic-workload, measured-power and directed-drain results. It improves sentence structure and clarity while preserving numerical values, equations, citations, figure/table content and evidence qualifications.
 
